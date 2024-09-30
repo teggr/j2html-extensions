@@ -1,25 +1,33 @@
 package dev.rebelcraft.j2html.ext;
 
-import j2html.attributes.Attr;
+import j2html.tags.specialized.HtmlTag;
 
+import static dev.rebelcraft.j2html.ext.BootstrapTagCreator.*;
 import static j2html.TagCreator.*;
 
+/**
+ * <pre>
+ *     https://getbootstrap.com/docs/5.3/getting-started/introduction/
+ * </pre>
+ */
 public class Quickstart {
 
-    public static String index() {
+    public static HtmlTag index() {
 
-        return document(
-                html(
-                        head(
-                                meta().attr(Attr.CHARSET, "utf-8"),
-                                meta().withName("viewport").withContent("width=device-width, initial-scale=1"),
-                                title("Bootstrap demo")
-                        ),
-                        body(
-                                h1("Hello, world!")
-                        )
-                )
-        );
+        return
+                html().withLang("en")
+                        .with(
+                                head(
+                                        utf8Charset(),
+                                        responsiveViewport(),
+                                        title("Bootstrap demo"),
+                                        cdnCSSLink()
+                                ),
+                                body(
+                                        h1("Hello, world!"),
+                                        cdnBundleMinJSLink()
+                                )
+                        );
 
     }
 

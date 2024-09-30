@@ -51,6 +51,29 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>7.5.0</version>
+            <scope>test</scope>
+        </dependency>
+<!-- https://romankh3.github.io/image-comparison/ -->
+<!--        <dependency>-->
+<!--            <groupId>com.github.romankh3</groupId>-->
+<!--            <artifactId>image-comparison</artifactId>-->
+<!--            <version>4.4.0</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-nop -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-nop</artifactId>
+            <version>2.0.16</version>
+            <scope>test</scope>
+        </dependency>
+
+
     </dependencies>
 
     <build>
