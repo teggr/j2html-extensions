@@ -13,3 +13,8 @@ This brings the [Bootstrap]() UI kit into the j2html ecosystem.
     <version>0.0.1-SNAPSHOT</version>
 </dependency>
 ```
+
+
+// TODO:
+svg Tag
+use Tag
