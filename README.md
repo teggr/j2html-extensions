@@ -14,7 +14,14 @@ This brings the [Bootstrap]() UI kit into the j2html ecosystem.
 </dependency>
 ```
 
-
+```
 // TODO:
 svg Tag
 use Tag
+```
+
+### bootstrap versions support
+
+| Java Version | Boostrap Version |
+|--------------|------------------|
+|0.0.1-SNAPSHOT| 5.3.3 |

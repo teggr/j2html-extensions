@@ -10,10 +10,19 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>dev.rebelcraft</groupId>
     <artifactId>bootstrap-j2html-extension</artifactId>
-    <version>5.3.3-SNAPSHOT</version> <!-- aligned with the boostrap version -->
 
+    <properties>
+    <!-- aligned with the boostrap version -->
+        <bootstrap.version>5.3.3</bootstrap.version>
+    </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>5.3.3</version>
+        </dependency>
+    </dependencies>
 
 </project>

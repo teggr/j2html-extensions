@@ -1,7 +1,5 @@
 package dev.rebelcraft.j2html.ext;
 
-import j2html.tags.specialized.HtmlTag;
-
 import static dev.rebelcraft.j2html.ext.BootstrapTagCreator.*;
 import static j2html.TagCreator.*;
 
@@ -12,9 +10,9 @@ import static j2html.TagCreator.*;
  */
 public class Quickstart {
 
-    public static HtmlTag index() {
+    public static String index() {
 
-        return
+        return ExtendedTagCreator.document(
                 html().withLang("en")
                         .with(
                                 head(
@@ -27,7 +25,8 @@ public class Quickstart {
                                         h1("Hello, world!"),
                                         cdnBundleMinJSLink()
                                 )
-                        );
+                        )
+        );
 
     }
 
