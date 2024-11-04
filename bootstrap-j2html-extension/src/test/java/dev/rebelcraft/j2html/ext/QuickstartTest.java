@@ -1,17 +1,25 @@
 package dev.rebelcraft.j2html.ext;
 
+import dev.rebelcraft.uidocs.UiDocumentation;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.function.Supplier;
+import org.junit.jupiter.api.TestInfo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class QuickstartTest {
 
+    private UiDocumentation uiDocumentation;
+
+    @BeforeEach
+    void init(TestInfo testInfo) {
+       uiDocumentation = new UiDocumentation(testInfo);
+    }
+
     @Test
     void shouldOutputTheQuickstart() throws Exception {
 
-        String quickStartIndex = render(Quickstart::index);
+        String quickStartIndex = uiDocumentation.render(Quickstart::index);
 
         //language=HTML
         assertEquals("""
@@ -35,10 +43,9 @@ class QuickstartTest {
                 </html>
                 """, quickStartIndex);
 
-    }
+        // document
+        uiDocumentation.document("Quickstart", quickStartIndex);
 
-    private String render(Supplier<String> document) {
-        return document.get();
     }
 
 }
