@@ -188,4 +188,134 @@ public class Grid {
 
     public static final String row_cols_auto = "row-cols-auto";
 
+    public static final String row_cols_sm_1 = "row-cols-sm-1";
+
+    public static final String row_cols_sm_2 = "row-cols-sm-2";
+
+    public static final String row_cols_sm_3 = "row-cols-sm-3";
+
+    public static final String row_cols_sm_4 = "row-cols-sm-4";
+
+    public static final String row_cols_sm_5 = "row-cols-sm-5";
+
+    public static final String row_cols_sm_6 = "row-cols-sm-6";
+
+    public static final String row_cols_sm_7 = "row-cols-sm-7";
+
+    public static final String row_cols_sm_8 = "row-cols-sm-8";
+
+    public static final String row_cols_sm_9 = "row-cols-sm-9";
+
+    public static final String row_cols_sm_10 = "row-cols-sm-10";
+
+    public static final String row_cols_sm_11 = "row-cols-sm-11";
+
+    public static final String row_cols_sm_12 = "row-cols-sm-12";
+
+    public static final String row_cols_sm_auto = "row-cols-sm-auto";
+
+    public static final String row_cols_md_1 = "row-cols-md-1";
+
+    public static final String row_cols_md_2 = "row-cols-md-2";
+
+    public static final String row_cols_md_3 = "row-cols-md-3";
+
+    public static final String row_cols_md_4 = "row-cols-md-4";
+
+    public static final String row_cols_md_5 = "row-cols-md-5";
+
+    public static final String row_cols_md_6 = "row-cols-md-6";
+
+    public static final String row_cols_md_7 = "row-cols-md-7";
+
+    public static final String row_cols_md_8 = "row-cols-md-8";
+
+    public static final String row_cols_md_9 = "row-cols-md-9";
+
+    public static final String row_cols_md_10 = "row-cols-md-10";
+
+    public static final String row_cols_md_11 = "row-cols-md-11";
+
+    public static final String row_cols_md_12 = "row-cols-md-12";
+
+    public static final String row_cols_md_auto = "row-cols-md-auto";
+
+    public static final String row_cols_lg_1 = "row-cols-lg-1";
+
+    public static final String row_cols_lg_2 = "row-cols-lg-2";
+
+    public static final String row_cols_lg_3 = "row-cols-lg-3";
+
+    public static final String row_cols_lg_4 = "row-cols-lg-4";
+
+    public static final String row_cols_lg_5 = "row-cols-lg-5";
+
+    public static final String row_cols_lg_6 = "row-cols-lg-6";
+
+    public static final String row_cols_lg_7 = "row-cols-lg-7";
+
+    public static final String row_cols_lg_8 = "row-cols-lg-8";
+
+    public static final String row_cols_lg_9 = "row-cols-lg-9";
+
+    public static final String row_cols_lg_10 = "row-cols-lg-10";
+
+    public static final String row_cols_lg_11 = "row-cols-lg-11";
+
+    public static final String row_cols_lg_12 = "row-cols-lg-12";
+
+    public static final String row_cols_lg_auto = "row-cols-lg-auto";
+
+    public static final String row_cols_xl_1 = "row-cols-xl-1";
+
+    public static final String row_cols_xl_2 = "row-cols-xl-2";
+
+    public static final String row_cols_xl_3 = "row-cols-xl-3";
+
+    public static final String row_cols_xl_4 = "row-cols-xl-4";
+
+    public static final String row_cols_xl_5 = "row-cols-xl-5";
+
+    public static final String row_cols_xl_6 = "row-cols-xl-6";
+
+    public static final String row_cols_xl_7 = "row-cols-xl-7";
+
+    public static final String row_cols_xl_8 = "row-cols-xl-8";
+
+    public static final String row_cols_xl_9 = "row-cols-xl-9";
+
+    public static final String row_cols_xl_10 = "row-cols-xl-10";
+
+    public static final String row_cols_xl_11 = "row-cols-xl-11";
+
+    public static final String row_cols_xl_12 = "row-cols-xl-12";
+
+    public static final String row_cols_xl_auto = "row-cols-xl-auto";
+
+    public static final String row_cols_xxl_1 = "row-cols-xxl-1";
+
+    public static final String row_cols_xxl_2 = "row-cols-xxl-2";
+
+    public static final String row_cols_xxl_3 = "row-cols-xxl-3";
+
+    public static final String row_cols_xxl_4 = "row-cols-xxl-4";
+
+    public static final String row_cols_xxl_5 = "row-cols-xxl-5";
+
+    public static final String row_cols_xxl_6 = "row-cols-xxl-6";
+
+    public static final String row_cols_xxl_7 = "row-cols-xxl-7";
+
+    public static final String row_cols_xxl_8 = "row-cols-xxl-8";
+
+    public static final String row_cols_xxl_9 = "row-cols-xxl-9";
+
+    public static final String row_cols_xxl_10 = "row-cols-xxl-10";
+
+    public static final String row_cols_xxl_11 = "row-cols-xxl-11";
+
+    public static final String row_cols_xxl_12 = "row-cols-xxl-12";
+
+    public static final String row_cols_xxl_auto = "row-cols-xxl-auto";
+
 }
