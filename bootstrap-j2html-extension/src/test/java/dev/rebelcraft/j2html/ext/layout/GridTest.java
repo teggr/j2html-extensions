@@ -837,9 +837,9 @@ class GridTest {
                 """, renderedHtml);
 
         // document
-        uiDocumentation.document("row-columns-example-6", renderedHtml);
+        uiDocumentation.document("nesting-example", renderedHtml);
 
-        uiDocumentation.documentSource("row-columns-example-6");
+        uiDocumentation.documentSource("nesting-example");
 
     }
 
