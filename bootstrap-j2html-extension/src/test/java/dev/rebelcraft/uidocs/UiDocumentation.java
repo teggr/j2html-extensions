@@ -1,5 +1,8 @@
 package dev.rebelcraft.uidocs;
 
+import j2html.rendering.IndentedHtml;
+import j2html.tags.DomContent;
+import j2html.tags.specialized.DivTag;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.TestInfo;
 
@@ -22,10 +25,6 @@ public class UiDocumentation {
 
     public UiDocumentation(TestInfo testInfo) {
         this.testInfo = testInfo;
-    }
-
-    public String render(Supplier<String> document) {
-        return document.get();
     }
 
     public void document(String identifier, String output) throws IOException {
@@ -59,6 +58,14 @@ public class UiDocumentation {
 
         FileUtils.write(indexFile, output, StandardCharsets.UTF_8);
 
+    }
+
+    public String render(Supplier<String> document) {
+        return document.get();
+    }
+
+    public String render(DomContent domContent) throws IOException {
+        return domContent.render(IndentedHtml.inMemory()).toString();
     }
 
 }
