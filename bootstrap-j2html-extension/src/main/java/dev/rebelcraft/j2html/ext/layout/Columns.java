@@ -36,6 +36,18 @@ public class Columns {
 
     public static final String order_last = "order-last";
 
+    public static final String offset_0 = "offset-0";
+
+    public static final String offset_sm_0 = "offset-sm-0";
+
+    public static final String offset_md_0 = "offset-md-0";
+
+    public static final String offset_lg_0 = "offset-lg-0";
+
+    public static final String offset_xl_0 = "offset-xl-0";
+
+    public static final String offset_xxl_0 = "offset-xxl-0";
+
     public static final String offset_1 = "offset-1";
 
     public static final String offset_sm_1 = "offset-sm-1";

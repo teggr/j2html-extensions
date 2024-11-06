@@ -18,6 +18,7 @@ This brings the [Bootstrap]() UI kit into the j2html ecosystem.
 // TODO:
 svg Tag
 use Tag
+render of the source code done at render() method use inline/page/etc. to determine where to get code
 ```
 
 ### bootstrap versions support
