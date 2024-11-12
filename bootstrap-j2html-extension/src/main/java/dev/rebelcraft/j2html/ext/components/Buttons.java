@@ -39,6 +39,9 @@ public class Buttons {
     public static final String active = "active";
     public static final String aria_pressed = "aria-pressed";
 
+    public static final String role = "role";
+    public static final String tabindex = "tabindex";
+
     public static Attribute disabled() {
         return new Attribute(disabled);
     }

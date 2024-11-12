@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.content;
 
+import dev.rebelcraft.j2html.ext.components.Buttons;
 import dev.rebelcraft.j2html.ext.utilities.Borders;
 import dev.rebelcraft.j2html.ext.utilities.Colors;
 import dev.rebelcraft.j2html.ext.utilities.Opacity;
@@ -497,8 +498,8 @@ void codeBlocks() throws Exception {
 
         String renderedHtml = uiDocumentation.render(
                 span()
-                        .attr("role","button")
-                        .attr("tabindex","0")
+                        .attr(Buttons.role, Buttons.button)
+                        .attr(Buttons.tabindex,"0")
                         .with(
                                 text("Non-button element button")
                         )
