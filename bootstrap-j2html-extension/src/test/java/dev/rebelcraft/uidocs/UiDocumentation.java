@@ -11,7 +11,6 @@ import com.github.javaparser.printer.lexicalpreservation.LexicalPreservingPrinte
 import j2html.Config;
 import j2html.rendering.IndentedHtml;
 import j2html.tags.DomContent;
-import j2html.utils.Indenter;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.TestInfo;
 
@@ -32,9 +31,12 @@ public class UiDocumentation {
     }
 
     private final TestInfo testInfo;
+    private final Config config;
 
     public UiDocumentation(TestInfo testInfo) {
         this.testInfo = testInfo;
+        this.config = Config.global()
+                .withIndenter((level, text) -> String.join("", Collections.nCopies(level, "  ")) + text);
     }
 
     public void document(String identifier, String output) throws IOException {
@@ -75,8 +77,6 @@ public class UiDocumentation {
     }
 
     public String render(DomContent domContent) throws IOException {
-        Config config = Config.global()
-                .withIndenter((level, text) -> String.join("", Collections.nCopies(level, "  ")) + text);
         return domContent.render(IndentedHtml.inMemory(config)).toString();
     }
 
@@ -121,7 +121,7 @@ public class UiDocumentation {
         CompilationUnit compilationUnit = StaticJavaParser.parse(new File(javaFile));
         LexicalPreservingPrinter.setup(compilationUnit);
 
-        MethodVisitor methodVisitor = new MethodVisitor( testInfo.getTestMethod().map(Method::getName).orElse("") );
+        MethodVisitor methodVisitor = new MethodVisitor(testInfo.getTestMethod().map(Method::getName).orElse(""));
 
         compilationUnit.accept(methodVisitor, null);
 
@@ -136,7 +136,7 @@ public class UiDocumentation {
     public static class MethodVisitor extends VoidVisitorAdapter<Void> {
 
         private final String methodName;
-        private  String methodSource;
+        private String methodSource;
 
         public MethodVisitor(String methodName) {
             this.methodName = methodName;
@@ -150,7 +150,7 @@ public class UiDocumentation {
         public void visit(MethodDeclaration method, Void arg) {
             super.visit(method, arg);
             // Check if this is the method we are looking for
-            if (method.getNameAsString().equals(methodName )) {
+            if (method.getNameAsString().equals(methodName)) {
 
                 method.accept(new VoidVisitorAdapter<Void>() {
 

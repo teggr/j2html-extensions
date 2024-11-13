@@ -1,5 +1,7 @@
 package dev.rebelcraft.j2html.ext.content;
 
+import j2html.attributes.Attribute;
+
 public class Tables {
 
     public static final String table = "table";
@@ -45,5 +47,5 @@ public class Tables {
 
     public static final String table_responsive_xxl = "table-responsive-xxl";
 
-
+    public static final String caption_top = "caption-top";
 }
