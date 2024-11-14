@@ -1,5 +1,7 @@
 package dev.rebelcraft.j2html.ext.forms;
 
+import j2html.attributes.Attribute;
+
 public class FormControl {
 
     public static final String form_label = "form-label";

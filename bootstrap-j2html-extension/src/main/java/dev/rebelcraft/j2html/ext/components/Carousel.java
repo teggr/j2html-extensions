@@ -20,8 +20,6 @@ public class Carousel {
 
     public static final String carousel_control_prev_icon = "carousel-control-prev-icon";
 
-    public static final String visually_hidden = "visually-hidden";
-
     public static final String carousel_control_next = "carousel-control-next";
 
     public static final String carousel_control_next_icon = "carousel-control-next-icon";
