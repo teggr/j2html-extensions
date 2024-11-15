@@ -14,4 +14,6 @@ public class ChecksAndRadios {
 
     public static final String form_check_reverse = "form-check-reverse";
 
+    public static final String btn_check = "btn-check";
+
 }
