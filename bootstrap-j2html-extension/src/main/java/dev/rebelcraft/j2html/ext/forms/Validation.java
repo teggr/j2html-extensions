@@ -18,4 +18,6 @@ public class Validation {
 
     public static final String valid_tooltip = "valid-tooltip";
 
+    public static final String needs_validation = "needs-validation";
+
 }
