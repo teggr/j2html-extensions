@@ -26,8 +26,4 @@ public class Alert {
         return new Attribute(data_bs_dismiss, alert);
     }
 
-    public static Attribute role() {
-        return new Attribute("role", alert);
-    }
-
 }
