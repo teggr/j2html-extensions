@@ -2293,7 +2293,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses("table")
+                        .withClasses(Tables.table)
                         .with(
                                 thead()
                                         .withClasses(Tables.table_light)
@@ -2509,7 +2509,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses("table")
+                        .withClasses(Tables.table)
                         .with(
                                 caption()
                                         .with(

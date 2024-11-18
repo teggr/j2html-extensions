@@ -6,6 +6,16 @@ public class Grid {
 
     public static final String col = "col";
 
+    public static final String col_sm = "col-sm";
+
+    public static final String col_md = "col-md";
+
+    public static final String col_lg = "col-lg";
+
+    public static final String col_xl = "col-xl";
+
+    public static final String col_xxl = "col-xxl";
+
     public static final String col_1 = "col-1";
 
     public static final String col_sm_1 = "col-sm-1";

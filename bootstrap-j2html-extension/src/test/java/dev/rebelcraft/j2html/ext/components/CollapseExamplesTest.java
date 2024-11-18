@@ -1,6 +1,8 @@
 package dev.rebelcraft.j2html.ext.components;
 
 import com.codeborne.selenide.Configuration;
+import dev.rebelcraft.j2html.ext.utilities.Display;
+import dev.rebelcraft.j2html.ext.utilities.Spacing;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -21,16 +23,16 @@ class CollapseExamplesTest {
     void example() throws MalformedURLException, FileNotFoundException {
 
         String output = demo( each(
-                p().withClasses("d-inline-flex", "gap-1")
+                p().withClasses(Display.d_inline_flex, Spacing.gap_1)
                         .with(
-                                a().withClasses("btn", "btn-primary")
+                                a().withClasses(Buttons.btn, Buttons.btn_primary)
                                         .attr(dataBSToggle(true))
                                         .withHref("#collapseExample")
                                         .attr("role", "button")
                                         .attr(ariaExpanded(Boolean.FALSE))
                                         .attr(ariaControls("collapseExample"))
                                         .withText("Link with href"),
-                                button().withClasses("btn", "btn-primary")
+                                button().withClasses(Buttons.btn, Buttons.btn_primary)
                                         .withType("button")
                                         .attr(dataBSToggle(true))
                                         .attr(dataBSTarget("#collapseExample"))
@@ -41,7 +43,7 @@ class CollapseExamplesTest {
                 div().withClasses(collapse)
                         .withId("collapseExample")
                         .with(
-                                div().withClasses("card", "card-body")
+                                div().withClasses(Card.card, Card.card_body)
                                         .withText("Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.")
                         )
         ));
