@@ -23,12 +23,5 @@ public class ButtonGroup {
 
     public static final String btn_group_vertical = "btn-group-vertical";
 
-    public static Attribute ariaLabel(String label) {
-        return new Attribute(aria_label, label);
-    }
-
-    public static Attribute ariaDescribedBy(String description) {
-        return new Attribute(aria_describedby, description);
-    }
-
+    public static final String btn_toolbar = "btn-toolbar";
 }
