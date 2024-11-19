@@ -27,15 +27,14 @@ public class Card {
 
     public static final String list_group_flush = "list-group-flush";
 
+    public static final String list_group_item = "list-group-item";
+
     public static final String card_header = "card-header";
 
     public static final String card_footer = "card-footer";
 
-    public static final String bg_transparent = "bg-transparent";
-
     public static final String card_group = "card-group";
 
-    public static final String h_100 = "h-100";
-
+    public static final String card_header_tabs = "card-header-tabs";
 
 }

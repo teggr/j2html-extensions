@@ -8,32 +8,21 @@ public class NavsTabs {
 
     public static final String nav_item = "nav-item";
 
-    public static final String nav_link = "nav_link";
+    public static final String nav_link = "nav-link";
 
     public static final String active = "active";
 
     public static final String disabled = "disabled";
 
-    public static final String nav_tabs = "nav_tabs";
+    public static final String nav_tabs = "nav-tabs";
 
-    public static final String nav_pills = "nav_pills";
+    public static final String nav_pills = "nav-pills";
 
-    public static final String nav_underline = "nav_underline";
+    public static final String nav_underline = "nav-underline";
 
-    public static final String nav_fill = "nav_fill";
+    public static final String nav_fill = "nav-fill";
 
-    public static final String nav_justified = "nav_justified";
+    public static final String nav_justified = "nav-justified";
 
-    public static Attribute ariaCurrentPage() {
-        return new Attribute("aria-current", "page");
-    }
-
-    public static Attribute ariaCurrentTrue() {
-        return new Attribute("aria-current", "true");
-    }
-
-    public static Attribute roleNavigation() {
-        return new Attribute("role", "navigation");
-    }
-
+    public static final String card_header_pills = "card-header-pills";
 }
