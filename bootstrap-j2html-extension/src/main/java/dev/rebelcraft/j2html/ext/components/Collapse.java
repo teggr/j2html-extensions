@@ -15,9 +15,6 @@ public class Collapse {
     public static final String data_bs_toggle = "data-bs-toggle";
     public static final String data_bs_target = "data-bs-target";
 
-    public static final String aria_expanded = "aria-expanded";
-    public static final String aria_controls = "aria-controls";
-
     public static Attribute dataBSToggle(boolean collapseState) {
         return new Attribute(data_bs_toggle, collapseState ? collapse : collapsed);
     }
@@ -26,12 +23,5 @@ public class Collapse {
         return new Attribute(data_bs_target, selector);
     }
 
-    public static Attribute ariaExpanded(Boolean expanded) {
-        return new Attribute(aria_expanded, expanded.toString());
-    }
-
-    public static Attribute ariaControls(String ...targetIds) {
-        return new Attribute(aria_controls, String.join(" ", targetIds));
-    }
-
+    public static String multi_collapse = "multi-collapse";
 }
