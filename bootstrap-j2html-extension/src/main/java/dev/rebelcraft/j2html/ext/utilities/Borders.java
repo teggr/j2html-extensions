@@ -84,4 +84,5 @@ public class Borders {
     public static final String rounded_start_4 = "rounded-start-4";
     public static final String rounded_start_5 = "rounded-start-5";
 
+    public static final String border_body = "border-body";
 }

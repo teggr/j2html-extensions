@@ -13,4 +13,5 @@ public class CloseButton {
         return new Attribute(data_bs_theme, "dark");
     }
 
+    public static final String btn_close_white = "btn-close-white";
 }
