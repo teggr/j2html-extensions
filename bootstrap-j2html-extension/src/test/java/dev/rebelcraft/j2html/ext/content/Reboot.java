@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.content;
 
+import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.components.Buttons;
 import dev.rebelcraft.j2html.ext.utilities.Borders;
 import dev.rebelcraft.j2html.ext.utilities.Colors;
@@ -498,7 +499,7 @@ void codeBlocks() throws Exception {
 
         String renderedHtml = uiDocumentation.render(
                 span()
-                        .attr(Buttons.role, Buttons.button)
+                        .attr(AriaRoles.roleButton)
                         .attr(Buttons.tabindex,"0")
                         .with(
                                 text("Non-button element button")

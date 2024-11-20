@@ -34,28 +34,13 @@ public class Buttons {
     public static final String btn_sm = "btn-sm";
 
     public static final String disabled = "disabled";
-    public static final String aria_disabled = "aria-disabled";
 
     public static final String active = "active";
-    public static final String aria_pressed = "aria-pressed";
 
-    public static final String role = "role";
     public static final String tabindex = "tabindex";
-
-    public static Attribute disabled() {
-        return new Attribute(disabled);
-    }
-
-    public static Attribute ariaDisabled() {
-        return new Attribute(aria_disabled, "true");
-    }
 
     public static Attribute dataBsToggle() {
         return new Attribute("data-bs-toggle", "button");
-    }
-
-    public static Attribute ariaPressed() {
-        return new Attribute(aria_pressed, "true");
     }
 
 }

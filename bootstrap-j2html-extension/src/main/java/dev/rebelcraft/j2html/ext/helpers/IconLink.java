@@ -10,10 +10,6 @@ public class IconLink {
 
     public static final String bi = "bi";
 
-    public static Attribute ariaHiddenTrue() {
-        return new Attribute("aria-hidden", "true");
-    }
-
     public static Attribute xlinkHref(String href) {
         return new Attribute("xlink:href", href);
     }

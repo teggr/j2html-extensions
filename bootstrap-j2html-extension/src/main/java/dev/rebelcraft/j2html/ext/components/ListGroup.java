@@ -34,14 +34,4 @@ public class ListGroup {
     public static final String list_group_light = "list-group-item-light";
     public static final String list_group_dark = "list-group-item-dark";
 
-    public static Attribute ariaCurrentTrue() {
-        return new Attribute(aria_current, "true");
-    }
-
-    public static final String aria_current = "aria-current";
-    public static final String aria_disabled = "aria-disabled";
-
-    public static Attribute ariaDisabledTrue() {
-        return new Attribute(aria_disabled, "true");
-    }
 }

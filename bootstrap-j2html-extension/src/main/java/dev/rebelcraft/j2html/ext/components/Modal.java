@@ -26,9 +26,6 @@ public class Modal {
 
     public static final String fade = "fade";
 
-    public static final String aria_labelledby = "aria-labelledby";
-    public static final String aria_hidden = "aria-hidden";
-
     public static final String data_bs_backdrop = "data-bs-backdrop";
     public static final String data_bs_keyboard = "data-bs-keyboard";
 
@@ -57,14 +54,6 @@ public class Modal {
 
     public static Attribute dataBsTarget(String target) {
         return new Attribute(data_bs_target, target);
-    }
-
-    public static Attribute ariaLabelledBy(String name) {
-        return new Attribute(aria_labelledby, name);
-    }
-
-    public static Attribute ariaHiddenTrue() {
-        return new Attribute(aria_hidden, "true");
     }
 
     public static Attribute dataBsBackdropStatic() {

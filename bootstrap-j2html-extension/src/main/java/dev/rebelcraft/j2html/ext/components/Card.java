@@ -1,9 +1,5 @@
 package dev.rebelcraft.j2html.ext.components;
 
-import j2html.attributes.Attribute;
-
-import static dev.rebelcraft.j2html.ext.components.BreadCrumb.aria_label;
-
 public class Card {
 
     public static final String card = "card";

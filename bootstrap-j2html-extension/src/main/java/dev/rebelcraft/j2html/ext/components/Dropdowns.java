@@ -12,13 +12,9 @@ public class Dropdowns {
 
     public static final String button = "button";
 
-    public static final String aria_expanded = "aria-expanded";
-
     public static final String dropdown_menu = "dropdown-menu";
 
     public static final String dropdown_item = "dropdown-item";
-
-    public static final String role = "role";
 
     public static final String dropdown_divider = "dropdown-divider";
 
@@ -40,11 +36,7 @@ public class Dropdowns {
 
     public static final String active = "active";
 
-    public static final String aria_current = "aria-current";
-
     public static final String disabled = "disabled";
-
-    public static final String aria_disabled = "aria-disabled";
 
     public static final String dropdown_menu_end = "dropdown-menu-end";
 
@@ -77,17 +69,6 @@ public class Dropdowns {
 
     public static final String data_bs_auto_close = "data-bs-auto-close";
 
-    public static Attribute ariaCurrentTrue() {
-        return new Attribute(aria_current, "true");
-    }
-
-    public static Attribute ariaCurrentPage() {
-        return new Attribute(aria_current, "page");
-    }
-
-    public static Attribute ariaDisabledTrue() {
-        return new Attribute(aria_disabled, "true");
-    }
 
     public static Attribute dataBsDisplayStatic() {
         return new Attribute(data_bs_display, "static");

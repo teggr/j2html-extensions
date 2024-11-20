@@ -29,24 +29,12 @@ public class OffCanvas {
         return new Attribute("tabIndex", "" + index);
     }
 
-    public static Attribute ariaLabelledby(String name) {
-        return new Attribute("aria-labelledby", name);
-    }
-
     public static Attribute dataBsDismissOffcanvas() {
         return new Attribute("data-bs-dismiss", offcanvas);
     }
 
-    public static Attribute ariaLabelClose() {
-        return new Attribute("aria-label", "close");
-    }
-
     public static Attribute dataBsToggleOffcanvas() {
         return new Attribute("data-bs-toggle", offcanvas);
-    }
-
-    public static Attribute ariaControls(String name) {
-        return new Attribute("aria-controls", name);
     }
 
     public static Attribute dataBsScrollTrue() {

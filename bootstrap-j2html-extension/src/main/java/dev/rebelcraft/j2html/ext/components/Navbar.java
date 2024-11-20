@@ -38,18 +38,6 @@ public class Navbar {
 
     public static final String navbar_nav_scroll = "navbar-nav-scroll";
 
-    public static Attribute roleNavigation() {
-        return new Attribute("role", navigation);
-    }
-
-    public static Attribute ariaCurrentPage() {
-        return new Attribute("aria-current", "page");
-    }
-
-    public static Attribute ariaCurrentTrue() {
-        return new Attribute("aria-current", "true");
-    }
-
     public static Attribute dataBsToggleCollapse() {
         return new Attribute("data-bs-toggle", "collapse");
     }
@@ -58,20 +46,9 @@ public class Navbar {
         return new Attribute("data-bs-target", selector);
     }
 
-    public static Attribute ariaControls(String name) {
-        return new Attribute("aria-controls", name );
-    }
-
-    public static Attribute ariaExpandedFalse() {
-        return new Attribute("aria-expanded", "false");
-    }
-
-    public static Attribute ariaLabelToggleNavigation() {
-        return new Attribute("aria-label", "Toggle navigation" );
-    }
-
     public static Attribute dataBsThemeDark() {
         return new Attribute("data-bs-theme", "dark");
     }
 
+    public static final String navbar_dark = "navbar-dark";
 }

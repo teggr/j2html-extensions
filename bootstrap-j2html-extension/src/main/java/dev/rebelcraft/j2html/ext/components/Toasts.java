@@ -22,28 +22,8 @@ public class Toasts {
     public static final String bottom_center = "bottom-0 start-50 translate-middle-x";
     public static final String bottom_right = "bottom-0 end-0";
 
-    public static Attribute roleAlert() {
-        return new Attribute("role", "alert");
-    }
-
-    public static Attribute ariaLiveAssertive() {
-        return new Attribute("aria-live", "assertive");
-    }
-
-    public static Attribute ariaAtomicTrue() {
-        return new Attribute("aria-atomic", "true");
-    }
-
     public static Attribute dataBsDismissToast() {
         return new Attribute("data-bs-dismiss", toast);
-    }
-
-    public static Attribute ariaLabelClose() {
-        return new Attribute("aria-label", "close");
-    }
-
-    public static Attribute ariaLivePolite() {
-        return new Attribute("aria-live", "polite");
     }
 
     public static Attribute dataBsDelay(int delay) {
