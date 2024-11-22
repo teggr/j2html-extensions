@@ -11,6 +11,7 @@ import com.github.javaparser.printer.lexicalpreservation.LexicalPreservingPrinte
 import j2html.Config;
 import j2html.rendering.IndentedHtml;
 import j2html.tags.DomContent;
+import j2html.utils.EscapeUtil;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.TestInfo;
 
@@ -36,7 +37,8 @@ public class UiDocumentation {
     public UiDocumentation(TestInfo testInfo) {
         this.testInfo = testInfo;
         this.config = Config.global()
-                .withIndenter((level, text) -> String.join("", Collections.nCopies(level, "  ")) + text);
+                .withIndenter((level, text) -> String.join("", Collections.nCopies(level, "  ")) + text)
+                .withTextEscaper(ExtendedEscapeUtil::escape);
     }
 
     public void document(String identifier, String output) throws IOException {
