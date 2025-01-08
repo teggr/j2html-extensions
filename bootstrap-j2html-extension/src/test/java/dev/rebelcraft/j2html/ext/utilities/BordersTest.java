@@ -10,7 +10,7 @@ import org.junit.jupiter.api.TestInfo;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class BorderTest {
+class BordersTest {
 
     private UiDocumentation uiDocumentation;
 
