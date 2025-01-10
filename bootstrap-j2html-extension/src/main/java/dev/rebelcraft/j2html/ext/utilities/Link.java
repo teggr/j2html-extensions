@@ -14,6 +14,8 @@ public class Link {
     public static final String link_opacity_75_hover = "link-opacity-75-hover";
     public static final String link_opacity_100_hover = "link-opacity-100-hover";
 
+    public static final String link_underline = "link-underline";
+
     public static final String link_underline_primary = "link-underline-primary";
     public static final String link_underline_secondary = "link-underline-secondary";
     public static final String link_underline_success = "link-underline-success";
@@ -27,7 +29,7 @@ public class Link {
     public static final String link_offset_2 = "link-offset-2";
     public static final String link_offset_3 = "link-offset-3";
 
-    public static final String link_underline_opacity_0 = "link-underline-opacity-10";
+    public static final String link_underline_opacity_0 = "link-underline-opacity-0";
     public static final String link_underline_opacity_10 = "link-underline-opacity-10";
     public static final String link_underline_opacity_25 = "link-underline-opacity-25";
     public static final String link_underline_opacity_50 = "link-underline-opacity-50";

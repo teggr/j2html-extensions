@@ -456,7 +456,7 @@ class ValidationTest {
                                                                         .withClasses(ChecksAndRadios.form_check_label)
                                                                         .withFor("invalidCheck2")
                                                                         .with(
-                                                                                text(" Agree to terms and conditions ")
+                                                                                text("Agree to terms and conditions")
                                                                         )
                                                         )
                                         ),
@@ -782,7 +782,9 @@ class ValidationTest {
                       Username
                     </label>
                     <div class="input-group has-validation">
-                      <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                      <span class="input-group-text" id="inputGroupPrepend3">
+                        @
+                      </span>
                       <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
                       <div id="validationServerUsernameFeedback" class="invalid-feedback">
                         Please choose a username.
@@ -815,7 +817,9 @@ class ValidationTest {
                     </div>
                   </div>
                   <div class="col-md-3">
-                    <label for="validationServer05" class="form-label">Zip</label>
+                    <label for="validationServer05" class="form-label">
+                      Zip
+                    </label>
                     <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
                     <div id="validationServer05Feedback" class="invalid-feedback">
                       Please provide a valid zip.
@@ -871,7 +875,7 @@ class ValidationTest {
                                                 div()
                                                         .withClasses(Validation.invalid_feedback)
                                                         .with(
-                                                                text(" Please enter a message in the textarea. ")
+                                                                text("Please enter a message in the textarea.")
                                                         )
                                         ),
                                 div()
@@ -1010,7 +1014,6 @@ class ValidationTest {
                       Please enter a message in the textarea.
                     </div>
                   </div>
-                
                   <div class="form-check mb-3">
                     <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
                     <label class="form-check-label" for="validationFormCheck1">
