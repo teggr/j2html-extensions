@@ -34,4 +34,38 @@
 
     </dependencies>
 
+    <build>
+        <plugins>
+
+            <!-- run this to generate the classname files for the CSS files -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>dev.rebelcraft.j2html.tools.ExtractCssClassesToJava</mainClass>
+                    <arguments>
+                        <argument>${project.basedir}\src\bootstrap\css\bootstrap.css</argument>
+                        <argument>dev.rebelcraft.j2html.ext</argument>
+                        <argument>BootstrapClasses</argument>
+                        <argument>${project.basedir}\src\main\java</argument>
+                    </arguments>
+                    <includePluginDependencies>true</includePluginDependencies>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>dev.rebelcraft</groupId>
+                        <artifactId>j2html-extensions-tools</artifactId>
+                        <version>${project.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-nop</artifactId>
+                        <version>2.0.16</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

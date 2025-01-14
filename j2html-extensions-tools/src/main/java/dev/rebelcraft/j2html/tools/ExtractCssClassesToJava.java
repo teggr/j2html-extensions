@@ -25,13 +25,20 @@ import java.util.Set;
 public class ExtractCssClassesToJava {
 
     /**
-     *
      * @param args - css_file package_name class_name output_dir
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
 
-        String cssFilePath = "bootstrap-j2html-extension/src/bootstrap/css/bootstrap.css";
+        String cssFilePath = args[0];
+        String packageName = args[1];
+        String className = args[2];
+        String outputPath = args[3];
+
+        System.out.println("CSS File: " + cssFilePath);
+        System.out.println("Package Name: " + packageName);
+        System.out.println("Class Name: " + className);
+        System.out.println("Output Path: " + outputPath);
 
         CascadingStyleSheet css = CSSReader.readFromFile(new File(cssFilePath), StandardCharsets.UTF_8, ECSSVersion.CSS30);
 
@@ -52,6 +59,7 @@ public class ExtractCssClassesToJava {
             public void onStyleRuleSelector(@Nonnull CSSSelector cssSelector) {
                 super.onStyleRuleSelector(cssSelector);
                 // System.out.println(cssSelector);
+                selectorCount[0]++;
                 ICommonsList<ICSSSelectorMember> allMembers = cssSelector.getAllMembers();
                 for (ICSSSelectorMember member : allMembers) {
                     String selector = member.getAsCSSString();
@@ -72,7 +80,7 @@ public class ExtractCssClassesToJava {
                     } else if (!selector.startsWith(".")) {
                         ignoredHtmlElements[0]++;
                     } else {
-                        System.out.println(selector);
+                        // System.out.println(selector);
                         selectors.add(selector);
                     }
                 }
@@ -80,31 +88,31 @@ public class ExtractCssClassesToJava {
         });
 
         System.out.println();
-        System.out.println("Selector count: " + selectorCount[0]);
+        System.out.println("Selectors found: " + selectorCount[0]);
         System.out.println("Ignored pseudo selectors: " + ignoredPseudos[0]);
         System.out.println("Ignored HTML element selectors: " + ignoredHtmlElements[0]);
-        System.out.println("Selectors: " + selectors.size());
+        System.out.println("Unique class Name Selectors: " + selectors.size());
 
-        File file = new File("bootstrap-j2html-extension/src/main/java/");
+        File file = new File(outputPath);
 
         List<FieldSpec> variables = new ArrayList<>();
         for (String selector : selectors) {
 
-            String className = selector.substring(selector.lastIndexOf(".") + 1);
-            String variableName = className.replaceAll("-", "_");
+            String cssClassName = selector.substring(selector.lastIndexOf(".") + 1);
+            String variableName = cssClassName.replaceAll("-", "_");
             variables.add(FieldSpec
                     .builder(String.class, variableName, Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
-                    .initializer("$S", className)
+                    .initializer("$S", cssClassName)
                     .build());
 
         }
 
-        TypeSpec bootstrapTypeSpec = TypeSpec.classBuilder("BootstrapClasses")
+        TypeSpec bootstrapTypeSpec = TypeSpec.classBuilder(className)
                 .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
                 .addFields(variables)
                 .build();
 
-        JavaFile javaFile = JavaFile.builder("dev.rebelcraft.j2html.ext", bootstrapTypeSpec).build();
+        JavaFile javaFile = JavaFile.builder(packageName, bootstrapTypeSpec).build();
 
         javaFile.writeTo(file);
 
