@@ -13,7 +13,7 @@
     <artifactId>bootstrap-j2html-extension</artifactId>
 
     <properties>
-    <!-- aligned with the boostrap version -->
+        <!-- aligned with the boostrap version -->
         <bootstrap.version>5.3.3</bootstrap.version>
     </properties>
 
@@ -23,6 +23,21 @@
             <artifactId>bootstrap</artifactId>
             <version>5.3.3</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.helger</groupId>
+            <artifactId>ph-css</artifactId>
+            <version>7.0.3</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.palantir.javapoet</groupId>
+            <artifactId>javapoet</artifactId>
+            <version>0.6.0</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
 </project>
