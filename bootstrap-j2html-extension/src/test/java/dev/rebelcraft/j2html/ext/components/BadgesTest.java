@@ -1,11 +1,6 @@
 package dev.rebelcraft.j2html.ext.components;
 
-import dev.rebelcraft.j2html.ext.helpers.ColorsAndBackground;
-import dev.rebelcraft.j2html.ext.helpers.VisuallyHidden;
-import dev.rebelcraft.j2html.ext.utilities.Background;
-import dev.rebelcraft.j2html.ext.utilities.Borders;
-import dev.rebelcraft.j2html.ext.utilities.Position;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -32,7 +27,7 @@ class BadgesTest {
                                 .with(
                                         text("Example heading"),
                                         span()
-                                                .withClasses(Badge.badge, ColorsAndBackground.text_bg_secondary)
+                                                .withClasses(BootstrapClasses.badge, BootstrapClasses.text_bg_secondary)
                                                 .with(
                                                         text("New")
                                                 )
@@ -41,7 +36,7 @@ class BadgesTest {
                                 .with(
                                         text("Example heading"),
                                         span()
-                                                .withClasses(Badge.badge, ColorsAndBackground.text_bg_secondary)
+                                                .withClasses(BootstrapClasses.badge, BootstrapClasses.text_bg_secondary)
                                                 .with(
                                                         text("New")
                                                 )
@@ -50,7 +45,7 @@ class BadgesTest {
                                 .with(
                                         text("Example heading"),
                                         span()
-                                                .withClasses(Badge.badge, ColorsAndBackground.text_bg_secondary)
+                                                .withClasses(BootstrapClasses.badge, BootstrapClasses.text_bg_secondary)
                                                 .with(
                                                         text("New")
                                                 )
@@ -59,7 +54,7 @@ class BadgesTest {
                                 .with(
                                         text("Example heading"),
                                         span()
-                                                .withClasses(Badge.badge, ColorsAndBackground.text_bg_secondary)
+                                                .withClasses(BootstrapClasses.badge, BootstrapClasses.text_bg_secondary)
                                                 .with(
                                                         text("New")
                                                 )
@@ -68,7 +63,7 @@ class BadgesTest {
                                 .with(
                                         text("Example heading"),
                                         span()
-                                                .withClasses(Badge.badge, ColorsAndBackground.text_bg_secondary)
+                                                .withClasses(BootstrapClasses.badge, BootstrapClasses.text_bg_secondary)
                                                 .with(
                                                         text("New")
                                                 )
@@ -77,7 +72,7 @@ class BadgesTest {
                                 .with(
                                         text("Example heading"),
                                         span()
-                                                .withClasses(Badge.badge, ColorsAndBackground.text_bg_secondary)
+                                                .withClasses(BootstrapClasses.badge, BootstrapClasses.text_bg_secondary)
                                                 .with(
                                                         text("New")
                                                 )
@@ -138,11 +133,11 @@ class BadgesTest {
         String renderedHtml = uiDocumentation.render(
                 button()
                         .withType("button")
-                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                         .with(
                                 text("Notifications"),
                                 span()
-                                        .withClasses(Badge.badge,ColorsAndBackground.text_bg_secondary)
+                                        .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_secondary)
                                         .with(
                                                 text("4")
                                         )
@@ -172,15 +167,15 @@ class BadgesTest {
         String renderedHtml = uiDocumentation.render(
                 button()
                         .withType("button")
-                        .withClasses(Buttons.btn,Buttons.btn_primary, Position.position_relative)
+                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary, BootstrapClasses.position_relative)
                         .with(
                                 text("Inbox"),
                                 span()
-                                        .withClasses(Position.position_absolute, Position.top_0, Position.start_100, Position.translate_middle,Badge.badge,Badge.rounded_pill, Background.bg_danger)
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_0, BootstrapClasses.start_100, BootstrapClasses.translate_middle,BootstrapClasses.badge,BootstrapClasses.rounded_pill, BootstrapClasses.bg_danger)
                                         .with(
                                                 text("99+"),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("unread messages")
                                                         )
@@ -214,14 +209,14 @@ class BadgesTest {
         String renderedHtml = uiDocumentation.render(
                 button()
                         .withType("button")
-                        .withClasses(Buttons.btn,Buttons.btn_primary,Position.position_relative)
+                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.position_relative)
                         .with(
                                 text("Profile"),
                                 span()
-                                        .withClasses(Position.position_absolute,Position.top_0,Position.start_100,Position.translate_middle,Spacing.p_2,Background.bg_danger, Borders.border,Borders.border_light,Borders.rounded_circle)
+                                        .withClasses(BootstrapClasses.position_absolute,BootstrapClasses.top_0,BootstrapClasses.start_100,BootstrapClasses.translate_middle,BootstrapClasses.p_2,BootstrapClasses.bg_danger, BootstrapClasses.border,BootstrapClasses.border_light,BootstrapClasses.rounded_circle)
                                         .with(
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("New alerts")
                                                         )
@@ -254,42 +249,42 @@ class BadgesTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         span()
-                                .withClasses(Badge.badge,ColorsAndBackground.text_bg_primary)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_primary)
                                 .with(
                                         text("Primary")
                                 ),
                         span()
-                                .withClasses(Badge.badge,ColorsAndBackground.text_bg_secondary)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_secondary)
                                 .with(
                                         text("Secondary")
                                 ),
                         span()
-                                .withClasses(Badge.badge,ColorsAndBackground.text_bg_success)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_success)
                                 .with(
                                         text("Success")
                                 ),
                         span()
-                                .withClasses(Badge.badge,ColorsAndBackground.text_bg_danger)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_danger)
                                 .with(
                                         text("Danger")
                                 ),
                         span()
-                                .withClasses(Badge.badge,ColorsAndBackground.text_bg_warning)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_warning)
                                 .with(
                                         text("Warning")
                                 ),
                         span()
-                                .withClasses(Badge.badge,ColorsAndBackground.text_bg_info)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_info)
                                 .with(
                                         text("Info")
                                 ),
                         span()
-                                .withClasses(Badge.badge,ColorsAndBackground.text_bg_light)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_light)
                                 .with(
                                         text("Light")
                                 ),
                         span()
-                                .withClasses(Badge.badge,ColorsAndBackground.text_bg_dark)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_dark)
                                 .with(
                                         text("Dark")
                                 )
@@ -337,42 +332,42 @@ class BadgesTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         span()
-                                .withClasses(Badge.badge,Badge.rounded_pill,ColorsAndBackground.text_bg_primary)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.rounded_pill,BootstrapClasses.text_bg_primary)
                                 .with(
                                         text("Primary")
                                 ),
                         span()
-                                .withClasses(Badge.badge,Badge.rounded_pill,ColorsAndBackground.text_bg_secondary)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.rounded_pill,BootstrapClasses.text_bg_secondary)
                                 .with(
                                         text("Secondary")
                                 ),
                         span()
-                                .withClasses(Badge.badge,Badge.rounded_pill,ColorsAndBackground.text_bg_success)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.rounded_pill,BootstrapClasses.text_bg_success)
                                 .with(
                                         text("Success")
                                 ),
                         span()
-                                .withClasses(Badge.badge,Badge.rounded_pill,ColorsAndBackground.text_bg_danger)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.rounded_pill,BootstrapClasses.text_bg_danger)
                                 .with(
                                         text("Danger")
                                 ),
                         span()
-                                .withClasses(Badge.badge,Badge.rounded_pill,ColorsAndBackground.text_bg_warning)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.rounded_pill,BootstrapClasses.text_bg_warning)
                                 .with(
                                         text("Warning")
                                 ),
                         span()
-                                .withClasses(Badge.badge,Badge.rounded_pill,ColorsAndBackground.text_bg_info)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.rounded_pill,BootstrapClasses.text_bg_info)
                                 .with(
                                         text("Info")
                                 ),
                         span()
-                                .withClasses(Badge.badge,Badge.rounded_pill,ColorsAndBackground.text_bg_light)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.rounded_pill,BootstrapClasses.text_bg_light)
                                 .with(
                                         text("Light")
                                 ),
                         span()
-                                .withClasses(Badge.badge,Badge.rounded_pill,ColorsAndBackground.text_bg_dark)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.rounded_pill,BootstrapClasses.text_bg_dark)
                                 .with(
                                         text("Dark")
                                 )

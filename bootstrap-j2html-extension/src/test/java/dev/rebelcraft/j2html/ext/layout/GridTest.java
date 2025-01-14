@@ -1,7 +1,6 @@
 package dev.rebelcraft.j2html.ext.layout;
 
-import dev.rebelcraft.j2html.ext.utilities.Flex;
-import dev.rebelcraft.j2html.ext.utilities.Text;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,17 +24,17 @@ class GridTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClass(Grid.row)
+                                        .withClass(BootstrapClasses.row)
                                         .with(
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                         )
                         )
         );
@@ -69,25 +68,25 @@ class GridTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClass(Grid.row)
+                                        .withClass(BootstrapClasses.row)
                                         .with(
                                                 div("1 of 2")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("2 of 2")
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                         ),
                                 div()
-                                        .withClass(Grid.row)
+                                        .withClass(BootstrapClasses.row)
                                         .with(
                                                 div("1 of 3")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("2 of 3")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("3 of 3")
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                         )
                         )
         );
@@ -130,27 +129,27 @@ class GridTest {
         String renderedHtml = uiDocumentation.render(
 
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClass(Grid.row)
+                                        .withClass(BootstrapClasses.row)
                                         .with(
                                                 div("1 of 3")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("2 of 3 (wider)")
-                                                        .withClass(Grid.col_6),
+                                                        .withClass(BootstrapClasses.col_6),
                                                 div("3 of 3")
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                         ),
                                 div()
-                                        .withClass(Grid.row)
+                                        .withClass(BootstrapClasses.row)
                                         .with(
                                                 div("1 of 3")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("2 of 3 (wider)")
-                                                        .withClass(Grid.col_5),
+                                                        .withClass(BootstrapClasses.col_5),
                                                 div("3 of 3")
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                         )
                         )
 
@@ -197,27 +196,27 @@ class GridTest {
         String renderedHtml = uiDocumentation.render(
 
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.row, Flex.justify_content_md_center)
+                                        .withClasses(BootstrapClasses.row, BootstrapClasses.justify_content_md_center)
                                         .with(
                                                 div("1 of 3")
-                                                        .withClasses(Grid.col, Grid.col_lg_2),
+                                                        .withClasses(BootstrapClasses.col, BootstrapClasses.col_lg_2),
                                                 div("Variable width content")
-                                                        .withClass(Grid.col_md_auto),
+                                                        .withClass(BootstrapClasses.col_md_auto),
                                                 div("3 of 3")
-                                                        .withClasses(Grid.col, Grid.col_lg_2)
+                                                        .withClasses(BootstrapClasses.col, BootstrapClasses.col_lg_2)
                                         ),
                                 div()
-                                        .withClass(Grid.row)
+                                        .withClass(BootstrapClasses.row)
                                         .with(
                                                 div("1 of 3")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Variable width content")
-                                                        .withClass(Grid.col_md_auto),
+                                                        .withClass(BootstrapClasses.col_md_auto),
                                                 div("3 of 3")
-                                                        .withClasses(Grid.col, Grid.col_lg_2)
+                                                        .withClasses(BootstrapClasses.col, BootstrapClasses.col_lg_2)
                                         )
                         )
 
@@ -265,27 +264,27 @@ class GridTest {
         String renderedHtml = uiDocumentation.render(
 
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClass(Grid.row)
+                                        .withClass(BootstrapClasses.row)
                                         .with(
                                                 div("col")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("col")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("col")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("col")
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                         ),
                                 div()
-                                        .withClass(Grid.row)
+                                        .withClass(BootstrapClasses.row)
                                         .with(
                                                 div("col-8")
-                                                        .withClass(Grid.col_8),
+                                                        .withClass(BootstrapClasses.col_8),
                                                 div("col-4")
-                                                        .withClass(Grid.col_4)
+                                                        .withClass(BootstrapClasses.col_4)
                                         )
                         )
 
@@ -333,27 +332,27 @@ class GridTest {
         String renderedHtml = uiDocumentation.render(
 
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClass(Grid.row)
+                                        .withClass(BootstrapClasses.row)
                                         .with(
                                                 div("col")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("col")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("col")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("col")
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                         ),
                                 div()
-                                        .withClass(Grid.row)
+                                        .withClass(BootstrapClasses.row)
                                         .with(
                                                 div("col-8")
-                                                        .withClass(Grid.col_8),
+                                                        .withClass(BootstrapClasses.col_8),
                                                 div("col-4")
-                                                        .withClass(Grid.col_4)
+                                                        .withClass(BootstrapClasses.col_4)
                                         )
                         )
 
@@ -401,36 +400,36 @@ class GridTest {
         String renderedHtml = uiDocumentation.render(
 
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 comment("Stack the columns on mobile by making one full-width and the other half-width"),
                                 div()
-                                        .withClass(Grid.row)
+                                        .withClass(BootstrapClasses.row)
                                         .with(
                                                 div(".col-md-8")
-                                                        .withClass(Grid.col_md_8),
+                                                        .withClass(BootstrapClasses.col_md_8),
                                                 div(".col-6.col-md-4")
-                                                        .withClasses(Grid.col_6, Grid.col_md_4)
+                                                        .withClasses(BootstrapClasses.col_6, BootstrapClasses.col_md_4)
                                         ),
                                 comment("Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop"),
                                 div()
-                                        .withClass(Grid.row)
+                                        .withClass(BootstrapClasses.row)
                                         .with(
                                                 div(".col-6.col-md-4")
-                                                        .withClasses(Grid.col_6, Grid.col_md_4),
+                                                        .withClasses(BootstrapClasses.col_6, BootstrapClasses.col_md_4),
                                                 div(".col-6.col-md-4")
-                                                        .withClasses(Grid.col_6, Grid.col_md_4),
+                                                        .withClasses(BootstrapClasses.col_6, BootstrapClasses.col_md_4),
                                                 div(".col-6.col-md-4")
-                                                        .withClasses(Grid.col_6, Grid.col_md_4)
+                                                        .withClasses(BootstrapClasses.col_6, BootstrapClasses.col_md_4)
                                         ),
                                 comment("Columns are always 50% wide, on mobile and desktop"),
                                 div()
                                         .withClass("row")
                                         .with(
                                                 div(".col-6")
-                                                        .withClass(Grid.col_6),
+                                                        .withClass(BootstrapClasses.col_6),
                                                 div(".col-6")
-                                                        .withClass(Grid.col_6)
+                                                        .withClass(BootstrapClasses.col_6)
                                         )
                         )
 
@@ -485,19 +484,19 @@ class GridTest {
         String renderedHtml = uiDocumentation.render(
 
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.row, Grid.row_cols_2)
+                                        .withClasses(BootstrapClasses.row, BootstrapClasses.row_cols_2)
                                         .with(
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                         )
                         )
 
@@ -536,19 +535,19 @@ class GridTest {
         String renderedHtml = uiDocumentation.render(
 
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.row, Grid.row_cols_3)
+                                        .withClasses(BootstrapClasses.row, BootstrapClasses.row_cols_3)
                                         .with(
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                         )
                         )
 
@@ -587,19 +586,19 @@ class GridTest {
         String renderedHtml = uiDocumentation.render(
 
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.row, Grid.row_cols_auto)
+                                        .withClasses(BootstrapClasses.row, BootstrapClasses.row_cols_auto)
                                         .with(
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                         )
                         )
 
@@ -638,19 +637,19 @@ class GridTest {
         String renderedHtml = uiDocumentation.render(
 
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.row, Grid.row_cols_4)
+                                        .withClasses(BootstrapClasses.row, BootstrapClasses.row_cols_4)
                                         .with(
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                         )
                         )
 
@@ -689,19 +688,19 @@ class GridTest {
         String renderedHtml = uiDocumentation.render(
 
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.row, Grid.row_cols_4)
+                                        .withClasses(BootstrapClasses.row, BootstrapClasses.row_cols_4)
                                         .with(
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col_6),
+                                                        .withClass(BootstrapClasses.col_6),
                                                 div("Column")
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                         )
                         )
 
@@ -740,19 +739,19 @@ class GridTest {
         String renderedHtml = uiDocumentation.render(
 
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.row, Grid.row_cols_1, Grid.row_cols_sm_2, Grid.row_cols_md_4)
+                                        .withClasses(BootstrapClasses.row, BootstrapClasses.row_cols_1, BootstrapClasses.row_cols_sm_2, BootstrapClasses.row_cols_md_4)
                                         .with(
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col),
+                                                        .withClass(BootstrapClasses.col),
                                                 div("Column")
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                         )
                         )
 
@@ -791,23 +790,23 @@ class GridTest {
         String renderedHtml = uiDocumentation.render(
 
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClass(Grid.row)
+                                        .withClass(BootstrapClasses.row)
                                         .with(
                                                 div("Level 1: .col-sm-3")
-                                                        .withClass(Grid.col_sm_3),
+                                                        .withClass(BootstrapClasses.col_sm_3),
                                                 div()
-                                                        .withClass(Grid.col_sm_9)
+                                                        .withClass(BootstrapClasses.col_sm_9)
                                                         .with(
                                                                 div()
-                                                                        .withClass(Grid.row)
+                                                                        .withClass(BootstrapClasses.row)
                                                                         .with(
                                                                                 div("Level 2: .col-8 .col-sm-6")
-                                                                                        .withClasses(Grid.col_8, Grid.col_sm_6),
+                                                                                        .withClasses(BootstrapClasses.col_8, BootstrapClasses.col_sm_6),
                                                                                 div("Level 2: .col-4 .col-sm-6")
-                                                                                        .withClasses(Grid.col_4, Grid.col_sm_6)
+                                                                                        .withClasses(BootstrapClasses.col_4, BootstrapClasses.col_sm_6)
                                                                         )
                                                         )
                                         )

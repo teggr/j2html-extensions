@@ -1,16 +1,12 @@
 package dev.rebelcraft.j2html.ext.helpers;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class VisuallyHiddenTest {
@@ -28,18 +24,18 @@ class VisuallyHiddenTest {
         String renderedHtml = uiDocumentation.render(
                 each(
               h2()
-               .withClasses(VisuallyHidden.visually_hidden)
+               .withClasses(BootstrapClasses.visually_hidden)
                .with(
                   text("Title for screen readers")
                 ),
               a()
-               .withClasses(VisuallyHidden.visually_hidden_focusable)
+               .withClasses(BootstrapClasses.visually_hidden_focusable)
                .withHref("#content")
                .with(
                   text("Skip to main content")
                 ),
               div()
-               .withClasses(VisuallyHidden.visually_hidden_focusable)
+               .withClasses(BootstrapClasses.visually_hidden_focusable)
                .with(
                   text("A container with a"),
                   a()

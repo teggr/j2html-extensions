@@ -1,20 +1,14 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.utilities.Flex;
-import dev.rebelcraft.j2html.ext.utilities.Text;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class NavsAndTabsTest {
@@ -31,13 +25,13 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                 .withClasses(NavsTabs.nav)
+                 .withClasses(BootstrapClasses.nav)
                  .with(
                     li()
-                     .withClasses(NavsTabs.nav_item)
+                     .withClasses(BootstrapClasses.nav_item)
                      .with(
                         a()
-                         .withClasses(NavsTabs.nav_link,Pagination.active)
+                         .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                          .attr(
                             AriaStatesAndProperties.ariaCurrent("page")
                           )
@@ -47,30 +41,30 @@ class NavsAndTabsTest {
                           )
                       ),
                     li()
-                     .withClasses(NavsTabs.nav_item)
+                     .withClasses(BootstrapClasses.nav_item)
                      .with(
                         a()
-                         .withClasses(NavsTabs.nav_link)
+                         .withClasses(BootstrapClasses.nav_link)
                          .withHref("#")
                          .with(
                             text("Link")
                           )
                       ),
                     li()
-                     .withClasses(NavsTabs.nav_item)
+                     .withClasses(BootstrapClasses.nav_item)
                      .with(
                         a()
-                         .withClasses(NavsTabs.nav_link)
+                         .withClasses(BootstrapClasses.nav_link)
                          .withHref("#")
                          .with(
                             text("Link")
                           )
                       ),
                     li()
-                     .withClasses(NavsTabs.nav_item)
+                     .withClasses(BootstrapClasses.nav_item)
                      .with(
                         a()
-                         .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                         .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                          .attr(
                             AriaStatesAndProperties.ariaDisabled("true")
                           )
@@ -119,10 +113,10 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(NavsTabs.nav)
+                        .withClasses(BootstrapClasses.nav)
                         .with(
                                 a()
-                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                         .attr(
                                                 AriaStatesAndProperties.ariaCurrent("page")
                                         )
@@ -131,19 +125,19 @@ class NavsAndTabsTest {
                                                 text("Active")
                                         ),
                                 a()
-                                        .withClasses(NavsTabs.nav_link)
+                                        .withClasses(BootstrapClasses.nav_link)
                                         .withHref("#")
                                         .with(
                                                 text("Link")
                                         ),
                                 a()
-                                        .withClasses(NavsTabs.nav_link)
+                                        .withClasses(BootstrapClasses.nav_link)
                                         .withHref("#")
                                         .with(
                                                 text("Link")
                                         ),
                                 a()
-                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                         .attr(
                                                 AriaStatesAndProperties.ariaDisabled("true")
                                         )
@@ -183,13 +177,13 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(NavsTabs.nav, Flex.justify_content_center)
+                        .withClasses(BootstrapClasses.nav, BootstrapClasses.justify_content_center)
                         .with(
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
@@ -199,30 +193,30 @@ class NavsAndTabsTest {
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                         )
@@ -272,13 +266,13 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(NavsTabs.nav,Flex.justify_content_end)
+                        .withClasses(BootstrapClasses.nav,BootstrapClasses.justify_content_end)
                         .with(
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
@@ -288,30 +282,30 @@ class NavsAndTabsTest {
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                         )
@@ -360,13 +354,13 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(NavsTabs.nav,Flex.flex_column)
+                        .withClasses(BootstrapClasses.nav,BootstrapClasses.flex_column)
                         .with(
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
@@ -376,30 +370,30 @@ class NavsAndTabsTest {
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                         )
@@ -448,10 +442,10 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(NavsTabs.nav,Flex.flex_column)
+                        .withClasses(BootstrapClasses.nav,BootstrapClasses.flex_column)
                         .with(
                                 a()
-                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                         .attr(
                                                 AriaStatesAndProperties.ariaCurrent("page")
                                         )
@@ -460,19 +454,19 @@ class NavsAndTabsTest {
                                                 text("Active")
                                         ),
                                 a()
-                                        .withClasses(NavsTabs.nav_link)
+                                        .withClasses(BootstrapClasses.nav_link)
                                         .withHref("#")
                                         .with(
                                                 text("Link")
                                         ),
                                 a()
-                                        .withClasses(NavsTabs.nav_link)
+                                        .withClasses(BootstrapClasses.nav_link)
                                         .withHref("#")
                                         .with(
                                                 text("Link")
                                         ),
                                 a()
-                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                         .attr(
                                                 AriaStatesAndProperties.ariaDisabled("true")
                                         )
@@ -512,13 +506,13 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(NavsTabs.nav,NavsTabs.nav_tabs)
+                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_tabs)
                         .with(
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
@@ -528,30 +522,30 @@ class NavsAndTabsTest {
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                         )
@@ -600,13 +594,13 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(NavsTabs.nav,NavsTabs.nav_pills)
+                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_pills)
                         .with(
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
@@ -616,30 +610,30 @@ class NavsAndTabsTest {
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                         )
@@ -688,13 +682,13 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(NavsTabs.nav,NavsTabs.nav_underline)
+                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_underline)
                         .with(
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
@@ -704,30 +698,30 @@ class NavsAndTabsTest {
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                         )
@@ -776,13 +770,13 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(NavsTabs.nav,NavsTabs.nav_pills,NavsTabs.nav_fill)
+                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_pills,BootstrapClasses.nav_fill)
                         .with(
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
@@ -792,30 +786,30 @@ class NavsAndTabsTest {
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Much longer nav link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                         )
@@ -864,10 +858,10 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(NavsTabs.nav,NavsTabs.nav_pills,NavsTabs.nav_fill)
+                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_pills,BootstrapClasses.nav_fill)
                         .with(
                                 a()
-                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                         .attr(
                                                 AriaStatesAndProperties.ariaCurrent("page")
                                         )
@@ -876,19 +870,19 @@ class NavsAndTabsTest {
                                                 text("Active")
                                         ),
                                 a()
-                                        .withClasses(NavsTabs.nav_link)
+                                        .withClasses(BootstrapClasses.nav_link)
                                         .withHref("#")
                                         .with(
                                                 text("Much longer nav link")
                                         ),
                                 a()
-                                        .withClasses(NavsTabs.nav_link)
+                                        .withClasses(BootstrapClasses.nav_link)
                                         .withHref("#")
                                         .with(
                                                 text("Link")
                                         ),
                                 a()
-                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                         .attr(
                                                 AriaStatesAndProperties.ariaDisabled("true")
                                         )
@@ -928,13 +922,13 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(NavsTabs.nav,NavsTabs.nav_pills,NavsTabs.nav_justified)
+                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_pills,BootstrapClasses.nav_justified)
                         .with(
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
@@ -944,30 +938,30 @@ class NavsAndTabsTest {
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Much longer nav link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                         )
@@ -1016,10 +1010,10 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(NavsTabs.nav,NavsTabs.nav_pills,NavsTabs.nav_justified)
+                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_pills,BootstrapClasses.nav_justified)
                         .with(
                                 a()
-                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                         .attr(
                                                 AriaStatesAndProperties.ariaCurrent("page")
                                         )
@@ -1028,19 +1022,19 @@ class NavsAndTabsTest {
                                                 text("Active")
                                         ),
                                 a()
-                                        .withClasses(NavsTabs.nav_link)
+                                        .withClasses(BootstrapClasses.nav_link)
                                         .withHref("#")
                                         .with(
                                                 text("Much longer nav link")
                                         ),
                                 a()
-                                        .withClasses(NavsTabs.nav_link)
+                                        .withClasses(BootstrapClasses.nav_link)
                                         .withHref("#")
                                         .with(
                                                 text("Link")
                                         ),
                                 a()
-                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                         .attr(
                                                 AriaStatesAndProperties.ariaDisabled("true")
                                         )
@@ -1080,10 +1074,10 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(NavsTabs.nav,NavsTabs.nav_pills,Flex.flex_column,Flex.flex_sm_row)
+                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_pills,BootstrapClasses.flex_column,BootstrapClasses.flex_sm_row)
                         .with(
                                 a()
-                                        .withClasses(Flex.flex_sm_fill, Text.text_sm_center,NavsTabs.nav_link,Pagination.active)
+                                        .withClasses(BootstrapClasses.flex_sm_fill, BootstrapClasses.text_sm_center,BootstrapClasses.nav_link,BootstrapClasses.active)
                                         .attr(
                                                 AriaStatesAndProperties.ariaCurrent("page")
                                         )
@@ -1092,19 +1086,19 @@ class NavsAndTabsTest {
                                                 text("Active")
                                         ),
                                 a()
-                                        .withClasses(Flex.flex_sm_fill,Text.text_sm_center,NavsTabs.nav_link)
+                                        .withClasses(BootstrapClasses.flex_sm_fill,BootstrapClasses.text_sm_center,BootstrapClasses.nav_link)
                                         .withHref("#")
                                         .with(
                                                 text("Longer nav link")
                                         ),
                                 a()
-                                        .withClasses(Flex.flex_sm_fill,Text.text_sm_center,NavsTabs.nav_link)
+                                        .withClasses(BootstrapClasses.flex_sm_fill,BootstrapClasses.text_sm_center,BootstrapClasses.nav_link)
                                         .withHref("#")
                                         .with(
                                                 text("Link")
                                         ),
                                 a()
-                                        .withClasses(Flex.flex_sm_fill,Text.text_sm_center,NavsTabs.nav_link,Popovers.disabled)
+                                        .withClasses(BootstrapClasses.flex_sm_fill,BootstrapClasses.text_sm_center,BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                         .attr(
                                                 AriaStatesAndProperties.ariaDisabled("true")
                                         )
@@ -1145,13 +1139,13 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(NavsTabs.nav,NavsTabs.nav_tabs)
+                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_tabs)
                         .with(
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
@@ -1161,10 +1155,10 @@ class NavsAndTabsTest {
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item,Dropdowns.dropdown)
+                                        .withClasses(BootstrapClasses.nav_item,BootstrapClasses.dropdown)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Dropdowns.dropdown_toggle)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.dropdown_toggle)
                                                         .withData("bs-toggle","dropdown")
                                                         .withHref("#")
                                                         .attr(AriaRoles.roleButton)
@@ -1175,12 +1169,12 @@ class NavsAndTabsTest {
                                                                 text("Dropdown")
                                                         ),
                                                 ul()
-                                                        .withClasses(Dropdowns.dropdown_menu)
+                                                        .withClasses(BootstrapClasses.dropdown_menu)
                                                         .with(
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Action")
@@ -1189,7 +1183,7 @@ class NavsAndTabsTest {
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Another action")
@@ -1198,7 +1192,7 @@ class NavsAndTabsTest {
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Something else here")
@@ -1207,12 +1201,12 @@ class NavsAndTabsTest {
                                                                 li()
                                                                         .with(
                                                                                 hr()
-                                                                                        .withClasses(Dropdowns.dropdown_divider)
+                                                                                        .withClasses(BootstrapClasses.dropdown_divider)
                                                                         ),
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Separated link")
@@ -1221,20 +1215,20 @@ class NavsAndTabsTest {
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                         )
@@ -1308,13 +1302,13 @@ class NavsAndTabsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(NavsTabs.nav,NavsTabs.nav_pills)
+                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_pills)
                         .with(
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
@@ -1324,10 +1318,10 @@ class NavsAndTabsTest {
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item,Dropdowns.dropdown)
+                                        .withClasses(BootstrapClasses.nav_item,BootstrapClasses.dropdown)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Dropdowns.dropdown_toggle)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.dropdown_toggle)
                                                         .withData("bs-toggle","dropdown")
                                                         .withHref("#")
                                                         .attr(AriaRoles.roleButton)
@@ -1338,12 +1332,12 @@ class NavsAndTabsTest {
                                                                 text("Dropdown")
                                                         ),
                                                 ul()
-                                                        .withClasses(Dropdowns.dropdown_menu)
+                                                        .withClasses(BootstrapClasses.dropdown_menu)
                                                         .with(
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Action")
@@ -1352,7 +1346,7 @@ class NavsAndTabsTest {
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Another action")
@@ -1361,7 +1355,7 @@ class NavsAndTabsTest {
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Something else here")
@@ -1370,12 +1364,12 @@ class NavsAndTabsTest {
                                                                 li()
                                                                         .with(
                                                                                 hr()
-                                                                                        .withClasses(Dropdowns.dropdown_divider)
+                                                                                        .withClasses(BootstrapClasses.dropdown_divider)
                                                                         ),
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Separated link")
@@ -1384,20 +1378,20 @@ class NavsAndTabsTest {
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link)
+                                                        .withClasses(BootstrapClasses.nav_link)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Link")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(NavsTabs.nav_item)
+                                        .withClasses(BootstrapClasses.nav_item)
                                         .with(
                                                 a()
-                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                         )

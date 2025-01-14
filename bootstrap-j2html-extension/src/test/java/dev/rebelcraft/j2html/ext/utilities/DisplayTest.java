@@ -1,6 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
-import dev.rebelcraft.j2html.ext.helpers.ColorsAndBackground;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,12 +24,12 @@ class DisplayTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Display.d_inline, Spacing.p_2, ColorsAndBackground.text_bg_primary)
+                                .withClasses(BootstrapClasses.d_inline, BootstrapClasses.p_2, BootstrapClasses.text_bg_primary)
                                 .with(
                                         text("d-inline")
                                 ),
                         div()
-                                .withClasses(Display.d_inline, Spacing.p_2, ColorsAndBackground.text_bg_dark)
+                                .withClasses(BootstrapClasses.d_inline, BootstrapClasses.p_2, BootstrapClasses.text_bg_dark)
                                 .with(
                                         text("d-inline")
                                 )
@@ -59,12 +59,12 @@ class DisplayTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         span()
-                                .withClasses(Display.visible_on_all, Spacing.p_2, ColorsAndBackground.text_bg_primary)
+                                .withClasses(BootstrapClasses.d_block, BootstrapClasses.p_2, BootstrapClasses.text_bg_primary)
                                 .with(
                                         text("d-block")
                                 ),
                         span()
-                                .withClasses(Display.visible_on_all, Spacing.p_2, ColorsAndBackground.text_bg_dark)
+                                .withClasses(BootstrapClasses.d_block, BootstrapClasses.p_2, BootstrapClasses.text_bg_dark)
                                 .with(
                                         text("d-block")
                                 )
@@ -94,12 +94,12 @@ class DisplayTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Display.d_lg_none)
+                                .withClasses(BootstrapClasses.d_lg_none)
                                 .with(
                                         text("hide on lg and wider screens")
                                 ),
                         div()
-                                .withClasses(Display.hidden_on_all, Display.d_lg_block)
+                                .withClasses(BootstrapClasses.d_none, BootstrapClasses.d_lg_block)
                                 .with(
                                         text("hide on screens smaller than lg")
                                 )
@@ -129,17 +129,17 @@ class DisplayTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Display.d_print_none)
+                                .withClasses(BootstrapClasses.d_print_none)
                                 .with(
                                         text("Screen Only (Hide on print only)")
                                 ),
                         div()
-                                .withClasses(Display.hidden_on_all, Display.d_print_block)
+                                .withClasses(BootstrapClasses.d_none, BootstrapClasses.d_print_block)
                                 .with(
                                         text("Print Only (Hide on screen only)")
                                 ),
                         div()
-                                .withClasses(Display.hidden_on_all, Display.d_lg_block, Display.d_print_block)
+                                .withClasses(BootstrapClasses.d_none, BootstrapClasses.d_lg_block, BootstrapClasses.d_print_block)
                                 .with(
                                         text("Hide up to large on screen, but always show on print")
                                 )

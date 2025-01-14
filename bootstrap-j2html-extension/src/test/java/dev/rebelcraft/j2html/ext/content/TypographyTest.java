@@ -1,17 +1,14 @@
 package dev.rebelcraft.j2html.ext.content;
 
-import dev.rebelcraft.j2html.ext.helpers.TextTruncation;
-import dev.rebelcraft.j2html.ext.layout.Grid;
-import dev.rebelcraft.j2html.ext.utilities.Colors;
-import dev.rebelcraft.j2html.ext.utilities.Text;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import java.lang.reflect.Type;
+
 import static j2html.TagCreator.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TypographyTest {
@@ -91,32 +88,32 @@ class TypographyTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         p()
-                                .withClasses(Typography.h1)
+                                .withClasses(BootstrapClasses.h1)
                                 .with(
                                         text("h1. Bootstrap heading")
                                 ),
                         p()
-                                .withClasses(Typography.h2)
+                                .withClasses(BootstrapClasses.h2)
                                 .with(
                                         text("h2. Bootstrap heading")
                                 ),
                         p()
-                                .withClasses(Typography.h3)
+                                .withClasses(BootstrapClasses.h3)
                                 .with(
                                         text("h3. Bootstrap heading")
                                 ),
                         p()
-                                .withClasses(Typography.h4)
+                                .withClasses(BootstrapClasses.h4)
                                 .with(
                                         text("h4. Bootstrap heading")
                                 ),
                         p()
-                                .withClasses(Typography.h5)
+                                .withClasses(BootstrapClasses.h5)
                                 .with(
                                         text("h5. Bootstrap heading")
                                 ),
                         p()
-                                .withClasses(Typography.h6)
+                                .withClasses(BootstrapClasses.h6)
                                 .with(
                                         text("h6. Bootstrap heading")
                                 )
@@ -160,7 +157,7 @@ class TypographyTest {
                         .with(
                                 text("Fancy display heading"),
                                 small()
-                                        .withClasses(Colors.text_body_secondary)
+                                        .withClasses(BootstrapClasses.text_body_secondary)
                                         .with(
                                                 text("With faded secondary text")
                                         )
@@ -190,32 +187,32 @@ class TypographyTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         h1()
-                                .withClasses(Typography.display_1)
+                                .withClasses(BootstrapClasses.display_1)
                                 .with(
                                         text("Display 1")
                                 ),
                         h1()
-                                .withClasses(Typography.display_2)
+                                .withClasses(BootstrapClasses.display_2)
                                 .with(
                                         text("Display 2")
                                 ),
                         h1()
-                                .withClasses(Typography.display_3)
+                                .withClasses(BootstrapClasses.display_3)
                                 .with(
                                         text("Display 3")
                                 ),
                         h1()
-                                .withClasses(Typography.display_4)
+                                .withClasses(BootstrapClasses.display_4)
                                 .with(
                                         text("Display 4")
                                 ),
                         h1()
-                                .withClasses(Typography.display_5)
+                                .withClasses(BootstrapClasses.display_5)
                                 .with(
                                         text("Display 5")
                                 ),
                         h1()
-                                .withClasses(Typography.display_6)
+                                .withClasses(BootstrapClasses.display_6)
                                 .with(
                                         text("Display 6")
                                 )
@@ -256,7 +253,7 @@ class TypographyTest {
 
         String renderedHtml = uiDocumentation.render(
                 p()
-                        .withClasses(Typography.lead)
+                        .withClasses(BootstrapClasses.lead)
                         .with(
                                 text("This is a lead paragraph. It stands out from regular paragraphs.")
                         )
@@ -288,13 +285,13 @@ class TypographyTest {
                                                 .with(
                                                         text("highlight")
                                                 ),
-                                        text("text.")
+                                        text("BootstrapClasses.")
                                 ),
                         p()
                                 .with(
                                         del()
                                                 .with(
-                                                        text("This line of text is meant to be treated as deleted text.")
+                                                        text("This line of text is meant to be treated as deleted BootstrapClasses.")
                                                 )
                                 ),
                         p()
@@ -329,14 +326,14 @@ class TypographyTest {
                                 .with(
                                         strong()
                                                 .with(
-                                                        text("This line rendered as bold text.")
+                                                        text("This line rendered as bold BootstrapClasses.")
                                                 )
                                 ),
                         p()
                                 .with(
                                         em()
                                                 .with(
-                                                        text("This line rendered as italicized text.")
+                                                        text("This line rendered as italicized BootstrapClasses.")
                                                 )
                                 )
                 )
@@ -349,11 +346,11 @@ class TypographyTest {
                   <mark>
                     highlight
                   </mark>
-                  text.
+                  BootstrapClasses.
                 </p>
                 <p>
                   <del>
-                    This line of text is meant to be treated as deleted text.
+                    This line of text is meant to be treated as deleted BootstrapClasses.
                   </del>
                 </p>
                 <p>
@@ -378,12 +375,12 @@ class TypographyTest {
                 </p>
                 <p>
                   <strong>
-                    This line rendered as bold text.
+                    This line rendered as bold BootstrapClasses.
                   </strong>
                 </p>
                 <p>
                   <em>
-                    This line rendered as italicized text.
+                    This line rendered as italicized BootstrapClasses.
                   </em>
                 </p>
                 """, renderedHtml);
@@ -412,7 +409,7 @@ class TypographyTest {
                                 .with(
                                         abbr()
                                                 .attr(Typography.title,"HyperText Markup Language")
-                                                .withClasses(Typography.initialism)
+                                                .withClasses(BootstrapClasses.initialism)
                                                 .with(
                                                         text("HTML")
                                                 )
@@ -447,7 +444,7 @@ class TypographyTest {
 
         String renderedHtml = uiDocumentation.render(
                 blockquote()
-                        .withClasses(Typography.blockquote)
+                        .withClasses(BootstrapClasses.blockquote)
                         .with(
                                 p()
                                         .with(
@@ -479,7 +476,7 @@ class TypographyTest {
                 figure()
                         .with(
                                 blockquote()
-                                        .withClasses(Typography.blockquote)
+                                        .withClasses(BootstrapClasses.blockquote)
                                         .with(
                                                 p()
                                                         .with(
@@ -487,7 +484,7 @@ class TypographyTest {
                                                         )
                                         ),
                                 figcaption()
-                                        .withClasses(Typography.blockquote_footer)
+                                        .withClasses(BootstrapClasses.blockquote_footer)
                                         .with(
                                                 text("Someone famous in"),
                                                 cite()
@@ -528,10 +525,10 @@ class TypographyTest {
 
         String renderedHtml = uiDocumentation.render(
                 figure()
-                        .withClasses(Text.text_center)
+                        .withClasses(BootstrapClasses.text_center)
                         .with(
                                 blockquote()
-                                        .withClasses(Typography.blockquote)
+                                        .withClasses(BootstrapClasses.blockquote)
                                         .with(
                                                 p()
                                                         .with(
@@ -539,7 +536,7 @@ class TypographyTest {
                                                         )
                                         ),
                                 figcaption()
-                                        .withClasses(Typography.blockquote_footer)
+                                        .withClasses(BootstrapClasses.blockquote_footer)
                                         .with(
                                                 text("Someone famous in"),
                                                 cite()
@@ -580,10 +577,10 @@ class TypographyTest {
 
         String renderedHtml = uiDocumentation.render(
                 figure()
-                        .withClasses(Text.text_end)
+                        .withClasses(BootstrapClasses.text_end)
                         .with(
                                 blockquote()
-                                        .withClasses(Typography.blockquote)
+                                        .withClasses(BootstrapClasses.blockquote)
                                         .with(
                                                 p()
                                                         .with(
@@ -591,7 +588,7 @@ class TypographyTest {
                                                         )
                                         ),
                                 figcaption()
-                                        .withClasses(Typography.blockquote_footer)
+                                        .withClasses(BootstrapClasses.blockquote_footer)
                                         .with(
                                                 text("Someone famous in"),
                                                 cite()
@@ -632,7 +629,7 @@ class TypographyTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(Typography.list_unstyled)
+                        .withClasses(BootstrapClasses.list_unstyled)
                         .with(
                                 li()
                                         .with(
@@ -723,20 +720,20 @@ class TypographyTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(Typography.list_inline)
+                        .withClasses(BootstrapClasses.list_inline)
                         .with(
                                 li()
-                                        .withClasses(Typography.list_inline_item)
+                                        .withClasses(BootstrapClasses.list_inline_item)
                                         .with(
                                                 text("This is a list item.")
                                         ),
                                 li()
-                                        .withClasses(Typography.list_inline_item)
+                                        .withClasses(BootstrapClasses.list_inline_item)
                                         .with(
                                                 text("And another one.")
                                         ),
                                 li()
-                                        .withClasses(Typography.list_inline_item)
+                                        .withClasses(BootstrapClasses.list_inline_item)
                                         .with(
                                                 text("But they're displayed inline.")
                                         )
@@ -770,25 +767,25 @@ class TypographyTest {
 
         String renderedHtml = uiDocumentation.render(
                 dl()
-                        .withClasses(Grid.row)
+                        .withClasses(BootstrapClasses.row)
                         .with(
                                 dt()
-                                        .withClasses(Grid.col_sm_3)
+                                        .withClasses(BootstrapClasses.col_sm_3)
                                         .with(
                                                 text("Description lists")
                                         ),
                                 dd()
-                                        .withClasses(Grid.col_sm_9)
+                                        .withClasses(BootstrapClasses.col_sm_9)
                                         .with(
                                                 text("A description list is perfect for defining terms.")
                                         ),
                                 dt()
-                                        .withClasses(Grid.col_sm_3)
+                                        .withClasses(BootstrapClasses.col_sm_3)
                                         .with(
                                                 text("Term")
                                         ),
                                 dd()
-                                        .withClasses(Grid.col_sm_9)
+                                        .withClasses(BootstrapClasses.col_sm_9)
                                         .with(
                                                 p()
                                                         .with(
@@ -796,47 +793,47 @@ class TypographyTest {
                                                         ),
                                                 p()
                                                         .with(
-                                                                text("And some more placeholder definition text.")
+                                                                text("And some more placeholder definition BootstrapClasses.")
                                                         )
                                         ),
                                 dt()
-                                        .withClasses(Grid.col_sm_3)
+                                        .withClasses(BootstrapClasses.col_sm_3)
                                         .with(
                                                 text("Another term")
                                         ),
                                 dd()
-                                        .withClasses(Grid.col_sm_9)
+                                        .withClasses(BootstrapClasses.col_sm_9)
                                         .with(
                                                 text("This definition is short, so no extra paragraphs or anything.")
                                         ),
                                 dt()
-                                        .withClasses(Grid.col_sm_3, TextTruncation.text_truncate)
+                                        .withClasses(BootstrapClasses.col_sm_3, BootstrapClasses.text_truncate)
                                         .with(
                                                 text("Truncated term is truncated")
                                         ),
                                 dd()
-                                        .withClasses(Grid.col_sm_9)
+                                        .withClasses(BootstrapClasses.col_sm_9)
                                         .with(
                                                 text("This can be useful when space is tight. Adds an ellipsis at the end.")
                                         ),
                                 dt()
-                                        .withClasses(Grid.col_sm_3)
+                                        .withClasses(BootstrapClasses.col_sm_3)
                                         .with(
                                                 text("Nesting")
                                         ),
                                 dd()
-                                        .withClasses(Grid.col_sm_9)
+                                        .withClasses(BootstrapClasses.col_sm_9)
                                         .with(
                                                 dl()
-                                                        .withClasses(Grid.row)
+                                                        .withClasses(BootstrapClasses.row)
                                                         .with(
                                                                 dt()
-                                                                        .withClasses(Grid.col_sm_4)
+                                                                        .withClasses(BootstrapClasses.col_sm_4)
                                                                         .with(
                                                                                 text("Nested definition list")
                                                                         ),
                                                                 dd()
-                                                                        .withClasses(Grid.col_sm_8)
+                                                                        .withClasses(BootstrapClasses.col_sm_8)
                                                                         .with(
                                                                                 text("I heard you like definition lists. Let me put a definition list inside your definition list.")
                                                                         )
@@ -862,7 +859,7 @@ class TypographyTest {
                       Definition for the term.
                     </p>
                     <p>
-                      And some more placeholder definition text.
+                      And some more placeholder definition BootstrapClasses.
                     </p>
                   </dd>
                   <dt class="col-sm-3">

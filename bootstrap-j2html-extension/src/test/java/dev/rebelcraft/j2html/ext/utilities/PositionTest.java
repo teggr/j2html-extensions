@@ -1,12 +1,8 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.components.Badge;
-import dev.rebelcraft.j2html.ext.components.Buttons;
-import dev.rebelcraft.j2html.ext.components.Progress;
-import dev.rebelcraft.j2html.ext.helpers.ColorsAndBackground;
-import dev.rebelcraft.j2html.ext.helpers.VisuallyHidden;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -32,27 +28,27 @@ class PositionTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Position.position_static)
+                                .withClasses(BootstrapClasses.position_static)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Position.position_relative)
+                                .withClasses(BootstrapClasses.position_relative)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Position.position_absolute)
+                                .withClasses(BootstrapClasses.position_absolute)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Position.position_fixed)
+                                .withClasses(BootstrapClasses.position_fixed)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Position.position_sticky)
+                                .withClasses(BootstrapClasses.position_sticky)
                                 .with(
                                         text("...")
                                 )
@@ -90,20 +86,20 @@ class PositionTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Position.position_relative)
+                        .withClasses(BootstrapClasses.position_relative)
                         .with(
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_0, Position.start_0),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_0, BootstrapClasses.start_0),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_0, Position.end_0),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_0, BootstrapClasses.end_0),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_50, Position.start_50),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_50, BootstrapClasses.start_50),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.bottom_50, Position.end_50),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.bottom_50, BootstrapClasses.end_50),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.bottom_0, Position.start_0),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.bottom_0, BootstrapClasses.start_0),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.bottom_0, Position.end_0)
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.bottom_0, BootstrapClasses.end_0)
                         )
         );
 
@@ -137,26 +133,26 @@ class PositionTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Position.position_relative)
+                        .withClasses(BootstrapClasses.position_relative)
                         .with(
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_0, Position.start_0, Position.translate_middle),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_0, BootstrapClasses.start_0, BootstrapClasses.translate_middle),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_0, Position.start_50, Position.translate_middle),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_0, BootstrapClasses.start_50, BootstrapClasses.translate_middle),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_0, Position.start_100, Position.translate_middle),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_0, BootstrapClasses.start_100, BootstrapClasses.translate_middle),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_50, Position.start_0, Position.translate_middle),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_50, BootstrapClasses.start_0, BootstrapClasses.translate_middle),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_50, Position.start_50, Position.translate_middle),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_50, BootstrapClasses.start_50, BootstrapClasses.translate_middle),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_50, Position.start_100, Position.translate_middle),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_50, BootstrapClasses.start_100, BootstrapClasses.translate_middle),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_100, Position.start_0, Position.translate_middle),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_100, BootstrapClasses.start_0, BootstrapClasses.translate_middle),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_100, Position.start_50, Position.translate_middle),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_100, BootstrapClasses.start_50, BootstrapClasses.translate_middle),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_100, Position.start_100, Position.translate_middle)
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_100, BootstrapClasses.start_100, BootstrapClasses.translate_middle)
                         )
         );
 
@@ -196,26 +192,26 @@ class PositionTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Position.position_relative)
+                        .withClasses(BootstrapClasses.position_relative)
                         .with(
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_0, Position.start_0),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_0, BootstrapClasses.start_0),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_0, Position.start_50, Position.translate_middle_x),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_0, BootstrapClasses.start_50, BootstrapClasses.translate_middle_x),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_0, Position.end_0),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_0, BootstrapClasses.end_0),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_50, Position.start_0, Position.translate_middle_y),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_50, BootstrapClasses.start_0, BootstrapClasses.translate_middle_y),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_50, Position.start_50, Position.translate_middle),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_50, BootstrapClasses.start_50, BootstrapClasses.translate_middle),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.top_50, Position.end_0, Position.translate_middle_y),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_50, BootstrapClasses.end_0, BootstrapClasses.translate_middle_y),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.bottom_0, Position.start_0),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.bottom_0, BootstrapClasses.start_0),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.bottom_0, Position.start_50, Position.translate_middle_x),
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.bottom_0, BootstrapClasses.start_50, BootstrapClasses.translate_middle_x),
                                 div()
-                                        .withClasses(Position.position_absolute, Position.bottom_0, Position.end_0)
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.bottom_0, BootstrapClasses.end_0)
                         )
         );
 
@@ -257,29 +253,29 @@ class PositionTest {
                 each(
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn, Buttons.btn_primary, Position.position_relative)
+                                .withClasses(BootstrapClasses.btn, BootstrapClasses.btn_primary, BootstrapClasses.position_relative)
                                 .with(
                                         text("Mails"),
                                         span()
-                                                .withClasses(Position.position_absolute, Position.top_0, Position.start_100, Position.translate_middle, Badge.badge, Borders.rounded_pill, ColorsAndBackground.text_bg_secondary)
+                                                .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_0, BootstrapClasses.start_100, BootstrapClasses.translate_middle, BootstrapClasses.badge, BootstrapClasses.rounded_pill, BootstrapClasses.text_bg_secondary)
                                                 .with(
                                                         text("+99"),
                                                         span()
-                                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                                .withClasses(BootstrapClasses.visually_hidden)
                                                                 .with(
                                                                         text("unread messages")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Position.position_relative, Spacing.py_2, Spacing.px_4, ColorsAndBackground.text_bg_secondary, Borders.border, Borders.border_secondary, Borders.rounded_pill)
+                                .withClasses(BootstrapClasses.position_relative, BootstrapClasses.py_2, BootstrapClasses.px_4, BootstrapClasses.text_bg_secondary, BootstrapClasses.border, BootstrapClasses.border_secondary, BootstrapClasses.rounded_pill)
                                 .with(
                                         text("Marker"),
                                         svg()
                                                 .attr("width", "1em")
                                                 .attr("height", "1em")
                                                 .attr("viewBox", "0 0 16 16")
-                                                .withClasses(Position.position_absolute, Position.top_100, Position.start_50, Position.translate_middle, Spacing.mt_1)
+                                                .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_100, BootstrapClasses.start_50, BootstrapClasses.translate_middle, BootstrapClasses.mt_1)
                                                 .attr("fill", "var(--bs-secondary)")
                                                 .attr("xmlns", "http://www.w3.org/2000/svg")
                                                 .with(
@@ -289,14 +285,14 @@ class PositionTest {
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn, Buttons.btn_primary, Position.position_relative)
+                                .withClasses(BootstrapClasses.btn, BootstrapClasses.btn_primary, BootstrapClasses.position_relative)
                                 .with(
                                         text("Alerts"),
                                         span()
-                                                .withClasses(Position.position_absolute, Position.top_0, Position.start_100, Position.translate_middle, Badge.badge, Borders.border, Borders.border_light, Borders.rounded_circle, Background.bg_danger, Spacing.p_2)
+                                                .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_0, BootstrapClasses.start_100, BootstrapClasses.translate_middle, BootstrapClasses.badge, BootstrapClasses.border, BootstrapClasses.border_light, BootstrapClasses.rounded_circle, BootstrapClasses.bg_danger, BootstrapClasses.p_2)
                                                 .with(
                                                         span()
-                                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                                .withClasses(BootstrapClasses.visually_hidden)
                                                                 .with(
                                                                         text("unread messages")
                                                                 )
@@ -345,10 +341,10 @@ class PositionTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Position.position_relative, Spacing.m_4)
+                        .withClasses(BootstrapClasses.position_relative, BootstrapClasses.m_4)
                         .with(
                                 div()
-                                        .withClasses(Progress.progress)
+                                        .withClasses(BootstrapClasses.progress)
                                         .attr(AriaRoles.roleProgressbar)
                                         .attr(
                                                 AriaStatesAndProperties.ariaLabel("Progress")
@@ -365,26 +361,26 @@ class PositionTest {
                                         .withStyle("height: 1px;")
                                         .with(
                                                 div()
-                                                        .withClasses(Progress.progress_bar)
+                                                        .withClasses(BootstrapClasses.progress_bar)
                                                         .withStyle("width: 50%")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Position.position_absolute, Position.top_0, Position.start_0, Position.translate_middle, Buttons.btn, Buttons.btn_sm, Buttons.btn_primary, Borders.rounded_pill)
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_0, BootstrapClasses.start_0, BootstrapClasses.translate_middle, BootstrapClasses.btn, BootstrapClasses.btn_sm, BootstrapClasses.btn_primary, BootstrapClasses.rounded_pill)
                                         .withStyle("width: 2rem; height:2rem;")
                                         .with(
                                                 text("1")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Position.position_absolute, Position.top_0, Position.start_50, Position.translate_middle, Buttons.btn, Buttons.btn_sm, Buttons.btn_primary, Borders.rounded_pill)
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_0, BootstrapClasses.start_50, BootstrapClasses.translate_middle, BootstrapClasses.btn, BootstrapClasses.btn_sm, BootstrapClasses.btn_primary, BootstrapClasses.rounded_pill)
                                         .withStyle("width: 2rem; height:2rem;")
                                         .with(
                                                 text("2")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Position.position_absolute, Position.top_0, Position.start_100, Position.translate_middle, Buttons.btn, Buttons.btn_sm, Buttons.btn_secondary, Borders.rounded_pill)
+                                        .withClasses(BootstrapClasses.position_absolute, BootstrapClasses.top_0, BootstrapClasses.start_100, BootstrapClasses.translate_middle, BootstrapClasses.btn, BootstrapClasses.btn_sm, BootstrapClasses.btn_secondary, BootstrapClasses.rounded_pill)
                                         .withStyle("width: 2rem; height:2rem;")
                                         .with(
                                                 text("3")

@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,23 +25,23 @@ class ObjectFitTest {
                 each(
                         img()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_contain, Borders.border, Borders.rounded)
+                                .withClasses(BootstrapClasses.object_fit_contain, BootstrapClasses.border, BootstrapClasses.rounded)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_cover, Borders.border, Borders.rounded)
+                                .withClasses(BootstrapClasses.object_fit_cover, BootstrapClasses.border, BootstrapClasses.rounded)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_fill, Borders.border, Borders.rounded)
+                                .withClasses(BootstrapClasses.object_fit_fill, BootstrapClasses.border, BootstrapClasses.rounded)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_scale, Borders.border, Borders.rounded)
+                                .withClasses(BootstrapClasses.object_fit_scale, BootstrapClasses.border, BootstrapClasses.rounded)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_none, Borders.border, Borders.rounded)
+                                .withClasses(BootstrapClasses.object_fit_none, BootstrapClasses.border, BootstrapClasses.rounded)
                                 .withAlt("...")
                 )
         );
@@ -68,23 +69,23 @@ class ObjectFitTest {
                 each(
                         img()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_sm_contain, Borders.border, Borders.rounded)
+                                .withClasses(BootstrapClasses.object_fit_sm_contain, BootstrapClasses.border, BootstrapClasses.rounded)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_md_contain, Borders.border, Borders.rounded)
+                                .withClasses(BootstrapClasses.object_fit_md_contain, BootstrapClasses.border, BootstrapClasses.rounded)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_lg_contain, Borders.border, Borders.rounded)
+                                .withClasses(BootstrapClasses.object_fit_lg_contain, BootstrapClasses.border, BootstrapClasses.rounded)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_xl_contain, Borders.border, Borders.rounded)
+                                .withClasses(BootstrapClasses.object_fit_xl_contain, BootstrapClasses.border, BootstrapClasses.rounded)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_xxl_contain, Borders.border, Borders.rounded)
+                                .withClasses(BootstrapClasses.object_fit_xxl_contain, BootstrapClasses.border, BootstrapClasses.rounded)
                                 .withAlt("...")
                 )
         );
@@ -112,23 +113,23 @@ class ObjectFitTest {
                 each(
                         video()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_contain)
+                                .withClasses(BootstrapClasses.object_fit_contain)
                                 .attr("autoplay"),
                         video()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_cover)
+                                .withClasses(BootstrapClasses.object_fit_cover)
                                 .attr("autoplay"),
                         video()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_fill)
+                                .withClasses(BootstrapClasses.object_fit_fill)
                                 .attr("autoplay"),
                         video()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_scale)
+                                .withClasses(BootstrapClasses.object_fit_scale)
                                 .attr("autoplay"),
                         video()
                                 .withSrc("...")
-                                .withClasses(ObjectFit.object_fit_none)
+                                .withClasses(BootstrapClasses.object_fit_none)
                                 .attr("autoplay")
                 )
         );

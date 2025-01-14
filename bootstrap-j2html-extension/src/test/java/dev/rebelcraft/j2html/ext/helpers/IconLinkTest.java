@@ -1,7 +1,7 @@
 package dev.rebelcraft.j2html.ext.helpers;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.icons.Icons;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -27,11 +27,11 @@ class IconLinkTest {
 
         String renderedHtml = uiDocumentation.render(
                 a()
-                        .withClasses(IconLink.icon_link)
+                        .withClasses(BootstrapClasses.icon_link)
                         .withHref("#")
                         .with(
                                 svg()
-                                        .withClasses(Icons.bi)
+                                        .withClasses(BootstrapClasses.bi)
                                         .attr(
                                                 AriaStatesAndProperties.ariaHidden("true")
                                         )
@@ -66,12 +66,12 @@ class IconLinkTest {
 
         String renderedHtml = uiDocumentation.render(
                 a()
-                        .withClasses(IconLink.icon_link)
+                        .withClasses(BootstrapClasses.icon_link)
                         .withHref("#")
                         .with(
                                 text("Icon link"),
                                 svg()
-                                        .withClasses(Icons.bi)
+                                        .withClasses(BootstrapClasses.bi)
                                         .attr(
                                                 AriaStatesAndProperties.ariaHidden("true")
                                         )
@@ -105,12 +105,12 @@ class IconLinkTest {
 
         String renderedHtml = uiDocumentation.render(
                 a()
-                        .withClasses(IconLink.icon_link,IconLink.icon_link_hover)
+                        .withClasses(BootstrapClasses.icon_link, BootstrapClasses.icon_link_hover)
                         .withHref("#")
                         .with(
                                 text("Icon link"),
                                 svg()
-                                        .withClasses(Icons.bi)
+                                        .withClasses(BootstrapClasses.bi)
                                         .attr(
                                                 AriaStatesAndProperties.ariaHidden("true")
                                         )

@@ -1,26 +1,15 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.forms.ChecksAndRadios;
-import dev.rebelcraft.j2html.ext.forms.FormControl;
-import dev.rebelcraft.j2html.ext.helpers.VisuallyHidden;
-import dev.rebelcraft.j2html.ext.layout.Containers;
-import dev.rebelcraft.j2html.ext.utilities.Background;
-import dev.rebelcraft.j2html.ext.utilities.Colors;
-import dev.rebelcraft.j2html.ext.utilities.Flex;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.comment;
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DropdownsTest {
@@ -37,10 +26,10 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                 .withClasses(Dropdowns.dropdown)
+                 .withClasses(BootstrapClasses.dropdown)
                  .with(
                     button()
-                     .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                     .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                      .withType("button")
                      .withData("bs-toggle","dropdown")
                      .attr(
@@ -50,12 +39,12 @@ class DropdownsTest {
                         text("Dropdown button")
                       ),
                     ul()
-                     .withClasses(Dropdowns.dropdown_menu)
+                     .withClasses(BootstrapClasses.dropdown_menu)
                      .with(
                         li()
                          .with(
                             a()
-                             .withClasses(Dropdowns.dropdown_item)
+                             .withClasses(BootstrapClasses.dropdown_item)
                              .withHref("#")
                              .with(
                                 text("Action")
@@ -64,7 +53,7 @@ class DropdownsTest {
                         li()
                          .with(
                             a()
-                             .withClasses(Dropdowns.dropdown_item)
+                             .withClasses(BootstrapClasses.dropdown_item)
                              .withHref("#")
                              .with(
                                 text("Another action")
@@ -73,7 +62,7 @@ class DropdownsTest {
                         li()
                          .with(
                             a()
-                             .withClasses(Dropdowns.dropdown_item)
+                             .withClasses(BootstrapClasses.dropdown_item)
                              .withHref("#")
                              .with(
                                 text("Something else here")
@@ -122,10 +111,10 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Dropdowns.dropdown)
+                        .withClasses(BootstrapClasses.dropdown)
                         .with(
                                 a()
-                                        .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                         .withHref("#")
                                         .attr(AriaRoles.roleButton)
                                         .withData("bs-toggle","dropdown")
@@ -136,12 +125,12 @@ class DropdownsTest {
                                                 text("Dropdown link")
                                         ),
                                 ul()
-                                        .withClasses(Dropdowns.dropdown_menu)
+                                        .withClasses(BootstrapClasses.dropdown_menu)
                                         .with(
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Action")
@@ -150,7 +139,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Another action")
@@ -159,7 +148,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Something else here")
@@ -207,11 +196,11 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_group)
+                        .withClasses(BootstrapClasses.btn_group)
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_danger,Dropdowns.dropdown_toggle)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_danger,BootstrapClasses.dropdown_toggle)
                                         .withData("bs-toggle","dropdown")
                                         .attr(
                                                 AriaStatesAndProperties.ariaExpanded("false")
@@ -220,12 +209,12 @@ class DropdownsTest {
                                                 text("Action")
                                         ),
                                 ul()
-                                        .withClasses(Dropdowns.dropdown_menu)
+                                        .withClasses(BootstrapClasses.dropdown_menu)
                                         .with(
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Action")
@@ -234,7 +223,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Another action")
@@ -243,7 +232,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Something else here")
@@ -252,12 +241,12 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 hr()
-                                                                        .withClasses(Dropdowns.dropdown_divider)
+                                                                        .withClasses(BootstrapClasses.dropdown_divider)
                                                         ),
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Separated link")
@@ -314,35 +303,35 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_group)
+                        .withClasses(BootstrapClasses.btn_group)
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_danger)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_danger)
                                         .with(
                                                 text("Action")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_danger,Dropdowns.dropdown_toggle,Dropdowns.dropdown_toggle_split)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_danger,BootstrapClasses.dropdown_toggle,BootstrapClasses.dropdown_toggle_split)
                                         .withData("bs-toggle","dropdown")
                                         .attr(
                                                 AriaStatesAndProperties.ariaExpanded("false")
                                         )
                                         .with(
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Toggle Dropdown")
                                                         )
                                         ),
                                 ul()
-                                        .withClasses(Dropdowns.dropdown_menu)
+                                        .withClasses(BootstrapClasses.dropdown_menu)
                                         .with(
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Action")
@@ -351,7 +340,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Another action")
@@ -360,7 +349,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Something else here")
@@ -369,12 +358,12 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 hr()
-                                                                        .withClasses(Dropdowns.dropdown_divider)
+                                                                        .withClasses(BootstrapClasses.dropdown_divider)
                                                         ),
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Separated link")
@@ -436,10 +425,10 @@ class DropdownsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ButtonGroup.btn_group)
+                                .withClasses(BootstrapClasses.btn_group)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Buttons.btn_lg,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.btn_lg,BootstrapClasses.dropdown_toggle)
                                                 .withType("button")
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
@@ -449,36 +438,36 @@ class DropdownsTest {
                                                         text("Large button")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         text("...")
                                                 )
                                 ),
                         div()
-                                .withClasses(ButtonGroup.btn_group)
+                                .withClasses(BootstrapClasses.btn_group)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Buttons.btn_lg)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.btn_lg)
                                                 .withType("button")
                                                 .with(
                                                         text("Large split button")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_lg,Buttons.btn_secondary,Dropdowns.dropdown_toggle,Dropdowns.dropdown_toggle_split)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_lg,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle,BootstrapClasses.dropdown_toggle_split)
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaExpanded("false")
                                                 )
                                                 .with(
                                                         span()
-                                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                                .withClasses(BootstrapClasses.visually_hidden)
                                                                 .with(
                                                                         text("Toggle Dropdown")
                                                                 )
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         text("...")
                                                 )
@@ -524,10 +513,10 @@ class DropdownsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ButtonGroup.btn_group)
+                                .withClasses(BootstrapClasses.btn_group)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Buttons.btn_sm,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.btn_sm,BootstrapClasses.dropdown_toggle)
                                                 .withType("button")
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
@@ -537,36 +526,36 @@ class DropdownsTest {
                                                         text("Small button")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         text("...")
                                                 )
                                 ),
                         div()
-                                .withClasses(ButtonGroup.btn_group)
+                                .withClasses(BootstrapClasses.btn_group)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Buttons.btn_sm)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.btn_sm)
                                                 .withType("button")
                                                 .with(
                                                         text("Small split button")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_sm,Buttons.btn_secondary,Dropdowns.dropdown_toggle,Dropdowns.dropdown_toggle_split)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_sm,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle,BootstrapClasses.dropdown_toggle_split)
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaExpanded("false")
                                                 )
                                                 .with(
                                                         span()
-                                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                                .withClasses(BootstrapClasses.visually_hidden)
                                                                 .with(
                                                                         text("Toggle Dropdown")
                                                                 )
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         text("...")
                                                 )
@@ -611,10 +600,10 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Dropdowns.dropdown)
+                        .withClasses(BootstrapClasses.dropdown)
                         .with(
                                 button()
-                                        .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                         .withType("button")
                                         .withData("bs-toggle","dropdown")
                                         .attr(
@@ -624,12 +613,12 @@ class DropdownsTest {
                                                 text("Dropdown button")
                                         ),
                                 ul()
-                                        .withClasses(Dropdowns.dropdown_menu,Dropdowns.dropdown_menu_dark)
+                                        .withClasses(BootstrapClasses.dropdown_menu,BootstrapClasses.dropdown_menu_dark)
                                         .with(
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item,Pagination.active)
+                                                                        .withClasses(BootstrapClasses.dropdown_item,BootstrapClasses.active)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Action")
@@ -638,7 +627,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Another action")
@@ -647,7 +636,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Something else here")
@@ -656,12 +645,12 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 hr()
-                                                                        .withClasses(Dropdowns.dropdown_divider)
+                                                                        .withClasses(BootstrapClasses.dropdown_divider)
                                                         ),
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Separated link")
@@ -717,19 +706,19 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Navbar.navbar_expand_lg,Navbar.navbar_dark, Background.bg_dark)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.navbar_expand_lg,BootstrapClasses.navbar_dark, BootstrapClasses.bg_dark)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Navbar")
                                                         ),
                                                 button()
-                                                        .withClasses(Navbar.navbar_toggler)
+                                                        .withClasses(BootstrapClasses.navbar_toggler)
                                                         .withType("button")
                                                         .withData("bs-toggle","collapse")
                                                         .withData("bs-target","#navbarNavDarkDropdown")
@@ -744,20 +733,20 @@ class DropdownsTest {
                                                         )
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Navbar.navbar_toggler_icon)
+                                                                        .withClasses(BootstrapClasses.navbar_toggler_icon)
                                                         ),
                                                 div()
-                                                        .withClasses(Collapse.collapse,Navbar.navbar_collapse)
+                                                        .withClasses(BootstrapClasses.collapse,BootstrapClasses.navbar_collapse)
                                                         .withId("navbarNavDarkDropdown")
                                                         .with(
                                                                 ul()
-                                                                        .withClasses(Navbar.navbar_nav)
+                                                                        .withClasses(BootstrapClasses.navbar_nav)
                                                                         .with(
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item,Dropdowns.dropdown)
+                                                                                        .withClasses(BootstrapClasses.nav_item,BootstrapClasses.dropdown)
                                                                                         .with(
                                                                                                 button()
-                                                                                                        .withClasses(Buttons.btn,Buttons.btn_dark,Dropdowns.dropdown_toggle)
+                                                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_dark,BootstrapClasses.dropdown_toggle)
                                                                                                         .withData("bs-toggle","dropdown")
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaExpanded("false")
@@ -766,12 +755,12 @@ class DropdownsTest {
                                                                                                                 text("Dropdown")
                                                                                                         ),
                                                                                                 ul()
-                                                                                                        .withClasses(Dropdowns.dropdown_menu,Dropdowns.dropdown_menu_dark)
+                                                                                                        .withClasses(BootstrapClasses.dropdown_menu,BootstrapClasses.dropdown_menu_dark)
                                                                                                         .with(
                                                                                                                 li()
                                                                                                                         .with(
                                                                                                                                 a()
-                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                         .withHref("#")
                                                                                                                                         .with(
                                                                                                                                                 text("Action")
@@ -780,7 +769,7 @@ class DropdownsTest {
                                                                                                                 li()
                                                                                                                         .with(
                                                                                                                                 a()
-                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                         .withHref("#")
                                                                                                                                         .with(
                                                                                                                                                 text("Another action")
@@ -789,7 +778,7 @@ class DropdownsTest {
                                                                                                                 li()
                                                                                                                         .with(
                                                                                                                                 a()
-                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                         .withHref("#")
                                                                                                                                         .with(
                                                                                                                                                 text("Something else here")
@@ -856,10 +845,10 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Dropdowns.dropdown_center)
+                        .withClasses(BootstrapClasses.dropdown_center)
                         .with(
                                 button()
-                                        .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                         .withType("button")
                                         .withData("bs-toggle","dropdown")
                                         .attr(
@@ -869,12 +858,12 @@ class DropdownsTest {
                                                 text("Centered dropdown")
                                         ),
                                 ul()
-                                        .withClasses(Dropdowns.dropdown_menu)
+                                        .withClasses(BootstrapClasses.dropdown_menu)
                                         .with(
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Action")
@@ -883,7 +872,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Action two")
@@ -892,7 +881,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Action three")
@@ -941,11 +930,11 @@ class DropdownsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ButtonGroup.btn_group,Dropdowns.dropup)
+                                .withClasses(BootstrapClasses.btn_group,BootstrapClasses.dropup)
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaExpanded("false")
@@ -954,37 +943,37 @@ class DropdownsTest {
                                                         text("Dropup")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         comment("Dropdown menu links")
                                                 )
                                 ),
                         comment("Split dropup button"),
                         div()
-                                .withClasses(ButtonGroup.btn_group,Dropdowns.dropup)
+                                .withClasses(BootstrapClasses.btn_group,BootstrapClasses.dropup)
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                                 .with(
                                                         text("Split dropup")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle,Dropdowns.dropdown_toggle_split)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle,BootstrapClasses.dropdown_toggle_split)
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaExpanded("false")
                                                 )
                                                 .with(
                                                         span()
-                                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                                .withClasses(BootstrapClasses.visually_hidden)
                                                                 .with(
                                                                         text("Toggle Dropdown")
                                                                 )
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         comment("Dropdown menu links")
                                                 )
@@ -1030,10 +1019,10 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Dropdowns.dropup_center,Dropdowns.dropup)
+                        .withClasses(BootstrapClasses.dropup_center,BootstrapClasses.dropup)
                         .with(
                                 button()
-                                        .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                         .withType("button")
                                         .withData("bs-toggle","dropdown")
                                         .attr(
@@ -1043,12 +1032,12 @@ class DropdownsTest {
                                                 text("Centered dropup")
                                         ),
                                 ul()
-                                        .withClasses(Dropdowns.dropdown_menu)
+                                        .withClasses(BootstrapClasses.dropdown_menu)
                                         .with(
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Action")
@@ -1057,7 +1046,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Action two")
@@ -1066,7 +1055,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Action three")
@@ -1114,10 +1103,10 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Dropdowns.dropup_center,Dropdowns.dropup)
+                        .withClasses(BootstrapClasses.dropup_center,BootstrapClasses.dropup)
                         .with(
                                 button()
-                                        .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                         .withType("button")
                                         .withData("bs-toggle","dropdown")
                                         .attr(
@@ -1127,12 +1116,12 @@ class DropdownsTest {
                                                 text("Centered dropup")
                                         ),
                                 ul()
-                                        .withClasses(Dropdowns.dropdown_menu)
+                                        .withClasses(BootstrapClasses.dropdown_menu)
                                         .with(
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Action")
@@ -1140,11 +1129,11 @@ class DropdownsTest {
                                                         ),
                                                 comment("Default dropend button"),
                                                 div()
-                                                        .withClasses(ButtonGroup.btn_group,Dropdowns.dropend)
+                                                        .withClasses(BootstrapClasses.btn_group,BootstrapClasses.dropend)
                                                         .with(
                                                                 button()
                                                                         .withType("button")
-                                                                        .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                                         .withData("bs-toggle","dropdown")
                                                                         .attr(
                                                                                 AriaStatesAndProperties.ariaExpanded("false")
@@ -1153,37 +1142,37 @@ class DropdownsTest {
                                                                                 text("Dropend")
                                                                         ),
                                                                 ul()
-                                                                        .withClasses(Dropdowns.dropdown_menu)
+                                                                        .withClasses(BootstrapClasses.dropdown_menu)
                                                                         .with(
                                                                                 comment("Dropdown menu links")
                                                                         )
                                                         ),
                                                 comment("Split dropend button"),
                                                 div()
-                                                        .withClasses(ButtonGroup.btn_group,Dropdowns.dropend)
+                                                        .withClasses(BootstrapClasses.btn_group,BootstrapClasses.dropend)
                                                         .with(
                                                                 button()
                                                                         .withType("button")
-                                                                        .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                                                         .with(
                                                                                 text("Split dropend")
                                                                         ),
                                                                 button()
                                                                         .withType("button")
-                                                                        .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle,Dropdowns.dropdown_toggle_split)
+                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle,BootstrapClasses.dropdown_toggle_split)
                                                                         .withData("bs-toggle","dropdown")
                                                                         .attr(
                                                                                 AriaStatesAndProperties.ariaExpanded("false")
                                                                         )
                                                                         .with(
                                                                                 span()
-                                                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                                                         .with(
                                                                                                 text("Toggle Dropend")
                                                                                         )
                                                                         ),
                                                                 ul()
-                                                                        .withClasses(Dropdowns.dropdown_menu)
+                                                                        .withClasses(BootstrapClasses.dropdown_menu)
                                                                         .with(
                                                                                 comment("Dropdown menu links")
                                                                         )
@@ -1191,7 +1180,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Action two")
@@ -1200,7 +1189,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Action three")
@@ -1272,11 +1261,11 @@ class DropdownsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ButtonGroup.btn_group,Dropdowns.dropstart)
+                                .withClasses(BootstrapClasses.btn_group,BootstrapClasses.dropstart)
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaExpanded("false")
@@ -1285,37 +1274,37 @@ class DropdownsTest {
                                                         text("Dropstart")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         comment("Dropdown menu links")
                                                 )
                                 ),
                         comment("Split dropstart button"),
                         div()
-                                .withClasses(ButtonGroup.btn_group,Dropdowns.dropstart)
+                                .withClasses(BootstrapClasses.btn_group,BootstrapClasses.dropstart)
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle,Dropdowns.dropdown_toggle_split)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle,BootstrapClasses.dropdown_toggle_split)
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaExpanded("false")
                                                 )
                                                 .with(
                                                         span()
-                                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                                .withClasses(BootstrapClasses.visually_hidden)
                                                                 .with(
                                                                         text("Toggle Dropstart")
                                                                 )
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         comment("Dropdown menu links")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                                 .with(
                                                         text("Split dropstart")
                                                 )
@@ -1361,10 +1350,10 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Dropdowns.dropdown)
+                        .withClasses(BootstrapClasses.dropdown)
                         .with(
                                 button()
-                                        .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                         .withType("button")
                                         .withData("bs-toggle","dropdown")
                                         .attr(
@@ -1374,12 +1363,12 @@ class DropdownsTest {
                                                 text("Dropdown")
                                         ),
                                 ul()
-                                        .withClasses(Dropdowns.dropdown_menu)
+                                        .withClasses(BootstrapClasses.dropdown_menu)
                                         .with(
                                                 li()
                                                         .with(
                                                                 button()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withType("button")
                                                                         .with(
                                                                                 text("Action")
@@ -1388,7 +1377,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 button()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withType("button")
                                                                         .with(
                                                                                 text("Another action")
@@ -1397,7 +1386,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 button()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withType("button")
                                                                         .with(
                                                                                 text("Something else here")
@@ -1445,12 +1434,12 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(Dropdowns.dropdown_menu)
+                        .withClasses(BootstrapClasses.dropdown_menu)
                         .with(
                                 li()
                                         .with(
                                                 span()
-                                                        .withClasses(Dropdowns.dropdown_item_text)
+                                                        .withClasses(BootstrapClasses.dropdown_item_text)
                                                         .with(
                                                                 text("Dropdown item text")
                                                         )
@@ -1458,7 +1447,7 @@ class DropdownsTest {
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item)
+                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Action")
@@ -1467,7 +1456,7 @@ class DropdownsTest {
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item)
+                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Another action")
@@ -1476,7 +1465,7 @@ class DropdownsTest {
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item)
+                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Something else here")
@@ -1523,12 +1512,12 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(Dropdowns.dropdown_menu)
+                        .withClasses(BootstrapClasses.dropdown_menu)
                         .with(
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item)
+                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Regular link")
@@ -1537,7 +1526,7 @@ class DropdownsTest {
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item,Pagination.active)
+                                                        .withClasses(BootstrapClasses.dropdown_item,BootstrapClasses.active)
                                                         .withHref("#")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("true")
@@ -1549,7 +1538,7 @@ class DropdownsTest {
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item)
+                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Another link")
@@ -1591,12 +1580,12 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(Dropdowns.dropdown_menu)
+                        .withClasses(BootstrapClasses.dropdown_menu)
                         .with(
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item)
+                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Regular link")
@@ -1605,7 +1594,7 @@ class DropdownsTest {
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.dropdown_item,BootstrapClasses.disabled)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                         )
@@ -1616,7 +1605,7 @@ class DropdownsTest {
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item)
+                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Another link")
@@ -1658,11 +1647,11 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_group)
+                        .withClasses(BootstrapClasses.btn_group)
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                         .withData("bs-toggle","dropdown")
                                         .attr(
                                                 AriaStatesAndProperties.ariaExpanded("false")
@@ -1671,12 +1660,12 @@ class DropdownsTest {
                                                 text("Right-aligned menu example")
                                         ),
                                 ul()
-                                        .withClasses(Dropdowns.dropdown_menu,Dropdowns.dropdown_menu_end)
+                                        .withClasses(BootstrapClasses.dropdown_menu,BootstrapClasses.dropdown_menu_end)
                                         .with(
                                                 li()
                                                         .with(
                                                                 button()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withType("button")
                                                                         .with(
                                                                                 text("Action")
@@ -1685,7 +1674,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 button()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withType("button")
                                                                         .with(
                                                                                 text("Another action")
@@ -1694,7 +1683,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 button()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withType("button")
                                                                         .with(
                                                                                 text("Something else here")
@@ -1742,11 +1731,11 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_group)
+                        .withClasses(BootstrapClasses.btn_group)
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                         .withData("bs-toggle","dropdown")
                                         .withData("bs-display","static")
                                         .attr(
@@ -1756,12 +1745,12 @@ class DropdownsTest {
                                                 text("Left-aligned but right aligned when large screen")
                                         ),
                                 ul()
-                                        .withClasses(Dropdowns.dropdown_menu,Dropdowns.dropdown_menu_lg_end)
+                                        .withClasses(BootstrapClasses.dropdown_menu,BootstrapClasses.dropdown_menu_lg_end)
                                         .with(
                                                 li()
                                                         .with(
                                                                 button()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withType("button")
                                                                         .with(
                                                                                 text("Action")
@@ -1770,7 +1759,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 button()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withType("button")
                                                                         .with(
                                                                                 text("Another action")
@@ -1779,7 +1768,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 button()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withType("button")
                                                                         .with(
                                                                                 text("Something else here")
@@ -1827,11 +1816,11 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_group)
+                        .withClasses(BootstrapClasses.btn_group)
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                         .withData("bs-toggle","dropdown")
                                         .withData("bs-display","static")
                                         .attr(
@@ -1841,12 +1830,12 @@ class DropdownsTest {
                                                 text("Right-aligned but left aligned when large screen")
                                         ),
                                 ul()
-                                        .withClasses(Dropdowns.dropdown_menu,Dropdowns.dropdown_menu_end,Dropdowns.dropdown_menu_lg_start)
+                                        .withClasses(BootstrapClasses.dropdown_menu,BootstrapClasses.dropdown_menu_end,BootstrapClasses.dropdown_menu_lg_start)
                                         .with(
                                                 li()
                                                         .with(
                                                                 button()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withType("button")
                                                                         .with(
                                                                                 text("Action")
@@ -1855,7 +1844,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 button()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withType("button")
                                                                         .with(
                                                                                 text("Another action")
@@ -1864,7 +1853,7 @@ class DropdownsTest {
                                                 li()
                                                         .with(
                                                                 button()
-                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                         .withType("button")
                                                                         .with(
                                                                                 text("Something else here")
@@ -1913,10 +1902,10 @@ class DropdownsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ButtonGroup.btn_group)
+                                .withClasses(BootstrapClasses.btn_group)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withType("button")
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
@@ -1926,12 +1915,12 @@ class DropdownsTest {
                                                         text("Dropdown")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -1940,7 +1929,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -1949,7 +1938,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -1958,11 +1947,11 @@ class DropdownsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(ButtonGroup.btn_group)
+                                .withClasses(BootstrapClasses.btn_group)
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaExpanded("false")
@@ -1971,12 +1960,12 @@ class DropdownsTest {
                                                         text("Right-aligned menu")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu,Dropdowns.dropdown_menu_end)
+                                                .withClasses(BootstrapClasses.dropdown_menu,BootstrapClasses.dropdown_menu_end)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -1985,7 +1974,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -1994,7 +1983,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2003,11 +1992,11 @@ class DropdownsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(ButtonGroup.btn_group)
+                                .withClasses(BootstrapClasses.btn_group)
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withData("bs-toggle","dropdown")
                                                 .withData("bs-display","static")
                                                 .attr(
@@ -2017,12 +2006,12 @@ class DropdownsTest {
                                                         text("Left-aligned, right-aligned lg")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu,Dropdowns.dropdown_menu_lg_end)
+                                                .withClasses(BootstrapClasses.dropdown_menu,BootstrapClasses.dropdown_menu_lg_end)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2031,7 +2020,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2040,7 +2029,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2049,11 +2038,11 @@ class DropdownsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(ButtonGroup.btn_group)
+                                .withClasses(BootstrapClasses.btn_group)
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withData("bs-toggle","dropdown")
                                                 .withData("bs-display","static")
                                                 .attr(
@@ -2063,12 +2052,12 @@ class DropdownsTest {
                                                         text("Right-aligned, left-aligned lg")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu,Dropdowns.dropdown_menu_end,Dropdowns.dropdown_menu_lg_start)
+                                                .withClasses(BootstrapClasses.dropdown_menu,BootstrapClasses.dropdown_menu_end,BootstrapClasses.dropdown_menu_lg_start)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2077,7 +2066,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2086,7 +2075,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2095,11 +2084,11 @@ class DropdownsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(ButtonGroup.btn_group,Dropdowns.dropstart)
+                                .withClasses(BootstrapClasses.btn_group,BootstrapClasses.dropstart)
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaExpanded("false")
@@ -2108,12 +2097,12 @@ class DropdownsTest {
                                                         text("Dropstart")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2122,7 +2111,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2131,7 +2120,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2140,11 +2129,11 @@ class DropdownsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(ButtonGroup.btn_group,Dropdowns.dropend)
+                                .withClasses(BootstrapClasses.btn_group,BootstrapClasses.dropend)
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaExpanded("false")
@@ -2153,12 +2142,12 @@ class DropdownsTest {
                                                         text("Dropend")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2167,7 +2156,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2176,7 +2165,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2185,11 +2174,11 @@ class DropdownsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(ButtonGroup.btn_group,Dropdowns.dropup)
+                                .withClasses(BootstrapClasses.btn_group,BootstrapClasses.dropup)
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaExpanded("false")
@@ -2198,12 +2187,12 @@ class DropdownsTest {
                                                         text("Dropup")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2212,7 +2201,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2221,7 +2210,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -2402,12 +2391,12 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(Dropdowns.dropdown_menu)
+                        .withClasses(BootstrapClasses.dropdown_menu)
                         .with(
                                 li()
                                         .with(
                                                 h6()
-                                                        .withClasses(Dropdowns.dropdown_header)
+                                                        .withClasses(BootstrapClasses.dropdown_header)
                                                         .with(
                                                                 text("Dropdown header")
                                                         )
@@ -2415,7 +2404,7 @@ class DropdownsTest {
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item)
+                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Action")
@@ -2424,7 +2413,7 @@ class DropdownsTest {
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item)
+                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Another action")
@@ -2466,12 +2455,12 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(Dropdowns.dropdown_menu)
+                        .withClasses(BootstrapClasses.dropdown_menu)
                         .with(
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item)
+                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Action")
@@ -2480,7 +2469,7 @@ class DropdownsTest {
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item)
+                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Another action")
@@ -2489,7 +2478,7 @@ class DropdownsTest {
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item)
+                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Something else here")
@@ -2498,12 +2487,12 @@ class DropdownsTest {
                                 li()
                                         .with(
                                                 hr()
-                                                        .withClasses(Dropdowns.dropdown_divider)
+                                                        .withClasses(BootstrapClasses.dropdown_divider)
                                         ),
                                 li()
                                         .with(
                                                 a()
-                                                        .withClasses(Dropdowns.dropdown_item)
+                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Separated link")
@@ -2553,7 +2542,7 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Dropdowns.dropdown_menu,Spacing.p_4, Colors.text_body_secondary)
+                        .withClasses(BootstrapClasses.dropdown_menu,BootstrapClasses.p_4, BootstrapClasses.text_body_secondary)
                         .withStyle("max-width: 200px;")
                         .with(
                                 p()
@@ -2561,9 +2550,9 @@ class DropdownsTest {
                                                 text("Some example text that's free-flowing within the dropdown menu.")
                                         ),
                                 p()
-                                        .withClasses(Spacing.mb_0)
+                                        .withClasses(BootstrapClasses.mb_0)
                                         .with(
-                                                text("And this is more example text.")
+                                                text("And this is more example BootstrapClasses.")
                                         )
                         )
         );
@@ -2575,7 +2564,7 @@ class DropdownsTest {
                 Some example text that&#x27;s free-flowing within the dropdown menu.
               </p>
               <p class="mb-0">
-                And this is more example text.
+                And this is more example BootstrapClasses.
               </p>
             </div>
             """, renderedHtml);
@@ -2592,53 +2581,53 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Dropdowns.dropdown_menu)
+                        .withClasses(BootstrapClasses.dropdown_menu)
                         .with(
                                 form()
-                                        .withClasses(Spacing.px_4,Spacing.py_3)
+                                        .withClasses(BootstrapClasses.px_4,BootstrapClasses.py_3)
                                         .with(
                                                 div()
-                                                        .withClasses(Spacing.mb_3)
+                                                        .withClasses(BootstrapClasses.mb_3)
                                                         .with(
                                                                 label()
                                                                         .withFor("exampleDropdownFormEmail1")
-                                                                        .withClasses(FormControl.form_label)
+                                                                        .withClasses(BootstrapClasses.form_label)
                                                                         .with(
                                                                                 text("Email address")
                                                                         ),
                                                                 input()
                                                                         .withType("email")
-                                                                        .withClasses(FormControl.form_control)
+                                                                        .withClasses(BootstrapClasses.form_control)
                                                                         .withId("exampleDropdownFormEmail1")
                                                                         .withPlaceholder("email@example.com")
                                                         ),
                                                 div()
-                                                        .withClasses(Spacing.mb_3)
+                                                        .withClasses(BootstrapClasses.mb_3)
                                                         .with(
                                                                 label()
                                                                         .withFor("exampleDropdownFormPassword1")
-                                                                        .withClasses(FormControl.form_label)
+                                                                        .withClasses(BootstrapClasses.form_label)
                                                                         .with(
                                                                                 text("Password")
                                                                         ),
                                                                 input()
                                                                         .withType("password")
-                                                                        .withClasses(FormControl.form_control)
+                                                                        .withClasses(BootstrapClasses.form_control)
                                                                         .withId("exampleDropdownFormPassword1")
                                                                         .withPlaceholder("Password")
                                                         ),
                                                 div()
-                                                        .withClasses(Spacing.mb_3)
+                                                        .withClasses(BootstrapClasses.mb_3)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(ChecksAndRadios.form_check)
+                                                                        .withClasses(BootstrapClasses.form_check)
                                                                         .with(
                                                                                 input()
                                                                                         .withType("checkbox")
-                                                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                                                        .withClasses(BootstrapClasses.form_check_input)
                                                                                         .withId("dropdownCheck"),
                                                                                 label()
-                                                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                                                        .withClasses(BootstrapClasses.form_check_label)
                                                                                         .withFor("dropdownCheck")
                                                                                         .with(
                                                                                                 text("Remember me")
@@ -2647,21 +2636,21 @@ class DropdownsTest {
                                                         ),
                                                 button()
                                                         .withType("submit")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("Sign in")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Dropdowns.dropdown_divider),
+                                        .withClasses(BootstrapClasses.dropdown_divider),
                                 a()
-                                        .withClasses(Dropdowns.dropdown_item)
+                                        .withClasses(BootstrapClasses.dropdown_item)
                                         .withHref("#")
                                         .with(
                                                 text("New around here? Sign up")
                                         ),
                                 a()
-                                        .withClasses(Dropdowns.dropdown_item)
+                                        .withClasses(BootstrapClasses.dropdown_item)
                                         .withHref("#")
                                         .with(
                                                 text("Forgot password?")
@@ -2720,11 +2709,11 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Dropdowns.dropdown)
+                        .withClasses(BootstrapClasses.dropdown)
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_primary,Dropdowns.dropdown_toggle)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.dropdown_toggle)
                                         .withData("bs-toggle","dropdown")
                                         .attr(
                                                 AriaStatesAndProperties.ariaExpanded("false")
@@ -2734,50 +2723,50 @@ class DropdownsTest {
                                                 text("Dropdown form")
                                         ),
                                 form()
-                                        .withClasses(Dropdowns.dropdown_menu,Spacing.p_4)
+                                        .withClasses(BootstrapClasses.dropdown_menu,BootstrapClasses.p_4)
                                         .with(
                                                 div()
-                                                        .withClasses(Spacing.mb_3)
+                                                        .withClasses(BootstrapClasses.mb_3)
                                                         .with(
                                                                 label()
                                                                         .withFor("exampleDropdownFormEmail2")
-                                                                        .withClasses(FormControl.form_label)
+                                                                        .withClasses(BootstrapClasses.form_label)
                                                                         .with(
                                                                                 text("Email address")
                                                                         ),
                                                                 input()
                                                                         .withType("email")
-                                                                        .withClasses(FormControl.form_control)
+                                                                        .withClasses(BootstrapClasses.form_control)
                                                                         .withId("exampleDropdownFormEmail2")
                                                                         .withPlaceholder("email@example.com")
                                                         ),
                                                 div()
-                                                        .withClasses(Spacing.mb_3)
+                                                        .withClasses(BootstrapClasses.mb_3)
                                                         .with(
                                                                 label()
                                                                         .withFor("exampleDropdownFormPassword2")
-                                                                        .withClasses(FormControl.form_label)
+                                                                        .withClasses(BootstrapClasses.form_label)
                                                                         .with(
                                                                                 text("Password")
                                                                         ),
                                                                 input()
                                                                         .withType("password")
-                                                                        .withClasses(FormControl.form_control)
+                                                                        .withClasses(BootstrapClasses.form_control)
                                                                         .withId("exampleDropdownFormPassword2")
                                                                         .withPlaceholder("Password")
                                                         ),
                                                 div()
-                                                        .withClasses(Spacing.mb_3)
+                                                        .withClasses(BootstrapClasses.mb_3)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(ChecksAndRadios.form_check)
+                                                                        .withClasses(BootstrapClasses.form_check)
                                                                         .with(
                                                                                 input()
                                                                                         .withType("checkbox")
-                                                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                                                        .withClasses(BootstrapClasses.form_check_input)
                                                                                         .withId("dropdownCheck2"),
                                                                                 label()
-                                                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                                                        .withClasses(BootstrapClasses.form_check_label)
                                                                                         .withFor("dropdownCheck2")
                                                                                         .with(
                                                                                                 text("Remember me")
@@ -2786,7 +2775,7 @@ class DropdownsTest {
                                                         ),
                                                 button()
                                                         .withType("submit")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("Sign in")
                                                         )
@@ -2840,14 +2829,14 @@ class DropdownsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex)
+                        .withClasses(BootstrapClasses.d_flex)
                         .with(
                                 div()
-                                        .withClasses(Dropdowns.dropdown,Spacing.me_1)
+                                        .withClasses(BootstrapClasses.dropdown,BootstrapClasses.me_1)
                                         .with(
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                         .withData("bs-toggle","dropdown")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaExpanded("false")
@@ -2857,12 +2846,12 @@ class DropdownsTest {
                                                                 text("Offset")
                                                         ),
                                                 ul()
-                                                        .withClasses(Dropdowns.dropdown_menu)
+                                                        .withClasses(BootstrapClasses.dropdown_menu)
                                                         .with(
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Action")
@@ -2871,7 +2860,7 @@ class DropdownsTest {
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Another action")
@@ -2880,7 +2869,7 @@ class DropdownsTest {
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Something else here")
@@ -2889,17 +2878,17 @@ class DropdownsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(ButtonGroup.btn_group)
+                                        .withClasses(BootstrapClasses.btn_group)
                                         .with(
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                                         .with(
                                                                 text("Reference")
                                                         ),
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle,Dropdowns.dropdown_toggle_split)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle,BootstrapClasses.dropdown_toggle_split)
                                                         .withData("bs-toggle","dropdown")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaExpanded("false")
@@ -2907,18 +2896,18 @@ class DropdownsTest {
                                                         .withData("bs-reference","parent")
                                                         .with(
                                                                 span()
-                                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                                         .with(
                                                                                 text("Toggle Dropdown")
                                                                         )
                                                         ),
                                                 ul()
-                                                        .withClasses(Dropdowns.dropdown_menu)
+                                                        .withClasses(BootstrapClasses.dropdown_menu)
                                                         .with(
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Action")
@@ -2927,7 +2916,7 @@ class DropdownsTest {
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Another action")
@@ -2936,7 +2925,7 @@ class DropdownsTest {
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Something else here")
@@ -2945,12 +2934,12 @@ class DropdownsTest {
                                                                 li()
                                                                         .with(
                                                                                 hr()
-                                                                                        .withClasses(Dropdowns.dropdown_divider)
+                                                                                        .withClasses(BootstrapClasses.dropdown_divider)
                                                                         ),
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Separated link")
@@ -3037,10 +3026,10 @@ class DropdownsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ButtonGroup.btn_group)
+                                .withClasses(BootstrapClasses.btn_group)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withType("button")
                                                 .withData("bs-toggle","dropdown")
                                                 .withData("bs-auto-close","true")
@@ -3051,12 +3040,12 @@ class DropdownsTest {
                                                         text("Default dropdown")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -3065,7 +3054,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -3074,7 +3063,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -3083,10 +3072,10 @@ class DropdownsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(ButtonGroup.btn_group)
+                                .withClasses(BootstrapClasses.btn_group)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withType("button")
                                                 .withData("bs-toggle","dropdown")
                                                 .withData("bs-auto-close","inside")
@@ -3097,12 +3086,12 @@ class DropdownsTest {
                                                         text("Clickable inside")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -3111,7 +3100,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -3120,7 +3109,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -3129,10 +3118,10 @@ class DropdownsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(ButtonGroup.btn_group)
+                                .withClasses(BootstrapClasses.btn_group)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withType("button")
                                                 .withData("bs-toggle","dropdown")
                                                 .withData("bs-auto-close","outside")
@@ -3143,12 +3132,12 @@ class DropdownsTest {
                                                         text("Clickable outside")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -3157,7 +3146,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -3166,7 +3155,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -3175,10 +3164,10 @@ class DropdownsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(ButtonGroup.btn_group)
+                                .withClasses(BootstrapClasses.btn_group)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withType("button")
                                                 .withData("bs-toggle","dropdown")
                                                 .withData("bs-auto-close","false")
@@ -3189,12 +3178,12 @@ class DropdownsTest {
                                                         text("Manual close")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -3203,7 +3192,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")
@@ -3212,7 +3201,7 @@ class DropdownsTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Menu item")

@@ -1,9 +1,6 @@
 package dev.rebelcraft.j2html.ext.content;
 
-import dev.rebelcraft.j2html.ext.utilities.Borders;
-import dev.rebelcraft.j2html.ext.utilities.Sizing;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
-import dev.rebelcraft.j2html.ext.utilities.VerticalAlign;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import j2html.tags.specialized.TbodyTag;
 import j2html.tags.specialized.TheadTag;
@@ -12,9 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TablesTest {
@@ -31,7 +25,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-         .withClasses(Tables.table)
+         .withClasses(BootstrapClasses.table)
          .with(
              testHead(),
              testBody()
@@ -113,7 +107,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_striped)
+                        .withClasses(BootstrapClasses.table, BootstrapClasses.table_striped)
                         .with(
                                 testHead(),
                                 testBody()
@@ -195,7 +189,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_striped_columns)
+                        .withClasses(BootstrapClasses.table,BootstrapClasses.table_striped_columns)
                         .with(
                                 testHead(),
                                 testBody()
@@ -277,7 +271,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_dark,Tables.table_striped)
+                        .withClasses(BootstrapClasses.table,BootstrapClasses.table_dark,BootstrapClasses.table_striped)
                         .with(
                                 testHead(),
                                 testBody()
@@ -359,7 +353,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_dark,Tables.table_striped_columns)
+                        .withClasses(BootstrapClasses.table,BootstrapClasses.table_dark,BootstrapClasses.table_striped_columns)
                         .with(
                                 testHead(),
                                 testBody()
@@ -441,7 +435,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_success,Tables.table_striped)
+                        .withClasses(BootstrapClasses.table,BootstrapClasses.table_success,BootstrapClasses.table_striped)
                         .with(
                                 testHead(),
                                 testBody()
@@ -523,7 +517,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_success,Tables.table_striped_columns)
+                        .withClasses(BootstrapClasses.table,BootstrapClasses.table_success,BootstrapClasses.table_striped_columns)
                         .with(
                                 testHead(),
                                 testBody()
@@ -605,7 +599,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_hover)
+                        .withClasses(BootstrapClasses.table,BootstrapClasses.table_hover)
                         .with(
                                 testHead(),
                                 testBody()
@@ -687,7 +681,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_dark,Tables.table_hover)
+                        .withClasses(BootstrapClasses.table,BootstrapClasses.table_dark,BootstrapClasses.table_hover)
                         .with(
                                 testHead(),
                                 testBody()
@@ -769,7 +763,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_striped,Tables.table_hover)
+                        .withClasses(BootstrapClasses.table,BootstrapClasses.table_striped,BootstrapClasses.table_hover)
                         .with(
                                 testHead(),
                                 testBody()
@@ -851,16 +845,16 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table)
+                        .withClasses(BootstrapClasses.table)
                         .with(
                                 testHead(),
                                 tbody()
                                         .with(
                                                 tr()
-                                                        .withClasses(Tables.table_active)
+                                                        .withClasses(BootstrapClasses.table_active)
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.row)
+                                                                        .withScope(BootstrapClasses.row)
                                                                         .with(
                                                                                 text("1")
                                                                         ),
@@ -880,7 +874,7 @@ class TablesTest {
                                                 tr()
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.row)
+                                                                        .withScope(BootstrapClasses.row)
                                                                         .with(
                                                                                 text("2")
                                                                         ),
@@ -900,12 +894,12 @@ class TablesTest {
                                                 tr()
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.row)
+                                                                        .withScope(BootstrapClasses.row)
                                                                         .with(
                                                                                 text("3")
                                                                         ),
                                                                 td()
-                                                                        .withClasses(Tables.table_active)
+                                                                        .withClasses(BootstrapClasses.table_active)
                                                                         .withColspan("2")
                                                                         .with(
                                                                                 text("Larry the Bird")
@@ -994,16 +988,16 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table, Tables.table_dark)
+                        .withClasses(BootstrapClasses.table, BootstrapClasses.table_dark)
                         .with(
                                 testHead(),
                                 tbody()
                                         .with(
                                                 tr()
-                                                        .withClasses(Tables.table_active)
+                                                        .withClasses(BootstrapClasses.table_active)
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.row)
+                                                                        .withScope(BootstrapClasses.row)
                                                                         .with(
                                                                                 text("1")
                                                                         ),
@@ -1023,7 +1017,7 @@ class TablesTest {
                                                 tr()
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.row)
+                                                                        .withScope(BootstrapClasses.row)
                                                                         .with(
                                                                                 text("2")
                                                                         ),
@@ -1043,12 +1037,12 @@ class TablesTest {
                                                 tr()
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.row)
+                                                                        .withScope(BootstrapClasses.row)
                                                                         .with(
                                                                                 text("3")
                                                                         ),
                                                                 td()
-                                                                        .withClasses(Tables.table_active)
+                                                                        .withClasses(BootstrapClasses.table_active)
                                                                         .withColspan("2")
                                                                         .with(
                                                                                 text("Larry the Bird")
@@ -1137,7 +1131,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_bordered)
+                        .withClasses(BootstrapClasses.table,BootstrapClasses.table_bordered)
                         .with(
                                 testHead(),
                                 testBody()
@@ -1219,7 +1213,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_bordered, Borders.border_primary)
+                        .withClasses(BootstrapClasses.table,BootstrapClasses.table_bordered, BootstrapClasses.border_primary)
                         .with(
                                 testHead(),
                                 testBody()
@@ -1301,7 +1295,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_borderless)
+                        .withClasses(BootstrapClasses.table,BootstrapClasses.table_borderless)
                         .with(
                                 testHead(),
                                 testBody()
@@ -1383,7 +1377,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_dark,Tables.table_borderless)
+                        .withClasses(BootstrapClasses.table,BootstrapClasses.table_dark,BootstrapClasses.table_borderless)
                         .with(
                                 testHead(),
                                 testBody()
@@ -1465,7 +1459,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_sm)
+                        .withClasses(BootstrapClasses.table,BootstrapClasses.table_sm)
                         .with(
                                 testHead(),
                                 testBody()
@@ -1547,7 +1541,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table,Tables.table_dark,Tables.table_sm)
+                        .withClasses(BootstrapClasses.table,BootstrapClasses.table_dark,BootstrapClasses.table_sm)
                         .with(
                                 testHead(),
                                 testBody()
@@ -1629,16 +1623,16 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table)
+                        .withClasses(BootstrapClasses.table)
                         .with(
                                 testHead(),
                                 tbody()
-                                        .withClasses(Tables.table_group_divider)
+                                        .withClasses(BootstrapClasses.table_group_divider)
                                         .with(
                                                 tr()
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.row)
+                                                                        .withScope(BootstrapClasses.row)
                                                                         .with(
                                                                                 text("1")
                                                                         ),
@@ -1658,7 +1652,7 @@ class TablesTest {
                                                 tr()
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.row)
+                                                                        .withScope(BootstrapClasses.row)
                                                                         .with(
                                                                                 text("2")
                                                                         ),
@@ -1678,7 +1672,7 @@ class TablesTest {
                                                 tr()
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.row)
+                                                                        .withScope(BootstrapClasses.row)
                                                                         .with(
                                                                                 text("3")
                                                                         ),
@@ -1771,33 +1765,33 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table, VerticalAlign.align_middle)
+                        .withClasses(BootstrapClasses.table, BootstrapClasses.align_middle)
                         .with(
                                 thead()
                                         .with(
                                                 tr()
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.col)
-                                                                        .withClasses(Sizing.w_25)
+                                                                        .withScope(BootstrapClasses.col)
+                                                                        .withClasses(BootstrapClasses.w_25)
                                                                         .with(
                                                                                 text("Heading 1")
                                                                         ),
                                                                 th()
-                                                                        .withScope(Tables.col)
-                                                                        .withClasses(Sizing.w_25)
+                                                                        .withScope(BootstrapClasses.col)
+                                                                        .withClasses(BootstrapClasses.w_25)
                                                                         .with(
                                                                                 text("Heading 2")
                                                                         ),
                                                                 th()
-                                                                        .withScope(Tables.col)
-                                                                        .withClasses(Sizing.w_25)
+                                                                        .withScope(BootstrapClasses.col)
+                                                                        .withClasses(BootstrapClasses.w_25)
                                                                         .with(
                                                                                 text("Heading 3")
                                                                         ),
                                                                 th()
-                                                                        .withScope(Tables.col)
-                                                                        .withClasses(Sizing.w_25)
+                                                                        .withScope(BootstrapClasses.col)
+                                                                        .withClasses(BootstrapClasses.w_25)
                                                                         .with(
                                                                                 text("Heading 4")
                                                                         )
@@ -1840,7 +1834,7 @@ class TablesTest {
                                                                         )
                                                         ),
                                                 tr()
-                                                        .withClasses(VerticalAlign.align_bottom)
+                                                        .withClasses(BootstrapClasses.align_bottom)
                                                         .with(
                                                                 td()
                                                                         .with(
@@ -1895,7 +1889,7 @@ class TablesTest {
                                                                                 text(" from the table")
                                                                         ),
                                                                 td()
-                                                                        .withClasses(VerticalAlign.align_top)
+                                                                        .withClasses(BootstrapClasses.align_top)
                                                                         .with(
                                                                                 text("This cell is aligned to the top.")
                                                                         ),
@@ -2018,29 +2012,29 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table, Tables.table_striped, Tables.table_bordered)
+                        .withClasses(BootstrapClasses.table, BootstrapClasses.table_striped, BootstrapClasses.table_bordered)
                         .with(
                                 thead()
                                         .with(
                                                 tr()
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.col)
+                                                                        .withScope(BootstrapClasses.col)
                                                                         .with(
                                                                                 text("#")
                                                                         ),
                                                                 th()
-                                                                        .withScope(Tables.col)
+                                                                        .withScope(BootstrapClasses.col)
                                                                         .with(
                                                                                 text("First")
                                                                         ),
                                                                 th()
-                                                                        .withScope(Tables.col)
+                                                                        .withScope(BootstrapClasses.col)
                                                                         .with(
                                                                                 text("Last")
                                                                         ),
                                                                 th()
-                                                                        .withScope(Tables.col)
+                                                                        .withScope(BootstrapClasses.col)
                                                                         .with(
                                                                                 text("Handle")
                                                                         )
@@ -2051,7 +2045,7 @@ class TablesTest {
                                                 tr()
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.row)
+                                                                        .withScope(BootstrapClasses.row)
                                                                         .with(
                                                                                 text("1")
                                                                         ),
@@ -2074,24 +2068,24 @@ class TablesTest {
                                                                         .withColspan("4")
                                                                         .with(
                                                                                 table()
-                                                                                        .withClasses(Tables.table, Spacing.mb_0)
+                                                                                        .withClasses(BootstrapClasses.table, BootstrapClasses.mb_0)
                                                                                         .with(
                                                                                                 thead()
                                                                                                         .with(
                                                                                                                 tr()
                                                                                                                         .with(
                                                                                                                                 th()
-                                                                                                                                        .withScope(Tables.col)
+                                                                                                                                        .withScope(BootstrapClasses.col)
                                                                                                                                         .with(
                                                                                                                                                 text("Header")
                                                                                                                                         ),
                                                                                                                                 th()
-                                                                                                                                        .withScope(Tables.col)
+                                                                                                                                        .withScope(BootstrapClasses.col)
                                                                                                                                         .with(
                                                                                                                                                 text("Header")
                                                                                                                                         ),
                                                                                                                                 th()
-                                                                                                                                        .withScope(Tables.col)
+                                                                                                                                        .withScope(BootstrapClasses.col)
                                                                                                                                         .with(
                                                                                                                                                 text("Header")
                                                                                                                                         )
@@ -2102,7 +2096,7 @@ class TablesTest {
                                                                                                                 tr()
                                                                                                                         .with(
                                                                                                                                 th()
-                                                                                                                                        .withScope(Tables.row)
+                                                                                                                                        .withScope(BootstrapClasses.row)
                                                                                                                                         .with(
                                                                                                                                                 text("A")
                                                                                                                                         ),
@@ -2118,7 +2112,7 @@ class TablesTest {
                                                                                                                 tr()
                                                                                                                         .with(
                                                                                                                                 th()
-                                                                                                                                        .withScope(Tables.row)
+                                                                                                                                        .withScope(BootstrapClasses.row)
                                                                                                                                         .with(
                                                                                                                                                 text("B")
                                                                                                                                         ),
@@ -2134,7 +2128,7 @@ class TablesTest {
                                                                                                                 tr()
                                                                                                                         .with(
                                                                                                                                 th()
-                                                                                                                                        .withScope(Tables.row)
+                                                                                                                                        .withScope(BootstrapClasses.row)
                                                                                                                                         .with(
                                                                                                                                                 text("C")
                                                                                                                                         ),
@@ -2154,7 +2148,7 @@ class TablesTest {
                                                 tr()
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.row)
+                                                                        .withScope(BootstrapClasses.row)
                                                                         .with(
                                                                                 text("3")
                                                                         ),
@@ -2293,30 +2287,30 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table)
+                        .withClasses(BootstrapClasses.table)
                         .with(
                                 thead()
-                                        .withClasses(Tables.table_light)
+                                        .withClasses(BootstrapClasses.table_light)
                                         .with(
                                                 tr()
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.col)
+                                                                        .withScope(BootstrapClasses.col)
                                                                         .with(
                                                                                 text("#")
                                                                         ),
                                                                 th()
-                                                                        .withScope(Tables.col)
+                                                                        .withScope(BootstrapClasses.col)
                                                                         .with(
                                                                                 text("First")
                                                                         ),
                                                                 th()
-                                                                        .withScope(Tables.col)
+                                                                        .withScope(BootstrapClasses.col)
                                                                         .with(
                                                                                 text("Last")
                                                                         ),
                                                                 th()
-                                                                        .withScope(Tables.col)
+                                                                        .withScope(BootstrapClasses.col)
                                                                         .with(
                                                                                 text("Handle")
                                                                         )
@@ -2401,30 +2395,30 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table)
+                        .withClasses(BootstrapClasses.table)
                         .with(
                                 thead()
-                                        .withClasses(Tables.table_dark)
+                                        .withClasses(BootstrapClasses.table_dark)
                                         .with(
                                                 tr()
                                                         .with(
                                                                 th()
-                                                                        .withScope(Tables.col)
+                                                                        .withScope(BootstrapClasses.col)
                                                                         .with(
                                                                                 text("#")
                                                                         ),
                                                                 th()
-                                                                        .withScope(Tables.col)
+                                                                        .withScope(BootstrapClasses.col)
                                                                         .with(
                                                                                 text("First")
                                                                         ),
                                                                 th()
-                                                                        .withScope(Tables.col)
+                                                                        .withScope(BootstrapClasses.col)
                                                                         .with(
                                                                                 text("Last")
                                                                         ),
                                                                 th()
-                                                                        .withScope(Tables.col)
+                                                                        .withScope(BootstrapClasses.col)
                                                                         .with(
                                                                                 text("Handle")
                                                                         )
@@ -2509,7 +2503,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table)
+                        .withClasses(BootstrapClasses.table)
                         .with(
                                 caption()
                                         .with(
@@ -2598,7 +2592,7 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 table()
-                        .withClasses(Tables.table, Tables.caption_top)
+                        .withClasses(BootstrapClasses.table, BootstrapClasses.caption_top)
                         .with(
                                 caption()
                                         .with(
@@ -2687,62 +2681,62 @@ class TablesTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Tables.table_responsive)
+                        .withClasses(BootstrapClasses.table_responsive)
                         .with(
                                 table()
-                                        .withClasses(Tables.table)
+                                        .withClasses(BootstrapClasses.table)
                                         .with(
                                                 thead()
                                                         .with(
                                                                 tr()
                                                                         .with(
                                                                                 th()
-                                                                                        .withScope(Tables.col)
+                                                                                        .withScope(BootstrapClasses.col)
                                                                                         .with(
                                                                                                 text("#")
                                                                                         ),
                                                                                 th()
-                                                                                        .withScope(Tables.col)
+                                                                                        .withScope(BootstrapClasses.col)
                                                                                         .with(
                                                                                                 text("Heading")
                                                                                         ),
                                                                                 th()
-                                                                                        .withScope(Tables.col)
+                                                                                        .withScope(BootstrapClasses.col)
                                                                                         .with(
                                                                                                 text("Heading")
                                                                                         ),
                                                                                 th()
-                                                                                        .withScope(Tables.col)
+                                                                                        .withScope(BootstrapClasses.col)
                                                                                         .with(
                                                                                                 text("Heading")
                                                                                         ),
                                                                                 th()
-                                                                                        .withScope(Tables.col)
+                                                                                        .withScope(BootstrapClasses.col)
                                                                                         .with(
                                                                                                 text("Heading")
                                                                                         ),
                                                                                 th()
-                                                                                        .withScope(Tables.col)
+                                                                                        .withScope(BootstrapClasses.col)
                                                                                         .with(
                                                                                                 text("Heading")
                                                                                         ),
                                                                                 th()
-                                                                                        .withScope(Tables.col)
+                                                                                        .withScope(BootstrapClasses.col)
                                                                                         .with(
                                                                                                 text("Heading")
                                                                                         ),
                                                                                 th()
-                                                                                        .withScope(Tables.col)
+                                                                                        .withScope(BootstrapClasses.col)
                                                                                         .with(
                                                                                                 text("Heading")
                                                                                         ),
                                                                                 th()
-                                                                                        .withScope(Tables.col)
+                                                                                        .withScope(BootstrapClasses.col)
                                                                                         .with(
                                                                                                 text("Heading")
                                                                                         ),
                                                                                 th()
-                                                                                        .withScope(Tables.col)
+                                                                                        .withScope(BootstrapClasses.col)
                                                                                         .with(
                                                                                                 text("Heading")
                                                                                         )
@@ -2753,7 +2747,7 @@ class TablesTest {
                                                                 tr()
                                                                         .with(
                                                                                 th()
-                                                                                        .withScope(Tables.row)
+                                                                                        .withScope(BootstrapClasses.row)
                                                                                         .with(
                                                                                                 text("1")
                                                                                         ),
@@ -2797,7 +2791,7 @@ class TablesTest {
                                                                 tr()
                                                                         .with(
                                                                                 th()
-                                                                                        .withScope(Tables.row)
+                                                                                        .withScope(BootstrapClasses.row)
                                                                                         .with(
                                                                                                 text("2")
                                                                                         ),
@@ -2841,7 +2835,7 @@ class TablesTest {
                                                                 tr()
                                                                         .with(
                                                                                 th()
-                                                                                        .withScope(Tables.row)
+                                                                                        .withScope(BootstrapClasses.row)
                                                                                         .with(
                                                                                                 text("3")
                                                                                         ),
@@ -3041,22 +3035,22 @@ class TablesTest {
                         tr()
                                 .with(
                                         th()
-                                                .withScope(Tables.col)
+                                                .withScope(BootstrapClasses.col)
                                                 .with(
                                                         text("#")
                                                 ),
                                         th()
-                                                .withScope(Tables.col)
+                                                .withScope(BootstrapClasses.col)
                                                 .with(
                                                         text("First")
                                                 ),
                                         th()
-                                                .withScope(Tables.col)
+                                                .withScope(BootstrapClasses.col)
                                                 .with(
                                                         text("Last")
                                                 ),
                                         th()
-                                                .withScope(Tables.col)
+                                                .withScope(BootstrapClasses.col)
                                                 .with(
                                                         text("Handle")
                                                 )
@@ -3070,7 +3064,7 @@ class TablesTest {
                         tr()
                                 .with(
                                         th()
-                                                .withScope(Tables.row)
+                                                .withScope(BootstrapClasses.row)
                                                 .with(
                                                         text("1")
                                                 ),
@@ -3090,7 +3084,7 @@ class TablesTest {
                         tr()
                                 .with(
                                         th()
-                                                .withScope(Tables.row)
+                                                .withScope(BootstrapClasses.row)
                                                 .with(
                                                         text("2")
                                                 ),
@@ -3110,7 +3104,7 @@ class TablesTest {
                         tr()
                                 .with(
                                         th()
-                                                .withScope(Tables.row)
+                                                .withScope(BootstrapClasses.row)
                                                 .with(
                                                         text("3")
                                                 ),

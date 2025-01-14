@@ -1,23 +1,16 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.BootstrapIcons;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.icons.Icons;
-import dev.rebelcraft.j2html.ext.utilities.Display;
-import dev.rebelcraft.j2html.ext.utilities.Flex;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
-import static j2html.TagCreator.*;
 import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
+import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AlertsTest {
@@ -35,49 +28,49 @@ class AlertsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                       div()
-                       .withClasses(Alert.alert,Alert.alert_primary)
+                       .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_primary)
                        .attr(AriaRoles.roleAlert)
                        .with(
                           text("A simple primary alert—check it out!")
                         ),
                       div()
-                       .withClasses(Alert.alert,Alert.alert_secondary)
+                       .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_secondary)
                        .attr(AriaRoles.roleAlert)
                        .with(
                           text("A simple secondary alert—check it out!")
                         ),
                       div()
-                       .withClasses(Alert.alert,Alert.alert_success)
+                       .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_success)
                        .attr(AriaRoles.roleAlert)
                        .with(
                           text("A simple success alert—check it out!")
                         ),
                       div()
-                       .withClasses(Alert.alert,Alert.alert_danger)
+                       .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_danger)
                        .attr(AriaRoles.roleAlert)
                        .with(
                           text("A simple danger alert—check it out!")
                         ),
                       div()
-                       .withClasses(Alert.alert,Alert.alert_warning)
+                       .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_warning)
                        .attr(AriaRoles.roleAlert)
                        .with(
                           text("A simple warning alert—check it out!")
                         ),
                       div()
-                       .withClasses(Alert.alert,Alert.alert_info)
+                       .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_info)
                        .attr(AriaRoles.roleAlert)
                        .with(
                           text("A simple info alert—check it out!")
                         ),
                       div()
-                       .withClasses(Alert.alert,Alert.alert_light)
+                       .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_light)
                        .attr(AriaRoles.roleAlert)
                        .with(
                           text("A simple light alert—check it out!")
                         ),
                       div()
-                       .withClasses(Alert.alert,Alert.alert_dark)
+                       .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_dark)
                        .attr(AriaRoles.roleAlert)
                        .with(
                           text("A simple dark alert—check it out!")
@@ -129,7 +122,7 @@ class AlertsTest {
                                 .withId("liveAlertPlaceholder"),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withId("liveAlertBtn")
                                 .with(
                                         text("Show live alert")
@@ -160,104 +153,104 @@ class AlertsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Alert.alert,Alert.alert_primary)
+                                .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_primary)
                                 .attr(AriaRoles.roleAlert)
                                 .with(
                                         text("A simple primary alert with"),
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Alert.alert_link)
+                                                .withClasses(BootstrapClasses.alert_link)
                                                 .with(
                                                         text("an example link")
                                                 ),
                                         text(". Give it a click if you like.")
                                 ),
                         div()
-                                .withClasses(Alert.alert,Alert.alert_secondary)
+                                .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_secondary)
                                 .attr(AriaRoles.roleAlert)
                                 .with(
                                         text("A simple secondary alert with"),
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Alert.alert_link)
+                                                .withClasses(BootstrapClasses.alert_link)
                                                 .with(
                                                         text("an example link")
                                                 ),
                                         text(". Give it a click if you like.")
                                 ),
                         div()
-                                .withClasses(Alert.alert,Alert.alert_success)
+                                .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_success)
                                 .attr(AriaRoles.roleAlert)
                                 .with(
                                         text("A simple success alert with"),
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Alert.alert_link)
+                                                .withClasses(BootstrapClasses.alert_link)
                                                 .with(
                                                         text("an example link")
                                                 ),
                                         text(". Give it a click if you like.")
                                 ),
                         div()
-                                .withClasses(Alert.alert,Alert.alert_danger)
+                                .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_danger)
                                 .attr(AriaRoles.roleAlert)
                                 .with(
                                         text("A simple danger alert with"),
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Alert.alert_link)
+                                                .withClasses(BootstrapClasses.alert_link)
                                                 .with(
                                                         text("an example link")
                                                 ),
                                         text(". Give it a click if you like.")
                                 ),
                         div()
-                                .withClasses(Alert.alert,Alert.alert_warning)
+                                .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_warning)
                                 .attr(AriaRoles.roleAlert)
                                 .with(
                                         text("A simple warning alert with"),
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Alert.alert_link)
+                                                .withClasses(BootstrapClasses.alert_link)
                                                 .with(
                                                         text("an example link")
                                                 ),
                                         text(". Give it a click if you like.")
                                 ),
                         div()
-                                .withClasses(Alert.alert,Alert.alert_info)
+                                .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_info)
                                 .attr(AriaRoles.roleAlert)
                                 .with(
                                         text("A simple info alert with"),
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Alert.alert_link)
+                                                .withClasses(BootstrapClasses.alert_link)
                                                 .with(
                                                         text("an example link")
                                                 ),
                                         text(". Give it a click if you like.")
                                 ),
                         div()
-                                .withClasses(Alert.alert,Alert.alert_light)
+                                .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_light)
                                 .attr(AriaRoles.roleAlert)
                                 .with(
                                         text("A simple light alert with"),
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Alert.alert_link)
+                                                .withClasses(BootstrapClasses.alert_link)
                                                 .with(
                                                         text("an example link")
                                                 ),
                                         text(". Give it a click if you like.")
                                 ),
                         div()
-                                .withClasses(Alert.alert,Alert.alert_dark)
+                                .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_dark)
                                 .attr(AriaRoles.roleAlert)
                                 .with(
                                         text("A simple dark alert with"),
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Alert.alert_link)
+                                                .withClasses(BootstrapClasses.alert_link)
                                                 .with(
                                                         text("an example link")
                                                 ),
@@ -338,11 +331,11 @@ class AlertsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Alert.alert,Alert.alert_success)
+                        .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_success)
                         .attr(AriaRoles.roleAlert)
                         .with(
                                 h4()
-                                        .withClasses(Alert.alert_heading)
+                                        .withClasses(BootstrapClasses.alert_heading)
                                         .with(
                                                 text("Well done!")
                                         ),
@@ -352,7 +345,7 @@ class AlertsTest {
                                         ),
                                 hr(),
                                 p()
-                                        .withClasses(Spacing.mb_0)
+                                        .withClasses(BootstrapClasses.mb_0)
                                         .with(
                                                 text("Whenever you need to, be sure to use margin utilities to keep things nice and tidy.")
                                         )
@@ -387,12 +380,12 @@ class AlertsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Alert.alert,Alert.alert_primary, Display.d_flex, Flex.align_items_center)
+                        .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_primary, BootstrapClasses.d_flex, BootstrapClasses.align_items_center)
                         .attr(AriaRoles.roleAlert)
                         .with(
                                 svg()
                                         .attr("xmlns","http://www.w3.org/2000/svg")
-                                        .withClasses(BootstrapIcons.bi,BootstrapIcons.bi_exclamation_triangle_fill,Flex.flex_shrink_0,Spacing.me_2)
+                                        .withClasses(BootstrapClasses.bi,BootstrapIcons.bi_exclamation_triangle_fill,BootstrapClasses.flex_shrink_0,BootstrapClasses.me_2)
                                         .attr("viewBox","0 0 16 16")
                                         .attr(AriaRoles.roleImg)
                                         .attr(
@@ -436,7 +429,7 @@ class AlertsTest {
                 each(
                         svg()
                                 .attr("xmlns","http://www.w3.org/2000/svg")
-                                .withClasses(Display.d_none)
+                                .withClasses(BootstrapClasses.d_none)
                                 .with(
                                         symbol()
                                                 .withId("check-circle-fill")
@@ -461,11 +454,11 @@ class AlertsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(Alert.alert,Alert.alert_primary,Display.d_flex,Flex.align_items_center)
+                                .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_primary,BootstrapClasses.d_flex,BootstrapClasses.align_items_center)
                                 .attr(AriaRoles.roleAlert)
                                 .with(
                                         svg()
-                                                .withClasses(BootstrapIcons.bi,Flex.flex_shrink_0,Spacing.me_2)
+                                                .withClasses(BootstrapClasses.bi,BootstrapClasses.flex_shrink_0,BootstrapClasses.me_2)
                                                 .attr(AriaRoles.roleImg)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Info:")
@@ -480,11 +473,11 @@ class AlertsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(Alert.alert,Alert.alert_success,Display.d_flex,Flex.align_items_center)
+                                .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_success,BootstrapClasses.d_flex,BootstrapClasses.align_items_center)
                                 .attr(AriaRoles.roleAlert)
                                 .with(
                                         svg()
-                                                .withClasses(BootstrapIcons.bi,Flex.flex_shrink_0,Spacing.me_2)
+                                                .withClasses(BootstrapClasses.bi,BootstrapClasses.flex_shrink_0,BootstrapClasses.me_2)
                                                 .attr(AriaRoles.roleImg)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Success:")
@@ -499,11 +492,11 @@ class AlertsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(Alert.alert,Alert.alert_warning,Display.d_flex,Flex.align_items_center)
+                                .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_warning,BootstrapClasses.d_flex,BootstrapClasses.align_items_center)
                                 .attr(AriaRoles.roleAlert)
                                 .with(
                                         svg()
-                                                .withClasses(BootstrapIcons.bi,Flex.flex_shrink_0,Spacing.me_2)
+                                                .withClasses(BootstrapClasses.bi,BootstrapClasses.flex_shrink_0,BootstrapClasses.me_2)
                                                 .attr(AriaRoles.roleImg)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Warning:")
@@ -518,11 +511,11 @@ class AlertsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(Alert.alert,Alert.alert_danger,Display.d_flex,Flex.align_items_center)
+                                .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_danger,BootstrapClasses.d_flex,BootstrapClasses.align_items_center)
                                 .attr(AriaRoles.roleAlert)
                                 .with(
                                         svg()
-                                                .withClasses(BootstrapIcons.bi,Flex.flex_shrink_0,Spacing.me_2)
+                                                .withClasses(BootstrapClasses.bi,BootstrapClasses.flex_shrink_0,BootstrapClasses.me_2)
                                                 .attr(AriaRoles.roleImg)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Danger:")
@@ -605,7 +598,7 @@ class AlertsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Alert.alert,Alert.alert_warning,Alert.alert_dismissible,Alert.fade,Collapse.show)
+                        .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_warning,BootstrapClasses.alert_dismissible,BootstrapClasses.fade,BootstrapClasses.show)
                         .attr(AriaRoles.roleAlert)
                         .with(
                                 strong()
@@ -615,7 +608,7 @@ class AlertsTest {
                                 text("You should check in on some of those fields below."),
                                 button()
                                         .withType("button")
-                                        .withClasses(CloseButton.btn_close)
+                                        .withClasses(BootstrapClasses.btn_close)
                                         .withData("bs-dismiss","alert")
                                         .attr(
                                                 AriaStatesAndProperties.ariaLabel("Close")

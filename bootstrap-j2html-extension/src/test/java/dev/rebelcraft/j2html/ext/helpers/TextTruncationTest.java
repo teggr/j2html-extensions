@@ -1,18 +1,13 @@
 package dev.rebelcraft.j2html.ext.helpers;
 
-import dev.rebelcraft.j2html.ext.layout.Grid;
-import dev.rebelcraft.j2html.ext.utilities.Display;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.comment;
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TextTruncationTest {
@@ -30,18 +25,18 @@ class TextTruncationTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                       div()
-                       .withClasses(Grid.row)
+                       .withClasses(BootstrapClasses.row)
                        .with(
                           comment("Block level"),
                           div()
-                           .withClasses(Grid.col_2,TextTruncation.text_truncate)
+                           .withClasses(BootstrapClasses.col_2, BootstrapClasses.text_truncate)
                            .with(
                               text("This text is quite long, and will be truncated once displayed.")
                             )
                         ),
                       comment("Inline level"),
                       span()
-                       .withClasses(Display.d_inline_block,TextTruncation.text_truncate)
+                       .withClasses(BootstrapClasses.d_inline_block,BootstrapClasses.text_truncate)
                        .withStyle("max-width: 150px;")
                        .with(
                           text("This text is quite long, and will be truncated once displayed.")

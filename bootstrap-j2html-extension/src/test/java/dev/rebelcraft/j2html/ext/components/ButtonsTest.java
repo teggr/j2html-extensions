@@ -1,19 +1,14 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.layout.Grid;
-import dev.rebelcraft.j2html.ext.utilities.Display;
-import dev.rebelcraft.j2html.ext.utilities.Flex;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ButtonsTest {
@@ -31,7 +26,7 @@ class ButtonsTest {
         String renderedHtml = uiDocumentation.render(
                 button()
                      .withType("button")
-                     .withClasses(Buttons.btn)
+                     .withClasses(BootstrapClasses.btn)
                      .with(
                         text("Base class")
                       )
@@ -58,55 +53,55 @@ class ButtonsTest {
                 each(
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .with(
                                         text("Primary")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                 .with(
                                         text("Secondary")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_success)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_success)
                                 .with(
                                         text("Success")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_danger)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_danger)
                                 .with(
                                         text("Danger")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_warning)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_warning)
                                 .with(
                                         text("Warning")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_info)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_info)
                                 .with(
                                         text("Info")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_light)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_light)
                                 .with(
                                         text("Light")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_dark)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_dark)
                                 .with(
                                         text("Dark")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_link)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_link)
                                 .with(
                                         text("Link")
                                 )
@@ -157,28 +152,28 @@ class ButtonsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         a()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withHref("#")
                                 .attr(AriaRoles.roleButton)
                                 .with(
                                         text("Link")
                                 ),
                         button()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("submit")
                                 .with(
                                         text("Button")
                                 ),
                         input()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("button")
                                 .withValue("Input"),
                         input()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("submit")
                                 .withValue("Submit"),
                         input()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("reset")
                                 .withValue("Reset")
                 )
@@ -211,49 +206,49 @@ class ButtonsTest {
                 each(
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                 .with(
                                         text("Primary")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                 .with(
                                         text("Secondary")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_outline_success)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_success)
                                 .with(
                                         text("Success")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_outline_danger)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_danger)
                                 .with(
                                         text("Danger")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_outline_warning)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_warning)
                                 .with(
                                         text("Warning")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_outline_info)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_info)
                                 .with(
                                         text("Info")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_outline_light)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_light)
                                 .with(
                                         text("Light")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_outline_dark)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_dark)
                                 .with(
                                         text("Dark")
                                 )
@@ -302,13 +297,13 @@ class ButtonsTest {
                 each(
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_primary,Buttons.btn_lg)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.btn_lg)
                                 .with(
                                         text("Large button")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_secondary,Buttons.btn_lg)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.btn_lg)
                                 .with(
                                         text("Large button")
                                 )
@@ -339,13 +334,13 @@ class ButtonsTest {
                 each(
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_primary,Buttons.btn_sm)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.btn_sm)
                                 .with(
                                         text("Small button")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_secondary,Buttons.btn_sm)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.btn_sm)
                                 .with(
                                         text("Small button")
                                 )
@@ -375,7 +370,7 @@ class ButtonsTest {
         String renderedHtml = uiDocumentation.render(
                 button()
                         .withType("button")
-                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                         .withStyle("--bs-btn-padding-y:.25rem; --bs-btn-padding-x:.5rem; --bs-btn-font-size:.75rem;")
                         .with(
                                 text("Custom button")
@@ -403,28 +398,28 @@ class ButtonsTest {
                 each(
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withCondDisabled(true)
                                 .with(
                                         text("Primary button")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                 .withCondDisabled(true)
                                 .with(
                                         text("Button")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                 .withCondDisabled(true)
                                 .with(
                                         text("Primary button")
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                 .withCondDisabled(true)
                                 .with(
                                         text("Button")
@@ -461,14 +456,14 @@ class ButtonsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         a()
-                                .withClasses(Buttons.btn,Buttons.btn_primary,Buttons.disabled)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.disabled)
                                 .attr(AriaRoles.roleButton)
                                 .attr(AriaStatesAndProperties.ariaDisabled("true"))
                                 .with(
                                         text("Primary link")
                                 ),
                         a()
-                                .withClasses(Buttons.btn,Buttons.btn_secondary,Buttons.disabled)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.disabled)
                                 .attr(AriaRoles.roleButton)
                                 .attr(AriaStatesAndProperties.ariaDisabled("true"))
                                 .with(
@@ -501,7 +496,7 @@ class ButtonsTest {
                 each(
                         a()
                                 .withHref("#")
-                                .withClasses(Buttons.btn,Buttons.btn_primary,Buttons.disabled)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.disabled)
                                 .withTabindex(-1)
                                 .attr(AriaRoles.roleButton)
                                 .attr(
@@ -512,7 +507,7 @@ class ButtonsTest {
                                 ),
                         a()
                                 .withHref("#")
-                                .withClasses(Buttons.btn,Buttons.btn_secondary,Buttons.disabled)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.disabled)
                                 .withTabindex(-1)
                                 .attr(AriaRoles.roleButton)
                                 .attr(
@@ -546,16 +541,16 @@ class ButtonsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Display.d_grid, Spacing.gap_2)
+                        .withClasses(BootstrapClasses.d_grid, BootstrapClasses.gap_2)
                         .with(
                                 button()
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .withType("button")
                                         .with(
                                                 text("Button")
                                         ),
                                 button()
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .withType("button")
                                         .with(
                                                 text("Button")
@@ -587,16 +582,16 @@ class ButtonsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Display.d_grid,Spacing.gap_2,Display.d_md_block)
+                        .withClasses(BootstrapClasses.d_grid,BootstrapClasses.gap_2,BootstrapClasses.d_md_block)
                         .with(
                                 button()
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .withType("button")
                                         .with(
                                                 text("Button")
                                         ),
                                 button()
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .withType("button")
                                         .with(
                                                 text("Button")
@@ -628,16 +623,16 @@ class ButtonsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Display.d_grid,Spacing.gap_2, Grid.col_6,Spacing.mx_auto)
+                        .withClasses(BootstrapClasses.d_grid,BootstrapClasses.gap_2, BootstrapClasses.col_6,BootstrapClasses.mx_auto)
                         .with(
                                 button()
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .withType("button")
                                         .with(
                                                 text("Button")
                                         ),
                                 button()
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .withType("button")
                                         .with(
                                                 text("Button")
@@ -669,16 +664,16 @@ class ButtonsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Display.d_grid,Spacing.gap_2,Display.d_md_flex, Flex.justify_content_md_end)
+                        .withClasses(BootstrapClasses.d_grid,BootstrapClasses.gap_2,BootstrapClasses.d_md_flex, BootstrapClasses.justify_content_md_end)
                         .with(
                                 button()
-                                        .withClasses(Buttons.btn,Buttons.btn_primary,Spacing.me_md_2)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.me_md_2)
                                         .withType("button")
                                         .with(
                                                 text("Button")
                                         ),
                                 button()
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .withType("button")
                                         .with(
                                                 text("Button")
@@ -711,18 +706,18 @@ class ButtonsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         p()
-                                .withClasses(Display.d_inline_flex,Spacing.gap_1)
+                                .withClasses(BootstrapClasses.d_inline_flex,BootstrapClasses.gap_1)
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn)
+                                                .withClasses(BootstrapClasses.btn)
                                                 .withData("bs-toggle","button")
                                                 .with(
                                                         text("Toggle button")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.active)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.active)
                                                 .withData("bs-toggle","button")
                                                 .attr(AriaStatesAndProperties.ariaPressed("true"))
                                                 .with(
@@ -730,7 +725,7 @@ class ButtonsTest {
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn)
+                                                .withClasses(BootstrapClasses.btn)
                                                 .withCondDisabled(true)
                                                 .withData("bs-toggle","button")
                                                 .with(
@@ -738,18 +733,18 @@ class ButtonsTest {
                                                 )
                                 ),
                         p()
-                                .withClasses(Display.d_inline_flex,Spacing.gap_1)
+                                .withClasses(BootstrapClasses.d_inline_flex,BootstrapClasses.gap_1)
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                 .withData("bs-toggle","button")
                                                 .with(
                                                         text("Toggle button")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_primary,Buttons.active)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.active)
                                                 .withData("bs-toggle","button")
                                                 .attr(AriaStatesAndProperties.ariaPressed("true"))
                                                 .with(
@@ -757,7 +752,7 @@ class ButtonsTest {
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                 .withCondDisabled(true)
                                                 .withData("bs-toggle","button")
                                                 .with(
@@ -806,11 +801,11 @@ class ButtonsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         p()
-                                .withClasses(Display.d_inline_flex,Spacing.gap_1)
+                                .withClasses(BootstrapClasses.d_inline_flex,BootstrapClasses.gap_1)
                                 .with(
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Buttons.btn)
+                                                .withClasses(BootstrapClasses.btn)
                                                 .attr(AriaRoles.roleButton)
                                                 .withData("bs-toggle","button")
                                                 .with(
@@ -818,7 +813,7 @@ class ButtonsTest {
                                                 ),
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Buttons.btn,Buttons.active)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.active)
                                                 .attr(AriaRoles.roleButton)
                                                 .withData("bs-toggle","button")
                                                 .attr(
@@ -828,7 +823,7 @@ class ButtonsTest {
                                                         text("Active toggle link")
                                                 ),
                                         a()
-                                                .withClasses(Buttons.btn,Buttons.disabled)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.disabled)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaDisabled("true")
                                                 )
@@ -839,11 +834,11 @@ class ButtonsTest {
                                                 )
                                 ),
                         p()
-                                .withClasses(Display.d_inline_flex,Spacing.gap_1)
+                                .withClasses(BootstrapClasses.d_inline_flex,BootstrapClasses.gap_1)
                                 .with(
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                 .attr(AriaRoles.roleButton)
                                                 .withData("bs-toggle","button")
                                                 .with(
@@ -851,7 +846,7 @@ class ButtonsTest {
                                                 ),
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Buttons.btn,Buttons.btn_primary,Buttons.active)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.active)
                                                 .attr(AriaRoles.roleButton)
                                                 .withData("bs-toggle","button")
                                                 .attr(
@@ -861,7 +856,7 @@ class ButtonsTest {
                                                         text("Active toggle link")
                                                 ),
                                         a()
-                                                .withClasses(Buttons.btn,Buttons.btn_primary,Buttons.disabled)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.disabled)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaDisabled("true")
                                                 )

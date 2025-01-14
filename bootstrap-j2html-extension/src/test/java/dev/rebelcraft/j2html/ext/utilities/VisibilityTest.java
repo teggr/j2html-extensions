@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,12 +24,12 @@ class VisibilityTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Visibility.visible)
+                                .withClasses(BootstrapClasses.visible)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Visibility.invisible)
+                                .withClasses(BootstrapClasses.invisible)
                                 .with(
                                         text("...")
                                 )

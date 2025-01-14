@@ -1,17 +1,14 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
-import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
+import static j2html.TagCreator.button;
+import static j2html.TagCreator.div;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CloseButtonTest {
@@ -29,7 +26,7 @@ class CloseButtonTest {
         String renderedHtml = uiDocumentation.render(
                 button()
                  .withType("button")
-                 .withClasses(CloseButton.btn_close)
+                 .withClasses(BootstrapClasses.btn_close)
                  .attr(
                     AriaStatesAndProperties.ariaLabel("Close")
                   )
@@ -54,7 +51,7 @@ class CloseButtonTest {
         String renderedHtml = uiDocumentation.render(
                 button()
                         .withType("button")
-                        .withClasses(CloseButton.btn_close)
+                        .withClasses(BootstrapClasses.btn_close)
                         .withCondDisabled(true)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Close")
@@ -83,13 +80,13 @@ class CloseButtonTest {
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(CloseButton.btn_close)
+                                        .withClasses(BootstrapClasses.btn_close)
                                         .attr(
                                                 AriaStatesAndProperties.ariaLabel("Close")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(CloseButton.btn_close)
+                                        .withClasses(BootstrapClasses.btn_close)
                                         .withCondDisabled(true)
                                         .attr(
                                                 AriaStatesAndProperties.ariaLabel("Close")

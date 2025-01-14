@@ -1,19 +1,13 @@
 package dev.rebelcraft.j2html.ext.forms;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.components.Buttons;
-import dev.rebelcraft.j2html.ext.components.Dropdowns;
-import dev.rebelcraft.j2html.ext.helpers.VisuallyHidden;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class InputGroupTest {
@@ -31,115 +25,115 @@ class InputGroupTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                   div()
-                   .withClasses(InputGroups.input_group, Spacing.mb_3)
+                   .withClasses(BootstrapClasses.input_group, BootstrapClasses.mb_3)
                    .with(
                       span()
-                       .withClasses(InputGroups.input_group_text)
+                       .withClasses(BootstrapClasses.input_group_text)
                        .withId("basic-addon1")
                        .with(
                           text("@")
                         ),
                       input()
                        .withType("text")
-                       .withClasses(FormControl.form_control)
+                       .withClasses(BootstrapClasses.form_control)
                        .withPlaceholder("Username")
                        .attr(AriaStatesAndProperties.ariaLabel("Username"))
                        .attr(AriaStatesAndProperties.ariaDescribedby("basic-addon1"))
                     ),
                   div()
-                   .withClasses(InputGroups.input_group,Spacing.mb_3)
+                   .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                    .with(
                       input()
                        .withType("text")
-                       .withClasses(FormControl.form_control)
+                       .withClasses(BootstrapClasses.form_control)
                        .withPlaceholder("Recipient's username")
                        .attr(AriaStatesAndProperties.ariaLabel("Recipient's username"))
                        .attr(AriaStatesAndProperties.ariaDescribedby("basic-addon2")),
                       span()
-                       .withClasses(InputGroups.input_group_text)
+                       .withClasses(BootstrapClasses.input_group_text)
                        .withId("basic-addon2")
                        .with(
                           text("@example.com")
                         )
                     ),
                   div()
-                   .withClasses(Spacing.mb_3)
+                   .withClasses(BootstrapClasses.mb_3)
                    .with(
                       label()
                        .withFor("basic-url")
-                       .withClasses(FormControl.form_label)
+                       .withClasses(BootstrapClasses.form_label)
                        .with(
                           text("Your vanity URL")
                         ),
                       div()
-                       .withClasses(InputGroups.input_group)
+                       .withClasses(BootstrapClasses.input_group)
                        .with(
                           span()
-                           .withClasses(InputGroups.input_group_text)
+                           .withClasses(BootstrapClasses.input_group_text)
                            .withId("basic-addon3")
                            .with(
                               text("https://example.com/users/")
                             ),
                           input()
                            .withType("text")
-                           .withClasses(FormControl.form_control)
+                           .withClasses(BootstrapClasses.form_control)
                            .withId("basic-url")
                            .attr(AriaStatesAndProperties.ariaDescribedby("basic-addon3 basic-addon4"))
                         ),
                       div()
-                       .withClasses(FormControl.form_text)
+                       .withClasses(BootstrapClasses.form_text)
                        .withId("basic-addon4")
                        .with(
                           text("Example help text goes outside the input group.")
                         )
                     ),
                   div()
-                   .withClasses(InputGroups.input_group,Spacing.mb_3)
+                   .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                    .with(
                       span()
-                       .withClasses(InputGroups.input_group_text)
+                       .withClasses(BootstrapClasses.input_group_text)
                        .with(
                           text("$")
                         ),
                       input()
                        .withType("text")
-                       .withClasses(FormControl.form_control)
+                       .withClasses(BootstrapClasses.form_control)
                        .attr(AriaStatesAndProperties.ariaLabel("Amount (to the nearest dollar)")),
                       span()
-                       .withClasses(InputGroups.input_group_text)
+                       .withClasses(BootstrapClasses.input_group_text)
                        .with(
                           text(".00")
                         )
                     ),
                   div()
-                   .withClasses(InputGroups.input_group,Spacing.mb_3)
+                   .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                    .with(
                       input()
                        .withType("text")
-                       .withClasses(FormControl.form_control)
+                       .withClasses(BootstrapClasses.form_control)
                        .withPlaceholder("Username")
                        .attr(AriaStatesAndProperties.ariaLabel("Username")),
                       span()
-                       .withClasses(InputGroups.input_group_text)
+                       .withClasses(BootstrapClasses.input_group_text)
                        .with(
                           text("@")
                         ),
                       input()
                        .withType("text")
-                       .withClasses(FormControl.form_control)
+                       .withClasses(BootstrapClasses.form_control)
                        .withPlaceholder("Server")
                        .attr(AriaStatesAndProperties.ariaLabel("Server"))
                     ),
                   div()
-                   .withClasses(InputGroups.input_group)
+                   .withClasses(BootstrapClasses.input_group)
                    .with(
                       span()
-                       .withClasses(InputGroups.input_group_text)
+                       .withClasses(BootstrapClasses.input_group_text)
                        .with(
                           text("With textarea")
                         ),
                       textarea()
-                       .withClasses(FormControl.form_control)
+                       .withClasses(BootstrapClasses.form_control)
                        .attr(AriaStatesAndProperties.ariaLabel("With textarea"))
                     )
             )
@@ -210,115 +204,115 @@ class InputGroupTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         span()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .withId("basic-addon1")
                                                 .with(
                                                         text("@")
                                                 ),
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withPlaceholder("Username")
                                                 .attr(AriaStatesAndProperties.ariaLabel("Username"))
                                                 .attr(AriaStatesAndProperties.ariaDescribedby("basic-addon1"))
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withPlaceholder("Recipient's username")
                                                 .attr(AriaStatesAndProperties.ariaLabel("Recipient's username"))
                                                 .attr(AriaStatesAndProperties.ariaDescribedby("basic-addon2")),
                                         span()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .withId("basic-addon2")
                                                 .with(
                                                         text("@example.com")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spacing.mb_3)
+                                .withClasses(BootstrapClasses.mb_3)
                                 .with(
                                         label()
                                                 .withFor("basic-url")
-                                                .withClasses(FormControl.form_label)
+                                                .withClasses(BootstrapClasses.form_label)
                                                 .with(
                                                         text("Your vanity URL")
                                                 ),
                                         div()
-                                                .withClasses(InputGroups.input_group)
+                                                .withClasses(BootstrapClasses.input_group)
                                                 .with(
                                                         span()
-                                                                .withClasses(InputGroups.input_group_text)
+                                                                .withClasses(BootstrapClasses.input_group_text)
                                                                 .withId("basic-addon3")
                                                                 .with(
                                                                         text("https://example.com/users/")
                                                                 ),
                                                         input()
                                                                 .withType("text")
-                                                                .withClasses(FormControl.form_control)
+                                                                .withClasses(BootstrapClasses.form_control)
                                                                 .withId("basic-url")
                                                                 .attr(AriaStatesAndProperties.ariaDescribedby("basic-addon3 basic-addon4"))
                                                 ),
                                         div()
-                                                .withClasses(FormControl.form_text)
+                                                .withClasses(BootstrapClasses.form_text)
                                                 .withId("basic-addon4")
                                                 .with(
                                                         text("Example help text goes outside the input group.")
                                                 )
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         span()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .with(
                                                         text("$")
                                                 ),
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .attr(AriaStatesAndProperties.ariaLabel("Amount (to the nearest dollar)")),
                                         span()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .with(
                                                         text(".00")
                                                 )
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withPlaceholder("Username")
                                                 .attr(AriaStatesAndProperties.ariaLabel("Username")),
                                         span()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .with(
                                                         text("@")
                                                 ),
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withPlaceholder("Server")
                                                 .attr(AriaStatesAndProperties.ariaLabel("Server"))
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group)
+                                .withClasses(BootstrapClasses.input_group)
                                 .with(
                                         span()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .with(
                                                         text("With textarea")
                                                 ),
                                         textarea()
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .attr(AriaStatesAndProperties.ariaLabel("With textarea"))
                                 )
                 )
@@ -389,47 +383,47 @@ class InputGroupTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(InputGroups.input_group,InputGroups.input_group_sm,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.input_group_sm,BootstrapClasses.mb_3)
                                 .with(
                                         span()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .withId("inputGroup-sizing-sm")
                                                 .with(
                                                         text("Small")
                                                 ),
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .attr(AriaStatesAndProperties.ariaLabel("Sizing example input"))
                                                 .attr(AriaStatesAndProperties.ariaDescribedby("inputGroup-sizing-sm"))
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         span()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .withId("inputGroup-sizing-default")
                                                 .with(
                                                         text("Default")
                                                 ),
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .attr(AriaStatesAndProperties.ariaLabel("Sizing example input"))
                                                 .attr(AriaStatesAndProperties.ariaDescribedby("inputGroup-sizing-default"))
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group,InputGroups.input_group_lg)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.input_group_lg)
                                 .with(
                                         span()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .withId("inputGroup-sizing-lg")
                                                 .with(
                                                         text("Large")
                                                 ),
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .attr(AriaStatesAndProperties.ariaLabel("Sizing example input"))
                                                 .attr(AriaStatesAndProperties.ariaDescribedby("inputGroup-sizing-lg"))
                                 )
@@ -471,37 +465,37 @@ class InputGroupTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         div()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .with(
                                                         input()
-                                                                .withClasses(ChecksAndRadios.form_check_input,Spacing.mt_0)
+                                                                .withClasses(BootstrapClasses.form_check_input,BootstrapClasses.mt_0)
                                                                 .withType("checkbox")
                                                                 .withValue("")
                                                                 .attr(AriaStatesAndProperties.ariaLabel("Checkbox for following text input"))
                                                 ),
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .attr(AriaStatesAndProperties.ariaLabel("Text input with checkbox"))
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group)
+                                .withClasses(BootstrapClasses.input_group)
                                 .with(
                                         div()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .with(
                                                         input()
-                                                                .withClasses(ChecksAndRadios.form_check_input,Spacing.mt_0)
+                                                                .withClasses(BootstrapClasses.form_check_input,BootstrapClasses.mt_0)
                                                                 .withType("radio")
                                                                 .withValue("")
                                                                 .attr(AriaStatesAndProperties.ariaLabel("Radio button for following text input"))
                                                 ),
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .attr(AriaStatesAndProperties.ariaLabel("Text input with radio button"))
                                 )
                 )
@@ -535,10 +529,10 @@ class InputGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(InputGroups.input_group)
+                        .withClasses(BootstrapClasses.input_group)
                         .with(
                                 span()
-                                        .withClasses(InputGroups.input_group_text)
+                                        .withClasses(BootstrapClasses.input_group_text)
                                         .with(
                                                 text("First and last name")
                                         ),
@@ -547,13 +541,13 @@ class InputGroupTest {
                                         .attr(
                                                 AriaStatesAndProperties.ariaLabel("First name")
                                         )
-                                        .withClasses(FormControl.form_control),
+                                        .withClasses(BootstrapClasses.form_control),
                                 input()
                                         .withType("text")
                                         .attr(
                                                 AriaStatesAndProperties.ariaLabel("Last name")
                                         )
-                                        .withClasses(FormControl.form_control)
+                                        .withClasses(BootstrapClasses.form_control)
                         )
         );
 
@@ -581,41 +575,41 @@ class InputGroupTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         span()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .with(
                                                         text("$")
                                                 ),
                                         span()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .with(
                                                         text("0.00")
                                                 ),
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Dollar amount (with dot and two decimal places)")
                                                 )
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group)
+                                .withClasses(BootstrapClasses.input_group)
                                 .with(
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Dollar amount (with dot and two decimal places)")
                                                 ),
                                         span()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .with(
                                                         text("$")
                                                 ),
                                         span()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .with(
                                                         text("0.00")
                                                 )
@@ -658,10 +652,10 @@ class InputGroupTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                 .withType("button")
                                                 .withId("button-addon1")
                                                 .with(
@@ -669,7 +663,7 @@ class InputGroupTest {
                                                 ),
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withPlaceholder("")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Example text with button addon")
@@ -679,11 +673,11 @@ class InputGroupTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withPlaceholder("Recipient's username")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Recipient's username")
@@ -692,7 +686,7 @@ class InputGroupTest {
                                                         AriaStatesAndProperties.ariaDescribedby("button-addon2")
                                                 ),
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                 .withType("button")
                                                 .withId("button-addon2")
                                                 .with(
@@ -700,46 +694,46 @@ class InputGroupTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                 .withType("button")
                                                 .with(
                                                         text("Button")
                                                 ),
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                 .withType("button")
                                                 .with(
                                                         text("Button")
                                                 ),
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withPlaceholder("")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Example text with two button addons")
                                                 )
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group)
+                                .withClasses(BootstrapClasses.input_group)
                                 .with(
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withPlaceholder("Recipient's username")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Recipient's username with two button addons")
                                                 ),
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                 .withType("button")
                                                 .with(
                                                         text("Button")
                                                 ),
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                 .withType("button")
                                                 .with(
                                                         text("Button")
@@ -795,10 +789,10 @@ class InputGroupTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary, Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary, BootstrapClasses.dropdown_toggle)
                                                 .withType("button")
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(AriaStatesAndProperties.ariaExpanded("false"))
@@ -806,12 +800,12 @@ class InputGroupTest {
                                                         text("Dropdown")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Action")
@@ -820,7 +814,7 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Another action")
@@ -829,7 +823,7 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Something else here")
@@ -838,12 +832,12 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         hr()
-                                                                                .withClasses(Dropdowns.dropdown_divider)
+                                                                                .withClasses(BootstrapClasses.dropdown_divider)
                                                                 ),
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Separated link")
@@ -852,22 +846,22 @@ class InputGroupTest {
                                                 ),
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Text input with dropdown button")
                                                 )
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Text input with dropdown button")
                                                 ),
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withType("button")
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(AriaStatesAndProperties.ariaExpanded("false"))
@@ -875,12 +869,12 @@ class InputGroupTest {
                                                         text("Dropdown")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu,Dropdowns.dropdown_menu_end)
+                                                .withClasses(BootstrapClasses.dropdown_menu,BootstrapClasses.dropdown_menu_end)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Action")
@@ -889,7 +883,7 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Another action")
@@ -898,7 +892,7 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Something else here")
@@ -907,12 +901,12 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         hr()
-                                                                                .withClasses(Dropdowns.dropdown_divider)
+                                                                                .withClasses(BootstrapClasses.dropdown_divider)
                                                                 ),
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Separated link")
@@ -921,10 +915,10 @@ class InputGroupTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group)
+                                .withClasses(BootstrapClasses.input_group)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withType("button")
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(AriaStatesAndProperties.ariaExpanded("false"))
@@ -932,12 +926,12 @@ class InputGroupTest {
                                                         text("Dropdown")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Action before")
@@ -946,7 +940,7 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Another action before")
@@ -955,7 +949,7 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Something else here")
@@ -964,12 +958,12 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         hr()
-                                                                                .withClasses(Dropdowns.dropdown_divider)
+                                                                                .withClasses(BootstrapClasses.dropdown_divider)
                                                                 ),
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Separated link")
@@ -978,12 +972,12 @@ class InputGroupTest {
                                                 ),
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Text input with 2 dropdown buttons")
                                                 ),
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary,Dropdowns.dropdown_toggle)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary,BootstrapClasses.dropdown_toggle)
                                                 .withType("button")
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(AriaStatesAndProperties.ariaExpanded("false"))
@@ -991,12 +985,12 @@ class InputGroupTest {
                                                         text("Dropdown")
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu,Dropdowns.dropdown_menu_end)
+                                                .withClasses(BootstrapClasses.dropdown_menu,BootstrapClasses.dropdown_menu_end)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Action")
@@ -1005,7 +999,7 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Another action")
@@ -1014,7 +1008,7 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Something else here")
@@ -1023,12 +1017,12 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         hr()
-                                                                                .withClasses(Dropdowns.dropdown_divider)
+                                                                                .withClasses(BootstrapClasses.dropdown_divider)
                                                                 ),
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Separated link")
@@ -1177,35 +1171,35 @@ class InputGroupTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                 .with(
                                                         text("Action")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary,Dropdowns.dropdown_toggle,Dropdowns.dropdown_toggle_split)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary,BootstrapClasses.dropdown_toggle,BootstrapClasses.dropdown_toggle_split)
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaExpanded("false")
                                                 )
                                                 .with(
                                                         span()
-                                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                                .withClasses(BootstrapClasses.visually_hidden)
                                                                 .with(
                                                                         text("Toggle Dropdown")
                                                                 )
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu)
+                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Action")
@@ -1214,7 +1208,7 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Another action")
@@ -1223,7 +1217,7 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Something else here")
@@ -1232,12 +1226,12 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         hr()
-                                                                                .withClasses(Dropdowns.dropdown_divider)
+                                                                                .withClasses(BootstrapClasses.dropdown_divider)
                                                                 ),
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Separated link")
@@ -1246,47 +1240,47 @@ class InputGroupTest {
                                                 ),
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Text input with segmented dropdown button")
                                                 )
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group)
+                                .withClasses(BootstrapClasses.input_group)
                                 .with(
                                         input()
                                                 .withType("text")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Text input with segmented dropdown button")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                 .with(
                                                         text("Action")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary,Dropdowns.dropdown_toggle,Dropdowns.dropdown_toggle_split)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary,BootstrapClasses.dropdown_toggle,BootstrapClasses.dropdown_toggle_split)
                                                 .withData("bs-toggle","dropdown")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaExpanded("false")
                                                 )
                                                 .with(
                                                         span()
-                                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                                .withClasses(BootstrapClasses.visually_hidden)
                                                                 .with(
                                                                         text("Toggle Dropdown")
                                                                 )
                                                 ),
                                         ul()
-                                                .withClasses(Dropdowns.dropdown_menu,Dropdowns.dropdown_menu_end)
+                                                .withClasses(BootstrapClasses.dropdown_menu,BootstrapClasses.dropdown_menu_end)
                                                 .with(
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Action")
@@ -1295,7 +1289,7 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Another action")
@@ -1304,7 +1298,7 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Something else here")
@@ -1313,12 +1307,12 @@ class InputGroupTest {
                                                         li()
                                                                 .with(
                                                                         hr()
-                                                                                .withClasses(Dropdowns.dropdown_divider)
+                                                                                .withClasses(BootstrapClasses.dropdown_divider)
                                                                 ),
                                                         li()
                                                                 .with(
                                                                         a()
-                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                 .withHref("#")
                                                                                 .with(
                                                                                         text("Separated link")
@@ -1418,16 +1412,16 @@ class InputGroupTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         label()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .withFor("inputGroupSelect01")
                                                 .with(
                                                         text("Options")
                                                 ),
                                         select()
-                                                .withClasses(Select.form_select)
+                                                .withClasses(BootstrapClasses.form_select)
                                                 .withId("inputGroupSelect01")
                                                 .with(
                                                         option()
@@ -1453,10 +1447,10 @@ class InputGroupTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         select()
-                                                .withClasses(Select.form_select)
+                                                .withClasses(BootstrapClasses.form_select)
                                                 .withId("inputGroupSelect02")
                                                 .with(
                                                         option()
@@ -1481,23 +1475,23 @@ class InputGroupTest {
                                                                 )
                                                 ),
                                         label()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .withFor("inputGroupSelect02")
                                                 .with(
                                                         text("Options")
                                                 )
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                 .withType("button")
                                                 .with(
                                                         text("Button")
                                                 ),
                                         select()
-                                                .withClasses(Select.form_select)
+                                                .withClasses(BootstrapClasses.form_select)
                                                 .withId("inputGroupSelect03")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Example select with button addon")
@@ -1526,10 +1520,10 @@ class InputGroupTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group)
+                                .withClasses(BootstrapClasses.input_group)
                                 .with(
                                         select()
-                                                .withClasses(Select.form_select)
+                                                .withClasses(BootstrapClasses.form_select)
                                                 .withId("inputGroupSelect04")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Example select with button addon")
@@ -1557,7 +1551,7 @@ class InputGroupTest {
                                                                 )
                                                 ),
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                 .withType("button")
                                                 .with(
                                                         text("Button")
@@ -1659,38 +1653,38 @@ class InputGroupTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         label()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .withFor("inputGroupFile01")
                                                 .with(
                                                         text("Upload")
                                                 ),
                                         input()
                                                 .withType("file")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withId("inputGroupFile01")
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         input()
                                                 .withType("file")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withId("inputGroupFile02"),
                                         label()
-                                                .withClasses(InputGroups.input_group_text)
+                                                .withClasses(BootstrapClasses.input_group_text)
                                                 .withFor("inputGroupFile02")
                                                 .with(
                                                         text("Upload")
                                                 )
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                 .withType("button")
                                                 .withId("inputGroupFileAddon03")
                                                 .with(
@@ -1698,7 +1692,7 @@ class InputGroupTest {
                                                 ),
                                         input()
                                                 .withType("file")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withId("inputGroupFile03")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaDescribedby("inputGroupFileAddon03")
@@ -1708,11 +1702,11 @@ class InputGroupTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(InputGroups.input_group)
+                                .withClasses(BootstrapClasses.input_group)
                                 .with(
                                         input()
                                                 .withType("file")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withId("inputGroupFile04")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaDescribedby("inputGroupFileAddon04")
@@ -1721,7 +1715,7 @@ class InputGroupTest {
                                                         AriaStatesAndProperties.ariaLabel("Upload")
                                                 ),
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                 .withType("button")
                                                 .withId("inputGroupFileAddon04")
                                                 .with(

@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,7 +25,7 @@ class SpacingTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Spacing.mx_auto, Spacing.p_2)
+                        .withClasses(BootstrapClasses.mx_auto, BootstrapClasses.p_2)
                         .withStyle("width: 200px;")
                         .with(
                                 text("Centered element")
@@ -50,25 +51,25 @@ class SpacingTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(AriaRoles.grid, Spacing.gap_3)
+                        .withClasses(AriaRoles.grid, BootstrapClasses.gap_3)
                         .with(
                                 div()
-                                        .withClasses(Spacing.p_2, "g-col-6")
+                                        .withClasses(BootstrapClasses.p_2, "g-col-6")
                                         .with(
                                                 text("Grid item 1")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2, "g-col-6")
+                                        .withClasses(BootstrapClasses.p_2, "g-col-6")
                                         .with(
                                                 text("Grid item 2")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2, "g-col-6")
+                                        .withClasses(BootstrapClasses.p_2, "g-col-6")
                                         .with(
                                                 text("Grid item 3")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2, "g-col-6")
+                                        .withClasses(BootstrapClasses.p_2, "g-col-6")
                                         .with(
                                                 text("Grid item 4")
                                         )
@@ -105,25 +106,25 @@ class SpacingTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(AriaRoles.grid, Spacing.gap_0, Spacing.row_gap_3)
+                        .withClasses(AriaRoles.grid, BootstrapClasses.gap_0, BootstrapClasses.row_gap_3)
                         .with(
                                 div()
-                                        .withClasses(Spacing.p_2, "g-col-6")
+                                        .withClasses(BootstrapClasses.p_2, "g-col-6")
                                         .with(
                                                 text("Grid item 1")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2, "g-col-6")
+                                        .withClasses(BootstrapClasses.p_2, "g-col-6")
                                         .with(
                                                 text("Grid item 2")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2, "g-col-6")
+                                        .withClasses(BootstrapClasses.p_2, "g-col-6")
                                         .with(
                                                 text("Grid item 3")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2, "g-col-6")
+                                        .withClasses(BootstrapClasses.p_2, "g-col-6")
                                         .with(
                                                 text("Grid item 4")
                                         )
@@ -160,25 +161,25 @@ class SpacingTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(AriaRoles.grid, Spacing.gap_0, Spacing.column_gap_3)
+                        .withClasses(AriaRoles.grid, BootstrapClasses.gap_0, BootstrapClasses.column_gap_3)
                         .with(
                                 div()
-                                        .withClasses(Spacing.p_2, "g-col-6")
+                                        .withClasses(BootstrapClasses.p_2, "g-col-6")
                                         .with(
                                                 text("Grid item 1")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2, "g-col-6")
+                                        .withClasses(BootstrapClasses.p_2, "g-col-6")
                                         .with(
                                                 text("Grid item 2")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2, "g-col-6")
+                                        .withClasses(BootstrapClasses.p_2, "g-col-6")
                                         .with(
                                                 text("Grid item 3")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2, "g-col-6")
+                                        .withClasses(BootstrapClasses.p_2, "g-col-6")
                                         .with(
                                                 text("Grid item 4")
                                         )

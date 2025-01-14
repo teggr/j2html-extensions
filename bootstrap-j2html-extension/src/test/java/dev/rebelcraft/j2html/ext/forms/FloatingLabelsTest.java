@@ -1,20 +1,13 @@
 package dev.rebelcraft.j2html.ext.forms;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.layout.Grid;
-import dev.rebelcraft.j2html.ext.layout.Gutters;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FloatingLabelsTest {
@@ -32,11 +25,11 @@ class FloatingLabelsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                   div()
-                   .withClasses(FloatingLabels.form_floating, Spacing.mb_3)
+                   .withClasses(BootstrapClasses.form_floating, BootstrapClasses.mb_3)
                    .with(
                       input()
                        .withType("email")
-                       .withClasses(FormControl.form_control)
+                       .withClasses(BootstrapClasses.form_control)
                        .withId("floatingInput")
                        .withPlaceholder("name@example.com"),
                       label()
@@ -46,11 +39,11 @@ class FloatingLabelsTest {
                         )
                     ),
                   div()
-                   .withClasses(FloatingLabels.form_floating)
+                   .withClasses(BootstrapClasses.form_floating)
                    .with(
                       input()
                        .withType("password")
-                       .withClasses(FormControl.form_control)
+                       .withClasses(BootstrapClasses.form_control)
                        .withId("floatingPassword")
                        .withPlaceholder("Password"),
                       label()
@@ -90,11 +83,11 @@ class FloatingLabelsTest {
 
         String renderedHtml = uiDocumentation.render(
                 form()
-                        .withClasses(FloatingLabels.form_floating)
+                        .withClasses(BootstrapClasses.form_floating)
                         .with(
                                 input()
                                         .withType("email")
-                                        .withClasses(FormControl.form_control)
+                                        .withClasses(BootstrapClasses.form_control)
                                         .withId("floatingInputValue")
                                         .withPlaceholder("name@example.com")
                                         .withValue("test@example.com"),
@@ -128,11 +121,11 @@ class FloatingLabelsTest {
 
         String renderedHtml = uiDocumentation.render(
                 form()
-                        .withClasses(FloatingLabels.form_floating)
+                        .withClasses(BootstrapClasses.form_floating)
                         .with(
                                 input()
                                         .withType("email")
-                                        .withClasses(FormControl.form_control,Validation.is_invalid)
+                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.is_invalid)
                                         .withId("floatingInputInvalid")
                                         .withPlaceholder("name@example.com")
                                         .withValue("test@example.com"),
@@ -166,10 +159,10 @@ class FloatingLabelsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(FloatingLabels.form_floating)
+                        .withClasses(BootstrapClasses.form_floating)
                         .with(
                                 textarea()
-                                        .withClasses(FormControl.form_control)
+                                        .withClasses(BootstrapClasses.form_control)
                                         .withPlaceholder("Leave a comment here")
                                         .withId("floatingTextarea"),
                                 label()
@@ -202,10 +195,10 @@ class FloatingLabelsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(FloatingLabels.form_floating)
+                        .withClasses(BootstrapClasses.form_floating)
                         .with(
                                 textarea()
-                                        .withClasses(FormControl.form_control)
+                                        .withClasses(BootstrapClasses.form_control)
                                         .withPlaceholder("Leave a comment here")
                                         .withId("floatingTextarea2")
                                         .withStyle("height: 100px"),
@@ -239,10 +232,10 @@ class FloatingLabelsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(FloatingLabels.form_floating)
+                        .withClasses(BootstrapClasses.form_floating)
                         .with(
                                 select()
-                                        .withClasses(Select.form_select)
+                                        .withClasses(BootstrapClasses.form_select)
                                         .withId("floatingSelect")
                                         .attr(
                                                 AriaStatesAndProperties.ariaLabel("Floating label select example")
@@ -313,11 +306,11 @@ class FloatingLabelsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(FloatingLabels.form_floating,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.form_floating,BootstrapClasses.mb_3)
                                 .with(
                                         input()
                                                 .withType("email")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withId("floatingInputDisabled")
                                                 .withPlaceholder("name@example.com")
                                                 .withCondDisabled(true),
@@ -328,10 +321,10 @@ class FloatingLabelsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(FloatingLabels.form_floating,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.form_floating,BootstrapClasses.mb_3)
                                 .with(
                                         textarea()
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withPlaceholder("Leave a comment here")
                                                 .withId("floatingTextareaDisabled")
                                                 .withCondDisabled(true),
@@ -342,10 +335,10 @@ class FloatingLabelsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(FloatingLabels.form_floating,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.form_floating,BootstrapClasses.mb_3)
                                 .with(
                                         textarea()
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withPlaceholder("Leave a comment here")
                                                 .withId("floatingTextarea2Disabled")
                                                 .withStyle("height: 100px")
@@ -360,10 +353,10 @@ class FloatingLabelsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(FloatingLabels.form_floating)
+                                .withClasses(BootstrapClasses.form_floating)
                                 .with(
                                         select()
-                                                .withClasses(Select.form_select)
+                                                .withClasses(BootstrapClasses.form_select)
                                                 .withId("floatingSelectDisabled")
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("Floating label disabled select example")
@@ -454,12 +447,12 @@ class FloatingLabelsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(FloatingLabels.form_floating,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.form_floating,BootstrapClasses.mb_3)
                                 .with(
                                         input()
                                                 .withType("email")
                                                 .withCondReadonly(true)
-                                                .withClasses(FormControl.form_control_plaintext)
+                                                .withClasses(BootstrapClasses.form_control_plaintext)
                                                 .withId("floatingEmptyPlaintextInput")
                                                 .withPlaceholder("name@example.com"),
                                         label()
@@ -469,12 +462,12 @@ class FloatingLabelsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(FloatingLabels.form_floating,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.form_floating,BootstrapClasses.mb_3)
                                 .with(
                                         input()
                                                 .withType("email")
                                                 .withCondReadonly(true)
-                                                .withClasses(FormControl.form_control_plaintext)
+                                                .withClasses(BootstrapClasses.form_control_plaintext)
                                                 .withId("floatingPlaintextInput")
                                                 .withPlaceholder("name@example.com")
                                                 .withValue("name@example.com"),
@@ -515,19 +508,19 @@ class FloatingLabelsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(InputGroups.input_group,Spacing.mb_3)
+                        .withClasses(BootstrapClasses.input_group,BootstrapClasses.mb_3)
                         .with(
                                 span()
-                                        .withClasses(InputGroups.input_group_text)
+                                        .withClasses(BootstrapClasses.input_group_text)
                                         .with(
                                                 text("@")
                                         ),
                                 div()
-                                        .withClasses(FloatingLabels.form_floating)
+                                        .withClasses(BootstrapClasses.form_floating)
                                         .with(
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("floatingInputGroup1")
                                                         .withPlaceholder("Username"),
                                                 label()
@@ -566,19 +559,19 @@ class FloatingLabelsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(InputGroups.input_group,Validation.has_validation)
+                        .withClasses(BootstrapClasses.input_group,BootstrapClasses.has_validation)
                         .with(
                                 span()
-                                        .withClasses(InputGroups.input_group_text)
+                                        .withClasses(BootstrapClasses.input_group_text)
                                         .with(
                                                 text("@")
                                         ),
                                 div()
-                                        .withClasses(FloatingLabels.form_floating,Validation.is_invalid)
+                                        .withClasses(BootstrapClasses.form_floating,BootstrapClasses.is_invalid)
                                         .with(
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control,Validation.is_invalid)
+                                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.is_invalid)
                                                         .withId("floatingInputGroup2")
                                                         .withPlaceholder("Username")
                                                         .withCondRequired(true),
@@ -589,7 +582,7 @@ class FloatingLabelsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Validation.invalid_feedback)
+                                        .withClasses(BootstrapClasses.invalid_feedback)
                                         .with(
                                                 text("Please choose a username.")
                                         )
@@ -626,17 +619,17 @@ class FloatingLabelsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row, Gutters.g_2)
+                        .withClasses(BootstrapClasses.row, BootstrapClasses.g_2)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_md)
+                                        .withClasses(BootstrapClasses.col_md)
                                         .with(
                                                 div()
-                                                        .withClasses(FloatingLabels.form_floating)
+                                                        .withClasses(BootstrapClasses.form_floating)
                                                         .with(
                                                                 input()
                                                                         .withType("email")
-                                                                        .withClasses(FormControl.form_control)
+                                                                        .withClasses(BootstrapClasses.form_control)
                                                                         .withId("floatingInputGrid")
                                                                         .withPlaceholder("name@example.com")
                                                                         .withValue("mdo@example.com"),
@@ -648,13 +641,13 @@ class FloatingLabelsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md)
+                                        .withClasses(BootstrapClasses.col_md)
                                         .with(
                                                 div()
-                                                        .withClasses(FloatingLabels.form_floating)
+                                                        .withClasses(BootstrapClasses.form_floating)
                                                         .with(
                                                                 select()
-                                                                        .withClasses(Select.form_select)
+                                                                        .withClasses(BootstrapClasses.form_select)
                                                                         .withId("floatingSelectGrid")
                                                                         .with(
                                                                                 option()

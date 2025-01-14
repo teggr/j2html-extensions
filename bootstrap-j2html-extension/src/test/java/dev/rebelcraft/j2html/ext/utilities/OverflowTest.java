@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,22 +24,22 @@ class OverflowTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Overflow.overflow_auto)
+                                .withClasses(BootstrapClasses.overflow_auto)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Overflow.overflow_hidden)
+                                .withClasses(BootstrapClasses.overflow_hidden)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Overflow.overflow_visible)
+                                .withClasses(BootstrapClasses.overflow_visible)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Overflow.overflow_scroll)
+                                .withClasses(BootstrapClasses.overflow_scroll)
                                 .with(
                                         text("...")
                                 )
@@ -74,22 +75,22 @@ class OverflowTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Overflow.overflow_x_auto)
+                                .withClasses(BootstrapClasses.overflow_x_auto)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Overflow.overflow_x_hidden)
+                                .withClasses(BootstrapClasses.overflow_x_hidden)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Overflow.overflow_x_visible)
+                                .withClasses(BootstrapClasses.overflow_x_visible)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Overflow.overflow_x_scroll)
+                                .withClasses(BootstrapClasses.overflow_x_scroll)
                                 .with(
                                         text("...")
                                 )
@@ -125,22 +126,22 @@ class OverflowTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Overflow.overflow_y_auto)
+                                .withClasses(BootstrapClasses.overflow_y_auto)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Overflow.overflow_y_hidden)
+                                .withClasses(BootstrapClasses.overflow_y_hidden)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Overflow.overflow_y_visible)
+                                .withClasses(BootstrapClasses.overflow_y_visible)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Overflow.overflow_y_scroll)
+                                .withClasses(BootstrapClasses.overflow_y_scroll)
                                 .with(
                                         text("...")
                                 )

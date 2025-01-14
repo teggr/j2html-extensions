@@ -1,17 +1,12 @@
 package dev.rebelcraft.j2html.ext.helpers;
 
-import dev.rebelcraft.j2html.ext.utilities.Link;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ColoredLinksTest {
@@ -32,7 +27,7 @@ class ColoredLinksTest {
                    .with(
                       a()
                        .withHref("#")
-                       .withClasses(Link.link_primary)
+                       .withClasses(BootstrapClasses.link_primary)
                        .with(
                           text("Primary link")
                         )
@@ -41,7 +36,7 @@ class ColoredLinksTest {
                    .with(
                       a()
                        .withHref("#")
-                       .withClasses(Link.link_secondary)
+                       .withClasses(BootstrapClasses.link_secondary)
                        .with(
                           text("Secondary link")
                         )
@@ -50,7 +45,7 @@ class ColoredLinksTest {
                    .with(
                       a()
                        .withHref("#")
-                       .withClasses(Link.link_success)
+                       .withClasses(BootstrapClasses.link_success)
                        .with(
                           text("Success link")
                         )
@@ -59,7 +54,7 @@ class ColoredLinksTest {
                    .with(
                       a()
                        .withHref("#")
-                       .withClasses(Link.link_danger)
+                       .withClasses(BootstrapClasses.link_danger)
                        .with(
                           text("Danger link")
                         )
@@ -68,7 +63,7 @@ class ColoredLinksTest {
                    .with(
                       a()
                        .withHref("#")
-                       .withClasses(Link.link_warning)
+                       .withClasses(BootstrapClasses.link_warning)
                        .with(
                           text("Warning link")
                         )
@@ -77,7 +72,7 @@ class ColoredLinksTest {
                    .with(
                       a()
                        .withHref("#")
-                       .withClasses(Link.link_info)
+                       .withClasses(BootstrapClasses.link_info)
                        .with(
                           text("Info link")
                         )
@@ -86,7 +81,7 @@ class ColoredLinksTest {
                    .with(
                       a()
                        .withHref("#")
-                       .withClasses(Link.link_light)
+                       .withClasses(BootstrapClasses.link_light)
                        .with(
                           text("Light link")
                         )
@@ -95,7 +90,7 @@ class ColoredLinksTest {
                    .with(
                       a()
                        .withHref("#")
-                       .withClasses(Link.link_dark)
+                       .withClasses(BootstrapClasses.link_dark)
                        .with(
                           text("Dark link")
                         )
@@ -104,7 +99,7 @@ class ColoredLinksTest {
                    .with(
                       a()
                        .withHref("#")
-                       .withClasses(Link.link_body_emphasis)
+                       .withClasses(BootstrapClasses.link_body_emphasis)
                        .with(
                           text("Emphasis link")
                         )
@@ -177,7 +172,7 @@ class ColoredLinksTest {
                                 .with(
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Link.link_primary,Link.link_offset_2,Link.link_underline_opacity_25,Link.link_underline_opacity_100_hover)
+                                                .withClasses(BootstrapClasses.link_primary,BootstrapClasses.link_offset_2,BootstrapClasses.link_underline_opacity_25,BootstrapClasses.link_underline_opacity_100_hover)
                                                 .with(
                                                         text("Primary link")
                                                 )
@@ -186,7 +181,7 @@ class ColoredLinksTest {
                                 .with(
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Link.link_secondary,Link.link_offset_2,Link.link_underline_opacity_25,Link.link_underline_opacity_100_hover)
+                                                .withClasses(BootstrapClasses.link_secondary,BootstrapClasses.link_offset_2,BootstrapClasses.link_underline_opacity_25,BootstrapClasses.link_underline_opacity_100_hover)
                                                 .with(
                                                         text("Secondary link")
                                                 )
@@ -195,7 +190,7 @@ class ColoredLinksTest {
                                 .with(
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Link.link_success,Link.link_offset_2,Link.link_underline_opacity_25,Link.link_underline_opacity_100_hover)
+                                                .withClasses(BootstrapClasses.link_success,BootstrapClasses.link_offset_2,BootstrapClasses.link_underline_opacity_25,BootstrapClasses.link_underline_opacity_100_hover)
                                                 .with(
                                                         text("Success link")
                                                 )
@@ -204,7 +199,7 @@ class ColoredLinksTest {
                                 .with(
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Link.link_danger,Link.link_offset_2,Link.link_underline_opacity_25,Link.link_underline_opacity_100_hover)
+                                                .withClasses(BootstrapClasses.link_danger,BootstrapClasses.link_offset_2,BootstrapClasses.link_underline_opacity_25,BootstrapClasses.link_underline_opacity_100_hover)
                                                 .with(
                                                         text("Danger link")
                                                 )
@@ -213,7 +208,7 @@ class ColoredLinksTest {
                                 .with(
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Link.link_warning,Link.link_offset_2,Link.link_underline_opacity_25,Link.link_underline_opacity_100_hover)
+                                                .withClasses(BootstrapClasses.link_warning,BootstrapClasses.link_offset_2,BootstrapClasses.link_underline_opacity_25,BootstrapClasses.link_underline_opacity_100_hover)
                                                 .with(
                                                         text("Warning link")
                                                 )
@@ -222,7 +217,7 @@ class ColoredLinksTest {
                                 .with(
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Link.link_info,Link.link_offset_2,Link.link_underline_opacity_25,Link.link_underline_opacity_100_hover)
+                                                .withClasses(BootstrapClasses.link_info,BootstrapClasses.link_offset_2,BootstrapClasses.link_underline_opacity_25,BootstrapClasses.link_underline_opacity_100_hover)
                                                 .with(
                                                         text("Info link")
                                                 )
@@ -231,7 +226,7 @@ class ColoredLinksTest {
                                 .with(
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Link.link_light,Link.link_offset_2,Link.link_underline_opacity_25,Link.link_underline_opacity_100_hover)
+                                                .withClasses(BootstrapClasses.link_light,BootstrapClasses.link_offset_2,BootstrapClasses.link_underline_opacity_25,BootstrapClasses.link_underline_opacity_100_hover)
                                                 .with(
                                                         text("Light link")
                                                 )
@@ -240,7 +235,7 @@ class ColoredLinksTest {
                                 .with(
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Link.link_dark,Link.link_offset_2,Link.link_underline_opacity_25,Link.link_underline_opacity_100_hover)
+                                                .withClasses(BootstrapClasses.link_dark,BootstrapClasses.link_offset_2,BootstrapClasses.link_underline_opacity_25,BootstrapClasses.link_underline_opacity_100_hover)
                                                 .with(
                                                         text("Dark link")
                                                 )
@@ -249,7 +244,7 @@ class ColoredLinksTest {
                                 .with(
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Link.link_body_emphasis,Link.link_offset_2,Link.link_underline_opacity_25,Link.link_underline_opacity_75_hover)
+                                                .withClasses(BootstrapClasses.link_body_emphasis,BootstrapClasses.link_offset_2,BootstrapClasses.link_underline_opacity_25,BootstrapClasses.link_underline_opacity_75_hover)
                                                 .with(
                                                         text("Emphasis link")
                                                 )

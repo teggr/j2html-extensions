@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
@@ -29,10 +30,10 @@ class BreadcrumbTest {
                                 )
                                 .with(
                                         ol()
-                                                .withClasses(BreadCrumb.breadcrumb)
+                                                .withClasses(BootstrapClasses.breadcrumb)
                                                 .with(
                                                         li()
-                                                                .withClasses(BreadCrumb.breadcrumb_item, BreadCrumb.active)
+                                                                .withClasses(BootstrapClasses.breadcrumb_item, BootstrapClasses.active)
                                                                 .attr(AriaStatesAndProperties.ariaCurrent("page"))
                                                                 .with(
                                                                         text("Home")
@@ -45,10 +46,10 @@ class BreadcrumbTest {
                                 )
                                 .with(
                                         ol()
-                                                .withClasses(BreadCrumb.breadcrumb)
+                                                .withClasses(BootstrapClasses.breadcrumb)
                                                 .with(
                                                         li()
-                                                                .withClasses(BreadCrumb.breadcrumb_item)
+                                                                .withClasses(BootstrapClasses.breadcrumb_item)
                                                                 .with(
                                                                         a()
                                                                                 .withHref("#")
@@ -57,7 +58,7 @@ class BreadcrumbTest {
                                                                                 )
                                                                 ),
                                                         li()
-                                                                .withClasses(BreadCrumb.breadcrumb_item, BreadCrumb.active)
+                                                                .withClasses(BootstrapClasses.breadcrumb_item, BootstrapClasses.active)
                                                                 .attr(AriaStatesAndProperties.ariaCurrent("page"))
                                                                 .with(
                                                                         text("Library")
@@ -70,10 +71,10 @@ class BreadcrumbTest {
                                 )
                                 .with(
                                         ol()
-                                                .withClasses(BreadCrumb.breadcrumb)
+                                                .withClasses(BootstrapClasses.breadcrumb)
                                                 .with(
                                                         li()
-                                                                .withClasses(BreadCrumb.breadcrumb_item)
+                                                                .withClasses(BootstrapClasses.breadcrumb_item)
                                                                 .with(
                                                                         a()
                                                                                 .withHref("#")
@@ -82,7 +83,7 @@ class BreadcrumbTest {
                                                                                 )
                                                                 ),
                                                         li()
-                                                                .withClasses(BreadCrumb.breadcrumb_item)
+                                                                .withClasses(BootstrapClasses.breadcrumb_item)
                                                                 .with(
                                                                         a()
                                                                                 .withHref("#")
@@ -91,7 +92,7 @@ class BreadcrumbTest {
                                                                                 )
                                                                 ),
                                                         li()
-                                                                .withClasses(BreadCrumb.breadcrumb_item, BreadCrumb.active)
+                                                                .withClasses(BootstrapClasses.breadcrumb_item, BootstrapClasses.active)
                                                                 .attr(AriaStatesAndProperties.ariaCurrent("page"))
                                                                 .with(
                                                                         text("Data")
@@ -159,10 +160,10 @@ class BreadcrumbTest {
                         )
                         .with(
                                 ol()
-                                        .withClasses(BreadCrumb.breadcrumb)
+                                        .withClasses(BootstrapClasses.breadcrumb)
                                         .with(
                                                 li()
-                                                        .withClasses(BreadCrumb.breadcrumb_item)
+                                                        .withClasses(BootstrapClasses.breadcrumb_item)
                                                         .with(
                                                                 a()
                                                                         .withHref("#")
@@ -171,7 +172,7 @@ class BreadcrumbTest {
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(BreadCrumb.breadcrumb_item, BreadCrumb.active)
+                                                        .withClasses(BootstrapClasses.breadcrumb_item, BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
@@ -216,10 +217,10 @@ class BreadcrumbTest {
                         )
                         .with(
                                 ol()
-                                        .withClasses(BreadCrumb.breadcrumb)
+                                        .withClasses(BootstrapClasses.breadcrumb)
                                         .with(
                                                 li()
-                                                        .withClasses(BreadCrumb.breadcrumb_item)
+                                                        .withClasses(BootstrapClasses.breadcrumb_item)
                                                         .with(
                                                                 a()
                                                                         .withHref("#")
@@ -228,7 +229,7 @@ class BreadcrumbTest {
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(BreadCrumb.breadcrumb_item, BreadCrumb.active)
+                                                        .withClasses(BootstrapClasses.breadcrumb_item, BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
@@ -273,10 +274,10 @@ class BreadcrumbTest {
                         )
                         .with(
                                 ol()
-                                        .withClasses(BreadCrumb.breadcrumb)
+                                        .withClasses(BootstrapClasses.breadcrumb)
                                         .with(
                                                 li()
-                                                        .withClasses(BreadCrumb.breadcrumb_item)
+                                                        .withClasses(BootstrapClasses.breadcrumb_item)
                                                         .with(
                                                                 a()
                                                                         .withHref("#")
@@ -285,7 +286,7 @@ class BreadcrumbTest {
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(BreadCrumb.breadcrumb_item,BreadCrumb.active)
+                                                        .withClasses(BootstrapClasses.breadcrumb_item,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )

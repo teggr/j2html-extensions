@@ -1,7 +1,6 @@
 package dev.rebelcraft.j2html.ext.content;
 
-import dev.rebelcraft.j2html.ext.utilities.Borders;
-import dev.rebelcraft.j2html.ext.utilities.Text;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,14 +23,14 @@ class FiguresTest {
 
         String renderedHtml = uiDocumentation.render(
                 figure()
-                        .withClasses(Figures.figure)
+                        .withClasses(BootstrapClasses.figure)
                         .with(
                                 img()
                                         .withSrc("...")
-                                        .withClasses(Figures.figure_img,Images.img_fluid, Borders.rounded)
+                                        .withClasses(BootstrapClasses.figure_img,BootstrapClasses.img_fluid, BootstrapClasses.rounded)
                                         .withAlt("..."),
                                 figcaption()
-                                        .withClasses(Figures.figure_caption)
+                                        .withClasses(BootstrapClasses.figure_caption)
                                         .with(
                                                 text("A caption for the above image.")
                                         )
@@ -60,14 +59,14 @@ class FiguresTest {
 
         String renderedHtml = uiDocumentation.render(
                 figure()
-                        .withClasses(Figures.figure)
+                        .withClasses(BootstrapClasses.figure)
                         .with(
                                 img()
                                         .withSrc("...")
-                                        .withClasses(Figures.figure_img,Images.img_fluid,Borders.rounded)
+                                        .withClasses(BootstrapClasses.figure_img,BootstrapClasses.img_fluid,BootstrapClasses.rounded)
                                         .withAlt("..."),
                                 figcaption()
-                                        .withClasses(Figures.figure_caption, Text.text_end)
+                                        .withClasses(BootstrapClasses.figure_caption, BootstrapClasses.text_end)
                                         .with(
                                                 text("A caption for the above image.")
                                         )

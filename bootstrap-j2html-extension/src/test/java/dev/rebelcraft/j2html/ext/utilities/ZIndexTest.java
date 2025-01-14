@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,7 +24,7 @@ class ZIndexTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ZIndex.z_3, Position.position_absolute, Spacing.p_5, Borders.rounded_3)
+                                .withClasses(BootstrapClasses.z_3, BootstrapClasses.position_absolute, BootstrapClasses.p_5, BootstrapClasses.rounded_3)
                                 .with(
                                         span()
                                                 .with(
@@ -31,7 +32,7 @@ class ZIndexTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(ZIndex.z_2, Position.position_absolute, Spacing.p_5, Borders.rounded_3)
+                                .withClasses(BootstrapClasses.z_2, BootstrapClasses.position_absolute, BootstrapClasses.p_5, BootstrapClasses.rounded_3)
                                 .with(
                                         span()
                                                 .with(
@@ -39,7 +40,7 @@ class ZIndexTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(ZIndex.z_1, Position.position_absolute, Spacing.p_5, Borders.rounded_3)
+                                .withClasses(BootstrapClasses.z_1, BootstrapClasses.position_absolute, BootstrapClasses.p_5, BootstrapClasses.rounded_3)
                                 .with(
                                         span()
                                                 .with(
@@ -47,7 +48,7 @@ class ZIndexTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(ZIndex.z_0, Position.position_absolute, Spacing.p_5, Borders.rounded_3)
+                                .withClasses(BootstrapClasses.z_0, BootstrapClasses.position_absolute, BootstrapClasses.p_5, BootstrapClasses.rounded_3)
                                 .with(
                                         span()
                                                 .with(
@@ -55,7 +56,7 @@ class ZIndexTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(ZIndex.z_n1, Position.position_absolute, Spacing.p_5, Borders.rounded_3)
+                                .withClasses(BootstrapClasses.z_n1, BootstrapClasses.position_absolute, BootstrapClasses.p_5, BootstrapClasses.rounded_3)
                                 .with(
                                         span()
                                                 .with(

@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,7 +23,7 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex, Spacing.p_2)
+                        .withClasses(BootstrapClasses.d_flex, BootstrapClasses.p_2)
                         .with(
                                 text("I'm a flexbox container!")
                         )
@@ -47,7 +48,7 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_inline_flex, Spacing.p_2)
+                        .withClasses(BootstrapClasses.d_inline_flex, BootstrapClasses.p_2)
                         .with(
                                 text("I'm an inline flexbox container!")
                         )
@@ -73,39 +74,39 @@ class FlexTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Flex.d_flex, Flex.flex_row, Spacing.mb_3)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.flex_row, BootstrapClasses.mb_3)
                                 .with(
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item 1")
                                                 ),
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item 2")
                                                 ),
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item 3")
                                                 )
                                 ),
                         div()
-                                .withClasses(Flex.d_flex, Flex.flex_row_reverse)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.flex_row_reverse)
                                 .with(
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item 1")
                                                 ),
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item 2")
                                                 ),
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item 3")
                                                 )
@@ -152,39 +153,39 @@ class FlexTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Flex.d_flex, Flex.flex_column, Spacing.mb_3)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.flex_column, BootstrapClasses.mb_3)
                                 .with(
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item 1")
                                                 ),
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item 2")
                                                 ),
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item 3")
                                                 )
                                 ),
                         div()
-                                .withClasses(Flex.d_flex, Flex.flex_column_reverse)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.flex_column_reverse)
                                 .with(
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item 1")
                                                 ),
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item 2")
                                                 ),
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item 3")
                                                 )
@@ -231,32 +232,32 @@ class FlexTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Flex.d_flex, Flex.justify_content_start)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.justify_content_start)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Flex.d_flex, Flex.justify_content_end)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.justify_content_end)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Flex.d_flex, Flex.justify_content_center)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.justify_content_center)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Flex.d_flex, Flex.justify_content_between)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.justify_content_between)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Flex.d_flex, Flex.justify_content_around)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.justify_content_around)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Flex.d_flex, Flex.justify_content_evenly)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.justify_content_evenly)
                                 .with(
                                         text("...")
                                 )
@@ -298,27 +299,27 @@ class FlexTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Flex.d_flex, Flex.align_items_start)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.align_items_start)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Flex.d_flex, Flex.align_items_end)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.align_items_end)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Flex.d_flex, Flex.align_items_center)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.align_items_center)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Flex.d_flex, Flex.align_items_baseline)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.align_items_baseline)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Flex.d_flex, Flex.align_items_stretch)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.align_items_stretch)
                                 .with(
                                         text("...")
                                 )
@@ -357,27 +358,27 @@ class FlexTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Flex.align_self_start)
+                                .withClasses(BootstrapClasses.align_self_start)
                                 .with(
                                         text("Aligned flex item")
                                 ),
                         div()
-                                .withClasses(Flex.align_self_end)
+                                .withClasses(BootstrapClasses.align_self_end)
                                 .with(
                                         text("Aligned flex item")
                                 ),
                         div()
-                                .withClasses(Flex.align_self_center)
+                                .withClasses(BootstrapClasses.align_self_center)
                                 .with(
                                         text("Aligned flex item")
                                 ),
                         div()
-                                .withClasses(Flex.align_self_baseline)
+                                .withClasses(BootstrapClasses.align_self_baseline)
                                 .with(
                                         text("Aligned flex item")
                                 ),
                         div()
-                                .withClasses(Flex.align_self_stretch)
+                                .withClasses(BootstrapClasses.align_self_stretch)
                                 .with(
                                         text("Aligned flex item")
                                 )
@@ -415,20 +416,20 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex)
+                        .withClasses(BootstrapClasses.d_flex)
                         .with(
                                 div()
-                                        .withClasses(Spacing.p_2, Flex.flex_fill)
+                                        .withClasses(BootstrapClasses.p_2, BootstrapClasses.flex_fill)
                                         .with(
                                                 text("Flex item with a lot of content")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2, Flex.flex_fill)
+                                        .withClasses(BootstrapClasses.p_2, BootstrapClasses.flex_fill)
                                         .with(
                                                 text("Flex item")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2, Flex.flex_fill)
+                                        .withClasses(BootstrapClasses.p_2, BootstrapClasses.flex_fill)
                                         .with(
                                                 text("Flex item")
                                         )
@@ -462,20 +463,20 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex)
+                        .withClasses(BootstrapClasses.d_flex)
                         .with(
                                 div()
-                                        .withClasses(Spacing.p_2, Flex.flex_grow_1)
+                                        .withClasses(BootstrapClasses.p_2, BootstrapClasses.flex_grow_1)
                                         .with(
                                                 text("Flex item")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2)
+                                        .withClasses(BootstrapClasses.p_2)
                                         .with(
                                                 text("Flex item")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2)
+                                        .withClasses(BootstrapClasses.p_2)
                                         .with(
                                                 text("Third flex item")
                                         )
@@ -509,15 +510,15 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex)
+                        .withClasses(BootstrapClasses.d_flex)
                         .with(
                                 div()
-                                        .withClasses(Spacing.p_2, Sizing.w_100)
+                                        .withClasses(BootstrapClasses.p_2, BootstrapClasses.w_100)
                                         .with(
                                                 text("Flex item")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2, Flex.flex_shrink_1)
+                                        .withClasses(BootstrapClasses.p_2, BootstrapClasses.flex_shrink_1)
                                         .with(
                                                 text("Flex item")
                                         )
@@ -549,41 +550,41 @@ class FlexTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Flex.d_flex, Flex.align_items_start, Flex.flex_column, Spacing.mb_3)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.align_items_start, BootstrapClasses.flex_column, BootstrapClasses.mb_3)
                                 .withStyle("height: 200px;")
                                 .with(
                                         div()
-                                                .withClasses(Spacing.mb_auto, Spacing.p_2)
+                                                .withClasses(BootstrapClasses.mb_auto, BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item")
                                                 ),
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item")
                                                 ),
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item")
                                                 )
                                 ),
                         div()
-                                .withClasses(Flex.d_flex, Flex.align_items_end, Flex.flex_column, Spacing.mb_3)
+                                .withClasses(BootstrapClasses.d_flex, BootstrapClasses.align_items_end, BootstrapClasses.flex_column, BootstrapClasses.mb_3)
                                 .withStyle("height: 200px;")
                                 .with(
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item")
                                                 ),
                                         div()
-                                                .withClasses(Spacing.p_2)
+                                                .withClasses(BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item")
                                                 ),
                                         div()
-                                                .withClasses(Spacing.mt_auto, Spacing.p_2)
+                                                .withClasses(BootstrapClasses.mt_auto, BootstrapClasses.p_2)
                                                 .with(
                                                         text("Flex item")
                                                 )
@@ -630,7 +631,7 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex, Flex.flex_nowrap)
+                        .withClasses(BootstrapClasses.d_flex, BootstrapClasses.flex_nowrap)
                         .with(
                                 text("...")
                         )
@@ -655,7 +656,7 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex, Flex.flex_wrap)
+                        .withClasses(BootstrapClasses.d_flex, BootstrapClasses.flex_wrap)
                         .with(
                                 text("...")
                         )
@@ -680,7 +681,7 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex, Flex.flex_wrap_reverse)
+                        .withClasses(BootstrapClasses.d_flex, BootstrapClasses.flex_wrap_reverse)
                         .with(
                                 text("...")
                         )
@@ -705,20 +706,20 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex, Flex.flex_nowrap)
+                        .withClasses(BootstrapClasses.d_flex, BootstrapClasses.flex_nowrap)
                         .with(
                                 div()
-                                        .withClasses(Flex.order_3, Spacing.p_2)
+                                        .withClasses(BootstrapClasses.order_3, BootstrapClasses.p_2)
                                         .with(
                                                 text("First flex item")
                                         ),
                                 div()
-                                        .withClasses(Flex.order_2, Spacing.p_2)
+                                        .withClasses(BootstrapClasses.order_2, BootstrapClasses.p_2)
                                         .with(
                                                 text("Second flex item")
                                         ),
                                 div()
-                                        .withClasses(Flex.order_1, Spacing.p_2)
+                                        .withClasses(BootstrapClasses.order_1, BootstrapClasses.p_2)
                                         .with(
                                                 text("Third flex item")
                                         )
@@ -752,7 +753,7 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex, Flex.align_content_start, Flex.flex_wrap)
+                        .withClasses(BootstrapClasses.d_flex, BootstrapClasses.align_content_start, BootstrapClasses.flex_wrap)
                         .with(
                                 text("...")
                         )
@@ -777,7 +778,7 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex, Flex.align_content_end, Flex.flex_wrap)
+                        .withClasses(BootstrapClasses.d_flex, BootstrapClasses.align_content_end, BootstrapClasses.flex_wrap)
                         .with(
                                 text("...")
                         )
@@ -802,7 +803,7 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex, Flex.align_content_center, Flex.flex_wrap)
+                        .withClasses(BootstrapClasses.d_flex, BootstrapClasses.align_content_center, BootstrapClasses.flex_wrap)
                         .with(
                                 text("...")
                         )
@@ -827,7 +828,7 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex, Flex.align_content_between, Flex.flex_wrap)
+                        .withClasses(BootstrapClasses.d_flex, BootstrapClasses.align_content_between, BootstrapClasses.flex_wrap)
                         .with(
                                 text("...")
                         )
@@ -852,7 +853,7 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex, Flex.align_content_around, Flex.flex_wrap)
+                        .withClasses(BootstrapClasses.d_flex, BootstrapClasses.align_content_around, BootstrapClasses.flex_wrap)
                         .with(
                                 text("...")
                         )
@@ -877,7 +878,7 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex, Flex.align_content_stretch, Flex.flex_wrap)
+                        .withClasses(BootstrapClasses.d_flex, BootstrapClasses.align_content_stretch, BootstrapClasses.flex_wrap)
                         .with(
                                 text("...")
                         )
@@ -902,17 +903,17 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex)
+                        .withClasses(BootstrapClasses.d_flex)
                         .with(
                                 div()
-                                        .withClasses(Flex.flex_shrink_0)
+                                        .withClasses(BootstrapClasses.flex_shrink_0)
                                         .with(
                                                 img()
                                                         .withSrc("...")
                                                         .withAlt("...")
                                         ),
                                 div()
-                                        .withClasses(Flex.flex_grow_1, Spacing.ms_3)
+                                        .withClasses(BootstrapClasses.flex_grow_1, BootstrapClasses.ms_3)
                                         .with(
                                                 text("This is some content from a media component. You can replace this with any content and adjust it as needed.")
                                         )
@@ -943,17 +944,17 @@ class FlexTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex, Flex.align_items_center)
+                        .withClasses(BootstrapClasses.d_flex, BootstrapClasses.align_items_center)
                         .with(
                                 div()
-                                        .withClasses(Flex.flex_shrink_0)
+                                        .withClasses(BootstrapClasses.flex_shrink_0)
                                         .with(
                                                 img()
                                                         .withSrc("...")
                                                         .withAlt("...")
                                         ),
                                 div()
-                                        .withClasses(Flex.flex_grow_1, Spacing.ms_3)
+                                        .withClasses(BootstrapClasses.flex_grow_1, BootstrapClasses.ms_3)
                                         .with(
                                                 text("This is some content from a media component. You can replace this with any content and adjust it as needed.")
                                         )

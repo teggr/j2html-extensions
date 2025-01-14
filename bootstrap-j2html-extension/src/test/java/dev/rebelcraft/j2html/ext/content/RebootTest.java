@@ -1,10 +1,7 @@
 package dev.rebelcraft.j2html.ext.content;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
-import dev.rebelcraft.j2html.ext.components.Buttons;
-import dev.rebelcraft.j2html.ext.utilities.Borders;
-import dev.rebelcraft.j2html.ext.utilities.Colors;
-import dev.rebelcraft.j2html.ext.utilities.Opacity;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,7 +10,7 @@ import org.junit.jupiter.api.TestInfo;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Reboot {
+class RebootTest {
 
     private UiDocumentation uiDocumentation;
 
@@ -116,14 +113,14 @@ class Reboot {
                 div(
                         hr(),
                         div()
-                                .withClass(Colors.text_success)
+                                .withClass(BootstrapClasses.text_success)
                                 .with(
                                         hr()
                                 ),
                         hr()
-                                .withClasses(Borders.border, Borders.border_danger, Borders.border_2, Opacity.opacity_50),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_danger, BootstrapClasses.border_2, BootstrapClasses.opacity_50),
                         hr()
-                                .withClasses(Borders.border, Borders.border_primary, Borders.border_3, Opacity.opacity_75)
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_primary, BootstrapClasses.border_3, BootstrapClasses.opacity_75)
                 )
         );
 
@@ -500,7 +497,7 @@ void codeBlocks() throws Exception {
         String renderedHtml = uiDocumentation.render(
                 span()
                         .attr(AriaRoles.roleButton)
-                        .attr(Buttons.tabindex,"0")
+                        .attr(Reboot.tabindex,"0")
                         .with(
                                 text("Non-button element button")
                         )

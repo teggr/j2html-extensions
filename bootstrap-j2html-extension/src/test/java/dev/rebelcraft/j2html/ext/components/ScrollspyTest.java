@@ -1,20 +1,14 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.layout.Grid;
-import dev.rebelcraft.j2html.ext.utilities.*;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ScrollspyTest {
@@ -33,42 +27,42 @@ class ScrollspyTest {
                 each(
                   nav()
                    .withId("navbar-example2")
-                   .withClasses(Navbar.navbar,Background.bg_body_tertiary,Spacing.px_3, Spacing.mb_3)
+                   .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_body_tertiary,BootstrapClasses.px_3, BootstrapClasses.mb_3)
                    .with(
                       a()
-                       .withClasses(Navbar.navbar_brand)
+                       .withClasses(BootstrapClasses.navbar_brand)
                        .withHref("#")
                        .with(
                           text("Navbar")
                         ),
                       ul()
-                       .withClasses(NavsTabs.nav,NavsTabs.nav_pills)
+                       .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_pills)
                        .with(
                           li()
-                           .withClasses(NavsTabs.nav_item)
+                           .withClasses(BootstrapClasses.nav_item)
                            .with(
                               a()
-                               .withClasses(NavsTabs.nav_link)
+                               .withClasses(BootstrapClasses.nav_link)
                                .withHref("#scrollspyHeading1")
                                .with(
                                   text("First")
                                 )
                             ),
                           li()
-                           .withClasses(NavsTabs.nav_item)
+                           .withClasses(BootstrapClasses.nav_item)
                            .with(
                               a()
-                               .withClasses(NavsTabs.nav_link)
+                               .withClasses(BootstrapClasses.nav_link)
                                .withHref("#scrollspyHeading2")
                                .with(
                                   text("Second")
                                 )
                             ),
                           li()
-                           .withClasses(NavsTabs.nav_item,Dropdowns.dropdown)
+                           .withClasses(BootstrapClasses.nav_item,BootstrapClasses.dropdown)
                            .with(
                               a()
-                               .withClasses(NavsTabs.nav_link,Dropdowns.dropdown_toggle)
+                               .withClasses(BootstrapClasses.nav_link,BootstrapClasses.dropdown_toggle)
                                .withData("bs-toggle","dropdown")
                                .withHref("#")
                                .attr(AriaRoles.roleButton)
@@ -79,12 +73,12 @@ class ScrollspyTest {
                                   text("Dropdown")
                                 ),
                               ul()
-                               .withClasses(Dropdowns.dropdown_menu)
+                               .withClasses(BootstrapClasses.dropdown_menu)
                                .with(
                                   li()
                                    .with(
                                       a()
-                                       .withClasses(Dropdowns.dropdown_item)
+                                       .withClasses(BootstrapClasses.dropdown_item)
                                        .withHref("#scrollspyHeading3")
                                        .with(
                                           text("Third")
@@ -93,7 +87,7 @@ class ScrollspyTest {
                                   li()
                                    .with(
                                       a()
-                                       .withClasses(Dropdowns.dropdown_item)
+                                       .withClasses(BootstrapClasses.dropdown_item)
                                        .withHref("#scrollspyHeading4")
                                        .with(
                                           text("Fourth")
@@ -102,12 +96,12 @@ class ScrollspyTest {
                                   li()
                                    .with(
                                       hr()
-                                       .withClasses(Dropdowns.dropdown_divider)
+                                       .withClasses(BootstrapClasses.dropdown_divider)
                                     ),
                                   li()
                                    .with(
                                       a()
-                                       .withClasses(Dropdowns.dropdown_item)
+                                       .withClasses(BootstrapClasses.dropdown_item)
                                        .withHref("#scrollspyHeading5")
                                        .with(
                                           text("Fifth")
@@ -122,7 +116,7 @@ class ScrollspyTest {
                    .withData("bs-target","#navbar-example2")
                    .withData("bs-root-margin","0px 0px -40%")
                    .withData("bs-smooth-scroll","true")
-                   .withClasses("scrollspy-example", Background.bg_body_tertiary,Spacing.p_3, Borders.rounded_2)
+                   .withClasses("scrollspy-example", BootstrapClasses.bg_body_tertiary,BootstrapClasses.p_3, BootstrapClasses.rounded_2)
                    .withTabindex(0)
                    .with(
                       h4()
@@ -264,63 +258,63 @@ class ScrollspyTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row)
+                        .withClasses(BootstrapClasses.row)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_4)
+                                        .withClasses(BootstrapClasses.col_4)
                                         .with(
                                                 nav()
                                                         .withId("navbar-example3")
-                                                        .withClasses(Sizing.h_100,Flex.flex_column,Flex.align_items_stretch,Spacing.pe_4,Borders.border_end)
+                                                        .withClasses(BootstrapClasses.h_100,BootstrapClasses.flex_column,BootstrapClasses.align_items_stretch,BootstrapClasses.pe_4,BootstrapClasses.border_end)
                                                         .with(
                                                                 nav()
-                                                                        .withClasses(NavsTabs.nav,NavsTabs.nav_pills,Flex.flex_column)
+                                                                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_pills,BootstrapClasses.flex_column)
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                         .withHref("#item-1")
                                                                                         .with(
                                                                                                 text("Item 1")
                                                                                         ),
                                                                                 nav()
-                                                                                        .withClasses(NavsTabs.nav,NavsTabs.nav_pills, Flex.flex_column)
+                                                                                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_pills, BootstrapClasses.flex_column)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Spacing.ms_3,Spacing.my_1)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.ms_3,BootstrapClasses.my_1)
                                                                                                         .withHref("#item-1-1")
                                                                                                         .with(
                                                                                                                 text("Item 1-1")
                                                                                                         ),
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Spacing.ms_3,Spacing.my_1)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.ms_3,BootstrapClasses.my_1)
                                                                                                         .withHref("#item-1-2")
                                                                                                         .with(
                                                                                                                 text("Item 1-2")
                                                                                                         )
                                                                                         ),
                                                                                 a()
-                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                         .withHref("#item-2")
                                                                                         .with(
                                                                                                 text("Item 2")
                                                                                         ),
                                                                                 a()
-                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                         .withHref("#item-3")
                                                                                         .with(
                                                                                                 text("Item 3")
                                                                                         ),
                                                                                 nav()
-                                                                                        .withClasses(NavsTabs.nav,NavsTabs.nav_pills,Flex.flex_column)
+                                                                                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_pills,BootstrapClasses.flex_column)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Spacing.ms_3,Spacing.my_1)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.ms_3,BootstrapClasses.my_1)
                                                                                                         .withHref("#item-3-1")
                                                                                                         .with(
                                                                                                                 text("Item 3-1")
                                                                                                         ),
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Spacing.ms_3,Spacing.my_1)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.ms_3,BootstrapClasses.my_1)
                                                                                                         .withHref("#item-3-2")
                                                                                                         .with(
                                                                                                                 text("Item 3-2")
@@ -330,7 +324,7 @@ class ScrollspyTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_8)
+                                        .withClasses(BootstrapClasses.col_8)
                                         .with(
                                                 div()
                                                         .withData("bs-spy","scroll")
@@ -537,35 +531,35 @@ class ScrollspyTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row)
+                        .withClasses(BootstrapClasses.row)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_4)
+                                        .withClasses(BootstrapClasses.col_4)
                                         .with(
                                                 div()
                                                         .withId("list-example")
-                                                        .withClasses(ListGroup.list_group)
+                                                        .withClasses(BootstrapClasses.list_group)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action)
+                                                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action)
                                                                         .withHref("#list-item-1")
                                                                         .with(
                                                                                 text("Item 1")
                                                                         ),
                                                                 a()
-                                                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action)
+                                                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action)
                                                                         .withHref("#list-item-2")
                                                                         .with(
                                                                                 text("Item 2")
                                                                         ),
                                                                 a()
-                                                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action)
+                                                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action)
                                                                         .withHref("#list-item-3")
                                                                         .with(
                                                                                 text("Item 3")
                                                                         ),
                                                                 a()
-                                                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action)
+                                                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action)
                                                                         .withHref("#list-item-4")
                                                                         .with(
                                                                                 text("Item 4")
@@ -573,7 +567,7 @@ class ScrollspyTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_8)
+                                        .withClasses(BootstrapClasses.col_8)
                                         .with(
                                                 div()
                                                         .withData("bs-spy","scroll")
@@ -685,41 +679,41 @@ class ScrollspyTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row)
+                        .withClasses(BootstrapClasses.row)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_4)
+                                        .withClasses(BootstrapClasses.col_4)
                                         .with(
                                                 div()
                                                         .withId("simple-list-example")
-                                                        .withClasses(Flex.d_flex,Flex.flex_column,Spacing.gap_2,"simple-list-example-scrollspy",Text.text_center)
+                                                        .withClasses(BootstrapClasses.d_flex,BootstrapClasses.flex_column,BootstrapClasses.gap_2,"simple-list-example-scrollspy",BootstrapClasses.text_center)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Spacing.p_1,Borders.rounded)
+                                                                        .withClasses(BootstrapClasses.p_1,BootstrapClasses.rounded)
                                                                         .withHref("#simple-list-item-1")
                                                                         .with(
                                                                                 text("Item 1")
                                                                         ),
                                                                 a()
-                                                                        .withClasses(Spacing.p_1,Borders.rounded)
+                                                                        .withClasses(BootstrapClasses.p_1,BootstrapClasses.rounded)
                                                                         .withHref("#simple-list-item-2")
                                                                         .with(
                                                                                 text("Item 2")
                                                                         ),
                                                                 a()
-                                                                        .withClasses(Spacing.p_1,Borders.rounded)
+                                                                        .withClasses(BootstrapClasses.p_1,BootstrapClasses.rounded)
                                                                         .withHref("#simple-list-item-3")
                                                                         .with(
                                                                                 text("Item 3")
                                                                         ),
                                                                 a()
-                                                                        .withClasses(Spacing.p_1,Borders.rounded)
+                                                                        .withClasses(BootstrapClasses.p_1,BootstrapClasses.rounded)
                                                                         .withHref("#simple-list-item-4")
                                                                         .with(
                                                                                 text("Item 4")
                                                                         ),
                                                                 a()
-                                                                        .withClasses(Spacing.p_1,Borders.rounded)
+                                                                        .withClasses(BootstrapClasses.p_1,BootstrapClasses.rounded)
                                                                         .withHref("#simple-list-item-5")
                                                                         .with(
                                                                                 text("Item 5")
@@ -727,7 +721,7 @@ class ScrollspyTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_8)
+                                        .withClasses(BootstrapClasses.col_8)
                                         .with(
                                                 div()
                                                         .withData("bs-spy","scroll")

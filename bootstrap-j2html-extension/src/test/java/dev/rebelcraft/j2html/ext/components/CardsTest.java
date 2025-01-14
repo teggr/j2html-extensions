@@ -1,24 +1,13 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.content.Images;
-import dev.rebelcraft.j2html.ext.content.Typography;
-import dev.rebelcraft.j2html.ext.helpers.ColorsAndBackground;
-import dev.rebelcraft.j2html.ext.layout.Grid;
-import dev.rebelcraft.j2html.ext.layout.Gutters;
-import dev.rebelcraft.j2html.ext.utilities.*;
 import dev.rebelcraft.uidocs.UiDocumentation;
-import j2html.tags.specialized.NavTag;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CardsTest {
@@ -35,29 +24,29 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                     .withClasses(Card.card)
+                     .withClasses(BootstrapClasses.card)
                      .withStyle("width: 18rem;")
                      .with(
                         img()
                          .withSrc("...")
-                         .withClasses(Card.card_img_top)
+                         .withClasses(BootstrapClasses.card_img_top)
                          .withAlt("..."),
                         div()
-                         .withClasses(Card.card_body)
+                         .withClasses(BootstrapClasses.card_body)
                          .with(
                             h5()
-                             .withClasses(Card.card_title)
+                             .withClasses(BootstrapClasses.card_title)
                              .with(
                                 text("Card title")
                               ),
                             p()
-                             .withClasses(Card.card_text)
+                             .withClasses(BootstrapClasses.card_text)
                              .with(
                                 text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                               ),
                             a()
                              .withHref("#")
-                             .withClasses(Buttons.btn,Buttons.btn_primary)
+                             .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                              .with(
                                 text("Go somewhere")
                               )
@@ -95,10 +84,10 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card)
+                        .withClasses(BootstrapClasses.card)
                         .with(
                                 div()
-                                        .withClasses(Card.card_body)
+                                        .withClasses(BootstrapClasses.card_body)
                                         .with(
                                                 text("This is some text within a card body.")
                                         )
@@ -126,36 +115,36 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card)
+                        .withClasses(BootstrapClasses.card)
                         .withStyle("width: 18rem;")
                         .with(
                                 div()
-                                        .withClasses(Card.card_body)
+                                        .withClasses(BootstrapClasses.card_body)
                                         .with(
                                                 h5()
-                                                        .withClasses(Card.card_title)
+                                                        .withClasses(BootstrapClasses.card_title)
                                                         .with(
                                                                 text("Card title")
                                                         ),
                                                 h6()
-                                                        .withClasses(Card.card_subtitle, Spacing.mb_2, Colors.text_body_secondary)
+                                                        .withClasses(BootstrapClasses.card_subtitle, BootstrapClasses.mb_2, BootstrapClasses.text_body_secondary)
                                                         .with(
                                                                 text("Card subtitle")
                                                         ),
                                                 p()
-                                                        .withClasses(Card.card_text)
+                                                        .withClasses(BootstrapClasses.card_text)
                                                         .with(
                                                                 text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                         ),
                                                 a()
                                                         .withHref("#")
-                                                        .withClasses(Card.card_link)
+                                                        .withClasses(BootstrapClasses.card_link)
                                                         .with(
                                                                 text("Card link")
                                                         ),
                                                 a()
                                                         .withHref("#")
-                                                        .withClasses(Card.card_link)
+                                                        .withClasses(BootstrapClasses.card_link)
                                                         .with(
                                                                 text("Another link")
                                                         )
@@ -198,18 +187,18 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card)
+                        .withClasses(BootstrapClasses.card)
                         .withStyle("width: 18rem;")
                         .with(
                                 img()
                                         .withSrc("...")
-                                        .withClasses(Card.card_img_top)
+                                        .withClasses(BootstrapClasses.card_img_top)
                                         .withAlt("..."),
                                 div()
-                                        .withClasses(Card.card_body)
+                                        .withClasses(BootstrapClasses.card_body)
                                         .with(
                                                 p()
-                                                        .withClasses(Card.card_text)
+                                                        .withClasses(BootstrapClasses.card_text)
                                                         .with(
                                                                 text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                         )
@@ -241,24 +230,24 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card)
+                        .withClasses(BootstrapClasses.card)
                         .withStyle("width: 18rem;")
                         .with(
                                 ul()
-                                        .withClasses(Card.list_group,Card.list_group_flush)
+                                        .withClasses(BootstrapClasses.list_group,BootstrapClasses.list_group_flush)
                                         .with(
                                                 li()
-                                                        .withClasses(Card.list_group_item)
+                                                        .withClasses(BootstrapClasses.list_group_item)
                                                         .with(
                                                                 text("An item")
                                                         ),
                                                 li()
-                                                        .withClasses(Card.list_group_item)
+                                                        .withClasses(BootstrapClasses.list_group_item)
                                                         .with(
                                                                 text("A second item")
                                                         ),
                                                 li()
-                                                        .withClasses(Card.list_group_item)
+                                                        .withClasses(BootstrapClasses.list_group_item)
                                                         .with(
                                                                 text("A third item")
                                                         )
@@ -295,29 +284,29 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card)
+                        .withClasses(BootstrapClasses.card)
                         .withStyle("width: 18rem;")
                         .with(
                                 div()
-                                        .withClasses(Card.card_header)
+                                        .withClasses(BootstrapClasses.card_header)
                                         .with(
                                                 text("Featured")
                                         ),
                                 ul()
-                                        .withClasses(Card.list_group,Card.list_group_flush)
+                                        .withClasses(BootstrapClasses.list_group,BootstrapClasses.list_group_flush)
                                         .with(
                                                 li()
-                                                        .withClasses(Card.list_group_item)
+                                                        .withClasses(BootstrapClasses.list_group_item)
                                                         .with(
                                                                 text("An item")
                                                         ),
                                                 li()
-                                                        .withClasses(Card.list_group_item)
+                                                        .withClasses(BootstrapClasses.list_group_item)
                                                         .with(
                                                                 text("A second item")
                                                         ),
                                                 li()
-                                                        .withClasses(Card.list_group_item)
+                                                        .withClasses(BootstrapClasses.list_group_item)
                                                         .with(
                                                                 text("A third item")
                                                         )
@@ -357,30 +346,30 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card)
+                        .withClasses(BootstrapClasses.card)
                         .withStyle("width: 18rem;")
                         .with(
                                 ul()
-                                        .withClasses(Card.list_group,Card.list_group_flush)
+                                        .withClasses(BootstrapClasses.list_group,BootstrapClasses.list_group_flush)
                                         .with(
                                                 li()
-                                                        .withClasses(Card.list_group_item)
+                                                        .withClasses(BootstrapClasses.list_group_item)
                                                         .with(
                                                                 text("An item")
                                                         ),
                                                 li()
-                                                        .withClasses(Card.list_group_item)
+                                                        .withClasses(BootstrapClasses.list_group_item)
                                                         .with(
                                                                 text("A second item")
                                                         ),
                                                 li()
-                                                        .withClasses(Card.list_group_item)
+                                                        .withClasses(BootstrapClasses.list_group_item)
                                                         .with(
                                                                 text("A third item")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Card.card_footer)
+                                        .withClasses(BootstrapClasses.card_footer)
                                         .with(
                                                 text("Card footer")
                                         )
@@ -419,58 +408,58 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card)
+                        .withClasses(BootstrapClasses.card)
                         .withStyle("width: 18rem;")
                         .with(
                                 img()
                                         .withSrc("...")
-                                        .withClasses(Card.card_img_top)
+                                        .withClasses(BootstrapClasses.card_img_top)
                                         .withAlt("..."),
                                 div()
-                                        .withClasses(Card.card_body)
+                                        .withClasses(BootstrapClasses.card_body)
                                         .with(
                                                 h5()
-                                                        .withClasses(Card.card_title)
+                                                        .withClasses(BootstrapClasses.card_title)
                                                         .with(
                                                                 text("Card title")
                                                         ),
                                                 p()
-                                                        .withClasses(Card.card_text)
+                                                        .withClasses(BootstrapClasses.card_text)
                                                         .with(
                                                                 text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                         )
                                         ),
                                 ul()
-                                        .withClasses(Card.list_group,Card.list_group_flush)
+                                        .withClasses(BootstrapClasses.list_group,BootstrapClasses.list_group_flush)
                                         .with(
                                                 li()
-                                                        .withClasses(Card.list_group_item)
+                                                        .withClasses(BootstrapClasses.list_group_item)
                                                         .with(
                                                                 text("An item")
                                                         ),
                                                 li()
-                                                        .withClasses(Card.list_group_item)
+                                                        .withClasses(BootstrapClasses.list_group_item)
                                                         .with(
                                                                 text("A second item")
                                                         ),
                                                 li()
-                                                        .withClasses(Card.list_group_item)
+                                                        .withClasses(BootstrapClasses.list_group_item)
                                                         .with(
                                                                 text("A third item")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Card.card_body)
+                                        .withClasses(BootstrapClasses.card_body)
                                         .with(
                                                 a()
                                                         .withHref("#")
-                                                        .withClasses(Card.card_link)
+                                                        .withClasses(BootstrapClasses.card_link)
                                                         .with(
                                                                 text("Card link")
                                                         ),
                                                 a()
                                                         .withHref("#")
-                                                        .withClasses(Card.card_link)
+                                                        .withClasses(BootstrapClasses.card_link)
                                                         .with(
                                                                 text("Another link")
                                                         )
@@ -524,29 +513,29 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card)
+                        .withClasses(BootstrapClasses.card)
                         .with(
                                 div()
-                                        .withClasses(Card.card_header)
+                                        .withClasses(BootstrapClasses.card_header)
                                         .with(
                                                 text("Featured")
                                         ),
                                 div()
-                                        .withClasses(Card.card_body)
+                                        .withClasses(BootstrapClasses.card_body)
                                         .with(
                                                 h5()
-                                                        .withClasses(Card.card_title)
+                                                        .withClasses(BootstrapClasses.card_title)
                                                         .with(
                                                                 text("Special title treatment")
                                                         ),
                                                 p()
-                                                        .withClasses(Card.card_text)
+                                                        .withClasses(BootstrapClasses.card_text)
                                                         .with(
                                                                 text("With supporting text below as a natural lead-in to additional content.")
                                                         ),
                                                 a()
                                                         .withHref("#")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("Go somewhere")
                                                         )
@@ -586,29 +575,29 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card)
+                        .withClasses(BootstrapClasses.card)
                         .with(
                                 h5()
-                                        .withClasses(Card.card_header)
+                                        .withClasses(BootstrapClasses.card_header)
                                         .with(
                                                 text("Featured")
                                         ),
                                 div()
-                                        .withClasses(Card.card_body)
+                                        .withClasses(BootstrapClasses.card_body)
                                         .with(
                                                 h5()
-                                                        .withClasses(Card.card_title)
+                                                        .withClasses(BootstrapClasses.card_title)
                                                         .with(
                                                                 text("Special title treatment")
                                                         ),
                                                 p()
-                                                        .withClasses(Card.card_text)
+                                                        .withClasses(BootstrapClasses.card_text)
                                                         .with(
                                                                 text("With supporting text below as a natural lead-in to additional content.")
                                                         ),
                                                 a()
                                                         .withHref("#")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("Go somewhere")
                                                         )
@@ -648,25 +637,25 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card)
+                        .withClasses(BootstrapClasses.card)
                         .with(
                                 div()
-                                        .withClasses(Card.card_header)
+                                        .withClasses(BootstrapClasses.card_header)
                                         .with(
                                                 text("Quote")
                                         ),
                                 div()
-                                        .withClasses(Card.card_body)
+                                        .withClasses(BootstrapClasses.card_body)
                                         .with(
                                                 blockquote()
-                                                        .withClasses(Typography.blockquote,Spacing.mb_0)
+                                                        .withClasses(BootstrapClasses.blockquote,BootstrapClasses.mb_0)
                                                         .with(
                                                                 p()
                                                                         .with(
                                                                                 text("A well-known quote, contained in a blockquote element.")
                                                                         ),
                                                                 footer()
-                                                                        .withClasses(Typography.blockquote_footer)
+                                                                        .withClasses(BootstrapClasses.blockquote_footer)
                                                                         .with(
                                                                                 text("Someone famous in"),
                                                                                 cite()
@@ -714,35 +703,35 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card, Text.text_center)
+                        .withClasses(BootstrapClasses.card, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Card.card_header)
+                                        .withClasses(BootstrapClasses.card_header)
                                         .with(
                                                 text("Featured")
                                         ),
                                 div()
-                                        .withClasses(Card.card_body)
+                                        .withClasses(BootstrapClasses.card_body)
                                         .with(
                                                 h5()
-                                                        .withClasses(Card.card_title)
+                                                        .withClasses(BootstrapClasses.card_title)
                                                         .with(
                                                                 text("Special title treatment")
                                                         ),
                                                 p()
-                                                        .withClasses(Card.card_text)
+                                                        .withClasses(BootstrapClasses.card_text)
                                                         .with(
                                                                 text("With supporting text below as a natural lead-in to additional content.")
                                                         ),
                                                 a()
                                                         .withHref("#")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("Go somewhere")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Card.card_footer,Colors.text_body_secondary)
+                                        .withClasses(BootstrapClasses.card_footer,BootstrapClasses.text_body_secondary)
                                         .with(
                                                 text("2 days ago")
                                         )
@@ -784,30 +773,30 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row)
+                        .withClasses(BootstrapClasses.row)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_sm_6,Spacing.mb_3,Spacing.mb_sm_0)
+                                        .withClasses(BootstrapClasses.col_sm_6,BootstrapClasses.mb_3,BootstrapClasses.mb_sm_0)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card)
+                                                        .withClasses(BootstrapClasses.card)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Special title treatment")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("With supporting text below as a natural lead-in to additional content.")
                                                                                         ),
                                                                                 a()
                                                                                         .withHref("#")
-                                                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                                                         .with(
                                                                                                 text("Go somewhere")
                                                                                         )
@@ -815,27 +804,27 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_sm_6)
+                                        .withClasses(BootstrapClasses.col_sm_6)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card)
+                                                        .withClasses(BootstrapClasses.card)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Special title treatment")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("With supporting text below as a natural lead-in to additional content.")
                                                                                         ),
                                                                                 a()
                                                                                         .withHref("#")
-                                                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                                                         .with(
                                                                                                 text("Go somewhere")
                                                                                         )
@@ -894,48 +883,48 @@ class CardsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Card.card, Sizing.w_75,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card, BootstrapClasses.w_75,BootstrapClasses.mb_3)
                                 .with(
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("With supporting text below as a natural lead-in to additional content.")
                                                                 ),
                                                         a()
                                                                 .withHref("#")
-                                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                                 .with(
                                                                         text("Button")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,Sizing.w_50)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.w_50)
                                 .with(
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("With supporting text below as a natural lead-in to additional content.")
                                                                 ),
                                                         a()
                                                                 .withHref("#")
-                                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                                 .with(
                                                                         text("Button")
                                                                 )
@@ -986,25 +975,25 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card)
+                        .withClasses(BootstrapClasses.card)
                         .withStyle("width: 18rem;")
                         .with(
                                 div()
-                                        .withClasses(Card.card_body)
+                                        .withClasses(BootstrapClasses.card_body)
                                         .with(
                                                 h5()
-                                                        .withClasses(Card.card_title)
+                                                        .withClasses(BootstrapClasses.card_title)
                                                         .with(
                                                                 text("Special title treatment")
                                                         ),
                                                 p()
-                                                        .withClasses(Card.card_text)
+                                                        .withClasses(BootstrapClasses.card_text)
                                                         .with(
                                                                 text("With supporting text below as a natural lead-in to additional content.")
                                                         ),
                                                 a()
                                                         .withHref("#")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("Go somewhere")
                                                         )
@@ -1042,75 +1031,75 @@ class CardsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Card.card,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.mb_3)
                                 .withStyle("width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Special title treatment")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("With supporting text below as a natural lead-in to additional content.")
                                                                 ),
                                                         a()
                                                                 .withHref("#")
-                                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                                 .with(
                                                                         text("Go somewhere")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,Text.text_center,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.text_center,BootstrapClasses.mb_3)
                                 .withStyle("width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Special title treatment")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("With supporting text below as a natural lead-in to additional content.")
                                                                 ),
                                                         a()
                                                                 .withHref("#")
-                                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                                 .with(
                                                                         text("Go somewhere")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,Text.text_end)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.text_end)
                                 .withStyle("width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Special title treatment")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("With supporting text below as a natural lead-in to additional content.")
                                                                 ),
                                                         a()
                                                                 .withHref("#")
-                                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                                 .with(
                                                                         text("Go somewhere")
                                                                 )
@@ -1175,19 +1164,19 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card,Text.text_center)
+                        .withClasses(BootstrapClasses.card,BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Card.card_header)
+                                        .withClasses(BootstrapClasses.card_header)
                                         .with(
                                                 ul()
-                                                        .withClasses(NavsTabs.nav,NavsTabs.nav_tabs,Card.card_header_tabs)
+                                                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_tabs,BootstrapClasses.card_header_tabs)
                                                         .with(
                                                                 li()
-                                                                        .withClasses(NavsTabs.nav_item)
+                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(NavsTabs.nav_link,NavsTabs.active)
+                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                                                         .attr(
                                                                                                 AriaStatesAndProperties.ariaCurrent("true")
                                                                                         )
@@ -1197,20 +1186,20 @@ class CardsTest {
                                                                                         )
                                                                         ),
                                                                 li()
-                                                                        .withClasses(NavsTabs.nav_item)
+                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Link")
                                                                                         )
                                                                         ),
                                                                 li()
-                                                                        .withClasses(NavsTabs.nav_item)
+                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(NavsTabs.nav_link,NavsTabs.disabled)
+                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                                                         .attr(
                                                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                                                         )
@@ -1221,21 +1210,21 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Card.card_body)
+                                        .withClasses(BootstrapClasses.card_body)
                                         .with(
                                                 h5()
-                                                        .withClasses(Card.card_title)
+                                                        .withClasses(BootstrapClasses.card_title)
                                                         .with(
                                                                 text("Special title treatment")
                                                         ),
                                                 p()
-                                                        .withClasses(Card.card_text)
+                                                        .withClasses(BootstrapClasses.card_text)
                                                         .with(
                                                                 text("With supporting text below as a natural lead-in to additional content.")
                                                         ),
                                                 a()
                                                         .withHref("#")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("Go somewhere")
                                                         )
@@ -1291,39 +1280,39 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card,Text.text_center)
+                        .withClasses(BootstrapClasses.card,BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Card.card_header)
+                                        .withClasses(BootstrapClasses.card_header)
                                         .with(
                                                 ul()
-                                                        .withClasses(NavsTabs.nav,NavsTabs.nav_pills,NavsTabs.card_header_pills)
+                                                        .withClasses(BootstrapClasses.nav,BootstrapClasses.nav_pills,BootstrapClasses.card_header_pills)
                                                         .with(
                                                                 li()
-                                                                        .withClasses(NavsTabs.nav_item)
+                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(NavsTabs.nav_link,NavsTabs.active)
+                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Active")
                                                                                         )
                                                                         ),
                                                                 li()
-                                                                        .withClasses(NavsTabs.nav_item)
+                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Link")
                                                                                         )
                                                                         ),
                                                                 li()
-                                                                        .withClasses(NavsTabs.nav_item)
+                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(NavsTabs.nav_link,NavsTabs.disabled)
+                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                                                         .attr(
                                                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                                                         )
@@ -1334,21 +1323,21 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Card.card_body)
+                                        .withClasses(BootstrapClasses.card_body)
                                         .with(
                                                 h5()
-                                                        .withClasses(Card.card_title)
+                                                        .withClasses(BootstrapClasses.card_title)
                                                         .with(
                                                                 text("Special title treatment")
                                                         ),
                                                 p()
-                                                        .withClasses(Card.card_text)
+                                                        .withClasses(BootstrapClasses.card_text)
                                                         .with(
                                                                 text("With supporting text below as a natural lead-in to additional content.")
                                                         ),
                                                 a()
                                                         .withHref("#")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("Go somewhere")
                                                         )
@@ -1405,30 +1394,30 @@ class CardsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Card.card,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.mb_3)
                                 .with(
                                         img()
                                                 .withSrc("...")
-                                                .withClasses(Card.card_img_top)
+                                                .withClasses(BootstrapClasses.card_img_top)
                                                 .withAlt("..."),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         small()
-                                                                                .withClasses(Colors.text_body_secondary)
+                                                                                .withClasses(BootstrapClasses.text_body_secondary)
                                                                                 .with(
                                                                                         text("Last updated 3 mins ago")
                                                                                 )
@@ -1436,23 +1425,23 @@ class CardsTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card)
+                                .withClasses(BootstrapClasses.card)
                                 .with(
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         small()
                                                                                 .withClasses("text-body-secondary")
@@ -1463,7 +1452,7 @@ class CardsTest {
                                                 ),
                                         img()
                                                 .withSrc("...")
-                                                .withClasses(Card.card_img_bottom)
+                                                .withClasses(BootstrapClasses.card_img_bottom)
                                                 .withAlt("...")
                                 )
                 )
@@ -1517,27 +1506,27 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card,ColorsAndBackground.text_bg_dark)
+                        .withClasses(BootstrapClasses.card,BootstrapClasses.text_bg_dark)
                         .with(
                                 img()
                                         .withSrc("...")
-                                        .withClasses(Card.card_img)
+                                        .withClasses(BootstrapClasses.card_img)
                                         .withAlt("..."),
                                 div()
-                                        .withClasses(Card.card_img_overlay)
+                                        .withClasses(BootstrapClasses.card_img_overlay)
                                         .with(
                                                 h5()
-                                                        .withClasses(Card.card_title)
+                                                        .withClasses(BootstrapClasses.card_title)
                                                         .with(
                                                                 text("Card title")
                                                         ),
                                                 p()
-                                                        .withClasses(Card.card_text)
+                                                        .withClasses(BootstrapClasses.card_text)
                                                         .with(
                                                                 text("This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                         ),
                                                 p()
-                                                        .withClasses(Card.card_text)
+                                                        .withClasses(BootstrapClasses.card_text)
                                                         .with(
                                                                 small()
                                                                         .with(
@@ -1580,38 +1569,38 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card,Spacing.mb_3)
+                        .withClasses(BootstrapClasses.card,BootstrapClasses.mb_3)
                         .withStyle("max-width: 540px;")
                         .with(
                                 div()
-                                        .withClasses(Grid.row, Gutters.g_0)
+                                        .withClasses(BootstrapClasses.row, BootstrapClasses.g_0)
                                         .with(
                                                 div()
-                                                        .withClasses(Grid.col_md_4)
+                                                        .withClasses(BootstrapClasses.col_md_4)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Images.img_fluid, Borders.rounded_start)
+                                                                        .withClasses(BootstrapClasses.img_fluid, BootstrapClasses.rounded_start)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Grid.col_md_8)
+                                                        .withClasses(BootstrapClasses.col_md_8)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 small()
                                                                                                         .withClasses("text-body-secondary")
@@ -1665,192 +1654,192 @@ class CardsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Card.card,ColorsAndBackground.text_bg_primary,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.text_bg_primary,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Primary card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,ColorsAndBackground.text_bg_secondary,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.text_bg_secondary,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Secondary card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,ColorsAndBackground.text_bg_success,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.text_bg_success,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Success card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,ColorsAndBackground.text_bg_danger,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.text_bg_danger,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Danger card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,ColorsAndBackground.text_bg_warning,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.text_bg_warning,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Warning card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,ColorsAndBackground.text_bg_info,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.text_bg_info,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Info card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,ColorsAndBackground.text_bg_light,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.text_bg_light,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Light card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,ColorsAndBackground.text_bg_dark,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.text_bg_dark,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Dark card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
@@ -1980,192 +1969,192 @@ class CardsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Card.card,Borders.border_primary,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.border_primary,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body,Colors.text_primary)
+                                                .withClasses(BootstrapClasses.card_body,BootstrapClasses.text_primary)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Primary card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,Borders.border_secondary,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.border_secondary,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body,Colors.text_secondary)
+                                                .withClasses(BootstrapClasses.card_body,BootstrapClasses.text_secondary)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Secondary card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,Borders.border_success,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.border_success,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body,Colors.text_success)
+                                                .withClasses(BootstrapClasses.card_body,BootstrapClasses.text_success)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Success card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,Borders.border_danger,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.border_danger,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body,Colors.text_danger)
+                                                .withClasses(BootstrapClasses.card_body,BootstrapClasses.text_danger)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Danger card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,Borders.border_warning,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.border_warning,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Warning card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,Borders.border_info,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.border_info,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Info card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,Borders.border_light,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.border_light,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Light card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,Borders.border_dark,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.border_dark,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Card.card_title)
+                                                                .withClasses(BootstrapClasses.card_title)
                                                                 .with(
                                                                         text("Dark card title")
                                                                 ),
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
@@ -2294,30 +2283,30 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card,Borders.border_success,Spacing.mb_3)
+                        .withClasses(BootstrapClasses.card,BootstrapClasses.border_success,BootstrapClasses.mb_3)
                         .withStyle("max-width: 18rem;")
                         .with(
                                 div()
-                                        .withClasses(Card.card_header,Background.bg_transparent,Borders.border_success)
+                                        .withClasses(BootstrapClasses.card_header,BootstrapClasses.bg_transparent,BootstrapClasses.border_success)
                                         .with(
                                                 text("Header")
                                         ),
                                 div()
-                                        .withClasses(Card.card_body,Colors.text_success)
+                                        .withClasses(BootstrapClasses.card_body,BootstrapClasses.text_success)
                                         .with(
                                                 h5()
-                                                        .withClasses(Card.card_title)
+                                                        .withClasses(BootstrapClasses.card_title)
                                                         .with(
                                                                 text("Success card title")
                                                         ),
                                                 p()
-                                                        .withClasses(Card.card_text)
+                                                        .withClasses(BootstrapClasses.card_text)
                                                         .with(
                                                                 text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Card.card_footer,Background.bg_transparent,Borders.border_success)
+                                        .withClasses(BootstrapClasses.card_footer,BootstrapClasses.bg_transparent,BootstrapClasses.border_success)
                                         .with(
                                                 text("Footer")
                                         )
@@ -2356,33 +2345,33 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card_group)
+                        .withClasses(BootstrapClasses.card_group)
                         .with(
                                 div()
-                                        .withClasses(Card.card)
+                                        .withClasses(BootstrapClasses.card)
                                         .with(
                                                 img()
                                                         .withSrc("...")
-                                                        .withClasses(Card.card_img_top)
+                                                        .withClasses(BootstrapClasses.card_img_top)
                                                         .withAlt("..."),
                                                 div()
-                                                        .withClasses(Card.card_body)
+                                                        .withClasses(BootstrapClasses.card_body)
                                                         .with(
                                                                 h5()
-                                                                        .withClasses(Card.card_title)
+                                                                        .withClasses(BootstrapClasses.card_title)
                                                                         .with(
                                                                                 text("Card title")
                                                                         ),
                                                                 p()
-                                                                        .withClasses(Card.card_text)
+                                                                        .withClasses(BootstrapClasses.card_text)
                                                                         .with(
                                                                                 text("This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                                         ),
                                                                 p()
-                                                                        .withClasses(Card.card_text)
+                                                                        .withClasses(BootstrapClasses.card_text)
                                                                         .with(
                                                                                 small()
-                                                                                        .withClasses(Colors.text_body_secondary)
+                                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                                         .with(
                                                                                                 text("Last updated 3 mins ago")
                                                                                         )
@@ -2390,30 +2379,30 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Card.card)
+                                        .withClasses(BootstrapClasses.card)
                                         .with(
                                                 img()
                                                         .withSrc("...")
-                                                        .withClasses(Card.card_img_top)
+                                                        .withClasses(BootstrapClasses.card_img_top)
                                                         .withAlt("..."),
                                                 div()
-                                                        .withClasses(Card.card_body)
+                                                        .withClasses(BootstrapClasses.card_body)
                                                         .with(
                                                                 h5()
-                                                                        .withClasses(Card.card_title)
+                                                                        .withClasses(BootstrapClasses.card_title)
                                                                         .with(
                                                                                 text("Card title")
                                                                         ),
                                                                 p()
-                                                                        .withClasses(Card.card_text)
+                                                                        .withClasses(BootstrapClasses.card_text)
                                                                         .with(
                                                                                 text("This card has supporting text below as a natural lead-in to additional content.")
                                                                         ),
                                                                 p()
-                                                                        .withClasses(Card.card_text)
+                                                                        .withClasses(BootstrapClasses.card_text)
                                                                         .with(
                                                                                 small()
-                                                                                        .withClasses(Colors.text_body_secondary)
+                                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                                         .with(
                                                                                                 text("Last updated 3 mins ago")
                                                                                         )
@@ -2421,30 +2410,30 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Card.card)
+                                        .withClasses(BootstrapClasses.card)
                                         .with(
                                                 img()
                                                         .withSrc("...")
-                                                        .withClasses(Card.card_img_top)
+                                                        .withClasses(BootstrapClasses.card_img_top)
                                                         .withAlt("..."),
                                                 div()
-                                                        .withClasses(Card.card_body)
+                                                        .withClasses(BootstrapClasses.card_body)
                                                         .with(
                                                                 h5()
-                                                                        .withClasses(Card.card_title)
+                                                                        .withClasses(BootstrapClasses.card_title)
                                                                         .with(
                                                                                 text("Card title")
                                                                         ),
                                                                 p()
-                                                                        .withClasses(Card.card_text)
+                                                                        .withClasses(BootstrapClasses.card_text)
                                                                         .with(
                                                                                 text("This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.")
                                                                         ),
                                                                 p()
-                                                                        .withClasses(Card.card_text)
+                                                                        .withClasses(BootstrapClasses.card_text)
                                                                         .with(
                                                                                 small()
-                                                                                        .withClasses(Colors.text_body_secondary)
+                                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                                         .with(
                                                                                                 text("Last updated 3 mins ago")
                                                                                         )
@@ -2520,96 +2509,96 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card_group)
+                        .withClasses(BootstrapClasses.card_group)
                         .with(
                                 div()
-                                        .withClasses(Card.card)
+                                        .withClasses(BootstrapClasses.card)
                                         .with(
                                                 img()
                                                         .withSrc("...")
-                                                        .withClasses(Card.card_img_top)
+                                                        .withClasses(BootstrapClasses.card_img_top)
                                                         .withAlt("..."),
                                                 div()
-                                                        .withClasses(Card.card_body)
+                                                        .withClasses(BootstrapClasses.card_body)
                                                         .with(
                                                                 h5()
-                                                                        .withClasses(Card.card_title)
+                                                                        .withClasses(BootstrapClasses.card_title)
                                                                         .with(
                                                                                 text("Card title")
                                                                         ),
                                                                 p()
-                                                                        .withClasses(Card.card_text)
+                                                                        .withClasses(BootstrapClasses.card_text)
                                                                         .with(
                                                                                 text("This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Card.card_footer)
+                                                        .withClasses(BootstrapClasses.card_footer)
                                                         .with(
                                                                 small()
-                                                                        .withClasses(Colors.text_body_secondary)
+                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                         .with(
                                                                                 text("Last updated 3 mins ago")
                                                                         )
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Card.card)
+                                        .withClasses(BootstrapClasses.card)
                                         .with(
                                                 img()
                                                         .withSrc("...")
-                                                        .withClasses(Card.card_img_top)
+                                                        .withClasses(BootstrapClasses.card_img_top)
                                                         .withAlt("..."),
                                                 div()
-                                                        .withClasses(Card.card_body)
+                                                        .withClasses(BootstrapClasses.card_body)
                                                         .with(
                                                                 h5()
-                                                                        .withClasses(Card.card_title)
+                                                                        .withClasses(BootstrapClasses.card_title)
                                                                         .with(
                                                                                 text("Card title")
                                                                         ),
                                                                 p()
-                                                                        .withClasses(Card.card_text)
+                                                                        .withClasses(BootstrapClasses.card_text)
                                                                         .with(
                                                                                 text("This card has supporting text below as a natural lead-in to additional content.")
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Card.card_footer)
+                                                        .withClasses(BootstrapClasses.card_footer)
                                                         .with(
                                                                 small()
-                                                                        .withClasses(Colors.text_body_secondary)
+                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                         .with(
                                                                                 text("Last updated 3 mins ago")
                                                                         )
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Card.card)
+                                        .withClasses(BootstrapClasses.card)
                                         .with(
                                                 img()
                                                         .withSrc("...")
-                                                        .withClasses(Card.card_img_top)
+                                                        .withClasses(BootstrapClasses.card_img_top)
                                                         .withAlt("..."),
                                                 div()
-                                                        .withClasses(Card.card_body)
+                                                        .withClasses(BootstrapClasses.card_body)
                                                         .with(
                                                                 h5()
-                                                                        .withClasses(Card.card_title)
+                                                                        .withClasses(BootstrapClasses.card_title)
                                                                         .with(
                                                                                 text("Card title")
                                                                         ),
                                                                 p()
-                                                                        .withClasses(Card.card_text)
+                                                                        .withClasses(BootstrapClasses.card_text)
                                                                         .with(
                                                                                 text("This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.")
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Card.card_footer)
+                                                        .withClasses(BootstrapClasses.card_footer)
                                                         .with(
                                                                 small()
-                                                                        .withClasses(Colors.text_body_secondary)
+                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                         .with(
                                                                                 text("Last updated 3 mins ago")
                                                                         )
@@ -2684,28 +2673,28 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row,Grid.row_cols_1,Grid.row_cols_md_2,Gutters.g_4)
+                        .withClasses(BootstrapClasses.row,BootstrapClasses.row_cols_1,BootstrapClasses.row_cols_md_2,BootstrapClasses.g_4)
                         .with(
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card)
+                                                        .withClasses(BootstrapClasses.card)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                                                         )
@@ -2713,25 +2702,25 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card)
+                                                        .withClasses(BootstrapClasses.card)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                                                         )
@@ -2739,25 +2728,25 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card)
+                                                        .withClasses(BootstrapClasses.card)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This is a longer card with supporting text below as a natural lead-in to additional content.")
                                                                                         )
@@ -2765,25 +2754,25 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card)
+                                                        .withClasses(BootstrapClasses.card)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                                                         )
@@ -2863,28 +2852,28 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row,Grid.row_cols_1,Grid.row_cols_md_3,Gutters.g_4)
+                        .withClasses(BootstrapClasses.row,BootstrapClasses.row_cols_1,BootstrapClasses.row_cols_md_3,BootstrapClasses.g_4)
                         .with(
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card)
+                                                        .withClasses(BootstrapClasses.card)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                                                         )
@@ -2892,25 +2881,25 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card)
+                                                        .withClasses(BootstrapClasses.card)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                                                         )
@@ -2918,25 +2907,25 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card)
+                                                        .withClasses(BootstrapClasses.card)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This is a longer card with supporting text below as a natural lead-in to additional content.")
                                                                                         )
@@ -2944,25 +2933,25 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card)
+                                                        .withClasses(BootstrapClasses.card)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                                                         )
@@ -3042,28 +3031,28 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row,Grid.row_cols_1,Grid.row_cols_md_3,Gutters.g_4)
+                        .withClasses(BootstrapClasses.row,BootstrapClasses.row_cols_1,BootstrapClasses.row_cols_md_3,BootstrapClasses.g_4)
                         .with(
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card,Sizing.h_100)
+                                                        .withClasses(BootstrapClasses.card,BootstrapClasses.h_100)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                                                         )
@@ -3071,51 +3060,51 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card,Sizing.h_100)
+                                                        .withClasses(BootstrapClasses.card,BootstrapClasses.h_100)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
-                                                                                                text("This is a short card.")
+                                                                                                text("This is a short BootstrapClasses.")
                                                                                         )
                                                                         )
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card,Sizing.h_100)
+                                                        .withClasses(BootstrapClasses.card,BootstrapClasses.h_100)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This is a longer card with supporting text below as a natural lead-in to additional content.")
                                                                                         )
@@ -3123,25 +3112,25 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card,Sizing.h_100)
+                                                        .withClasses(BootstrapClasses.card,BootstrapClasses.h_100)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                                                         )
@@ -3175,7 +3164,7 @@ class CardsTest {
                           Card title
                         </h5>
                         <p class="card-text">
-                          This is a short card.
+                          This is a short BootstrapClasses.
                         </p>
                       </div>
                     </div>
@@ -3221,37 +3210,37 @@ class CardsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row,Grid.row_cols_1,Grid.row_cols_md_3,Gutters.g_4)
+                        .withClasses(BootstrapClasses.row,BootstrapClasses.row_cols_1,BootstrapClasses.row_cols_md_3,BootstrapClasses.g_4)
                         .with(
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card,Sizing.h_100)
+                                                        .withClasses(BootstrapClasses.card,BootstrapClasses.h_100)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.")
                                                                                         )
                                                                         ),
                                                                 div()
-                                                                        .withClasses(Card.card_footer)
+                                                                        .withClasses(BootstrapClasses.card_footer)
                                                                         .with(
                                                                                 small()
-                                                                                        .withClasses(Colors.text_body_secondary)
+                                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                                         .with(
                                                                                                 text("Last updated 3 mins ago")
                                                                                         )
@@ -3259,34 +3248,34 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card,Sizing.h_100)
+                                                        .withClasses(BootstrapClasses.card,BootstrapClasses.h_100)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This card has supporting text below as a natural lead-in to additional content.")
                                                                                         )
                                                                         ),
                                                                 div()
-                                                                        .withClasses(Card.card_footer)
+                                                                        .withClasses(BootstrapClasses.card_footer)
                                                                         .with(
                                                                                 small()
-                                                                                        .withClasses(Colors.text_body_secondary)
+                                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                                         .with(
                                                                                                 text("Last updated 3 mins ago")
                                                                                         )
@@ -3294,34 +3283,34 @@ class CardsTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 div()
-                                                        .withClasses(Card.card,Sizing.h_100)
+                                                        .withClasses(BootstrapClasses.card,BootstrapClasses.h_100)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Card.card_img_top)
+                                                                        .withClasses(BootstrapClasses.card_img_top)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Card.card_body)
+                                                                        .withClasses(BootstrapClasses.card_body)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(Card.card_title)
+                                                                                        .withClasses(BootstrapClasses.card_title)
                                                                                         .with(
                                                                                                 text("Card title")
                                                                                         ),
                                                                                 p()
-                                                                                        .withClasses(Card.card_text)
+                                                                                        .withClasses(BootstrapClasses.card_text)
                                                                                         .with(
                                                                                                 text("This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.")
                                                                                         )
                                                                         ),
                                                                 div()
-                                                                        .withClasses(Card.card_footer)
+                                                                        .withClasses(BootstrapClasses.card_footer)
                                                                         .with(
                                                                                 small()
-                                                                                        .withClasses(Colors.text_body_secondary)
+                                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                                         .with(
                                                                                                 text("Last updated 3 mins ago")
                                                                                         )

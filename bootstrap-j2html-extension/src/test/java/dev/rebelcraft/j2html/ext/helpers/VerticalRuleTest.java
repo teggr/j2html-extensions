@@ -1,18 +1,13 @@
 package dev.rebelcraft.j2html.ext.helpers;
 
-import dev.rebelcraft.j2html.ext.utilities.Flex;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
-import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
+import static j2html.TagCreator.div;
+import static j2html.TagCreator.text;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class VerticalRuleTest {
@@ -29,7 +24,7 @@ class VerticalRuleTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                    .withClasses(VerticalRule.vr)
+                    .withClasses(BootstrapClasses.vr)
         );
 
         //language=HTML
@@ -50,11 +45,11 @@ class VerticalRuleTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex)
+                        .withClasses(BootstrapClasses.d_flex)
                         .withStyle("height: 200px;")
                         .with(
                                 div()
-                                        .withClasses(VerticalRule.vr)
+                                        .withClasses(BootstrapClasses.vr)
                         )
         );
 
@@ -78,22 +73,22 @@ class VerticalRuleTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Stacks.hstack,Spacing.gap_3)
+                        .withClasses(BootstrapClasses.hstack,BootstrapClasses.gap_3)
                         .with(
                                 div()
-                                        .withClasses(Spacing.p_2)
+                                        .withClasses(BootstrapClasses.p_2)
                                         .with(
                                                 text("First item")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2,Spacing.ms_auto)
+                                        .withClasses(BootstrapClasses.p_2,BootstrapClasses.ms_auto)
                                         .with(
                                                 text("Second item")
                                         ),
                                 div()
-                                        .withClasses(VerticalRule.vr),
+                                        .withClasses(BootstrapClasses.vr),
                                 div()
-                                        .withClasses(Spacing.p_2)
+                                        .withClasses(BootstrapClasses.p_2)
                                         .with(
                                                 text("Third item")
                                         )

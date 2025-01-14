@@ -1,21 +1,13 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.forms.ChecksAndRadios;
-import dev.rebelcraft.j2html.ext.helpers.ColorsAndBackground;
-import dev.rebelcraft.j2html.ext.helpers.StretchedLink;
-import dev.rebelcraft.j2html.ext.utilities.*;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ListGroupTest {
@@ -32,30 +24,30 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                 .withClasses(ListGroup.list_group)
+                 .withClasses(BootstrapClasses.list_group)
                  .with(
                     li()
-                     .withClasses(ListGroup.list_group_item)
+                     .withClasses(BootstrapClasses.list_group_item)
                      .with(
                         text("An item")
                       ),
                     li()
-                     .withClasses(ListGroup.list_group_item)
+                     .withClasses(BootstrapClasses.list_group_item)
                      .with(
                         text("A second item")
                       ),
                     li()
-                     .withClasses(ListGroup.list_group_item)
+                     .withClasses(BootstrapClasses.list_group_item)
                      .with(
                         text("A third item")
                       ),
                     li()
-                     .withClasses(ListGroup.list_group_item)
+                     .withClasses(BootstrapClasses.list_group_item)
                      .with(
                         text("A fourth item")
                       ),
                     li()
-                     .withClasses(ListGroup.list_group_item)
+                     .withClasses(BootstrapClasses.list_group_item)
                      .with(
                         text("And a fifth one")
                       )
@@ -95,10 +87,10 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(ListGroup.list_group)
+                        .withClasses(BootstrapClasses.list_group)
                         .with(
                                 li()
-                                        .withClasses(ListGroup.list_group_item,Pagination.active)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.active)
                                         .attr(
                                                 AriaStatesAndProperties.ariaCurrent("true")
                                         )
@@ -106,22 +98,22 @@ class ListGroupTest {
                                                 text("An active item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("A second item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("A third item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("A fourth item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("And a fifth one")
                                         )
@@ -161,10 +153,10 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(ListGroup.list_group)
+                        .withClasses(BootstrapClasses.list_group)
                         .with(
                                 li()
-                                        .withClasses(ListGroup.list_group_item,Popovers.disabled)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.disabled)
                                         .attr(
                                                 AriaStatesAndProperties.ariaDisabled("true")
                                         )
@@ -172,22 +164,22 @@ class ListGroupTest {
                                                 text("A disabled item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("A second item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("A third item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("A fourth item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("And a fifth one")
                                         )
@@ -227,11 +219,11 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ListGroup.list_group)
+                        .withClasses(BootstrapClasses.list_group)
                         .with(
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action,Pagination.active)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,BootstrapClasses.active)
                                         .attr(
                                                 AriaStatesAndProperties.ariaCurrent("true")
                                         )
@@ -240,24 +232,24 @@ class ListGroupTest {
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action)
                                         .with(
                                                 text("A second link item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action)
                                         .with(
                                                 text("A third link item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action)
                                         .with(
                                                 text("A fourth link item")
                                         ),
                                 a()
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action,Popovers.disabled)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,BootstrapClasses.disabled)
                                         .attr(
                                                 AriaStatesAndProperties.ariaDisabled("true")
                                         )
@@ -300,11 +292,11 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ListGroup.list_group)
+                        .withClasses(BootstrapClasses.list_group)
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action,Pagination.active)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,BootstrapClasses.active)
                                         .attr(
                                                 AriaStatesAndProperties.ariaCurrent("true")
                                         )
@@ -313,25 +305,25 @@ class ListGroupTest {
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action)
                                         .with(
                                                 text("A second button item")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action)
                                         .with(
                                                 text("A third button item")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action)
                                         .with(
                                                 text("A fourth button item")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action)
                                         .withCondDisabled(true)
                                         .with(
                                                 text("A disabled button item")
@@ -372,30 +364,30 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(ListGroup.list_group,ListGroup.list_group_flush)
+                        .withClasses(BootstrapClasses.list_group,BootstrapClasses.list_group_flush)
                         .with(
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("An item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("A second item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("A third item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("A fourth item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("And a fifth one")
                                         )
@@ -435,20 +427,20 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 ol()
-                        .withClasses(ListGroup.list_group,ListGroup.list_group_numbered)
+                        .withClasses(BootstrapClasses.list_group,BootstrapClasses.list_group_numbered)
                         .with(
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("A list item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("A list item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("A list item")
                                         )
@@ -482,61 +474,61 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 ol()
-                        .withClasses(ListGroup.list_group,ListGroup.list_group_numbered)
+                        .withClasses(BootstrapClasses.list_group,BootstrapClasses.list_group_numbered)
                         .with(
                                 li()
-                                        .withClasses(ListGroup.list_group_item, Flex.d_flex,Flex.justify_content_between,Flex.align_items_start)
+                                        .withClasses(BootstrapClasses.list_group_item, BootstrapClasses.d_flex,BootstrapClasses.justify_content_between,BootstrapClasses.align_items_start)
                                         .with(
                                                 div()
-                                                        .withClasses(Spacing.ms_2,Spacing.me_auto)
+                                                        .withClasses(BootstrapClasses.ms_2,BootstrapClasses.me_auto)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(Text.fw_bold)
+                                                                        .withClasses(BootstrapClasses.fw_bold)
                                                                         .with(
                                                                                 text("Subheading")
                                                                         ),
                                                                 text("Content for list item")
                                                         ),
                                                 span()
-                                                        .withClasses(Badge.badge, ColorsAndBackground.text_bg_primary, Borders.rounded_pill)
+                                                        .withClasses(BootstrapClasses.badge, BootstrapClasses.text_bg_primary, BootstrapClasses.rounded_pill)
                                                         .with(
                                                                 text("14")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item,Flex.d_flex,Flex.justify_content_between,Flex.align_items_start)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.d_flex,BootstrapClasses.justify_content_between,BootstrapClasses.align_items_start)
                                         .with(
                                                 div()
-                                                        .withClasses(Spacing.ms_2,Spacing.me_auto)
+                                                        .withClasses(BootstrapClasses.ms_2,BootstrapClasses.me_auto)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(Text.fw_bold)
+                                                                        .withClasses(BootstrapClasses.fw_bold)
                                                                         .with(
                                                                                 text("Subheading")
                                                                         ),
                                                                 text("Content for list item")
                                                         ),
                                                 span()
-                                                        .withClasses(Badge.badge,ColorsAndBackground.text_bg_primary,Borders.rounded_pill)
+                                                        .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_primary,BootstrapClasses.rounded_pill)
                                                         .with(
                                                                 text("14")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item,Flex.d_flex,Flex.justify_content_between,Flex.align_items_start)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.d_flex,BootstrapClasses.justify_content_between,BootstrapClasses.align_items_start)
                                         .with(
                                                 div()
-                                                        .withClasses(Spacing.ms_2,Spacing.me_auto)
+                                                        .withClasses(BootstrapClasses.ms_2,BootstrapClasses.me_auto)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(Text.fw_bold)
+                                                                        .withClasses(BootstrapClasses.fw_bold)
                                                                         .with(
                                                                                 text("Subheading")
                                                                         ),
                                                                 text("Content for list item")
                                                         ),
                                                 span()
-                                                        .withClasses(Badge.badge,ColorsAndBackground.text_bg_primary,Borders.rounded_pill)
+                                                        .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_primary,BootstrapClasses.rounded_pill)
                                                         .with(
                                                                 text("14")
                                                         )
@@ -596,115 +588,115 @@ class ListGroupTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         ul()
-                                .withClasses(ListGroup.list_group,ListGroup.list_group_horizontal)
+                                .withClasses(BootstrapClasses.list_group,BootstrapClasses.list_group_horizontal)
                                 .with(
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("An item")
                                                 ),
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("A second item")
                                                 ),
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("A third item")
                                                 )
                                 ),
                         ul()
-                                .withClasses(ListGroup.list_group,ListGroup.list_group_horizontal_sm)
+                                .withClasses(BootstrapClasses.list_group,BootstrapClasses.list_group_horizontal_sm)
                                 .with(
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("An item")
                                                 ),
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("A second item")
                                                 ),
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("A third item")
                                                 )
                                 ),
                         ul()
-                                .withClasses(ListGroup.list_group,ListGroup.list_group_horizontal_md)
+                                .withClasses(BootstrapClasses.list_group,BootstrapClasses.list_group_horizontal_md)
                                 .with(
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("An item")
                                                 ),
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("A second item")
                                                 ),
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("A third item")
                                                 )
                                 ),
                         ul()
-                                .withClasses(ListGroup.list_group,ListGroup.list_group_horizontal_lg)
+                                .withClasses(BootstrapClasses.list_group,BootstrapClasses.list_group_horizontal_lg)
                                 .with(
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("An item")
                                                 ),
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("A second item")
                                                 ),
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("A third item")
                                                 )
                                 ),
                         ul()
-                                .withClasses(ListGroup.list_group,ListGroup.list_group_horizontal_xl)
+                                .withClasses(BootstrapClasses.list_group,BootstrapClasses.list_group_horizontal_xl)
                                 .with(
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("An item")
                                                 ),
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("A second item")
                                                 ),
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("A third item")
                                                 )
                                 ),
                         ul()
-                                .withClasses(ListGroup.list_group,ListGroup.list_group_horizontal_xxl)
+                                .withClasses(BootstrapClasses.list_group,BootstrapClasses.list_group_horizontal_xxl)
                                 .with(
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("An item")
                                                 ),
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("A second item")
                                                 ),
                                         li()
-                                                .withClasses(ListGroup.list_group_item)
+                                                .withClasses(BootstrapClasses.list_group_item)
                                                 .with(
                                                         text("A third item")
                                                 )
@@ -794,50 +786,50 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(ListGroup.list_group)
+                        .withClasses(BootstrapClasses.list_group)
                         .with(
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 text("A simple default list group item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_primary)
+                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_primary)
                                         .with(
                                                 text("A simple primary list group item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_secondary)
+                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_secondary)
                                         .with(
                                                 text("A simple secondary list group item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_success)
+                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_success)
                                         .with(
                                                 text("A simple success list group item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_danger)
+                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_danger)
                                         .with(
                                                 text("A simple danger list group item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_warning)
+                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_warning)
                                         .with(
                                                 text("A simple warning list group item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_info)
+                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_info)
                                         .with(
                                                 text("A simple info list group item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_light)
+                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_light)
                                         .with(
                                                 text("A simple light list group item")
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_dark)
+                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_dark)
                                         .with(
                                                 text("A simple dark list group item")
                                         )
@@ -889,59 +881,59 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ListGroup.list_group)
+                        .withClasses(BootstrapClasses.list_group)
                         .with(
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action)
                                         .with(
                                                 text("A simple default list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action,ListGroup.list_group_primary)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_primary)
                                         .with(
                                                 text("A simple primary list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action,ListGroup.list_group_secondary)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_secondary)
                                         .with(
                                                 text("A simple secondary list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action,ListGroup.list_group_success)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_success)
                                         .with(
                                                 text("A simple success list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action,ListGroup.list_group_danger)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_danger)
                                         .with(
                                                 text("A simple danger list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action,ListGroup.list_group_warning)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_warning)
                                         .with(
                                                 text("A simple warning list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action,ListGroup.list_group_info)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_info)
                                         .with(
                                                 text("A simple info list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action,ListGroup.list_group_light)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_light)
                                         .with(
                                                 text("A simple light list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action,ListGroup.list_group_dark)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_dark)
                                         .with(
                                                 text("A simple dark list group item")
                                         )
@@ -993,34 +985,34 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(ListGroup.list_group)
+                        .withClasses(BootstrapClasses.list_group)
                         .with(
                                 li()
-                                        .withClasses(ListGroup.list_group_item,Flex.d_flex,Flex.justify_content_between,Flex.align_items_center)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.d_flex,BootstrapClasses.justify_content_between,BootstrapClasses.align_items_center)
                                         .with(
                                                 text("A list item"),
                                                 span()
-                                                        .withClasses(Badge.badge,ColorsAndBackground.text_bg_primary,Borders.rounded_pill)
+                                                        .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_primary,BootstrapClasses.rounded_pill)
                                                         .with(
                                                                 text("14")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item,Flex.d_flex,Flex.justify_content_between,Flex.align_items_center)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.d_flex,BootstrapClasses.justify_content_between,BootstrapClasses.align_items_center)
                                         .with(
                                                 text("A second list item"),
                                                 span()
-                                                        .withClasses(Badge.badge,ColorsAndBackground.text_bg_primary,Borders.rounded_pill)
+                                                        .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_primary,BootstrapClasses.rounded_pill)
                                                         .with(
                                                                 text("2")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item,Flex.d_flex,Flex.justify_content_between,Flex.align_items_center)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.d_flex,BootstrapClasses.justify_content_between,BootstrapClasses.align_items_center)
                                         .with(
                                                 text("A third list item"),
                                                 span()
-                                                        .withClasses(Badge.badge,ColorsAndBackground.text_bg_primary,Borders.rounded_pill)
+                                                        .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_primary,BootstrapClasses.rounded_pill)
                                                         .with(
                                                                 text("1")
                                                         )
@@ -1064,20 +1056,20 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ListGroup.list_group)
+                        .withClasses(BootstrapClasses.list_group)
                         .with(
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action,Pagination.active)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,BootstrapClasses.active)
                                         .attr(
                                                 AriaStatesAndProperties.ariaCurrent("true")
                                         )
                                         .with(
                                                 div()
-                                                        .withClasses(Flex.d_flex, Sizing.w_100,Flex.justify_content_between)
+                                                        .withClasses(BootstrapClasses.d_flex, BootstrapClasses.w_100,BootstrapClasses.justify_content_between)
                                                         .with(
                                                                 h5()
-                                                                        .withClasses(Spacing.mb_1)
+                                                                        .withClasses(BootstrapClasses.mb_1)
                                                                         .with(
                                                                                 text("List group item heading")
                                                                         ),
@@ -1087,7 +1079,7 @@ class ListGroupTest {
                                                                         )
                                                         ),
                                                 p()
-                                                        .withClasses(Spacing.mb_1)
+                                                        .withClasses(BootstrapClasses.mb_1)
                                                         .with(
                                                                 text("Some placeholder content in a paragraph.")
                                                         ),
@@ -1098,58 +1090,58 @@ class ListGroupTest {
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action)
                                         .with(
                                                 div()
-                                                        .withClasses(Flex.d_flex,Sizing.w_100,Flex.justify_content_between)
+                                                        .withClasses(BootstrapClasses.d_flex,BootstrapClasses.w_100,BootstrapClasses.justify_content_between)
                                                         .with(
                                                                 h5()
-                                                                        .withClasses(Spacing.mb_1)
+                                                                        .withClasses(BootstrapClasses.mb_1)
                                                                         .with(
                                                                                 text("List group item heading")
                                                                         ),
                                                                 small()
-                                                                        .withClasses(Colors.text_body_secondary)
+                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                         .with(
                                                                                 text("3 days ago")
                                                                         )
                                                         ),
                                                 p()
-                                                        .withClasses(Spacing.mb_1)
+                                                        .withClasses(BootstrapClasses.mb_1)
                                                         .with(
                                                                 text("Some placeholder content in a paragraph.")
                                                         ),
                                                 small()
-                                                        .withClasses(Colors.text_body_secondary)
+                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                         .with(
                                                                 text("And some muted small print.")
                                                         )
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(ListGroup.list_group_item,ListGroup.list_group_item_action)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action)
                                         .with(
                                                 div()
-                                                        .withClasses(Flex.d_flex,Sizing.w_100,Flex.justify_content_between)
+                                                        .withClasses(BootstrapClasses.d_flex,BootstrapClasses.w_100,BootstrapClasses.justify_content_between)
                                                         .with(
                                                                 h5()
-                                                                        .withClasses(Spacing.mb_1)
+                                                                        .withClasses(BootstrapClasses.mb_1)
                                                                         .with(
                                                                                 text("List group item heading")
                                                                         ),
                                                                 small()
-                                                                        .withClasses(Colors.text_body_secondary)
+                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                         .with(
                                                                                 text("3 days ago")
                                                                         )
                                                         ),
                                                 p()
-                                                        .withClasses(Spacing.mb_1)
+                                                        .withClasses(BootstrapClasses.mb_1)
                                                         .with(
                                                                 text("Some placeholder content in a paragraph.")
                                                         ),
                                                 small()
-                                                        .withClasses(Colors.text_body_secondary)
+                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                         .with(
                                                                 text("And some muted small print.")
                                                         )
@@ -1223,48 +1215,48 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(ListGroup.list_group)
+                        .withClasses(BootstrapClasses.list_group)
                         .with(
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 input()
-                                                        .withClasses(ChecksAndRadios.form_check_input,Spacing.me_1)
+                                                        .withClasses(BootstrapClasses.form_check_input,BootstrapClasses.me_1)
                                                         .withType("checkbox")
                                                         .withValue("")
                                                         .withId("firstCheckbox"),
                                                 label()
-                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                        .withClasses(BootstrapClasses.form_check_label)
                                                         .withFor("firstCheckbox")
                                                         .with(
                                                                 text("First checkbox")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 input()
-                                                        .withClasses(ChecksAndRadios.form_check_input,Spacing.me_1)
+                                                        .withClasses(BootstrapClasses.form_check_input,BootstrapClasses.me_1)
                                                         .withType("checkbox")
                                                         .withValue("")
                                                         .withId("secondCheckbox"),
                                                 label()
-                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                        .withClasses(BootstrapClasses.form_check_label)
                                                         .withFor("secondCheckbox")
                                                         .with(
                                                                 text("Second checkbox")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 input()
-                                                        .withClasses(ChecksAndRadios.form_check_input,Spacing.me_1)
+                                                        .withClasses(BootstrapClasses.form_check_input,BootstrapClasses.me_1)
                                                         .withType("checkbox")
                                                         .withValue("")
                                                         .withId("thirdCheckbox"),
                                                 label()
-                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                        .withClasses(BootstrapClasses.form_check_label)
                                                         .withFor("thirdCheckbox")
                                                         .with(
                                                                 text("Third checkbox")
@@ -1309,52 +1301,52 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(ListGroup.list_group)
+                        .withClasses(BootstrapClasses.list_group)
                         .with(
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 input()
-                                                        .withClasses(ChecksAndRadios.form_check_input,Spacing.me_1)
+                                                        .withClasses(BootstrapClasses.form_check_input,BootstrapClasses.me_1)
                                                         .withType("radio")
                                                         .withName("listGroupRadio")
                                                         .withValue("")
                                                         .withId("firstRadio")
                                                         .withCondChecked(true),
                                                 label()
-                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                        .withClasses(BootstrapClasses.form_check_label)
                                                         .withFor("firstRadio")
                                                         .with(
                                                                 text("First radio")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 input()
-                                                        .withClasses(ChecksAndRadios.form_check_input,Spacing.me_1)
+                                                        .withClasses(BootstrapClasses.form_check_input,BootstrapClasses.me_1)
                                                         .withType("radio")
                                                         .withName("listGroupRadio")
                                                         .withValue("")
                                                         .withId("secondRadio"),
                                                 label()
-                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                        .withClasses(BootstrapClasses.form_check_label)
                                                         .withFor("secondRadio")
                                                         .with(
                                                                 text("Second radio")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 input()
-                                                        .withClasses(ChecksAndRadios.form_check_input,Spacing.me_1)
+                                                        .withClasses(BootstrapClasses.form_check_input,BootstrapClasses.me_1)
                                                         .withType("radio")
                                                         .withName("listGroupRadio")
                                                         .withValue("")
                                                         .withId("thirdRadio"),
                                                 label()
-                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                        .withClasses(BootstrapClasses.form_check_label)
                                                         .withFor("thirdRadio")
                                                         .with(
                                                                 text("Third radio")
@@ -1399,48 +1391,48 @@ class ListGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 ul()
-                        .withClasses(ListGroup.list_group)
+                        .withClasses(BootstrapClasses.list_group)
                         .with(
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 input()
-                                                        .withClasses(ChecksAndRadios.form_check_input,Spacing.me_1)
+                                                        .withClasses(BootstrapClasses.form_check_input,BootstrapClasses.me_1)
                                                         .withType("checkbox")
                                                         .withValue("")
                                                         .withId("firstCheckboxStretched"),
                                                 label()
-                                                        .withClasses(ChecksAndRadios.form_check_label,StretchedLink.stretched_link)
+                                                        .withClasses(BootstrapClasses.form_check_label,BootstrapClasses.stretched_link)
                                                         .withFor("firstCheckboxStretched")
                                                         .with(
                                                                 text("First checkbox")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 input()
-                                                        .withClasses(ChecksAndRadios.form_check_input,Spacing.me_1)
+                                                        .withClasses(BootstrapClasses.form_check_input,BootstrapClasses.me_1)
                                                         .withType("checkbox")
                                                         .withValue("")
                                                         .withId("secondCheckboxStretched"),
                                                 label()
-                                                        .withClasses(ChecksAndRadios.form_check_label,StretchedLink.stretched_link)
+                                                        .withClasses(BootstrapClasses.form_check_label,BootstrapClasses.stretched_link)
                                                         .withFor("secondCheckboxStretched")
                                                         .with(
                                                                 text("Second checkbox")
                                                         )
                                         ),
                                 li()
-                                        .withClasses(ListGroup.list_group_item)
+                                        .withClasses(BootstrapClasses.list_group_item)
                                         .with(
                                                 input()
-                                                        .withClasses(ChecksAndRadios.form_check_input,Spacing.me_1)
+                                                        .withClasses(BootstrapClasses.form_check_input,BootstrapClasses.me_1)
                                                         .withType("checkbox")
                                                         .withValue("")
                                                         .withId("thirdCheckboxStretched"),
                                                 label()
-                                                        .withClasses(ChecksAndRadios.form_check_label, StretchedLink.stretched_link)
+                                                        .withClasses(BootstrapClasses.form_check_label, BootstrapClasses.stretched_link)
                                                         .withFor("thirdCheckboxStretched")
                                                         .with(
                                                                 text("Third checkbox")

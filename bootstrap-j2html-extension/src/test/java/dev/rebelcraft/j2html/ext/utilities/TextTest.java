@@ -1,7 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
-import dev.rebelcraft.j2html.ext.components.Badge;
-import dev.rebelcraft.j2html.ext.helpers.ColorsAndBackground;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,42 +24,42 @@ class TextTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         p()
-                                .withClasses(Text.text_start)
+                                .withClasses(BootstrapClasses.text_start)
                                 .with(
                                         text("Start aligned text on all viewport sizes.")
                                 ),
                         p()
-                                .withClasses(Text.text_center)
+                                .withClasses(BootstrapClasses.text_center)
                                 .with(
                                         text("Center aligned text on all viewport sizes.")
                                 ),
                         p()
-                                .withClasses(Text.text_end)
+                                .withClasses(BootstrapClasses.text_end)
                                 .with(
                                         text("End aligned text on all viewport sizes.")
                                 ),
                         p()
-                                .withClasses(Text.text_sm_end)
+                                .withClasses(BootstrapClasses.text_sm_end)
                                 .with(
                                         text("End aligned text on viewports sized SM (small) or wider.")
                                 ),
                         p()
-                                .withClasses(Text.text_md_end)
+                                .withClasses(BootstrapClasses.text_md_end)
                                 .with(
                                         text("End aligned text on viewports sized MD (medium) or wider.")
                                 ),
                         p()
-                                .withClasses(Text.text_lg_end)
+                                .withClasses(BootstrapClasses.text_lg_end)
                                 .with(
                                         text("End aligned text on viewports sized LG (large) or wider.")
                                 ),
                         p()
-                                .withClasses(Text.text_xl_end)
+                                .withClasses(BootstrapClasses.text_xl_end)
                                 .with(
                                         text("End aligned text on viewports sized XL (extra large) or wider.")
                                 ),
                         p()
-                                .withClasses(Text.text_xxl_end)
+                                .withClasses(BootstrapClasses.text_xxl_end)
                                 .with(
                                         text("End aligned text on viewports sized XXL (extra extra large) or wider.")
                                 )
@@ -107,7 +106,7 @@ class TextTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Badge.badge, ColorsAndBackground.text_bg_primary, Text.text_wrap)
+                        .withClasses(BootstrapClasses.badge, BootstrapClasses.text_bg_primary, BootstrapClasses.text_wrap)
                         .withStyle("width: 6rem;")
                         .with(
                                 text("This text should wrap.")
@@ -133,7 +132,7 @@ class TextTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Text.text_nowrap, Background.bg_body_secondary, Borders.border)
+                        .withClasses(BootstrapClasses.text_nowrap, BootstrapClasses.bg_body_secondary, BootstrapClasses.border)
                         .withStyle("width: 8rem;")
                         .with(
                                 text("This text should overflow the parent.")
@@ -159,7 +158,7 @@ class TextTest {
 
         String renderedHtml = uiDocumentation.render(
                 p()
-                        .withClasses(Text.text_break)
+                        .withClasses(BootstrapClasses.text_break)
                         .with(
                                 text("mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm")
                         )
@@ -185,19 +184,19 @@ class TextTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         p()
-                                .withClasses(Text.text_lowercase)
+                                .withClasses(BootstrapClasses.text_lowercase)
                                 .with(
-                                        text("Lowercased text.")
+                                        text("Lowercased BootstrapClasses.")
                                 ),
                         p()
-                                .withClasses(Text.text_uppercase)
+                                .withClasses(BootstrapClasses.text_uppercase)
                                 .with(
-                                        text("Uppercased text.")
+                                        text("Uppercased BootstrapClasses.")
                                 ),
                         p()
-                                .withClasses(Text.text_capitalize)
+                                .withClasses(BootstrapClasses.text_capitalize)
                                 .with(
-                                        text("CapiTaliZed text.")
+                                        text("CapiTaliZed BootstrapClasses.")
                                 )
                 )
         );
@@ -205,13 +204,13 @@ class TextTest {
         //language=HTML
         assertEquals("""
                 <p class="text-lowercase">
-                  Lowercased text.
+                  Lowercased BootstrapClasses.
                 </p>
                 <p class="text-uppercase">
-                  Uppercased text.
+                  Uppercased BootstrapClasses.
                 </p>
                 <p class="text-capitalize">
-                  CapiTaliZed text.
+                  CapiTaliZed BootstrapClasses.
                 </p>
                 """, renderedHtml);
 
@@ -228,32 +227,32 @@ class TextTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         p()
-                                .withClasses(Text.fs_1)
+                                .withClasses(BootstrapClasses.fs_1)
                                 .with(
                                         text(".fs-1 text")
                                 ),
                         p()
-                                .withClasses(Text.fs_2)
+                                .withClasses(BootstrapClasses.fs_2)
                                 .with(
                                         text(".fs-2 text")
                                 ),
                         p()
-                                .withClasses(Text.fs_3)
+                                .withClasses(BootstrapClasses.fs_3)
                                 .with(
                                         text(".fs-3 text")
                                 ),
                         p()
-                                .withClasses(Text.fs_4)
+                                .withClasses(BootstrapClasses.fs_4)
                                 .with(
                                         text(".fs-4 text")
                                 ),
                         p()
-                                .withClasses(Text.fs_5)
+                                .withClasses(BootstrapClasses.fs_5)
                                 .with(
                                         text(".fs-5 text")
                                 ),
                         p()
-                                .withClasses(Text.fs_6)
+                                .withClasses(BootstrapClasses.fs_6)
                                 .with(
                                         text(".fs-6 text")
                                 )
@@ -295,47 +294,47 @@ class TextTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         p()
-                                .withClasses(Text.fw_bold)
+                                .withClasses(BootstrapClasses.fw_bold)
                                 .with(
-                                        text("Bold text.")
+                                        text("Bold BootstrapClasses.")
                                 ),
                         p()
-                                .withClasses(Text.fw_bolder)
+                                .withClasses(BootstrapClasses.fw_bolder)
                                 .with(
                                         text("Bolder weight text (relative to the parent element).")
                                 ),
                         p()
-                                .withClasses(Text.fw_semibold)
+                                .withClasses(BootstrapClasses.fw_semibold)
                                 .with(
-                                        text("Semibold weight text.")
+                                        text("Semibold weight BootstrapClasses.")
                                 ),
                         p()
-                                .withClasses(Text.fw_medium)
+                                .withClasses(BootstrapClasses.fw_medium)
                                 .with(
-                                        text("Medium weight text.")
+                                        text("Medium weight BootstrapClasses.")
                                 ),
                         p()
-                                .withClasses(Text.fw_normal)
+                                .withClasses(BootstrapClasses.fw_normal)
                                 .with(
-                                        text("Normal weight text.")
+                                        text("Normal weight BootstrapClasses.")
                                 ),
                         p()
-                                .withClasses(Text.fw_light)
+                                .withClasses(BootstrapClasses.fw_light)
                                 .with(
-                                        text("Light weight text.")
+                                        text("Light weight BootstrapClasses.")
                                 ),
                         p()
-                                .withClasses(Text.fw_lighter)
+                                .withClasses(BootstrapClasses.fw_lighter)
                                 .with(
                                         text("Lighter weight text (relative to the parent element).")
                                 ),
                         p()
-                                .withClasses(Text.fst_italic)
+                                .withClasses(BootstrapClasses.fst_italic)
                                 .with(
-                                        text("Italic text.")
+                                        text("Italic BootstrapClasses.")
                                 ),
                         p()
-                                .withClasses(Text.fst_normal)
+                                .withClasses(BootstrapClasses.fst_normal)
                                 .with(
                                         text("Text with normal font style")
                                 )
@@ -345,28 +344,28 @@ class TextTest {
         //language=HTML
         assertEquals("""
                 <p class="fw-bold">
-                  Bold text.
+                  Bold BootstrapClasses.
                 </p>
                 <p class="fw-bolder">
                   Bolder weight text (relative to the parent element).
                 </p>
                 <p class="fw-semibold">
-                  Semibold weight text.
+                  Semibold weight BootstrapClasses.
                 </p>
                 <p class="fw-medium">
-                  Medium weight text.
+                  Medium weight BootstrapClasses.
                 </p>
                 <p class="fw-normal">
-                  Normal weight text.
+                  Normal weight BootstrapClasses.
                 </p>
                 <p class="fw-light">
-                  Light weight text.
+                  Light weight BootstrapClasses.
                 </p>
                 <p class="fw-lighter">
                   Lighter weight text (relative to the parent element).
                 </p>
                 <p class="fst-italic">
-                  Italic text.
+                  Italic BootstrapClasses.
                 </p>
                 <p class="fst-normal">
                   Text with normal font style
@@ -386,22 +385,22 @@ class TextTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         p()
-                                .withClasses(Text.lh_1)
+                                .withClasses(BootstrapClasses.lh_1)
                                 .with(
                                         text("This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.")
                                 ),
                         p()
-                                .withClasses(Text.lh_sm)
+                                .withClasses(BootstrapClasses.lh_sm)
                                 .with(
                                         text("This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.")
                                 ),
                         p()
-                                .withClasses(Text.lh_base)
+                                .withClasses(BootstrapClasses.lh_base)
                                 .with(
                                         text("This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.")
                                 ),
                         p()
-                                .withClasses(Text.lh_lg)
+                                .withClasses(BootstrapClasses.lh_lg)
                                 .with(
                                         text("This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.")
                                 )
@@ -436,7 +435,7 @@ class TextTest {
 
         String renderedHtml = uiDocumentation.render(
                 p()
-                        .withClasses(Text.font_monospace)
+                        .withClasses(BootstrapClasses.font_monospace)
                         .with(
                                 text("This is in monospace")
                         )
@@ -461,12 +460,12 @@ class TextTest {
 
         String renderedHtml = uiDocumentation.render(
                 p()
-                        .withClasses(Colors.text_body_secondary)
+                        .withClasses(BootstrapClasses.text_body_secondary)
                         .with(
                                 text("Secondary body text with a"),
                                 a()
                                         .withHref("#")
-                                        .withClasses(Text.text_reset)
+                                        .withClasses(BootstrapClasses.text_reset)
                                         .with(
                                                 text("reset link")
                                         ),
@@ -498,18 +497,18 @@ class TextTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         p()
-                                .withClasses(Text.text_decoration_underline)
+                                .withClasses(BootstrapClasses.text_decoration_underline)
                                 .with(
                                         text("This text has a line underneath it.")
                                 ),
                         p()
-                                .withClasses(Text.text_decoration_line_through)
+                                .withClasses(BootstrapClasses.text_decoration_line_through)
                                 .with(
                                         text("This text has a line going through it.")
                                 ),
                         a()
                                 .withHref("#")
-                                .withClasses(Text.text_decoration_none)
+                                .withClasses(BootstrapClasses.text_decoration_none)
                                 .with(
                                         text("This link has its text decoration removed")
                                 )

@@ -1,18 +1,12 @@
 package dev.rebelcraft.j2html.ext.helpers;
 
-import dev.rebelcraft.j2html.ext.components.Buttons;
-import dev.rebelcraft.j2html.ext.utilities.Background;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ClearfixTest {
@@ -29,7 +23,7 @@ class ClearfixTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                 .withClasses(Clearfix.clearfix)
+                 .withClasses(BootstrapClasses.clearfix)
                  .with(
                     text("...")
                   )
@@ -54,17 +48,17 @@ class ClearfixTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Background.bg_info,Clearfix.clearfix)
+                        .withClasses(BootstrapClasses.bg_info,BootstrapClasses.clearfix)
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_secondary,dev.rebelcraft.j2html.ext.utilities.Float.float_start)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.float_start)
                                         .with(
                                                 text("Example Button floated left")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_secondary, dev.rebelcraft.j2html.ext.utilities.Float.float_end)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary, BootstrapClasses.float_end)
                                         .with(
                                                 text("Example Button floated right")
                                         )

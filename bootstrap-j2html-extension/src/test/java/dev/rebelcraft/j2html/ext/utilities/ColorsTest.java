@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,122 +24,122 @@ class ColorsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         p()
-                                .withClasses(Colors.text_primary)
+                                .withClasses(BootstrapClasses.text_primary)
                                 .with(
                                         text(".text-primary")
                                 ),
                         p()
-                                .withClasses(Colors.text_primary_emphasis)
+                                .withClasses(BootstrapClasses.text_primary_emphasis)
                                 .with(
                                         text(".text-primary-emphasis")
                                 ),
                         p()
-                                .withClasses(Colors.text_secondary)
+                                .withClasses(BootstrapClasses.text_secondary)
                                 .with(
                                         text(".text-secondary")
                                 ),
                         p()
-                                .withClasses(Colors.text_secondary_emphasis)
+                                .withClasses(BootstrapClasses.text_secondary_emphasis)
                                 .with(
                                         text(".text-secondary-emphasis")
                                 ),
                         p()
-                                .withClasses(Colors.text_success)
+                                .withClasses(BootstrapClasses.text_success)
                                 .with(
                                         text(".text-success")
                                 ),
                         p()
-                                .withClasses(Colors.text_success_emphasis)
+                                .withClasses(BootstrapClasses.text_success_emphasis)
                                 .with(
                                         text(".text-success-emphasis")
                                 ),
                         p()
-                                .withClasses(Colors.text_danger)
+                                .withClasses(BootstrapClasses.text_danger)
                                 .with(
                                         text(".text-danger")
                                 ),
                         p()
-                                .withClasses(Colors.text_danger_emphasis)
+                                .withClasses(BootstrapClasses.text_danger_emphasis)
                                 .with(
                                         text(".text-danger-emphasis")
                                 ),
                         p()
-                                .withClasses(Colors.text_warning, Background.bg_dark)
+                                .withClasses(BootstrapClasses.text_warning, BootstrapClasses.bg_dark)
                                 .with(
                                         text(".text-warning")
                                 ),
                         p()
-                                .withClasses(Colors.text_warning_emphasis)
+                                .withClasses(BootstrapClasses.text_warning_emphasis)
                                 .with(
                                         text(".text-warning-emphasis")
                                 ),
                         p()
-                                .withClasses(Colors.text_info, Background.bg_dark)
+                                .withClasses(BootstrapClasses.text_info, BootstrapClasses.bg_dark)
                                 .with(
                                         text(".text-info")
                                 ),
                         p()
-                                .withClasses(Colors.text_info_emphasis)
+                                .withClasses(BootstrapClasses.text_info_emphasis)
                                 .with(
                                         text(".text-info-emphasis")
                                 ),
                         p()
-                                .withClasses(Colors.text_light, Background.bg_dark)
+                                .withClasses(BootstrapClasses.text_light, BootstrapClasses.bg_dark)
                                 .with(
                                         text(".text-light")
                                 ),
                         p()
-                                .withClasses(Colors.text_light_emphasis)
+                                .withClasses(BootstrapClasses.text_light_emphasis)
                                 .with(
                                         text(".text-light-emphasis")
                                 ),
                         p()
-                                .withClasses(Colors.text_dark, Background.bg_white)
+                                .withClasses(BootstrapClasses.text_dark, BootstrapClasses.bg_white)
                                 .with(
                                         text(".text-dark")
                                 ),
                         p()
-                                .withClasses(Colors.text_dark_emphasis)
+                                .withClasses(BootstrapClasses.text_dark_emphasis)
                                 .with(
                                         text(".text-dark-emphasis")
                                 ),
                         p()
-                                .withClasses(Colors.text_body)
+                                .withClasses(BootstrapClasses.text_body)
                                 .with(
                                         text(".text-body")
                                 ),
                         p()
-                                .withClasses(Colors.text_body_emphasis)
+                                .withClasses(BootstrapClasses.text_body_emphasis)
                                 .with(
                                         text(".text-body-emphasis")
                                 ),
                         p()
-                                .withClasses(Colors.text_body_secondary)
+                                .withClasses(BootstrapClasses.text_body_secondary)
                                 .with(
                                         text(".text-body-secondary")
                                 ),
                         p()
-                                .withClasses(Colors.text_body_tertiary)
+                                .withClasses(BootstrapClasses.text_body_tertiary)
                                 .with(
                                         text(".text-body-tertiary")
                                 ),
                         p()
-                                .withClasses(Colors.text_black, Background.bg_white)
+                                .withClasses(BootstrapClasses.text_black, BootstrapClasses.bg_white)
                                 .with(
                                         text(".text-black")
                                 ),
                         p()
-                                .withClasses(Colors.text_white, Background.bg_dark)
+                                .withClasses(BootstrapClasses.text_white, BootstrapClasses.bg_dark)
                                 .with(
                                         text(".text-white")
                                 ),
                         p()
-                                .withClasses(Colors.text_black_50, Background.bg_white)
+                                .withClasses(BootstrapClasses.text_black_50, BootstrapClasses.bg_white)
                                 .with(
                                         text(".text-black-50")
                                 ),
                         p()
-                                .withClasses(Colors.text_white_50, Background.bg_dark)
+                                .withClasses(BootstrapClasses.text_white_50, BootstrapClasses.bg_dark)
                                 .with(
                                         text(".text-white-50")
                                 )
@@ -234,12 +235,12 @@ class ColorsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Colors.text_primary)
+                                .withClasses(BootstrapClasses.text_primary)
                                 .with(
                                         text("This is default primary text")
                                 ),
                         div()
-                                .withClasses(Colors.text_primary)
+                                .withClasses(BootstrapClasses.text_primary)
                                 .withStyle("--bs-text-opacity:.5;")
                                 .with(
                                         text("This is 50% opacity primary text")
@@ -270,22 +271,22 @@ class ColorsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Colors.text_primary)
+                                .withClasses(BootstrapClasses.text_primary)
                                 .with(
                                         text("This is default primary text")
                                 ),
                         div()
-                                .withClasses(Colors.text_primary, Colors.text_opacity_75)
+                                .withClasses(BootstrapClasses.text_primary, BootstrapClasses.text_opacity_75)
                                 .with(
                                         text("This is 75% opacity primary text")
                                 ),
                         div()
-                                .withClasses(Colors.text_primary, Colors.text_opacity_50)
+                                .withClasses(BootstrapClasses.text_primary, BootstrapClasses.text_opacity_50)
                                 .with(
                                         text("This is 50% opacity primary text")
                                 ),
                         div()
-                                .withClasses(Colors.text_primary, Colors.text_opacity_25)
+                                .withClasses(BootstrapClasses.text_primary, BootstrapClasses.text_opacity_25)
                                 .with(
                                         text("This is 25% opacity primary text")
                                 )

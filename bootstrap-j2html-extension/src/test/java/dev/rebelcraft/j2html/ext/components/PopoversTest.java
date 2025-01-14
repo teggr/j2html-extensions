@@ -1,17 +1,12 @@
 package dev.rebelcraft.j2html.ext.components;
 
-import dev.rebelcraft.j2html.ext.utilities.Display;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PopoversTest {
@@ -29,7 +24,7 @@ class PopoversTest {
         String renderedHtml = uiDocumentation.render(
                 button()
                  .withType("button")
-                 .withClasses(Buttons.btn,Buttons.btn_lg,Buttons.btn_danger)
+                 .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_lg,BootstrapClasses.btn_danger)
                  .withData("bs-toggle","popover")
                  .withData("bs-title","Popover title")
                  .withData("bs-content","And here's some amazing content. It's very engaging. Right?")
@@ -59,7 +54,7 @@ class PopoversTest {
                 each(
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                 .withData("bs-container","body")
                                 .withData("bs-toggle","popover")
                                 .withData("bs-placement","top")
@@ -69,7 +64,7 @@ class PopoversTest {
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                 .withData("bs-container","body")
                                 .withData("bs-toggle","popover")
                                 .withData("bs-placement","right")
@@ -79,7 +74,7 @@ class PopoversTest {
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                 .withData("bs-container","body")
                                 .withData("bs-toggle","popover")
                                 .withData("bs-placement","bottom")
@@ -89,7 +84,7 @@ class PopoversTest {
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                 .withData("bs-container","body")
                                 .withData("bs-toggle","popover")
                                 .withData("bs-placement","left")
@@ -128,14 +123,14 @@ class PopoversTest {
 
         String renderedHtml = uiDocumentation.render(
                 span()
-                        .withClasses(Display.d_inline_block)
+                        .withClasses(BootstrapClasses.d_inline_block)
                         .withTabindex(0)
                         .withData("bs-toggle","popover")
                         .withData("bs-trigger","hover focus")
                         .withData("bs-content","Disabled popover")
                         .with(
                                 button()
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .withType("button")
                                         .withCondDisabled(true)
                                         .with(

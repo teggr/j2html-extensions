@@ -1,7 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
-import dev.rebelcraft.j2html.ext.content.Typography;
-import dev.rebelcraft.j2html.ext.forms.FormControl;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,15 +24,15 @@ class BordersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         span()
-                                .withClasses(Borders.border),
+                                .withClasses(BootstrapClasses.border),
                         span()
-                                .withClasses(Borders.border_top),
+                                .withClasses(BootstrapClasses.border_top),
                         span()
-                                .withClasses(Borders.border_end),
+                                .withClasses(BootstrapClasses.border_end),
                         span()
-                                .withClasses(Borders.border_bottom),
+                                .withClasses(BootstrapClasses.border_bottom),
                         span()
-                                .withClasses(Borders.border_start)
+                                .withClasses(BootstrapClasses.border_start)
                 )
         );
 
@@ -64,15 +63,15 @@ class BordersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         span()
-                                .withClasses(Borders.border, Borders.border_0),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_0),
                         span()
-                                .withClasses(Borders.border, Borders.border_top_0),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_top_0),
                         span()
-                                .withClasses(Borders.border, Borders.border_end_0),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_end_0),
                         span()
-                                .withClasses(Borders.border, Borders.border_bottom_0),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_bottom_0),
                         span()
-                                .withClasses(Borders.border, Borders.border_start_0)
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_start_0)
                 )
         );
 
@@ -102,41 +101,41 @@ class BordersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         span()
-                                .withClasses(Borders.border, Borders.border_primary),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_primary),
                         span()
-                                .withClasses(Borders.border, Borders.border_primary_subtle),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_primary_subtle),
                         span()
-                                .withClasses(Borders.border, Borders.border_secondary),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_secondary),
                         span()
-                                .withClasses(Borders.border, Borders.border_secondary_subtle),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_secondary_subtle),
                         span()
-                                .withClasses(Borders.border, Borders.border_success),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_success),
                         span()
-                                .withClasses(Borders.border, Borders.border_success_subtle),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_success_subtle),
                         span()
-                                .withClasses(Borders.border, Borders.border_danger),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_danger),
                         span()
-                                .withClasses(Borders.border, Borders.border_danger_subtle),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_danger_subtle),
                         span()
-                                .withClasses(Borders.border, Borders.border_warning),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_warning),
                         span()
-                                .withClasses(Borders.border, Borders.border_warning_subtle),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_warning_subtle),
                         span()
-                                .withClasses(Borders.border, Borders.border_info),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_info),
                         span()
-                                .withClasses(Borders.border, Borders.border_info_subtle),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_info_subtle),
                         span()
-                                .withClasses(Borders.border, Borders.border_light),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_light),
                         span()
-                                .withClasses(Borders.border, Borders.border_light_subtle),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_light_subtle),
                         span()
-                                .withClasses(Borders.border, Borders.border_dark),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_dark),
                         span()
-                                .withClasses(Borders.border, Borders.border_dark_subtle),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_dark_subtle),
                         span()
-                                .withClasses(Borders.border, Borders.border_black),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_black),
                         span()
-                                .withClasses(Borders.border, Borders.border_white)
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_white)
                 )
         );
 
@@ -193,27 +192,27 @@ class BordersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Spacing.mb_4)
+                                .withClasses(BootstrapClasses.mb_4)
                                 .with(
                                         label()
                                                 .withFor("exampleFormControlInput1")
-                                                .withClasses(FormControl.form_label)
+                                                .withClasses(BootstrapClasses.form_label)
                                                 .with(
                                                         text("Email address")
                                                 ),
                                         input()
                                                 .withType("email")
-                                                .withClasses(FormControl.form_control, Borders.border_success)
+                                                .withClasses(BootstrapClasses.form_control, BootstrapClasses.border_success)
                                                 .withId("exampleFormControlInput1")
                                                 .withPlaceholder("name@example.com")
                                 ),
                         div()
-                                .withClasses(Typography.h4, Spacing.pb_2, Spacing.mb_4, Colors.text_danger, Borders.border_bottom, Borders.border_danger)
+                                .withClasses(BootstrapClasses.h4, BootstrapClasses.pb_2, BootstrapClasses.mb_4, BootstrapClasses.text_danger, BootstrapClasses.border_bottom, BootstrapClasses.border_danger)
                                 .with(
                                         text("Dangerous heading")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Background.bg_info, Background.bg_opacity_10, Borders.border, Borders.border_info, Borders.border_start_0, Borders.rounded_end)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.bg_info, BootstrapClasses.bg_opacity_10, BootstrapClasses.border, BootstrapClasses.border_info, BootstrapClasses.border_start_0, BootstrapClasses.rounded_end)
                                 .with(
                                         text("Changing border color and width")
                                 )
@@ -249,12 +248,12 @@ class BordersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Borders.border, Borders.border_success, Spacing.p_2, Spacing.mb_2)
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_success, BootstrapClasses.p_2, BootstrapClasses.mb_2)
                                 .with(
                                         text("This is default success border")
                                 ),
                         div()
-                                .withClasses(Borders.border, Borders.border_success, Spacing.p_2)
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_success, BootstrapClasses.p_2)
                                 .withStyle("--bs-border-opacity:.5;")
                                 .with(
                                         text("This is 50% opacity success border")
@@ -285,27 +284,27 @@ class BordersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Borders.border, Borders.border_success, Spacing.p_2, Spacing.mb_2)
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_success, BootstrapClasses.p_2, BootstrapClasses.mb_2)
                                 .with(
                                         text("This is default success border")
                                 ),
                         div()
-                                .withClasses(Borders.border, Borders.border_success, Spacing.p_2, Spacing.mb_2, Borders.border_opacity_75)
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_success, BootstrapClasses.p_2, BootstrapClasses.mb_2, BootstrapClasses.border_opacity_75)
                                 .with(
                                         text("This is 75% opacity success border")
                                 ),
                         div()
-                                .withClasses(Borders.border, Borders.border_success, Spacing.p_2, Spacing.mb_2, Borders.border_opacity_50)
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_success, BootstrapClasses.p_2, BootstrapClasses.mb_2, BootstrapClasses.border_opacity_50)
                                 .with(
                                         text("This is 50% opacity success border")
                                 ),
                         div()
-                                .withClasses(Borders.border, Borders.border_success, Spacing.p_2, Spacing.mb_2, Borders.border_opacity_25)
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_success, BootstrapClasses.p_2, BootstrapClasses.mb_2, BootstrapClasses.border_opacity_25)
                                 .with(
                                         text("This is 25% opacity success border")
                                 ),
                         div()
-                                .withClasses(Borders.border, Borders.border_success, Spacing.p_2, Borders.border_opacity_10)
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_success, BootstrapClasses.p_2, BootstrapClasses.border_opacity_10)
                                 .with(
                                         text("This is 10% opacity success border")
                                 )
@@ -344,15 +343,15 @@ class BordersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         span()
-                                .withClasses(Borders.border, Borders.border_1),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_1),
                         span()
-                                .withClasses(Borders.border, Borders.border_2),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_2),
                         span()
-                                .withClasses(Borders.border, Borders.border_3),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_3),
                         span()
-                                .withClasses(Borders.border, Borders.border_4),
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_4),
                         span()
-                                .withClasses(Borders.border, Borders.border_5)
+                                .withClasses(BootstrapClasses.border, BootstrapClasses.border_5)
                 )
         );
 
@@ -384,31 +383,31 @@ class BordersTest {
                 each(
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded)
+                                .withClasses(BootstrapClasses.rounded)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_top)
+                                .withClasses(BootstrapClasses.rounded_top)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_end)
+                                .withClasses(BootstrapClasses.rounded_end)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_bottom)
+                                .withClasses(BootstrapClasses.rounded_bottom)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_start)
+                                .withClasses(BootstrapClasses.rounded_start)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_circle)
+                                .withClasses(BootstrapClasses.rounded_circle)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_pill)
+                                .withClasses(BootstrapClasses.rounded_pill)
                                 .withAlt("...")
                 )
         );
@@ -438,27 +437,27 @@ class BordersTest {
                 each(
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_0)
+                                .withClasses(BootstrapClasses.rounded_0)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_1)
+                                .withClasses(BootstrapClasses.rounded_1)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_2)
+                                .withClasses(BootstrapClasses.rounded_2)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_3)
+                                .withClasses(BootstrapClasses.rounded_3)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_4)
+                                .withClasses(BootstrapClasses.rounded_4)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_5)
+                                .withClasses(BootstrapClasses.rounded_5)
                                 .withAlt("...")
                 )
         );
@@ -487,11 +486,11 @@ class BordersTest {
                 each(
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_bottom_1)
+                                .withClasses(BootstrapClasses.rounded_bottom_1)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_start_2)
+                                .withClasses(BootstrapClasses.rounded_start_2)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
@@ -503,7 +502,7 @@ class BordersTest {
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded_5, Borders.rounded_top_0)
+                                .withClasses(BootstrapClasses.rounded_5, BootstrapClasses.rounded_top_0)
                                 .withAlt("...")
                 )
         );

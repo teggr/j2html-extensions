@@ -1,17 +1,14 @@
 package dev.rebelcraft.j2html.ext.forms;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.components.Buttons;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ChecksAndRadiosTest {
@@ -29,31 +26,31 @@ class ChecksAndRadiosTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ChecksAndRadios.form_check)
+                                .withClasses(BootstrapClasses.form_check)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .withValue("")
                                                 .withId("flexCheckDefault"),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("flexCheckDefault")
                                                 .with(
                                                         text("Default checkbox")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check)
+                                .withClasses(BootstrapClasses.form_check)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .withValue("")
                                                 .withId("flexCheckChecked")
                                                 .withCondChecked(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("flexCheckChecked")
                                                 .with(
                                                         text("Checked checkbox")
@@ -90,15 +87,15 @@ class ChecksAndRadiosTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ChecksAndRadios.form_check)
+                        .withClasses(BootstrapClasses.form_check)
                         .with(
                                 input()
-                                        .withClasses(ChecksAndRadios.form_check_input)
+                                        .withClasses(BootstrapClasses.form_check_input)
                                         .withType("checkbox")
                                         .withValue("")
                                         .withId("flexCheckIndeterminate"),
                                 label()
-                                        .withClasses(ChecksAndRadios.form_check_label)
+                                        .withClasses(BootstrapClasses.form_check_label)
                                         .withFor("flexCheckIndeterminate")
                                         .with(
                                                 text("Indeterminate checkbox")
@@ -129,49 +126,49 @@ class ChecksAndRadiosTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ChecksAndRadios.form_check)
+                                .withClasses(BootstrapClasses.form_check)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .withValue("")
                                                 .withId("flexCheckIndeterminateDisabled")
                                                 .withCondDisabled(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("flexCheckIndeterminateDisabled")
                                                 .with(
                                                         text("Disabled indeterminate checkbox")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check)
+                                .withClasses(BootstrapClasses.form_check)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .withValue("")
                                                 .withId("flexCheckDisabled")
                                                 .withCondDisabled(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("flexCheckDisabled")
                                                 .with(
                                                         text("Disabled checkbox")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check)
+                                .withClasses(BootstrapClasses.form_check)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .withValue("")
                                                 .withId("flexCheckCheckedDisabled")
                                                 .withCondChecked(true)
                                                 .withCondDisabled(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("flexCheckCheckedDisabled")
                                                 .with(
                                                         text("Disabled checked checkbox")
@@ -216,31 +213,31 @@ class ChecksAndRadiosTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ChecksAndRadios.form_check)
+                                .withClasses(BootstrapClasses.form_check)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("radio")
                                                 .withName("flexRadioDefault")
                                                 .withId("flexRadioDefault1"),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("flexRadioDefault1")
                                                 .with(
                                                         text("Default radio")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check)
+                                .withClasses(BootstrapClasses.form_check)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("radio")
                                                 .withName("flexRadioDefault")
                                                 .withId("flexRadioDefault2")
                                                 .withCondChecked(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("flexRadioDefault2")
                                                 .with(
                                                         text("Default checked radio")
@@ -278,33 +275,33 @@ class ChecksAndRadiosTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ChecksAndRadios.form_check)
+                                .withClasses(BootstrapClasses.form_check)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("radio")
                                                 .withName("flexRadioDisabled")
                                                 .withId("flexRadioDisabled")
                                                 .withCondDisabled(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("flexRadioDisabled")
                                                 .with(
                                                         text("Disabled radio")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check)
+                                .withClasses(BootstrapClasses.form_check)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("radio")
                                                 .withName("flexRadioDisabled")
                                                 .withId("flexRadioCheckedDisabled")
                                                 .withCondChecked(true)
                                                 .withCondDisabled(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("flexRadioCheckedDisabled")
                                                 .with(
                                                         text("Disabled checked radio")
@@ -342,64 +339,64 @@ class ChecksAndRadiosTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ChecksAndRadios.form_check,ChecksAndRadios.form_switch)
+                                .withClasses(BootstrapClasses.form_check,BootstrapClasses.form_switch)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .attr(AriaRoles.roleSwitch)
                                                 .withId("flexSwitchCheckDefault"),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("flexSwitchCheckDefault")
                                                 .with(
                                                         text("Default switch checkbox input")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check,ChecksAndRadios.form_switch)
+                                .withClasses(BootstrapClasses.form_check,BootstrapClasses.form_switch)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .attr(AriaRoles.roleSwitch)
                                                 .withId("flexSwitchCheckChecked")
                                                 .withCondChecked(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("flexSwitchCheckChecked")
                                                 .with(
                                                         text("Checked switch checkbox input")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check,ChecksAndRadios.form_switch)
+                                .withClasses(BootstrapClasses.form_check,BootstrapClasses.form_switch)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .attr(AriaRoles.roleSwitch)
                                                 .withId("flexSwitchCheckDisabled")
                                                 .withCondDisabled(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("flexSwitchCheckDisabled")
                                                 .with(
                                                         text("Disabled switch checkbox input")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check,ChecksAndRadios.form_switch)
+                                .withClasses(BootstrapClasses.form_check,BootstrapClasses.form_switch)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .attr(AriaRoles.roleSwitch)
                                                 .withId("flexSwitchCheckCheckedDisabled")
                                                 .withCondChecked(true)
                                                 .withCondDisabled(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("flexSwitchCheckCheckedDisabled")
                                                 .with(
                                                         text("Disabled checked switch checkbox input")
@@ -449,31 +446,31 @@ class ChecksAndRadiosTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ChecksAndRadios.form_check)
+                                .withClasses(BootstrapClasses.form_check)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .withValue("")
                                                 .withId("defaultCheck1"),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("defaultCheck1")
                                                 .with(
                                                         text("Default checkbox")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check)
+                                .withClasses(BootstrapClasses.form_check)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .withValue("")
                                                 .withId("defaultCheck2")
                                                 .withCondDisabled(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("defaultCheck2")
                                                 .with(
                                                         text("Disabled checkbox")
@@ -511,50 +508,50 @@ class ChecksAndRadiosTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ChecksAndRadios.form_check)
+                                .withClasses(BootstrapClasses.form_check)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("radio")
                                                 .withName("exampleRadios")
                                                 .withId("exampleRadios1")
                                                 .withValue("option1")
                                                 .withCondChecked(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("exampleRadios1")
                                                 .with(
                                                         text("Default radio")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check)
+                                .withClasses(BootstrapClasses.form_check)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("radio")
                                                 .withName("exampleRadios")
                                                 .withId("exampleRadios2")
                                                 .withValue("option2"),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("exampleRadios2")
                                                 .with(
                                                         text("Second default radio")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check)
+                                .withClasses(BootstrapClasses.form_check)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("radio")
                                                 .withName("exampleRadios")
                                                 .withId("exampleRadios3")
                                                 .withValue("option3")
                                                 .withCondDisabled(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("exampleRadios3")
                                                 .with(
                                                         text("Disabled radio")
@@ -599,46 +596,46 @@ class ChecksAndRadiosTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ChecksAndRadios.form_check,ChecksAndRadios.form_check_inline)
+                                .withClasses(BootstrapClasses.form_check,BootstrapClasses.form_check_inline)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .withId("inlineCheckbox1")
                                                 .withValue("option1"),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("inlineCheckbox1")
                                                 .with(
                                                         text("1")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check,ChecksAndRadios.form_check_inline)
+                                .withClasses(BootstrapClasses.form_check,BootstrapClasses.form_check_inline)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .withId("inlineCheckbox2")
                                                 .withValue("option2"),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("inlineCheckbox2")
                                                 .with(
                                                         text("2")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check,ChecksAndRadios.form_check_inline)
+                                .withClasses(BootstrapClasses.form_check,BootstrapClasses.form_check_inline)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .withId("inlineCheckbox3")
                                                 .withValue("option3")
                                                 .withCondDisabled(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("inlineCheckbox3")
                                                 .with(
                                                         text("3 (disabled)")
@@ -682,49 +679,49 @@ class ChecksAndRadiosTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ChecksAndRadios.form_check,ChecksAndRadios.form_check_inline)
+                                .withClasses(BootstrapClasses.form_check,BootstrapClasses.form_check_inline)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("radio")
                                                 .withName("inlineRadioOptions")
                                                 .withId("inlineRadio1")
                                                 .withValue("option1"),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("inlineRadio1")
                                                 .with(
                                                         text("1")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check,ChecksAndRadios.form_check_inline)
+                                .withClasses(BootstrapClasses.form_check,BootstrapClasses.form_check_inline)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("radio")
                                                 .withName("inlineRadioOptions")
                                                 .withId("inlineRadio2")
                                                 .withValue("option2"),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("inlineRadio2")
                                                 .with(
                                                         text("2")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check,ChecksAndRadios.form_check_inline)
+                                .withClasses(BootstrapClasses.form_check,BootstrapClasses.form_check_inline)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("radio")
                                                 .withName("inlineRadioOptions")
                                                 .withId("inlineRadio3")
                                                 .withValue("option3")
                                                 .withCondDisabled(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("inlineRadio3")
                                                 .with(
                                                         text("3 (disabled)")
@@ -768,45 +765,45 @@ class ChecksAndRadiosTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ChecksAndRadios.form_check,ChecksAndRadios.form_check_reverse)
+                                .withClasses(BootstrapClasses.form_check,BootstrapClasses.form_check_reverse)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .withValue("")
                                                 .withId("reverseCheck1"),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("reverseCheck1")
                                                 .with(
                                                         text("Reverse checkbox")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check,ChecksAndRadios.form_check_reverse)
+                                .withClasses(BootstrapClasses.form_check,BootstrapClasses.form_check_reverse)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .withValue("")
                                                 .withId("reverseCheck2")
                                                 .withCondDisabled(true),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("reverseCheck2")
                                                 .with(
                                                         text("Disabled reverse checkbox")
                                                 )
                                 ),
                         div()
-                                .withClasses(ChecksAndRadios.form_check,ChecksAndRadios.form_switch,ChecksAndRadios.form_check_reverse)
+                                .withClasses(BootstrapClasses.form_check,BootstrapClasses.form_switch,BootstrapClasses.form_check_reverse)
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .withId("flexSwitchCheckReverse"),
                                         label()
-                                                .withClasses(ChecksAndRadios.form_check_label)
+                                                .withClasses(BootstrapClasses.form_check_label)
                                                 .withFor("flexSwitchCheckReverse")
                                                 .with(
                                                         text("Reverse switch checkbox input")
@@ -852,7 +849,7 @@ class ChecksAndRadiosTest {
                         div()
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("checkbox")
                                                 .withId("checkboxNoLabel")
                                                 .withValue("")
@@ -861,7 +858,7 @@ class ChecksAndRadiosTest {
                         div()
                                 .with(
                                         input()
-                                                .withClasses(ChecksAndRadios.form_check_input)
+                                                .withClasses(BootstrapClasses.form_check_input)
                                                 .withType("radio")
                                                 .withName("radioNoLabel")
                                                 .withId("radioNoLabel1")
@@ -895,35 +892,35 @@ class ChecksAndRadiosTest {
                 each(
                         input()
                                 .withType("checkbox")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withId("btn-check")
                                 .attr("autocomplete", "off"),
                         label()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withFor("btn-check")
                                 .with(
                                         text("Single toggle")
                                 ),
                         input()
                                 .withType("checkbox")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withId("btn-check-2")
                                 .withCondChecked(true)
                                 .attr("autocomplete", "off"),
                         label()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withFor("btn-check-2")
                                 .with(
                                         text("Checked")
                                 ),
                         input()
                                 .withType("checkbox")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withId("btn-check-3")
                                 .attr("autocomplete", "off")
                                 .withCondDisabled(true),
                         label()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withFor("btn-check-3")
                                 .with(
                                         text("Disabled")
@@ -961,35 +958,35 @@ class ChecksAndRadiosTest {
                 each(
                         input()
                                 .withType("checkbox")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withId("btn-check-4")
                                 .attr("autocomplete","off"),
                         label()
-                                .withClasses(Buttons.btn)
+                                .withClasses(BootstrapClasses.btn)
                                 .withFor("btn-check-4")
                                 .with(
                                         text("Single toggle")
                                 ),
                         input()
                                 .withType("checkbox")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withId("btn-check-5")
                                 .withCondChecked(true)
                                 .attr("autocomplete","off"),
                         label()
-                                .withClasses(Buttons.btn)
+                                .withClasses(BootstrapClasses.btn)
                                 .withFor("btn-check-5")
                                 .with(
                                         text("Checked")
                                 ),
                         input()
                                 .withType("checkbox")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withId("btn-check-6")
                                 .attr("autocomplete","off")
                                 .withCondDisabled(true),
                         label()
-                                .withClasses(Buttons.btn)
+                                .withClasses(BootstrapClasses.btn)
                                 .withFor("btn-check-6")
                                 .with(
                                         text("Disabled")
@@ -1027,50 +1024,50 @@ class ChecksAndRadiosTest {
                 each(
                         input()
                                 .withType("radio")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withName("options")
                                 .withId("option1")
                                 .attr("autocomplete","off")
                                 .withCondChecked(true),
                         label()
-                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                 .withFor("option1")
                                 .with(
                                         text("Checked")
                                 ),
                         input()
                                 .withType("radio")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withName("options")
                                 .withId("option2")
                                 .attr("autocomplete","off"),
                         label()
-                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                 .withFor("option2")
                                 .with(
                                         text("Radio")
                                 ),
                         input()
                                 .withType("radio")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withName("options")
                                 .withId("option3")
                                 .attr("autocomplete","off")
                                 .withCondDisabled(true),
                         label()
-                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                 .withFor("option3")
                                 .with(
                                         text("Disabled")
                                 ),
                         input()
                                 .withType("radio")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withName("options")
                                 .withId("option4")
                                 .attr("autocomplete","off"),
                         label()
-                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                 .withFor("option4")
                                 .with(
                                         text("Radio")
@@ -1112,50 +1109,50 @@ class ChecksAndRadiosTest {
                 each(
                         input()
                                 .withType("radio")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withName("options-base")
                                 .withId("option5")
                                 .attr("autocomplete","off")
                                 .withCondChecked(true),
                         label()
-                                .withClasses(Buttons.btn)
+                                .withClasses(BootstrapClasses.btn)
                                 .withFor("option5")
                                 .with(
                                         text("Checked")
                                 ),
                         input()
                                 .withType("radio")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withName("options-base")
                                 .withId("option6")
                                 .attr("autocomplete","off"),
                         label()
-                                .withClasses(Buttons.btn)
+                                .withClasses(BootstrapClasses.btn)
                                 .withFor("option6")
                                 .with(
                                         text("Radio")
                                 ),
                         input()
                                 .withType("radio")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withName("options-base")
                                 .withId("option7")
                                 .attr("autocomplete","off")
                                 .withCondDisabled(true),
                         label()
-                                .withClasses(Buttons.btn)
+                                .withClasses(BootstrapClasses.btn)
                                 .withFor("option7")
                                 .with(
                                         text("Disabled")
                                 ),
                         input()
                                 .withType("radio")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withName("options-base")
                                 .withId("option8")
                                 .attr("autocomplete","off"),
                         label()
-                                .withClasses(Buttons.btn)
+                                .withClasses(BootstrapClasses.btn)
                                 .withFor("option8")
                                 .with(
                                         text("Radio")
@@ -1197,11 +1194,11 @@ class ChecksAndRadiosTest {
                 each(
                         input()
                                 .withType("checkbox")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withId("btn-check-outlined")
                                 .attr("autocomplete","off"),
                         label()
-                                .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                 .withFor("btn-check-outlined")
                                 .with(
                                         text("Single toggle")
@@ -1209,12 +1206,12 @@ class ChecksAndRadiosTest {
                         br(),
                         input()
                                 .withType("checkbox")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withId("btn-check-2-outlined")
                                 .withCondChecked(true)
                                 .attr("autocomplete","off"),
                         label()
-                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                 .withFor("btn-check-2-outlined")
                                 .with(
                                         text("Checked")
@@ -1222,25 +1219,25 @@ class ChecksAndRadiosTest {
                         br(),
                         input()
                                 .withType("radio")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withName("options-outlined")
                                 .withId("success-outlined")
                                 .attr("autocomplete","off")
                                 .withCondChecked(true),
                         label()
-                                .withClasses(Buttons.btn,Buttons.btn_outline_success)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_success)
                                 .withFor("success-outlined")
                                 .with(
                                         text("Checked success radio")
                                 ),
                         input()
                                 .withType("radio")
-                                .withClasses(ChecksAndRadios.btn_check)
+                                .withClasses(BootstrapClasses.btn_check)
                                 .withName("options-outlined")
                                 .withId("danger-outlined")
                                 .attr("autocomplete","off"),
                         label()
-                                .withClasses(Buttons.btn,Buttons.btn_outline_danger)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_danger)
                                 .withFor("danger-outlined")
                                 .with(
                                         text("Danger radio")

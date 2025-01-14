@@ -1,20 +1,13 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.layout.Grid;
-import dev.rebelcraft.j2html.ext.utilities.Background;
-import dev.rebelcraft.j2html.ext.utilities.Sizing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PlaceholdersTest {
@@ -32,68 +25,68 @@ class PlaceholdersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                   div()
-                   .withClasses(Card.card)
+                   .withClasses(BootstrapClasses.card)
                    .with(
                       img()
                        .withSrc("...")
-                       .withClasses(Card.card_img_top)
+                       .withClasses(BootstrapClasses.card_img_top)
                        .withAlt("..."),
                       div()
-                       .withClasses(Card.card_body)
+                       .withClasses(BootstrapClasses.card_body)
                        .with(
                           h5()
-                           .withClasses(Card.card_title)
+                           .withClasses(BootstrapClasses.card_title)
                            .with(
                               text("Card title")
                             ),
                           p()
-                           .withClasses(Card.card_text)
+                           .withClasses(BootstrapClasses.card_text)
                            .with(
                               text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                             ),
                           a()
                            .withHref("#")
-                           .withClasses(Buttons.btn,Buttons.btn_primary)
+                           .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                            .with(
                               text("Go somewhere")
                             )
                         )
                     ),
                   div()
-                   .withClasses(Card.card)
+                   .withClasses(BootstrapClasses.card)
                    .attr(
                       AriaStatesAndProperties.ariaHidden("true")
                     )
                    .with(
                       img()
                        .withSrc("...")
-                       .withClasses(Card.card_img_top)
+                       .withClasses(BootstrapClasses.card_img_top)
                        .withAlt("..."),
                       div()
-                       .withClasses(Card.card_body)
+                       .withClasses(BootstrapClasses.card_body)
                        .with(
                           h5()
-                           .withClasses(Card.card_title,Placeholders.placeholder_glow)
+                           .withClasses(BootstrapClasses.card_title,BootstrapClasses.placeholder_glow)
                            .with(
                               span()
-                               .withClasses(Placeholders.placeholder,Grid.col_6)
+                               .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_6)
                             ),
                           p()
-                           .withClasses(Card.card_text,Placeholders.placeholder_glow)
+                           .withClasses(BootstrapClasses.card_text,BootstrapClasses.placeholder_glow)
                            .with(
                               span()
-                               .withClasses(Placeholders.placeholder, Grid.col_7),
+                               .withClasses(BootstrapClasses.placeholder, BootstrapClasses.col_7),
                               span()
-                               .withClasses(Placeholders.placeholder,Grid.col_4),
+                               .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_4),
                               span()
-                               .withClasses(Placeholders.placeholder,Grid.col_4),
+                               .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_4),
                               span()
-                               .withClasses(Placeholders.placeholder,Grid.col_6),
+                               .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_6),
                               span()
-                               .withClasses(Placeholders.placeholder,Grid.col_8)
+                               .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_8)
                             ),
                           a()
-                           .withClasses(Buttons.btn,Buttons.btn_primary,Popovers.disabled,Placeholders.placeholder,Grid.col_6)
+                           .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.disabled,BootstrapClasses.placeholder,BootstrapClasses.col_6)
                            .attr(
                               AriaStatesAndProperties.ariaDisabled("true")
                             )
@@ -161,10 +154,10 @@ class PlaceholdersTest {
                                 )
                                 .with(
                                         span()
-                                                .withClasses(Placeholders.placeholder,Grid.col_6)
+                                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_6)
                                 ),
                         a()
-                                .withClasses(Buttons.btn,Buttons.btn_primary,Popovers.disabled,Placeholders.placeholder,Grid.col_4)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.disabled,BootstrapClasses.placeholder,BootstrapClasses.col_4)
                                 .attr(
                                         AriaStatesAndProperties.ariaDisabled("true")
                                 )
@@ -194,11 +187,11 @@ class PlaceholdersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         span()
-                                .withClasses(Placeholders.placeholder,Grid.col_6),
+                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_6),
                         span()
-                                .withClasses(Placeholders.placeholder, Sizing.w_75),
+                                .withClasses(BootstrapClasses.placeholder, BootstrapClasses.w_75),
                         span()
-                                .withClasses(Placeholders.placeholder)
+                                .withClasses(BootstrapClasses.placeholder)
                                 .withStyle("width: 25%;")
                 )
         );
@@ -226,23 +219,23 @@ class PlaceholdersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         span()
-                                .withClasses(Placeholders.placeholder,Grid.col_12),
+                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12),
                         span()
-                                .withClasses(Placeholders.placeholder,Grid.col_12,Background.bg_primary),
+                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12,BootstrapClasses.bg_primary),
                         span()
-                                .withClasses(Placeholders.placeholder,Grid.col_12,Background.bg_secondary),
+                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12,BootstrapClasses.bg_secondary),
                         span()
-                                .withClasses(Placeholders.placeholder,Grid.col_12,Background.bg_success),
+                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12,BootstrapClasses.bg_success),
                         span()
-                                .withClasses(Placeholders.placeholder,Grid.col_12,Background.bg_danger),
+                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12,BootstrapClasses.bg_danger),
                         span()
-                                .withClasses(Placeholders.placeholder,Grid.col_12,Background.bg_warning),
+                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12,BootstrapClasses.bg_warning),
                         span()
-                                .withClasses(Placeholders.placeholder,Grid.col_12,Background.bg_info),
+                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12,BootstrapClasses.bg_info),
                         span()
-                                .withClasses(Placeholders.placeholder,Grid.col_12,Background.bg_light),
+                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12,BootstrapClasses.bg_light),
                         span()
-                                .withClasses(Placeholders.placeholder,Grid.col_12, Background.bg_dark)
+                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12, BootstrapClasses.bg_dark)
                 )
         );
 
@@ -281,13 +274,13 @@ class PlaceholdersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         span()
-                                .withClasses(Placeholders.placeholder,Grid.col_12,Placeholders.placeholder_lg),
+                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12,BootstrapClasses.placeholder_lg),
                         span()
-                                .withClasses(Placeholders.placeholder,Grid.col_12),
+                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12),
                         span()
-                                .withClasses(Placeholders.placeholder,Grid.col_12,Placeholders.placeholder_sm),
+                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12,BootstrapClasses.placeholder_sm),
                         span()
-                                .withClasses(Placeholders.placeholder,Grid.col_12,Placeholders.placeholder_xs)
+                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12,BootstrapClasses.placeholder_xs)
                 )
         );
 
@@ -316,16 +309,16 @@ class PlaceholdersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         p()
-                                .withClasses(Placeholders.placeholder_glow)
+                                .withClasses(BootstrapClasses.placeholder_glow)
                                 .with(
                                         span()
-                                                .withClasses(Placeholders.placeholder,Grid.col_12)
+                                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12)
                                 ),
                         p()
-                                .withClasses(Placeholders.placeholder_wave)
+                                .withClasses(BootstrapClasses.placeholder_wave)
                                 .with(
                                         span()
-                                                .withClasses(Placeholders.placeholder,Grid.col_12)
+                                                .withClasses(BootstrapClasses.placeholder,BootstrapClasses.col_12)
                                 )
                 )
         );

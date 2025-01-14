@@ -1,21 +1,13 @@
 package dev.rebelcraft.j2html.ext.forms;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.components.Buttons;
-import dev.rebelcraft.j2html.ext.helpers.VisuallyHidden;
-import dev.rebelcraft.j2html.ext.layout.Grid;
-import dev.rebelcraft.j2html.ext.layout.Gutters;
-import dev.rebelcraft.j2html.ext.utilities.Flex;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FormControlsTest {
@@ -33,31 +25,31 @@ class FormControlsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Spacing.mb_3)
+                                .withClasses(BootstrapClasses.mb_3)
                                 .with(
                                         label()
                                                 .withFor("exampleFormControlInput1")
-                                                .withClasses(FormControl.form_label)
+                                                .withClasses(BootstrapClasses.form_label)
                                                 .with(
                                                         text("Email address")
                                                 ),
                                         input()
                                                 .withType("email")
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withId("exampleFormControlInput1")
                                                 .withPlaceholder("name@example.com")
                                 ),
                         div()
-                                .withClasses(Spacing.mb_3)
+                                .withClasses(BootstrapClasses.mb_3)
                                 .with(
                                         label()
                                                 .withFor("exampleFormControlTextarea1")
-                                                .withClasses(FormControl.form_label)
+                                                .withClasses(BootstrapClasses.form_label)
                                                 .with(
                                                         text("Example textarea")
                                                 ),
                                         textarea()
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withId("exampleFormControlTextarea1")
                                                 .withRows("3")
                                 )
@@ -93,17 +85,17 @@ class FormControlsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         input()
-                                .withClasses(FormControl.form_control,FormControl.form_control_lg)
+                                .withClasses(BootstrapClasses.form_control,BootstrapClasses.form_control_lg)
                                 .withType("text")
                                 .withPlaceholder(".form-control-lg")
                                 .attr(AriaStatesAndProperties.ariaLabel(".form-control-lg example")),
                         input()
-                                .withClasses(FormControl.form_control)
+                                .withClasses(BootstrapClasses.form_control)
                                 .withType("text")
                                 .withPlaceholder("Default input")
                                 .attr(AriaStatesAndProperties.ariaLabel("default input example")),
                         input()
-                                .withClasses(FormControl.form_control,FormControl.form_control_sm)
+                                .withClasses(BootstrapClasses.form_control,BootstrapClasses.form_control_sm)
                                 .withType("text")
                                 .withPlaceholder(".form-control-sm")
                                 .attr(AriaStatesAndProperties.ariaLabel(".form-control-sm example"))
@@ -131,18 +123,18 @@ class FormControlsTest {
                 each(
                         label()
                                 .withFor("inputPassword5")
-                                .withClasses(FormControl.form_label)
+                                .withClasses(BootstrapClasses.form_label)
                                 .with(
                                         text("Password")
                                 ),
                         input()
                                 .withType("password")
                                 .withId("inputPassword5")
-                                .withClasses(FormControl.form_control)
+                                .withClasses(BootstrapClasses.form_control)
                                 .attr(AriaStatesAndProperties.ariaDescribedby("passwordHelpBlock")),
                         div()
                                 .withId("passwordHelpBlock")
-                                .withClasses(FormControl.form_text)
+                                .withClasses(BootstrapClasses.form_text)
                                 .with(
                                         text("Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.")
                                 )
@@ -172,33 +164,33 @@ class FormControlsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row, Gutters.g_3, Flex.align_items_center)
+                        .withClasses(BootstrapClasses.row, BootstrapClasses.g_3, BootstrapClasses.align_items_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_auto)
+                                        .withClasses(BootstrapClasses.col_auto)
                                         .with(
                                                 label()
                                                         .withFor("inputPassword6")
-                                                        .withClasses(Layout.col_form_label)
+                                                        .withClasses(BootstrapClasses.col_form_label)
                                                         .with(
                                                                 text("Password")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_auto)
+                                        .withClasses(BootstrapClasses.col_auto)
                                         .with(
                                                 input()
                                                         .withType("password")
                                                         .withId("inputPassword6")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .attr(AriaStatesAndProperties.ariaDescribedby("passwordHelpInline"))
                                         ),
                                 div()
-                                        .withClasses(Grid.col_auto)
+                                        .withClasses(BootstrapClasses.col_auto)
                                         .with(
                                                 span()
                                                         .withId("passwordHelpInline")
-                                                        .withClasses(FormControl.form_text)
+                                                        .withClasses(BootstrapClasses.form_text)
                                                         .with(
                                                                 text("Must be 8-20 characters long.")
                                                         )
@@ -238,13 +230,13 @@ class FormControlsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         input()
-                                .withClasses(FormControl.form_control)
+                                .withClasses(BootstrapClasses.form_control)
                                 .withType("text")
                                 .withPlaceholder("Disabled input")
                                 .attr(AriaStatesAndProperties.ariaLabel("Disabled input example"))
                                 .withCondDisabled(true ),
                         input()
-                                .withClasses(FormControl.form_control)
+                                .withClasses(BootstrapClasses.form_control)
                                 .withType("text")
                                 .withValue("Disabled readonly input")
                                 .attr(AriaStatesAndProperties.ariaLabel("Disabled input example"))
@@ -271,7 +263,7 @@ class FormControlsTest {
 
         String renderedHtml = uiDocumentation.render(
                 input()
-                        .withClasses(FormControl.form_control)
+                        .withClasses(BootstrapClasses.form_control)
                         .withType("text")
                         .withValue("Readonly input here...")
                         .attr(AriaStatesAndProperties.ariaLabel("readonly input example"))
@@ -296,40 +288,40 @@ class FormControlsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Spacing.mb_3,Grid.row)
+                                .withClasses(BootstrapClasses.mb_3,BootstrapClasses.row)
                                 .with(
                                         label()
                                                 .withFor("staticEmail")
-                                                .withClasses(Grid.col_sm_2,Layout.col_form_label)
+                                                .withClasses(BootstrapClasses.col_sm_2,BootstrapClasses.col_form_label)
                                                 .with(
                                                         text("Email")
                                                 ),
                                         div()
-                                                .withClasses(Grid.col_sm_10)
+                                                .withClasses(BootstrapClasses.col_sm_10)
                                                 .with(
                                                         input()
                                                                 .withType("text")
                                                                 .withCondReadonly(true)
-                                                                .withClasses(FormControl.form_control_plaintext)
+                                                                .withClasses(BootstrapClasses.form_control_plaintext)
                                                                 .withId("staticEmail")
                                                                 .withValue("email@example.com")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spacing.mb_3,Grid.row)
+                                .withClasses(BootstrapClasses.mb_3,BootstrapClasses.row)
                                 .with(
                                         label()
                                                 .withFor("inputPassword")
-                                                .withClasses(Grid.col_sm_2,Layout.col_form_label)
+                                                .withClasses(BootstrapClasses.col_sm_2,BootstrapClasses.col_form_label)
                                                 .with(
                                                         text("Password")
                                                 ),
                                         div()
-                                                .withClasses(Grid.col_sm_10)
+                                                .withClasses(BootstrapClasses.col_sm_10)
                                                 .with(
                                                         input()
                                                                 .withType("password")
-                                                                .withClasses(FormControl.form_control)
+                                                                .withClasses(BootstrapClasses.form_control)
                                                                 .withId("inputPassword")
                                                 )
                                 )
@@ -368,45 +360,45 @@ class FormControlsTest {
 
         String renderedHtml = uiDocumentation.render(
                 form()
-                        .withClasses(Grid.row,Gutters.g_3)
+                        .withClasses(BootstrapClasses.row,BootstrapClasses.g_3)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_auto)
+                                        .withClasses(BootstrapClasses.col_auto)
                                         .with(
                                                 label()
                                                         .withFor("staticEmail2")
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Email")
                                                         ),
                                                 input()
                                                         .withType("text")
                                                         .withCondReadonly(true)
-                                                        .withClasses(FormControl.form_control_plaintext)
+                                                        .withClasses(BootstrapClasses.form_control_plaintext)
                                                         .withId("staticEmail2")
                                                         .withValue("email@example.com")
                                         ),
                                 div()
-                                        .withClasses(Grid.col_auto)
+                                        .withClasses(BootstrapClasses.col_auto)
                                         .with(
                                                 label()
                                                         .withFor("inputPassword2")
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Password")
                                                         ),
                                                 input()
                                                         .withType("password")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("inputPassword2")
                                                         .withPlaceholder("Password")
                                         ),
                                 div()
-                                        .withClasses(Grid.col_auto)
+                                        .withClasses(BootstrapClasses.col_auto)
                                         .with(
                                                 button()
                                                         .withType("submit")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary,Spacing.mb_3)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.mb_3)
                                                         .with(
                                                                 text("Confirm identity")
                                                         )
@@ -450,60 +442,60 @@ class FormControlsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Spacing.mb_3)
+                                .withClasses(BootstrapClasses.mb_3)
                                 .with(
                                         label()
                                                 .withFor("formFile")
-                                                .withClasses(FormControl.form_label)
+                                                .withClasses(BootstrapClasses.form_label)
                                                 .with(
                                                         text("Default file input example")
                                                 ),
                                         input()
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withType("file")
                                                 .withId("formFile")
                                 ),
                         div()
-                                .withClasses(Spacing.mb_3)
+                                .withClasses(BootstrapClasses.mb_3)
                                 .with(
                                         label()
                                                 .withFor("formFileMultiple")
-                                                .withClasses(FormControl.form_label)
+                                                .withClasses(BootstrapClasses.form_label)
                                                 .with(
                                                         text("Multiple files input example")
                                                 ),
                                         input()
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withType("file")
                                                 .withId("formFileMultiple")
                                                 .withCondMultiple(true)
                                 ),
                         div()
-                                .withClasses(Spacing.mb_3)
+                                .withClasses(BootstrapClasses.mb_3)
                                 .with(
                                         label()
                                                 .withFor("formFileDisabled")
-                                                .withClasses(FormControl.form_label)
+                                                .withClasses(BootstrapClasses.form_label)
                                                 .with(
                                                         text("Disabled file input example")
                                                 ),
                                         input()
-                                                .withClasses(FormControl.form_control)
+                                                .withClasses(BootstrapClasses.form_control)
                                                 .withType("file")
                                                 .withId("formFileDisabled")
                                                 .withCondDisabled(true)
                                 ),
                         div()
-                                .withClasses(Spacing.mb_3)
+                                .withClasses(BootstrapClasses.mb_3)
                                 .with(
                                         label()
                                                 .withFor("formFileSm")
-                                                .withClasses(FormControl.form_label)
+                                                .withClasses(BootstrapClasses.form_label)
                                                 .with(
                                                         text("Small file input example")
                                                 ),
                                         input()
-                                                .withClasses(FormControl.form_control,FormControl.form_control_sm)
+                                                .withClasses(BootstrapClasses.form_control,BootstrapClasses.form_control_sm)
                                                 .withId("formFileSm")
                                                 .withType("file")
                                 ),
@@ -511,12 +503,12 @@ class FormControlsTest {
                                 .with(
                                         label()
                                                 .withFor("formFileLg")
-                                                .withClasses(FormControl.form_label)
+                                                .withClasses(BootstrapClasses.form_label)
                                                 .with(
                                                         text("Large file input example")
                                                 ),
                                         input()
-                                                .withClasses(FormControl.form_control,FormControl.form_control_lg)
+                                                .withClasses(BootstrapClasses.form_control,BootstrapClasses.form_control_lg)
                                                 .withId("formFileLg")
                                                 .withType("file")
                                 )
@@ -571,13 +563,13 @@ class FormControlsTest {
                 each(
                         label()
                                 .withFor("exampleColorInput")
-                                .withClasses(FormControl.form_label)
+                                .withClasses(BootstrapClasses.form_label)
                                 .with(
                                         text("Color picker")
                                 ),
                         input()
                                 .withType("color")
-                                .withClasses(FormControl.form_control,FormControl.form_control_color)
+                                .withClasses(BootstrapClasses.form_control,BootstrapClasses.form_control_color)
                                 .withId("exampleColorInput")
                                 .withValue("#563d7c")
                                 .withTitle("Choose your color")
@@ -606,12 +598,12 @@ class FormControlsTest {
                 each(
                         label()
                                 .withFor("exampleDataList")
-                                .withClasses(FormControl.form_label)
+                                .withClasses(BootstrapClasses.form_label)
                                 .with(
                                         text("Datalist example")
                                 ),
                         input()
-                                .withClasses(FormControl.form_control)
+                                .withClasses(BootstrapClasses.form_control)
                                 .withList("datalistOptions")
                                 .withId("exampleDataList")
                                 .withPlaceholder("Type to search..."),

@@ -85,10 +85,11 @@ public class MavenDependencyFileLister {
         List<FieldSpec> variables = new ArrayList<>();
         for (String selector : selectors) {
 
-            String variableName = selector.substring(selector.lastIndexOf(".") + 1).replaceAll("-", "_");
+            String className = selector.substring(selector.lastIndexOf(".") + 1);
+            String variableName = className.replaceAll("-", "_");
             variables.add(FieldSpec
                     .builder(String.class, variableName, Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
-                    .initializer("$S", "myname")
+                    .initializer("$S", className)
                     .build());
 
         }

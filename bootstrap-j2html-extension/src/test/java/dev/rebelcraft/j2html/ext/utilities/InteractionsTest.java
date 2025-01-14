@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,17 +25,17 @@ class InteractionsTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         p()
-                                .withClasses(Interactions.user_select_all)
+                                .withClasses(BootstrapClasses.user_select_all)
                                 .with(
                                         text("This paragraph will be entirely selected when clicked by the user.")
                                 ),
                         p()
-                                .withClasses(Interactions.user_select_auto)
+                                .withClasses(BootstrapClasses.user_select_auto)
                                 .with(
                                         text("This paragraph has default select behavior.")
                                 ),
                         p()
-                                .withClasses(Interactions.user_select_none)
+                                .withClasses(BootstrapClasses.user_select_none)
                                 .with(
                                         text("This paragraph will not be selectable when clicked by the user.")
                                 )
@@ -70,7 +71,7 @@ class InteractionsTest {
                                 .with(
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Interactions.pe_none)
+                                                .withClasses(BootstrapClasses.pe_none)
                                                 .withTabindex(-1)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaDisabled("true")
@@ -84,14 +85,14 @@ class InteractionsTest {
                                 .with(
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Spacing.pe_auto)
+                                                .withClasses(BootstrapClasses.pe_auto)
                                                 .with(
                                                         text("This link")
                                                 ),
                                         text("can be clicked (this is default behavior).")
                                 ),
                         p()
-                                .withClasses(Interactions.pe_none)
+                                .withClasses(BootstrapClasses.pe_none)
                                 .with(
                                         a()
                                                 .withHref("#")
@@ -110,7 +111,7 @@ class InteractionsTest {
                                         text("property is inherited from its parent. However,"),
                                         a()
                                                 .withHref("#")
-                                                .withClasses(Spacing.pe_auto)
+                                                .withClasses(BootstrapClasses.pe_auto)
                                                 .with(
                                                         text("this link")
                                                 ),

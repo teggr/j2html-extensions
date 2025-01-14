@@ -1,22 +1,13 @@
 package dev.rebelcraft.j2html.ext.forms;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.components.Buttons;
-import dev.rebelcraft.j2html.ext.layout.Grid;
-import dev.rebelcraft.j2html.ext.layout.Gutters;
-import dev.rebelcraft.j2html.ext.utilities.Position;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ValidationTest {
@@ -33,115 +24,115 @@ class ValidationTest {
 
         String renderedHtml = uiDocumentation.render(
                 form()
-                     .withClasses(Grid.row, Gutters.g_3,Validation.needs_validation)
+                     .withClasses(BootstrapClasses.row, BootstrapClasses.g_3,Validation.needs_validation)
                      .withCondNovalidate(true)
                      .with(
                         div()
-                         .withClasses(Grid.col_md_4)
+                         .withClasses(BootstrapClasses.col_md_4)
                          .with(
                             label()
                              .withFor("validationCustom01")
-                             .withClasses(FormControl.form_label)
+                             .withClasses(BootstrapClasses.form_label)
                              .with(
                                 text("First name")
                               ),
                             input()
                              .withType("text")
-                             .withClasses(FormControl.form_control)
+                             .withClasses(BootstrapClasses.form_control)
                              .withId("validationCustom01")
                              .withValue("Mark")
                              .withCondRequired(true),
                             div()
-                             .withClasses(Validation.valid_feedback)
+                             .withClasses(BootstrapClasses.valid_feedback)
                              .with(
                                 text("Looks good!")
                               )
                           ),
                         div()
-                         .withClasses(Grid.col_md_4)
+                         .withClasses(BootstrapClasses.col_md_4)
                          .with(
                             label()
                              .withFor("validationCustom02")
-                             .withClasses(FormControl.form_label)
+                             .withClasses(BootstrapClasses.form_label)
                              .with(
                                 text("Last name")
                               ),
                             input()
                              .withType("text")
-                             .withClasses(FormControl.form_control)
+                             .withClasses(BootstrapClasses.form_control)
                              .withId("validationCustom02")
                              .withValue("Otto")
                              .withCondRequired(true),
                             div()
-                             .withClasses(Validation.valid_feedback)
+                             .withClasses(BootstrapClasses.valid_feedback)
                              .with(
                                 text("Looks good!")
                               )
                           ),
                         div()
-                         .withClasses(Grid.col_md_4)
+                         .withClasses(BootstrapClasses.col_md_4)
                          .with(
                             label()
                              .withFor("validationCustomUsername")
-                             .withClasses(FormControl.form_label)
+                             .withClasses(BootstrapClasses.form_label)
                              .with(
                                 text("Username")
                               ),
                             div()
-                             .withClasses(InputGroups.input_group,Validation.has_validation)
+                             .withClasses(BootstrapClasses.input_group,BootstrapClasses.has_validation)
                              .with(
                                 span()
-                                 .withClasses(InputGroups.input_group_text)
+                                 .withClasses(BootstrapClasses.input_group_text)
                                  .withId("inputGroupPrepend")
                                  .with(
                                     text("@")
                                   ),
                                 input()
                                  .withType("text")
-                                 .withClasses(FormControl.form_control)
+                                 .withClasses(BootstrapClasses.form_control)
                                  .withId("validationCustomUsername")
                                  .attr(
                                     AriaStatesAndProperties.ariaDescribedby("inputGroupPrepend")
                                   )
                                  .withCondRequired(true),
                                 div()
-                                 .withClasses(Validation.invalid_feedback)
+                                 .withClasses(BootstrapClasses.invalid_feedback)
                                  .with(
                                     text("Please choose a username.")
                                   )
                               )
                           ),
                         div()
-                         .withClasses(Grid.col_md_6)
+                         .withClasses(BootstrapClasses.col_md_6)
                          .with(
                             label()
                              .withFor("validationCustom03")
-                             .withClasses(FormControl.form_label)
+                             .withClasses(BootstrapClasses.form_label)
                              .with(
                                 text("City")
                               ),
                             input()
                              .withType("text")
-                             .withClasses(FormControl.form_control)
+                             .withClasses(BootstrapClasses.form_control)
                              .withId("validationCustom03")
                              .withCondRequired(true),
                             div()
-                             .withClasses(Validation.invalid_feedback)
+                             .withClasses(BootstrapClasses.invalid_feedback)
                              .with(
                                 text("Please provide a valid city.")
                               )
                           ),
                         div()
-                         .withClasses(Grid.col_md_3)
+                         .withClasses(BootstrapClasses.col_md_3)
                          .with(
                             label()
                              .withFor("validationCustom04")
-                             .withClasses(FormControl.form_label)
+                             .withClasses(BootstrapClasses.form_label)
                              .with(
                                 text("State")
                               ),
                             select()
-                             .withClasses(Select.form_select)
+                             .withClasses(BootstrapClasses.form_select)
                              .withId("validationCustom04")
                              .withCondRequired(true)
                              .with(
@@ -158,61 +149,61 @@ class ValidationTest {
                                   )
                               ),
                             div()
-                             .withClasses(Validation.invalid_feedback)
+                             .withClasses(BootstrapClasses.invalid_feedback)
                              .with(
                                 text("Please select a valid state.")
                               )
                           ),
                         div()
-                         .withClasses(Grid.col_md_3)
+                         .withClasses(BootstrapClasses.col_md_3)
                          .with(
                             label()
                              .withFor("validationCustom05")
-                             .withClasses(FormControl.form_label)
+                             .withClasses(BootstrapClasses.form_label)
                              .with(
                                 text("Zip")
                               ),
                             input()
                              .withType("text")
-                             .withClasses(FormControl.form_control)
+                             .withClasses(BootstrapClasses.form_control)
                              .withId("validationCustom05")
                              .withCondRequired(true),
                             div()
-                             .withClasses(Validation.invalid_feedback)
+                             .withClasses(BootstrapClasses.invalid_feedback)
                              .with(
                                 text("Please provide a valid zip.")
                               )
                           ),
                         div()
-                         .withClasses(Grid.col_12)
+                         .withClasses(BootstrapClasses.col_12)
                          .with(
                             div()
-                             .withClasses(ChecksAndRadios.form_check)
+                             .withClasses(BootstrapClasses.form_check)
                              .with(
                                 input()
-                                 .withClasses(ChecksAndRadios.form_check_input)
+                                 .withClasses(BootstrapClasses.form_check_input)
                                  .withType("checkbox")
                                  .withValue("")
                                  .withId("invalidCheck")
                                  .withCondRequired(true),
                                 label()
-                                 .withClasses(ChecksAndRadios.form_check_label)
+                                 .withClasses(BootstrapClasses.form_check_label)
                                  .withFor("invalidCheck")
                                  .with(
                                     text("Agree to terms and conditions")
                                   ),
                                 div()
-                                 .withClasses(Validation.invalid_feedback)
+                                 .withClasses(BootstrapClasses.invalid_feedback)
                                  .with(
                                     text("You must agree before submitting.")
                                   )
                               )
                           ),
                         div()
-                         .withClasses(Grid.col_12)
+                         .withClasses(BootstrapClasses.col_12)
                          .with(
                             button()
-                             .withClasses(Buttons.btn,Buttons.btn_primary)
+                             .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                              .withType("submit")
                              .with(
                                 text("Submit form")
@@ -321,61 +312,61 @@ class ValidationTest {
 
         String renderedHtml = uiDocumentation.render(
                 form()
-                        .withClasses(Grid.row,Gutters.g_3)
+                        .withClasses(BootstrapClasses.row,BootstrapClasses.g_3)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_md_4)
+                                        .withClasses(BootstrapClasses.col_md_4)
                                         .with(
                                                 label()
                                                         .withFor("validationDefault01")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("First name")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("validationDefault01")
                                                         .withValue("Mark")
                                                         .withCondRequired(true)
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_4)
+                                        .withClasses(BootstrapClasses.col_md_4)
                                         .with(
                                                 label()
                                                         .withFor("validationDefault02")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Last name")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("validationDefault02")
                                                         .withValue("Otto")
                                                         .withCondRequired(true)
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_4)
+                                        .withClasses(BootstrapClasses.col_md_4)
                                         .with(
                                                 label()
                                                         .withFor("validationDefaultUsername")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Username")
                                                         ),
                                                 div()
-                                                        .withClasses(InputGroups.input_group)
+                                                        .withClasses(BootstrapClasses.input_group)
                                                         .with(
                                                                 span()
-                                                                        .withClasses(InputGroups.input_group_text)
+                                                                        .withClasses(BootstrapClasses.input_group_text)
                                                                         .withId("inputGroupPrepend2")
                                                                         .with(
                                                                                 text("@")
                                                                         ),
                                                                 input()
                                                                         .withType("text")
-                                                                        .withClasses(FormControl.form_control)
+                                                                        .withClasses(BootstrapClasses.form_control)
                                                                         .withId("validationDefaultUsername")
                                                                         .attr(
                                                                                 AriaStatesAndProperties.ariaDescribedby("inputGroupPrepend2")
@@ -384,31 +375,31 @@ class ValidationTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_6)
+                                        .withClasses(BootstrapClasses.col_md_6)
                                         .with(
                                                 label()
                                                         .withFor("validationDefault03")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("City")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("validationDefault03")
                                                         .withCondRequired(true)
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_3)
+                                        .withClasses(BootstrapClasses.col_md_3)
                                         .with(
                                                 label()
                                                         .withFor("validationDefault04")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("State")
                                                         ),
                                                 select()
-                                                        .withClasses(Select.form_select)
+                                                        .withClasses(BootstrapClasses.form_select)
                                                         .withId("validationDefault04")
                                                         .withCondRequired(true)
                                                         .with(
@@ -426,34 +417,34 @@ class ValidationTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_3)
+                                        .withClasses(BootstrapClasses.col_md_3)
                                         .with(
                                                 label()
                                                         .withFor("validationDefault05")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Zip")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("validationDefault05")
                                                         .withCondRequired(true)
                                         ),
                                 div()
-                                        .withClasses(Grid.col_12)
+                                        .withClasses(BootstrapClasses.col_12)
                                         .with(
                                                 div()
-                                                        .withClasses(ChecksAndRadios.form_check)
+                                                        .withClasses(BootstrapClasses.form_check)
                                                         .with(
                                                                 input()
-                                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                                        .withClasses(BootstrapClasses.form_check_input)
                                                                         .withType("checkbox")
                                                                         .withValue("")
                                                                         .withId("invalidCheck2")
                                                                         .withCondRequired(true),
                                                                 label()
-                                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                                        .withClasses(BootstrapClasses.form_check_label)
                                                                         .withFor("invalidCheck2")
                                                                         .with(
                                                                                 text("Agree to terms and conditions")
@@ -461,10 +452,10 @@ class ValidationTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_12)
+                                        .withClasses(BootstrapClasses.col_12)
                                         .with(
                                                 button()
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .withType("submit")
                                                         .with(
                                                                 text("Submit form")
@@ -552,71 +543,71 @@ class ValidationTest {
 
         String renderedHtml = uiDocumentation.render(
                 form()
-                        .withClasses(Grid.row,Gutters.g_3)
+                        .withClasses(BootstrapClasses.row,BootstrapClasses.g_3)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_md_4)
+                                        .withClasses(BootstrapClasses.col_md_4)
                                         .with(
                                                 label()
                                                         .withFor("validationServer01")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("First name")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control,Validation.is_valid)
+                                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.is_valid)
                                                         .withId("validationServer01")
                                                         .withValue("Mark")
                                                         .withCondRequired(true),
                                                 div()
-                                                        .withClasses(Validation.valid_feedback)
+                                                        .withClasses(BootstrapClasses.valid_feedback)
                                                         .with(
                                                                 text("Looks good!")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_4)
+                                        .withClasses(BootstrapClasses.col_md_4)
                                         .with(
                                                 label()
                                                         .withFor("validationServer02")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Last name")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control,Validation.is_valid)
+                                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.is_valid)
                                                         .withId("validationServer02")
                                                         .withValue("Otto")
                                                         .withCondRequired(true),
                                                 div()
-                                                        .withClasses(Validation.valid_feedback)
+                                                        .withClasses(BootstrapClasses.valid_feedback)
                                                         .with(
                                                                 text("Looks good!")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_4)
+                                        .withClasses(BootstrapClasses.col_md_4)
                                         .with(
                                                 label()
                                                         .withFor("validationServerUsername")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Username")
                                                         ),
                                                 div()
-                                                        .withClasses(InputGroups.input_group,Validation.has_validation)
+                                                        .withClasses(BootstrapClasses.input_group,BootstrapClasses.has_validation)
                                                         .with(
                                                                 span()
-                                                                        .withClasses(InputGroups.input_group_text)
+                                                                        .withClasses(BootstrapClasses.input_group_text)
                                                                         .withId("inputGroupPrepend3")
                                                                         .with(
                                                                                 text("@")
                                                                         ),
                                                                 input()
                                                                         .withType("text")
-                                                                        .withClasses(FormControl.form_control,Validation.is_invalid)
+                                                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.is_invalid)
                                                                         .withId("validationServerUsername")
                                                                         .attr(
                                                                                 AriaStatesAndProperties.ariaDescribedby("inputGroupPrepend3 validationServerUsernameFeedback")
@@ -624,24 +615,24 @@ class ValidationTest {
                                                                         .withCondRequired(true),
                                                                 div()
                                                                         .withId("validationServerUsernameFeedback")
-                                                                        .withClasses(Validation.invalid_feedback)
+                                                                        .withClasses(BootstrapClasses.invalid_feedback)
                                                                         .with(
                                                                                 text("Please choose a username.")
                                                                         )
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_6)
+                                        .withClasses(BootstrapClasses.col_md_6)
                                         .with(
                                                 label()
                                                         .withFor("validationServer03")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("City")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control,Validation.is_invalid)
+                                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.is_invalid)
                                                         .withId("validationServer03")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaDescribedby("validationServer03Feedback")
@@ -649,22 +640,22 @@ class ValidationTest {
                                                         .withCondRequired(true),
                                                 div()
                                                         .withId("validationServer03Feedback")
-                                                        .withClasses(Validation.invalid_feedback)
+                                                        .withClasses(BootstrapClasses.invalid_feedback)
                                                         .with(
                                                                 text("Please provide a valid city.")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_3)
+                                        .withClasses(BootstrapClasses.col_md_3)
                                         .with(
                                                 label()
                                                         .withFor("validationServer04")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("State")
                                                         ),
                                                 select()
-                                                        .withClasses(Select.form_select,Validation.is_invalid)
+                                                        .withClasses(BootstrapClasses.form_select,BootstrapClasses.is_invalid)
                                                         .withId("validationServer04")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaDescribedby("validationServer04Feedback")
@@ -685,23 +676,23 @@ class ValidationTest {
                                                         ),
                                                 div()
                                                         .withId("validationServer04Feedback")
-                                                        .withClasses(Validation.invalid_feedback)
+                                                        .withClasses(BootstrapClasses.invalid_feedback)
                                                         .with(
                                                                 text("Please select a valid state.")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_3)
+                                        .withClasses(BootstrapClasses.col_md_3)
                                         .with(
                                                 label()
                                                         .withFor("validationServer05")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Zip")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control,Validation.is_invalid)
+                                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.is_invalid)
                                                         .withId("validationServer05")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaDescribedby("validationServer05Feedback")
@@ -709,19 +700,19 @@ class ValidationTest {
                                                         .withCondRequired(true),
                                                 div()
                                                         .withId("validationServer05Feedback")
-                                                        .withClasses(Validation.invalid_feedback)
+                                                        .withClasses(BootstrapClasses.invalid_feedback)
                                                         .with(
                                                                 text("Please provide a valid zip.")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_12)
+                                        .withClasses(BootstrapClasses.col_12)
                                         .with(
                                                 div()
-                                                        .withClasses(ChecksAndRadios.form_check)
+                                                        .withClasses(BootstrapClasses.form_check)
                                                         .with(
                                                                 input()
-                                                                        .withClasses(ChecksAndRadios.form_check_input,Validation.is_invalid)
+                                                                        .withClasses(BootstrapClasses.form_check_input,BootstrapClasses.is_invalid)
                                                                         .withType("checkbox")
                                                                         .withValue("")
                                                                         .withId("invalidCheck3")
@@ -730,24 +721,24 @@ class ValidationTest {
                                                                         )
                                                                         .withCondRequired(true),
                                                                 label()
-                                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                                        .withClasses(BootstrapClasses.form_check_label)
                                                                         .withFor("invalidCheck3")
                                                                         .with(
                                                                                 text("Agree to terms and conditions")
                                                                         ),
                                                                 div()
                                                                         .withId("invalidCheck3Feedback")
-                                                                        .withClasses(Validation.invalid_feedback)
+                                                                        .withClasses(BootstrapClasses.invalid_feedback)
                                                                         .with(
                                                                                 text("You must agree before submitting.")
                                                                         )
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_12)
+                                        .withClasses(BootstrapClasses.col_12)
                                         .with(
                                                 button()
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .withType("submit")
                                                         .with(
                                                                 text("Submit form")
@@ -856,90 +847,90 @@ class ValidationTest {
 
         String renderedHtml = uiDocumentation.render(
                 form()
-                        .withClasses(Validation.was_validated)
+                        .withClasses(BootstrapClasses.was_validated)
                         .with(
                                 div()
-                                        .withClasses(Spacing.mb_3)
+                                        .withClasses(BootstrapClasses.mb_3)
                                         .with(
                                                 label()
                                                         .withFor("validationTextarea")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Textarea")
                                                         ),
                                                 textarea()
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("validationTextarea")
                                                         .withPlaceholder("Required example textarea")
                                                         .withCondRequired(true),
                                                 div()
-                                                        .withClasses(Validation.invalid_feedback)
+                                                        .withClasses(BootstrapClasses.invalid_feedback)
                                                         .with(
                                                                 text("Please enter a message in the textarea.")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(ChecksAndRadios.form_check,Spacing.mb_3)
+                                        .withClasses(BootstrapClasses.form_check,BootstrapClasses.mb_3)
                                         .with(
                                                 input()
                                                         .withType("checkbox")
-                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                        .withClasses(BootstrapClasses.form_check_input)
                                                         .withId("validationFormCheck1")
                                                         .withCondRequired(true),
                                                 label()
-                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                        .withClasses(BootstrapClasses.form_check_label)
                                                         .withFor("validationFormCheck1")
                                                         .with(
                                                                 text("Check this checkbox")
                                                         ),
                                                 div()
-                                                        .withClasses(Validation.invalid_feedback)
+                                                        .withClasses(BootstrapClasses.invalid_feedback)
                                                         .with(
                                                                 text("Example invalid feedback text")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(ChecksAndRadios.form_check)
+                                        .withClasses(BootstrapClasses.form_check)
                                         .with(
                                                 input()
                                                         .withType("radio")
-                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                        .withClasses(BootstrapClasses.form_check_input)
                                                         .withId("validationFormCheck2")
                                                         .withName("radio-stacked")
                                                         .withCondRequired(true),
                                                 label()
-                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                        .withClasses(BootstrapClasses.form_check_label)
                                                         .withFor("validationFormCheck2")
                                                         .with(
                                                                 text("Toggle this radio")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(ChecksAndRadios.form_check,Spacing.mb_3)
+                                        .withClasses(BootstrapClasses.form_check,BootstrapClasses.mb_3)
                                         .with(
                                                 input()
                                                         .withType("radio")
-                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                        .withClasses(BootstrapClasses.form_check_input)
                                                         .withId("validationFormCheck3")
                                                         .withName("radio-stacked")
                                                         .withCondRequired(true),
                                                 label()
-                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                        .withClasses(BootstrapClasses.form_check_label)
                                                         .withFor("validationFormCheck3")
                                                         .with(
                                                                 text("Or toggle this other radio")
                                                         ),
                                                 div()
-                                                        .withClasses(Validation.invalid_feedback)
+                                                        .withClasses(BootstrapClasses.invalid_feedback)
                                                         .with(
                                                                 text("More example invalid feedback text")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Spacing.mb_3)
+                                        .withClasses(BootstrapClasses.mb_3)
                                         .with(
                                                 select()
-                                                        .withClasses(Select.form_select)
+                                                        .withClasses(BootstrapClasses.form_select)
                                                         .withCondRequired(true)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLabel("select example")
@@ -967,32 +958,32 @@ class ValidationTest {
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Validation.invalid_feedback)
+                                                        .withClasses(BootstrapClasses.invalid_feedback)
                                                         .with(
                                                                 text("Example invalid select feedback")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Spacing.mb_3)
+                                        .withClasses(BootstrapClasses.mb_3)
                                         .with(
                                                 input()
                                                         .withType("file")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLabel("file example")
                                                         )
                                                         .withCondRequired(true),
                                                 div()
-                                                        .withClasses(Validation.invalid_feedback)
+                                                        .withClasses(BootstrapClasses.invalid_feedback)
                                                         .with(
                                                                 text("Example invalid form file feedback")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Spacing.mb_3)
+                                        .withClasses(BootstrapClasses.mb_3)
                                         .with(
                                                 button()
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .withType("submit")
                                                         .withCondDisabled(true)
                                                         .with(
@@ -1083,115 +1074,115 @@ class ValidationTest {
 
         String renderedHtml = uiDocumentation.render(
                 form()
-                        .withClasses(Grid.row,Gutters.g_3,Validation.needs_validation)
+                        .withClasses(BootstrapClasses.row,BootstrapClasses.g_3,Validation.needs_validation)
                         .withCondNovalidate(true)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_md_4, Position.position_relative)
+                                        .withClasses(BootstrapClasses.col_md_4, BootstrapClasses.position_relative)
                                         .with(
                                                 label()
                                                         .withFor("validationTooltip01")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("First name")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("validationTooltip01")
                                                         .withValue("Mark")
                                                         .withCondRequired(true),
                                                 div()
-                                                        .withClasses(Validation.valid_tooltip)
+                                                        .withClasses(BootstrapClasses.valid_tooltip)
                                                         .with(
                                                                 text("Looks good!")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_4,Position.position_relative)
+                                        .withClasses(BootstrapClasses.col_md_4,BootstrapClasses.position_relative)
                                         .with(
                                                 label()
                                                         .withFor("validationTooltip02")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Last name")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("validationTooltip02")
                                                         .withValue("Otto")
                                                         .withCondRequired(true),
                                                 div()
-                                                        .withClasses(Validation.valid_tooltip)
+                                                        .withClasses(BootstrapClasses.valid_tooltip)
                                                         .with(
                                                                 text("Looks good!")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_4,Position.position_relative)
+                                        .withClasses(BootstrapClasses.col_md_4,BootstrapClasses.position_relative)
                                         .with(
                                                 label()
                                                         .withFor("validationTooltipUsername")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Username")
                                                         ),
                                                 div()
-                                                        .withClasses(InputGroups.input_group,Validation.has_validation)
+                                                        .withClasses(BootstrapClasses.input_group,BootstrapClasses.has_validation)
                                                         .with(
                                                                 span()
-                                                                        .withClasses(InputGroups.input_group_text)
+                                                                        .withClasses(BootstrapClasses.input_group_text)
                                                                         .withId("validationTooltipUsernamePrepend")
                                                                         .with(
                                                                                 text("@")
                                                                         ),
                                                                 input()
                                                                         .withType("text")
-                                                                        .withClasses(FormControl.form_control)
+                                                                        .withClasses(BootstrapClasses.form_control)
                                                                         .withId("validationTooltipUsername")
                                                                         .attr(
                                                                                 AriaStatesAndProperties.ariaDescribedby("validationTooltipUsernamePrepend")
                                                                         )
                                                                         .withCondRequired(true),
                                                                 div()
-                                                                        .withClasses(Validation.invalid_tooltip)
+                                                                        .withClasses(BootstrapClasses.invalid_tooltip)
                                                                         .with(
                                                                                 text("Please choose a unique and valid username.")
                                                                         )
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_6,Position.position_relative)
+                                        .withClasses(BootstrapClasses.col_md_6,BootstrapClasses.position_relative)
                                         .with(
                                                 label()
                                                         .withFor("validationTooltip03")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("City")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("validationTooltip03")
                                                         .withCondRequired(true),
                                                 div()
-                                                        .withClasses(Validation.invalid_tooltip)
+                                                        .withClasses(BootstrapClasses.invalid_tooltip)
                                                         .with(
                                                                 text("Please provide a valid city.")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_3,Position.position_relative)
+                                        .withClasses(BootstrapClasses.col_md_3,BootstrapClasses.position_relative)
                                         .with(
                                                 label()
                                                         .withFor("validationTooltip04")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("State")
                                                         ),
                                                 select()
-                                                        .withClasses(Select.form_select)
+                                                        .withClasses(BootstrapClasses.form_select)
                                                         .withId("validationTooltip04")
                                                         .withCondRequired(true)
                                                         .with(
@@ -1208,36 +1199,36 @@ class ValidationTest {
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Validation.invalid_tooltip)
+                                                        .withClasses(BootstrapClasses.invalid_tooltip)
                                                         .with(
                                                                 text("Please select a valid state.")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_3,Position.position_relative)
+                                        .withClasses(BootstrapClasses.col_md_3,BootstrapClasses.position_relative)
                                         .with(
                                                 label()
                                                         .withFor("validationTooltip05")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Zip")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("validationTooltip05")
                                                         .withCondRequired(true),
                                                 div()
-                                                        .withClasses(Validation.invalid_tooltip)
+                                                        .withClasses(BootstrapClasses.invalid_tooltip)
                                                         .with(
                                                                 text("Please provide a valid zip.")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_12)
+                                        .withClasses(BootstrapClasses.col_12)
                                         .with(
                                                 button()
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .withType("submit")
                                                         .with(
                                                                 text("Submit form")

@@ -1,16 +1,12 @@
 package dev.rebelcraft.j2html.ext.layout;
 
-import dev.rebelcraft.j2html.ext.utilities.Overflow;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
-import dev.rebelcraft.j2html.ext.utilities.Text;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
-import static j2html.TagCreator.*;
-
-
+import static j2html.TagCreator.div;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GuttersTest {
@@ -27,22 +23,22 @@ class GuttersTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Containers.container, Spacing.px_4, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.px_4, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.row, Gutters.gx_5)
+                                        .withClasses(BootstrapClasses.row, BootstrapClasses.gx_5)
                                         .with(
                                                 div()
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                                         .with(
                                                                 div("Custom column padding")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                                         .with(
                                                                 div("Custom column padding")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         )
                                         )
                         )
@@ -78,22 +74,22 @@ class GuttersTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Containers.container, Overflow.overflow_hidden, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.overflow_hidden, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.row, Gutters.gx_5)
+                                        .withClasses(BootstrapClasses.row, BootstrapClasses.gx_5)
                                         .with(
                                                 div()
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                                         .with(
                                                                 div("Custom column padding")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                                         .with(
                                                                 div("Custom column padding")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         )
                                         )
                         )
@@ -129,34 +125,34 @@ class GuttersTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Containers.container, Overflow.overflow_hidden,Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.overflow_hidden,BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.row, Gutters.gy_5)
+                                        .withClasses(BootstrapClasses.row, BootstrapClasses.gy_5)
                                         .with(
                                                 div()
-                                                        .withClass(Grid.col_6)
+                                                        .withClass(BootstrapClasses.col_6)
                                                         .with(
                                                                 div("Custom column padding")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col_6)
+                                                        .withClass(BootstrapClasses.col_6)
                                                         .with(
                                                                 div("Custom column padding")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col_6)
+                                                        .withClass(BootstrapClasses.col_6)
                                                         .with(
                                                                 div("Custom column padding")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col_6)
+                                                        .withClass(BootstrapClasses.col_6)
                                                         .with(
                                                                 div("Custom column padding")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         )
                                         )
                         )
@@ -202,34 +198,34 @@ class GuttersTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.row, Gutters.g_2)
+                                        .withClasses(BootstrapClasses.row, BootstrapClasses.g_2)
                                         .with(
                                                 div()
-                                                        .withClass(Grid.col_6)
+                                                        .withClass(BootstrapClasses.col_6)
                                                         .with(
                                                                 div("Custom column padding")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col_6)
+                                                        .withClass(BootstrapClasses.col_6)
                                                         .with(
                                                                 div("Custom column padding")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col_6)
+                                                        .withClass(BootstrapClasses.col_6)
                                                         .with(
                                                                 div("Custom column padding")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col_6)
+                                                        .withClass(BootstrapClasses.col_6)
                                                         .with(
                                                                 div("Custom column padding")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         )
                                         )
                         )
@@ -275,70 +271,70 @@ class GuttersTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Containers.container, Text.text_center)
+                        .withClasses(BootstrapClasses.container, BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.row, Grid.row_cols_2, Grid.row_cols_lg_5, Gutters.g_2, Gutters.g_lg_3)
+                                        .withClasses(BootstrapClasses.row, BootstrapClasses.row_cols_2, BootstrapClasses.row_cols_lg_5, BootstrapClasses.g_2, BootstrapClasses.g_lg_3)
                                         .with(
                                                 div()
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                                         .with(
                                                                 div("Row column")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                                         .with(
                                                                 div("Row column")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                                         .with(
                                                                 div("Row column")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                                         .with(
                                                                 div("Row column")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                                         .with(
                                                                 div("Row column")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                                         .with(
                                                                 div("Row column")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                                         .with(
                                                                 div("Row column")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                                         .with(
                                                                 div("Row column")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                                         .with(
                                                                 div("Row column")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         ),
                                                 div()
-                                                        .withClass(Grid.col)
+                                                        .withClass(BootstrapClasses.col)
                                                         .with(
                                                                 div("Row column")
-                                                                        .withClass(Spacing.p_3)
+                                                                        .withClass(BootstrapClasses.p_3)
                                                         )
                                         )
                         )
@@ -414,12 +410,12 @@ class GuttersTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row, Gutters.g_0, Text.text_center)
+                        .withClasses(BootstrapClasses.row, BootstrapClasses.g_0, BootstrapClasses.text_center)
                         .with(
                                 div(".col-sm-6.col-md-8")
-                                        .withClasses(Grid.col_sm_6, Grid.col_md_8),
+                                        .withClasses(BootstrapClasses.col_sm_6, BootstrapClasses.col_md_8),
                                 div(".col-6.col-md-4")
-                                        .withClasses(Grid.col_6, Grid.col_md_4)
+                                        .withClasses(BootstrapClasses.col_6, BootstrapClasses.col_md_4)
                         )
         );
 

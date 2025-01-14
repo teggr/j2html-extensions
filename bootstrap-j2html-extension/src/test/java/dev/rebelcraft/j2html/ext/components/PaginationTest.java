@@ -1,18 +1,13 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.utilities.Flex;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PaginationTest {
@@ -34,53 +29,53 @@ class PaginationTest {
                   )
                  .with(
                     ul()
-                     .withClasses(Pagination.pagination)
+                     .withClasses(BootstrapClasses.pagination)
                      .with(
                         li()
-                         .withClasses(Pagination.page_item)
+                         .withClasses(BootstrapClasses.page_item)
                          .with(
                             a()
-                             .withClasses(Pagination.page_link)
+                             .withClasses(BootstrapClasses.page_link)
                              .withHref("#")
                              .with(
                                 text("Previous")
                               )
                           ),
                         li()
-                         .withClasses(Pagination.page_item)
+                         .withClasses(BootstrapClasses.page_item)
                          .with(
                             a()
-                             .withClasses(Pagination.page_link)
+                             .withClasses(BootstrapClasses.page_link)
                              .withHref("#")
                              .with(
                                 text("1")
                               )
                           ),
                         li()
-                         .withClasses(Pagination.page_item)
+                         .withClasses(BootstrapClasses.page_item)
                          .with(
                             a()
-                             .withClasses(Pagination.page_link)
+                             .withClasses(BootstrapClasses.page_link)
                              .withHref("#")
                              .with(
                                 text("2")
                               )
                           ),
                         li()
-                         .withClasses(Pagination.page_item)
+                         .withClasses(BootstrapClasses.page_item)
                          .with(
                             a()
-                             .withClasses(Pagination.page_link)
+                             .withClasses(BootstrapClasses.page_link)
                              .withHref("#")
                              .with(
                                 text("3")
                               )
                           ),
                         li()
-                         .withClasses(Pagination.page_item)
+                         .withClasses(BootstrapClasses.page_item)
                          .with(
                             a()
-                             .withClasses(Pagination.page_link)
+                             .withClasses(BootstrapClasses.page_link)
                              .withHref("#")
                              .with(
                                 text("Next")
@@ -140,13 +135,13 @@ class PaginationTest {
                         )
                         .with(
                                 ul()
-                                        .withClasses(Pagination.pagination)
+                                        .withClasses(BootstrapClasses.pagination)
                                         .with(
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .attr(
                                                                                 AriaStatesAndProperties.ariaLabel("Previous")
@@ -162,40 +157,40 @@ class PaginationTest {
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("1")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("2")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("3")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .attr(
                                                                                 AriaStatesAndProperties.ariaLabel("Next")
@@ -268,55 +263,55 @@ class PaginationTest {
                         )
                         .with(
                                 ul()
-                                        .withClasses(Pagination.pagination)
+                                        .withClasses(BootstrapClasses.pagination)
                                         .with(
                                                 li()
-                                                        .withClasses(Pagination.page_item,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.page_item,BootstrapClasses.disabled)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .with(
                                                                                 text("Previous")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("1")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item,Pagination.active)
+                                                        .withClasses(BootstrapClasses.page_item,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("2")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("3")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Next")
@@ -376,54 +371,54 @@ class PaginationTest {
                         )
                         .with(
                                 ul()
-                                        .withClasses(Pagination.pagination)
+                                        .withClasses(BootstrapClasses.pagination)
                                         .with(
                                                 li()
-                                                        .withClasses(Pagination.page_item,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.page_item,BootstrapClasses.disabled)
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .with(
                                                                                 text("Previous")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("1")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item,Pagination.active)
+                                                        .withClasses(BootstrapClasses.page_item,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .with(
                                                                                 text("2")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("3")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Next")
@@ -483,35 +478,35 @@ class PaginationTest {
                         )
                         .with(
                                 ul()
-                                        .withClasses(Pagination.pagination,Pagination.pagination_lg)
+                                        .withClasses(BootstrapClasses.pagination,BootstrapClasses.pagination_lg)
                                         .with(
                                                 li()
-                                                        .withClasses(Pagination.page_item,Pagination.active)
+                                                        .withClasses(BootstrapClasses.page_item,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .with(
                                                                                 text("1")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("2")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("3")
@@ -561,35 +556,35 @@ class PaginationTest {
                         )
                         .with(
                                 ul()
-                                        .withClasses(Pagination.pagination,Pagination.pagination_sm)
+                                        .withClasses(BootstrapClasses.pagination,BootstrapClasses.pagination_sm)
                                         .with(
                                                 li()
-                                                        .withClasses(Pagination.page_item,Pagination.active)
+                                                        .withClasses(BootstrapClasses.page_item,BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                         )
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .with(
                                                                                 text("1")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("2")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("3")
@@ -639,52 +634,52 @@ class PaginationTest {
                         )
                         .with(
                                 ul()
-                                        .withClasses(Pagination.pagination, Flex.justify_content_center)
+                                        .withClasses(BootstrapClasses.pagination, BootstrapClasses.justify_content_center)
                                         .with(
                                                 li()
-                                                        .withClasses(Pagination.page_item,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.page_item,BootstrapClasses.disabled)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .with(
                                                                                 text("Previous")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("1")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("2")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("3")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Next")
@@ -744,52 +739,52 @@ class PaginationTest {
                         )
                         .with(
                                 ul()
-                                        .withClasses(Pagination.pagination,Flex.justify_content_end)
+                                        .withClasses(BootstrapClasses.pagination,BootstrapClasses.justify_content_end)
                                         .with(
                                                 li()
-                                                        .withClasses(Pagination.page_item,Popovers.disabled)
+                                                        .withClasses(BootstrapClasses.page_item,BootstrapClasses.disabled)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .with(
                                                                                 text("Previous")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("1")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("2")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("3")
                                                                         )
                                                         ),
                                                 li()
-                                                        .withClasses(Pagination.page_item)
+                                                        .withClasses(BootstrapClasses.page_item)
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Pagination.page_link)
+                                                                        .withClasses(BootstrapClasses.page_link)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Next")

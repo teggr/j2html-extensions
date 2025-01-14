@@ -1,23 +1,14 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.forms.FormControl;
-import dev.rebelcraft.j2html.ext.forms.Layout;
-import dev.rebelcraft.j2html.ext.layout.Containers;
-import dev.rebelcraft.j2html.ext.layout.Grid;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
-import dev.rebelcraft.j2html.ext.utilities.Text;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.comment;
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ModalTest {
@@ -34,33 +25,33 @@ class ModalTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                 .withClasses(Modal.modal)
+                 .withClasses(BootstrapClasses.modal)
                  .withTabindex(-1)
                  .with(
                     div()
-                     .withClasses(Modal.modal_dialog)
+                     .withClasses(BootstrapClasses.modal_dialog)
                      .with(
                         div()
-                         .withClasses(Modal.modal_content)
+                         .withClasses(BootstrapClasses.modal_content)
                          .with(
                             div()
-                             .withClasses(Modal.modal_header)
+                             .withClasses(BootstrapClasses.modal_header)
                              .with(
                                 h5()
-                                 .withClasses(Modal.modal_title)
+                                 .withClasses(BootstrapClasses.modal_title)
                                  .with(
                                     text("Modal title")
                                   ),
                                 button()
                                  .withType("button")
-                                 .withClasses(CloseButton.btn_close)
+                                 .withClasses(BootstrapClasses.btn_close)
                                  .withData("bs-dismiss","modal")
                                  .attr(
                                     AriaStatesAndProperties.ariaLabel("Close")
                                   )
                               ),
                             div()
-                             .withClasses(Modal.modal_body)
+                             .withClasses(BootstrapClasses.modal_body)
                              .with(
                                 p()
                                  .with(
@@ -68,18 +59,18 @@ class ModalTest {
                                   )
                               ),
                             div()
-                             .withClasses(Modal.modal_footer)
+                             .withClasses(BootstrapClasses.modal_footer)
                              .with(
                                 button()
                                  .withType("button")
-                                 .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                 .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                  .withData("bs-dismiss","modal")
                                  .with(
                                     text("Close")
                                   ),
                                 button()
                                  .withType("button")
-                                 .withClasses(Buttons.btn,Buttons.btn_primary)
+                                 .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                  .with(
                                     text("Save changes")
                                   )
@@ -133,7 +124,7 @@ class ModalTest {
                 each(
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withData("bs-toggle","modal")
                                 .withData("bs-target","#exampleModal")
                                 .with(
@@ -141,7 +132,7 @@ class ModalTest {
                                 ),
                         comment("Modal"),
                         div()
-                                .withClasses(Modal.modal,Modal.fade)
+                                .withClasses(BootstrapClasses.modal,BootstrapClasses.fade)
                                 .withId("exampleModal")
                                 .withTabindex(-1)
                                 .attr(AriaStatesAndProperties.ariaLabelledby("exampleModalLabel"))
@@ -150,46 +141,46 @@ class ModalTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Modal.modal_dialog)
+                                                .withClasses(BootstrapClasses.modal_dialog)
                                                 .with(
                                                         div()
-                                                                .withClasses(Modal.modal_content)
+                                                                .withClasses(BootstrapClasses.modal_content)
                                                                 .with(
                                                                         div()
-                                                                                .withClasses(Modal.modal_header)
+                                                                                .withClasses(BootstrapClasses.modal_header)
                                                                                 .with(
                                                                                         h1()
-                                                                                                .withClasses(Modal.modal_title, Text.fs_5)
+                                                                                                .withClasses(BootstrapClasses.modal_title, BootstrapClasses.fs_5)
                                                                                                 .withId("exampleModalLabel")
                                                                                                 .with(
                                                                                                         text("Modal title")
                                                                                                 ),
                                                                                         button()
                                                                                                 .withType("button")
-                                                                                                .withClasses(CloseButton.btn_close)
+                                                                                                .withClasses(BootstrapClasses.btn_close)
                                                                                                 .withData("bs-dismiss","modal")
                                                                                                 .attr(
                                                                                                         AriaStatesAndProperties.ariaLabel("Close")
                                                                                                 )
                                                                                 ),
                                                                         div()
-                                                                                .withClasses(Modal.modal_body)
+                                                                                .withClasses(BootstrapClasses.modal_body)
                                                                                 .with(
                                                                                         text("...")
                                                                                 ),
                                                                         div()
-                                                                                .withClasses(Modal.modal_footer)
+                                                                                .withClasses(BootstrapClasses.modal_footer)
                                                                                 .with(
                                                                                         button()
                                                                                                 .withType("button")
-                                                                                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                                                                                 .withData("bs-dismiss","modal")
                                                                                                 .with(
                                                                                                         text("Close")
                                                                                                 ),
                                                                                         button()
                                                                                                 .withType("button")
-                                                                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                                                                 .with(
                                                                                                         text("Save changes")
                                                                                                 )
@@ -246,7 +237,7 @@ class ModalTest {
                 each(
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withData("bs-toggle","modal")
                                 .withData("bs-target","#staticBackdrop")
                                 .with(
@@ -254,7 +245,7 @@ class ModalTest {
                                 ),
                         comment("Modal"),
                         div()
-                                .withClasses(Modal.modal,Modal.fade)
+                                .withClasses(BootstrapClasses.modal,BootstrapClasses.fade)
                                 .withId("staticBackdrop")
                                 .withData("bs-backdrop","static")
                                 .withData("bs-keyboard","false")
@@ -267,46 +258,46 @@ class ModalTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Modal.modal_dialog)
+                                                .withClasses(BootstrapClasses.modal_dialog)
                                                 .with(
                                                         div()
-                                                                .withClasses(Modal.modal_content)
+                                                                .withClasses(BootstrapClasses.modal_content)
                                                                 .with(
                                                                         div()
-                                                                                .withClasses(Modal.modal_header)
+                                                                                .withClasses(BootstrapClasses.modal_header)
                                                                                 .with(
                                                                                         h1()
-                                                                                                .withClasses(Modal.modal_title,Text.fs_5)
+                                                                                                .withClasses(BootstrapClasses.modal_title,BootstrapClasses.fs_5)
                                                                                                 .withId("staticBackdropLabel")
                                                                                                 .with(
                                                                                                         text("Modal title")
                                                                                                 ),
                                                                                         button()
                                                                                                 .withType("button")
-                                                                                                .withClasses(CloseButton.btn_close)
+                                                                                                .withClasses(BootstrapClasses.btn_close)
                                                                                                 .withData("bs-dismiss","modal")
                                                                                                 .attr(
                                                                                                         AriaStatesAndProperties.ariaLabel("Close")
                                                                                                 )
                                                                                 ),
                                                                         div()
-                                                                                .withClasses(Modal.modal_body)
+                                                                                .withClasses(BootstrapClasses.modal_body)
                                                                                 .with(
                                                                                         text("...")
                                                                                 ),
                                                                         div()
-                                                                                .withClasses(Modal.modal_footer)
+                                                                                .withClasses(BootstrapClasses.modal_footer)
                                                                                 .with(
                                                                                         button()
                                                                                                 .withType("button")
-                                                                                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                                                                                 .withData("bs-dismiss","modal")
                                                                                                 .with(
                                                                                                         text("Close")
                                                                                                 ),
                                                                                         button()
                                                                                                 .withType("button")
-                                                                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                                                                 .with(
                                                                                                         text("Understood")
                                                                                                 )
@@ -361,7 +352,7 @@ class ModalTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Modal.modal_dialog,Modal.modal_dialog_scrollable)
+                        .withClasses(BootstrapClasses.modal_dialog,BootstrapClasses.modal_dialog_scrollable)
                         .with(
                                 text("...")
                         )
@@ -387,13 +378,13 @@ class ModalTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Modal.modal_dialog,Modal.modal_dialog_centered)
+                                .withClasses(BootstrapClasses.modal_dialog,BootstrapClasses.modal_dialog_centered)
                                 .with(
                                         text("...")
                                 ),
                         comment("Vertically centered scrollable modal"),
                         div()
-                                .withClasses(Modal.modal_dialog,Modal.modal_dialog_centered,Modal.modal_dialog_scrollable)
+                                .withClasses(BootstrapClasses.modal_dialog,BootstrapClasses.modal_dialog_centered,BootstrapClasses.modal_dialog_scrollable)
                                 .with(
                                         text("...")
                                 )
@@ -423,10 +414,10 @@ class ModalTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Modal.modal_body)
+                        .withClasses(BootstrapClasses.modal_body)
                         .with(
                                 h2()
-                                        .withClasses(Text.fs_5)
+                                        .withClasses(BootstrapClasses.fs_5)
                                         .with(
                                                 text("Popover in a modal")
                                         ),
@@ -434,7 +425,7 @@ class ModalTest {
                                         .with(
                                                 text("This"),
                                                 button()
-                                                        .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                                         .withData("bs-toggle","popover")
                                                         .withTitle("Popover title")
                                                         .withData("bs-content","Popover body content is set in this attribute.")
@@ -445,7 +436,7 @@ class ModalTest {
                                         ),
                                 hr(),
                                 h2()
-                                        .withClasses(Text.fs_5)
+                                        .withClasses(BootstrapClasses.fs_5)
                                         .with(
                                                 text("Tooltips in a modal")
                                         ),
@@ -513,65 +504,65 @@ class ModalTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Modal.modal_body)
+                        .withClasses(BootstrapClasses.modal_body)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 div()
-                                                        .withClasses(Grid.row)
+                                                        .withClasses(BootstrapClasses.row)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(Grid.col_md_4)
+                                                                        .withClasses(BootstrapClasses.col_md_4)
                                                                         .with(
                                                                                 text(".col-md-4")
                                                                         ),
                                                                 div()
-                                                                        .withClasses(Grid.col_md_4,Spacing.ms_auto)
+                                                                        .withClasses(BootstrapClasses.col_md_4,BootstrapClasses.ms_auto)
                                                                         .with(
                                                                                 text(".col-md-4.ms-auto")
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Grid.row)
+                                                        .withClasses(BootstrapClasses.row)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(Grid.col_md_3,Spacing.ms_auto)
+                                                                        .withClasses(BootstrapClasses.col_md_3,BootstrapClasses.ms_auto)
                                                                         .with(
                                                                                 text(".col-md-3.ms-auto")
                                                                         ),
                                                                 div()
-                                                                        .withClasses(Grid.col_md_2,Spacing.ms_auto)
+                                                                        .withClasses(BootstrapClasses.col_md_2,BootstrapClasses.ms_auto)
                                                                         .with(
                                                                                 text(".col-md-2.ms-auto")
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Grid.row)
+                                                        .withClasses(BootstrapClasses.row)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(Grid.col_md_6, Spacing.ms_auto)
+                                                                        .withClasses(BootstrapClasses.col_md_6, BootstrapClasses.ms_auto)
                                                                         .with(
                                                                                 text(".col-md-6.ms-auto")
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Grid.row)
+                                                        .withClasses(BootstrapClasses.row)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(Grid.col_sm_9)
+                                                                        .withClasses(BootstrapClasses.col_sm_9)
                                                                         .with(
                                                                                 text("Level 1:.col-sm-9"),
                                                                                 div()
-                                                                                        .withClasses(Grid.row)
+                                                                                        .withClasses(BootstrapClasses.row)
                                                                                         .with(
                                                                                                 div()
-                                                                                                        .withClasses(Grid.col_8,Grid.col_sm_6)
+                                                                                                        .withClasses(BootstrapClasses.col_8,BootstrapClasses.col_sm_6)
                                                                                                         .with(
                                                                                                                 text("Level 2:.col-8.col-sm-6")
                                                                                                         ),
                                                                                                 div()
-                                                                                                        .withClasses(Grid.col_4, Grid.col_sm_6)
+                                                                                                        .withClasses(BootstrapClasses.col_4, BootstrapClasses.col_sm_6)
                                                                                                         .with(
                                                                                                                 text("Level 2:.col-4.col-sm-6")
                                                                                                         )
@@ -638,7 +629,7 @@ class ModalTest {
                 each(
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withData("bs-toggle","modal")
                                 .withData("bs-target","#exampleModal")
                                 .withData("bs-whatever","@mdo")
@@ -647,7 +638,7 @@ class ModalTest {
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withData("bs-toggle","modal")
                                 .withData("bs-target","#exampleModal")
                                 .withData("bs-whatever","@fat")
@@ -656,7 +647,7 @@ class ModalTest {
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withData("bs-toggle","modal")
                                 .withData("bs-target","#exampleModal")
                                 .withData("bs-whatever","@getbootstrap")
@@ -664,7 +655,7 @@ class ModalTest {
                                         text("Open modal for @getbootstrap")
                                 ),
                         div()
-                                .withClasses(Modal.modal,Modal.fade)
+                                .withClasses(BootstrapClasses.modal,BootstrapClasses.fade)
                                 .withId("exampleModal")
                                 .withTabindex(-1)
                                 .attr(
@@ -675,75 +666,75 @@ class ModalTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Modal.modal_dialog)
+                                                .withClasses(BootstrapClasses.modal_dialog)
                                                 .with(
                                                         div()
-                                                                .withClasses(Modal.modal_content)
+                                                                .withClasses(BootstrapClasses.modal_content)
                                                                 .with(
                                                                         div()
-                                                                                .withClasses(Modal.modal_header)
+                                                                                .withClasses(BootstrapClasses.modal_header)
                                                                                 .with(
                                                                                         h1()
-                                                                                                .withClasses(Modal.modal_title,Text.fs_5)
+                                                                                                .withClasses(BootstrapClasses.modal_title,BootstrapClasses.fs_5)
                                                                                                 .withId("exampleModalLabel")
                                                                                                 .with(
                                                                                                         text("New message")
                                                                                                 ),
                                                                                         button()
                                                                                                 .withType("button")
-                                                                                                .withClasses(CloseButton.btn_close)
+                                                                                                .withClasses(BootstrapClasses.btn_close)
                                                                                                 .withData("bs-dismiss","modal")
                                                                                                 .attr(
                                                                                                         AriaStatesAndProperties.ariaLabel("Close")
                                                                                                 )
                                                                                 ),
                                                                         div()
-                                                                                .withClasses(Modal.modal_body)
+                                                                                .withClasses(BootstrapClasses.modal_body)
                                                                                 .with(
                                                                                         form()
                                                                                                 .with(
                                                                                                         div()
-                                                                                                                .withClasses(Spacing.mb_3)
+                                                                                                                .withClasses(BootstrapClasses.mb_3)
                                                                                                                 .with(
                                                                                                                         label()
                                                                                                                                 .withFor("recipient-name")
-                                                                                                                                .withClasses(Layout.col_form_label)
+                                                                                                                                .withClasses(BootstrapClasses.col_form_label)
                                                                                                                                 .with(
                                                                                                                                         text("Recipient:")
                                                                                                                                 ),
                                                                                                                         input()
                                                                                                                                 .withType("text")
-                                                                                                                                .withClasses(FormControl.form_control)
+                                                                                                                                .withClasses(BootstrapClasses.form_control)
                                                                                                                                 .withId("recipient-name")
                                                                                                                 ),
                                                                                                         div()
-                                                                                                                .withClasses(Spacing.mb_3)
+                                                                                                                .withClasses(BootstrapClasses.mb_3)
                                                                                                                 .with(
                                                                                                                         label()
                                                                                                                                 .withFor("message-text")
-                                                                                                                                .withClasses(Layout.col_form_label)
+                                                                                                                                .withClasses(BootstrapClasses.col_form_label)
                                                                                                                                 .with(
                                                                                                                                         text("Message:")
                                                                                                                                 ),
                                                                                                                         textarea()
-                                                                                                                                .withClasses(FormControl.form_control)
+                                                                                                                                .withClasses(BootstrapClasses.form_control)
                                                                                                                                 .withId("message-text")
                                                                                                                 )
                                                                                                 )
                                                                                 ),
                                                                         div()
-                                                                                .withClasses(Modal.modal_footer)
+                                                                                .withClasses(BootstrapClasses.modal_footer)
                                                                                 .with(
                                                                                         button()
                                                                                                 .withType("button")
-                                                                                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                                                                                 .withData("bs-dismiss","modal")
                                                                                                 .with(
                                                                                                         text("Close")
                                                                                                 ),
                                                                                         button()
                                                                                                 .withType("button")
-                                                                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                                                                 .with(
                                                                                                         text("Send message")
                                                                                                 )
@@ -817,7 +808,7 @@ class ModalTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Modal.modal,Modal.fade)
+                                .withClasses(BootstrapClasses.modal,BootstrapClasses.fade)
                                 .withId("exampleModalToggle")
                                 .attr(
                                         AriaStatesAndProperties.ariaHidden("true")
@@ -828,38 +819,38 @@ class ModalTest {
                                 .withTabindex(-1)
                                 .with(
                                         div()
-                                                .withClasses(Modal.modal_dialog,Modal.modal_dialog_centered)
+                                                .withClasses(BootstrapClasses.modal_dialog,BootstrapClasses.modal_dialog_centered)
                                                 .with(
                                                         div()
-                                                                .withClasses(Modal.modal_content)
+                                                                .withClasses(BootstrapClasses.modal_content)
                                                                 .with(
                                                                         div()
-                                                                                .withClasses(Modal.modal_header)
+                                                                                .withClasses(BootstrapClasses.modal_header)
                                                                                 .with(
                                                                                         h1()
-                                                                                                .withClasses(Modal.modal_title,Text.fs_5)
+                                                                                                .withClasses(BootstrapClasses.modal_title,BootstrapClasses.fs_5)
                                                                                                 .withId("exampleModalToggleLabel")
                                                                                                 .with(
                                                                                                         text("Modal 1")
                                                                                                 ),
                                                                                         button()
                                                                                                 .withType("button")
-                                                                                                .withClasses(CloseButton.btn_close)
+                                                                                                .withClasses(BootstrapClasses.btn_close)
                                                                                                 .withData("bs-dismiss","modal")
                                                                                                 .attr(
                                                                                                         AriaStatesAndProperties.ariaLabel("Close")
                                                                                                 )
                                                                                 ),
                                                                         div()
-                                                                                .withClasses(Modal.modal_body)
+                                                                                .withClasses(BootstrapClasses.modal_body)
                                                                                 .with(
                                                                                         text("Show a second modal and hide this one with the button below.")
                                                                                 ),
                                                                         div()
-                                                                                .withClasses(Modal.modal_footer)
+                                                                                .withClasses(BootstrapClasses.modal_footer)
                                                                                 .with(
                                                                                         button()
-                                                                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                                                                 .withData("bs-target","#exampleModalToggle2")
                                                                                                 .withData("bs-toggle","modal")
                                                                                                 .with(
@@ -870,7 +861,7 @@ class ModalTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(Modal.modal,Modal.fade)
+                                .withClasses(BootstrapClasses.modal,BootstrapClasses.fade)
                                 .withId("exampleModalToggle2")
                                 .attr(
                                         AriaStatesAndProperties.ariaHidden("true")
@@ -881,38 +872,38 @@ class ModalTest {
                                 .withTabindex(-1)
                                 .with(
                                         div()
-                                                .withClasses(Modal.modal_dialog,Modal.modal_dialog_centered)
+                                                .withClasses(BootstrapClasses.modal_dialog,BootstrapClasses.modal_dialog_centered)
                                                 .with(
                                                         div()
-                                                                .withClasses(Modal.modal_content)
+                                                                .withClasses(BootstrapClasses.modal_content)
                                                                 .with(
                                                                         div()
-                                                                                .withClasses(Modal.modal_header)
+                                                                                .withClasses(BootstrapClasses.modal_header)
                                                                                 .with(
                                                                                         h1()
-                                                                                                .withClasses(Modal.modal_title,Text.fs_5)
+                                                                                                .withClasses(BootstrapClasses.modal_title,BootstrapClasses.fs_5)
                                                                                                 .withId("exampleModalToggleLabel2")
                                                                                                 .with(
                                                                                                         text("Modal 2")
                                                                                                 ),
                                                                                         button()
                                                                                                 .withType("button")
-                                                                                                .withClasses(CloseButton.btn_close)
+                                                                                                .withClasses(BootstrapClasses.btn_close)
                                                                                                 .withData("bs-dismiss","modal")
                                                                                                 .attr(
                                                                                                         AriaStatesAndProperties.ariaLabel("Close")
                                                                                                 )
                                                                                 ),
                                                                         div()
-                                                                                .withClasses(Modal.modal_body)
+                                                                                .withClasses(BootstrapClasses.modal_body)
                                                                                 .with(
                                                                                         text("Hide this modal and show the first with the button below.")
                                                                                 ),
                                                                         div()
-                                                                                .withClasses(Modal.modal_footer)
+                                                                                .withClasses(BootstrapClasses.modal_footer)
                                                                                 .with(
                                                                                         button()
-                                                                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                                                                 .withData("bs-target","#exampleModalToggle")
                                                                                                 .withData("bs-toggle","modal")
                                                                                                 .with(
@@ -923,7 +914,7 @@ class ModalTest {
                                                 )
                                 ),
                         button()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withData("bs-target","#exampleModalToggle")
                                 .withData("bs-toggle","modal")
                                 .with(
@@ -994,17 +985,17 @@ class ModalTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Modal.modal_dialog,Modal.modal_xl)
+                                .withClasses(BootstrapClasses.modal_dialog,BootstrapClasses.modal_xl)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Modal.modal_dialog,Modal.modal_lg)
+                                .withClasses(BootstrapClasses.modal_dialog,BootstrapClasses.modal_lg)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Modal.modal_dialog,Modal.modal_sm)
+                                .withClasses(BootstrapClasses.modal_dialog,BootstrapClasses.modal_sm)
                                 .with(
                                         text("...")
                                 )
@@ -1036,7 +1027,7 @@ class ModalTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Modal.modal_dialog,Modal.modal_fullscreen_sm_down)
+                        .withClasses(BootstrapClasses.modal_dialog,BootstrapClasses.modal_fullscreen_sm_down)
                         .with(
                                 text("...")
                         )

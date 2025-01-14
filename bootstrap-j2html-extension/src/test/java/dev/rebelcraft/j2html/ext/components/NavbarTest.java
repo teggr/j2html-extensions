@@ -1,25 +1,15 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.content.Typography;
-import dev.rebelcraft.j2html.ext.forms.FormControl;
-import dev.rebelcraft.j2html.ext.forms.InputGroups;
-import dev.rebelcraft.j2html.ext.helpers.ColorsAndBackground;
-import dev.rebelcraft.j2html.ext.helpers.Position;
-import dev.rebelcraft.j2html.ext.layout.Containers;
-import dev.rebelcraft.j2html.ext.utilities.*;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.comment;
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class NavbarTest {
@@ -36,19 +26,19 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                 .withClasses(Navbar.navbar,Navbar.navbar_expand_lg, Background.bg_body_tertiary)
+                 .withClasses(BootstrapClasses.navbar,BootstrapClasses.navbar_expand_lg, BootstrapClasses.bg_body_tertiary)
                  .with(
                     div()
-                     .withClasses(Containers.container_fluid)
+                     .withClasses(BootstrapClasses.container_fluid)
                      .with(
                         a()
-                         .withClasses(Navbar.navbar_brand)
+                         .withClasses(BootstrapClasses.navbar_brand)
                          .withHref("#")
                          .with(
                             text("Navbar")
                           ),
                         button()
-                         .withClasses(Navbar.navbar_toggler)
+                         .withClasses(BootstrapClasses.navbar_toggler)
                          .withType("button")
                          .withData("bs-toggle","collapse")
                          .withData("bs-target","#navbarSupportedContent")
@@ -63,20 +53,20 @@ class NavbarTest {
                           )
                          .with(
                             span()
-                             .withClasses(Navbar.navbar_toggler_icon)
+                             .withClasses(BootstrapClasses.navbar_toggler_icon)
                           ),
                         div()
-                         .withClasses(Collapse.collapse,Navbar.navbar_collapse)
+                         .withClasses(BootstrapClasses.collapse,BootstrapClasses.navbar_collapse)
                          .withId("navbarSupportedContent")
                          .with(
                             ul()
-                             .withClasses(Navbar.navbar_nav, Spacing.me_auto,Spacing.mb_2,Spacing.mb_lg_0)
+                             .withClasses(BootstrapClasses.navbar_nav, BootstrapClasses.me_auto,BootstrapClasses.mb_2,BootstrapClasses.mb_lg_0)
                              .with(
                                 li()
-                                 .withClasses(NavsTabs.nav_item)
+                                 .withClasses(BootstrapClasses.nav_item)
                                  .with(
                                     a()
-                                     .withClasses(NavsTabs.nav_link,Pagination.active)
+                                     .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                      .attr(
                                         AriaStatesAndProperties.ariaCurrent("page")
                                       )
@@ -86,20 +76,20 @@ class NavbarTest {
                                       )
                                   ),
                                 li()
-                                 .withClasses(NavsTabs.nav_item)
+                                 .withClasses(BootstrapClasses.nav_item)
                                  .with(
                                     a()
-                                     .withClasses(NavsTabs.nav_link)
+                                     .withClasses(BootstrapClasses.nav_link)
                                      .withHref("#")
                                      .with(
                                         text("Link")
                                       )
                                   ),
                                 li()
-                                 .withClasses(NavsTabs.nav_item,Dropdowns.dropdown)
+                                 .withClasses(BootstrapClasses.nav_item,BootstrapClasses.dropdown)
                                  .with(
                                     a()
-                                     .withClasses(NavsTabs.nav_link,Dropdowns.dropdown_toggle)
+                                     .withClasses(BootstrapClasses.nav_link,BootstrapClasses.dropdown_toggle)
                                      .withHref("#")
                                      .attr(AriaRoles.roleButton)
                                      .withData("bs-toggle","dropdown")
@@ -110,12 +100,12 @@ class NavbarTest {
                                         text("Dropdown")
                                       ),
                                     ul()
-                                     .withClasses(Dropdowns.dropdown_menu)
+                                     .withClasses(BootstrapClasses.dropdown_menu)
                                      .with(
                                         li()
                                          .with(
                                             a()
-                                             .withClasses(Dropdowns.dropdown_item)
+                                             .withClasses(BootstrapClasses.dropdown_item)
                                              .withHref("#")
                                              .with(
                                                 text("Action")
@@ -124,7 +114,7 @@ class NavbarTest {
                                         li()
                                          .with(
                                             a()
-                                             .withClasses(Dropdowns.dropdown_item)
+                                             .withClasses(BootstrapClasses.dropdown_item)
                                              .withHref("#")
                                              .with(
                                                 text("Another action")
@@ -133,12 +123,12 @@ class NavbarTest {
                                         li()
                                          .with(
                                             hr()
-                                             .withClasses(Dropdowns.dropdown_divider)
+                                             .withClasses(BootstrapClasses.dropdown_divider)
                                           ),
                                         li()
                                          .with(
                                             a()
-                                             .withClasses(Dropdowns.dropdown_item)
+                                             .withClasses(BootstrapClasses.dropdown_item)
                                              .withHref("#")
                                              .with(
                                                 text("Something else here")
@@ -147,10 +137,10 @@ class NavbarTest {
                                       )
                                   ),
                                 li()
-                                 .withClasses(NavsTabs.nav_item)
+                                 .withClasses(BootstrapClasses.nav_item)
                                  .with(
                                     a()
-                                     .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                     .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                      .attr(
                                         AriaStatesAndProperties.ariaDisabled("true")
                                       )
@@ -160,18 +150,18 @@ class NavbarTest {
                                   )
                               ),
                             form()
-                             .withClasses(Flex.d_flex)
+                             .withClasses(BootstrapClasses.d_flex)
                              .attr(AriaRoles.roleSearch)
                              .with(
                                 input()
-                                 .withClasses(FormControl.form_control,Spacing.me_2)
+                                 .withClasses(BootstrapClasses.form_control,BootstrapClasses.me_2)
                                  .withType("search")
                                  .withPlaceholder("Search")
                                  .attr(
                                     AriaStatesAndProperties.ariaLabel("Search")
                                   ),
                                 button()
-                                 .withClasses(Buttons.btn,Buttons.btn_outline_success)
+                                 .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_success)
                                  .withType("submit")
                                  .with(
                                     text("Search")
@@ -260,13 +250,13 @@ class NavbarTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         nav()
-                                .withClasses(Navbar.navbar,Background.bg_body_tertiary)
+                                .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_body_tertiary)
                                 .with(
                                         div()
-                                                .withClasses(Containers.container_fluid)
+                                                .withClasses(BootstrapClasses.container_fluid)
                                                 .with(
                                                         a()
-                                                                .withClasses(Navbar.navbar_brand)
+                                                                .withClasses(BootstrapClasses.navbar_brand)
                                                                 .withHref("#")
                                                                 .with(
                                                                         text("Navbar")
@@ -275,13 +265,13 @@ class NavbarTest {
                                 ),
                         comment("As a heading"),
                         nav()
-                                .withClasses(Navbar.navbar,Background.bg_body_tertiary)
+                                .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_body_tertiary)
                                 .with(
                                         div()
-                                                .withClasses(Containers.container_fluid)
+                                                .withClasses(BootstrapClasses.container_fluid)
                                                 .with(
                                                         span()
-                                                                .withClasses(Navbar.navbar_brand,Spacing.mb_0, Typography.h1)
+                                                                .withClasses(BootstrapClasses.navbar_brand,BootstrapClasses.mb_0, BootstrapClasses.h1)
                                                                 .with(
                                                                         text("Navbar")
                                                                 )
@@ -321,13 +311,13 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container)
+                                        .withClasses(BootstrapClasses.container)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 img()
@@ -363,13 +353,13 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 img()
@@ -377,7 +367,7 @@ class NavbarTest {
                                                                         .withAlt("Logo")
                                                                         .attr("width","30")
                                                                         .attr("height","24")
-                                                                        .withClasses(Display.d_inline_block, VerticalAlign.align_text_top),
+                                                                        .withClasses(BootstrapClasses.d_inline_block, BootstrapClasses.align_text_top),
                                                                 text("Bootstrap")
                                                         )
                                         )
@@ -408,19 +398,19 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Navbar.navbar_expand_lg,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.navbar_expand_lg,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Navbar")
                                                         ),
                                                 button()
-                                                        .withClasses(Navbar.navbar_toggler)
+                                                        .withClasses(BootstrapClasses.navbar_toggler)
                                                         .withType("button")
                                                         .withData("bs-toggle","collapse")
                                                         .withData("bs-target","#navbarNav")
@@ -435,20 +425,20 @@ class NavbarTest {
                                                         )
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Navbar.navbar_toggler_icon)
+                                                                        .withClasses(BootstrapClasses.navbar_toggler_icon)
                                                         ),
                                                 div()
-                                                        .withClasses(Collapse.collapse,Navbar.navbar_collapse)
+                                                        .withClasses(BootstrapClasses.collapse,BootstrapClasses.navbar_collapse)
                                                         .withId("navbarNav")
                                                         .with(
                                                                 ul()
-                                                                        .withClasses(Navbar.navbar_nav)
+                                                                        .withClasses(BootstrapClasses.navbar_nav)
                                                                         .with(
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                                                                         )
@@ -458,30 +448,30 @@ class NavbarTest {
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                                         .withHref("#")
                                                                                                         .with(
                                                                                                                 text("Features")
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                                         .withHref("#")
                                                                                                         .with(
                                                                                                                 text("Pricing")
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                                                                         )
@@ -546,19 +536,19 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Navbar.navbar_expand_lg,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.navbar_expand_lg,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Navbar")
                                                         ),
                                                 button()
-                                                        .withClasses(Navbar.navbar_toggler)
+                                                        .withClasses(BootstrapClasses.navbar_toggler)
                                                         .withType("button")
                                                         .withData("bs-toggle","collapse")
                                                         .withData("bs-target","#navbarNavAltMarkup")
@@ -573,17 +563,17 @@ class NavbarTest {
                                                         )
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Navbar.navbar_toggler_icon)
+                                                                        .withClasses(BootstrapClasses.navbar_toggler_icon)
                                                         ),
                                                 div()
-                                                        .withClasses(Collapse.collapse,Navbar.navbar_collapse)
+                                                        .withClasses(BootstrapClasses.collapse,BootstrapClasses.navbar_collapse)
                                                         .withId("navbarNavAltMarkup")
                                                         .with(
                                                                 div()
-                                                                        .withClasses(Navbar.navbar_nav)
+                                                                        .withClasses(BootstrapClasses.navbar_nav)
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                                                         .attr(
                                                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                                                         )
@@ -592,19 +582,19 @@ class NavbarTest {
                                                                                                 text("Home")
                                                                                         ),
                                                                                 a()
-                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Features")
                                                                                         ),
                                                                                 a()
-                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Pricing")
                                                                                         ),
                                                                                 a()
-                                                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                                                         .attr(
                                                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                                                         )
@@ -660,19 +650,19 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Navbar.navbar_expand_lg,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.navbar_expand_lg,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Navbar")
                                                         ),
                                                 button()
-                                                        .withClasses(Navbar.navbar_toggler)
+                                                        .withClasses(BootstrapClasses.navbar_toggler)
                                                         .withType("button")
                                                         .withData("bs-toggle","collapse")
                                                         .withData("bs-target","#navbarNavDropdown")
@@ -687,20 +677,20 @@ class NavbarTest {
                                                         )
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Navbar.navbar_toggler_icon)
+                                                                        .withClasses(BootstrapClasses.navbar_toggler_icon)
                                                         ),
                                                 div()
-                                                        .withClasses(Collapse.collapse,Navbar.navbar_collapse)
+                                                        .withClasses(BootstrapClasses.collapse,BootstrapClasses.navbar_collapse)
                                                         .withId("navbarNavDropdown")
                                                         .with(
                                                                 ul()
-                                                                        .withClasses(Navbar.navbar_nav)
+                                                                        .withClasses(BootstrapClasses.navbar_nav)
                                                                         .with(
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                                                                         )
@@ -710,30 +700,30 @@ class NavbarTest {
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                                         .withHref("#")
                                                                                                         .with(
                                                                                                                 text("Features")
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                                         .withHref("#")
                                                                                                         .with(
                                                                                                                 text("Pricing")
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item,Dropdowns.dropdown)
+                                                                                        .withClasses(BootstrapClasses.nav_item,BootstrapClasses.dropdown)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Dropdowns.dropdown_toggle)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.dropdown_toggle)
                                                                                                         .withHref("#")
                                                                                                         .attr(AriaRoles.roleButton)
                                                                                                         .withData("bs-toggle","dropdown")
@@ -744,12 +734,12 @@ class NavbarTest {
                                                                                                                 text("Dropdown link")
                                                                                                         ),
                                                                                                 ul()
-                                                                                                        .withClasses(Dropdowns.dropdown_menu)
+                                                                                                        .withClasses(BootstrapClasses.dropdown_menu)
                                                                                                         .with(
                                                                                                                 li()
                                                                                                                         .with(
                                                                                                                                 a()
-                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                         .withHref("#")
                                                                                                                                         .with(
                                                                                                                                                 text("Action")
@@ -758,7 +748,7 @@ class NavbarTest {
                                                                                                                 li()
                                                                                                                         .with(
                                                                                                                                 a()
-                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                         .withHref("#")
                                                                                                                                         .with(
                                                                                                                                                 text("Another action")
@@ -767,7 +757,7 @@ class NavbarTest {
                                                                                                                 li()
                                                                                                                         .with(
                                                                                                                                 a()
-                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                         .withHref("#")
                                                                                                                                         .with(
                                                                                                                                                 text("Something else here")
@@ -849,24 +839,24 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 form()
-                                                        .withClasses(Flex.d_flex)
+                                                        .withClasses(BootstrapClasses.d_flex)
                                                         .attr(AriaRoles.roleSearch)
                                                         .with(
                                                                 input()
-                                                                        .withClasses(FormControl.form_control,Spacing.me_2)
+                                                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.me_2)
                                                                         .withType("search")
                                                                         .withPlaceholder("Search")
                                                                         .attr(
                                                                                 AriaStatesAndProperties.ariaLabel("Search")
                                                                         ),
                                                                 button()
-                                                                        .withClasses(Buttons.btn,Buttons.btn_outline_success)
+                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_success)
                                                                         .withType("submit")
                                                                         .with(
                                                                                 text("Search")
@@ -902,29 +892,29 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .with(
                                                                 text("Navbar")
                                                         ),
                                                 form()
-                                                        .withClasses(Flex.d_flex)
+                                                        .withClasses(BootstrapClasses.d_flex)
                                                         .attr(AriaRoles.roleSearch)
                                                         .with(
                                                                 input()
-                                                                        .withClasses(FormControl.form_control,Spacing.me_2)
+                                                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.me_2)
                                                                         .withType("search")
                                                                         .withPlaceholder("Search")
                                                                         .attr(
                                                                                 AriaStatesAndProperties.ariaLabel("Search")
                                                                         ),
                                                                 button()
-                                                                        .withClasses(Buttons.btn,Buttons.btn_outline_success)
+                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_success)
                                                                         .withType("submit")
                                                                         .with(
                                                                                 text("Search")
@@ -963,23 +953,23 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 form()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 div()
-                                                        .withClasses(InputGroups.input_group)
+                                                        .withClasses(BootstrapClasses.input_group)
                                                         .with(
                                                                 span()
-                                                                        .withClasses(InputGroups.input_group_text)
+                                                                        .withClasses(BootstrapClasses.input_group_text)
                                                                         .withId("basic-addon1")
                                                                         .with(
                                                                                 text("@")
                                                                         ),
                                                                 input()
                                                                         .withType("text")
-                                                                        .withClasses(FormControl.form_control)
+                                                                        .withClasses(BootstrapClasses.form_control)
                                                                         .withPlaceholder("Username")
                                                                         .attr(
                                                                                 AriaStatesAndProperties.ariaLabel("Username")
@@ -1018,19 +1008,19 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 form()
-                                        .withClasses(Containers.container_fluid,Flex.justify_content_start)
+                                        .withClasses(BootstrapClasses.container_fluid,BootstrapClasses.justify_content_start)
                                         .with(
                                                 button()
-                                                        .withClasses(Buttons.btn,Buttons.btn_outline_success,Spacing.me_2)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_success,BootstrapClasses.me_2)
                                                         .withType("button")
                                                         .with(
                                                                 text("Main button")
                                                         ),
                                                 button()
-                                                        .withClasses(Buttons.btn,Buttons.btn_sm,Buttons.btn_outline_secondary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_sm,BootstrapClasses.btn_outline_secondary)
                                                         .withType("button")
                                                         .with(
                                                                 text("Smaller button")
@@ -1065,13 +1055,13 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 span()
-                                                        .withClasses(Navbar.navbar_text)
+                                                        .withClasses(BootstrapClasses.navbar_text)
                                                         .with(
                                                                 text("Navbar text with an inline element")
                                                         )
@@ -1102,19 +1092,19 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Navbar.navbar_expand_lg,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.navbar_expand_lg,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Navbar w/ text")
                                                         ),
                                                 button()
-                                                        .withClasses(Navbar.navbar_toggler)
+                                                        .withClasses(BootstrapClasses.navbar_toggler)
                                                         .withType("button")
                                                         .withData("bs-toggle","collapse")
                                                         .withData("bs-target","#navbarText")
@@ -1129,20 +1119,20 @@ class NavbarTest {
                                                         )
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Navbar.navbar_toggler_icon)
+                                                                        .withClasses(BootstrapClasses.navbar_toggler_icon)
                                                         ),
                                                 div()
-                                                        .withClasses(Collapse.collapse,Navbar.navbar_collapse)
+                                                        .withClasses(BootstrapClasses.collapse,BootstrapClasses.navbar_collapse)
                                                         .withId("navbarText")
                                                         .with(
                                                                 ul()
-                                                                        .withClasses(Navbar.navbar_nav,Spacing.me_auto,Spacing.mb_2,Spacing.mb_lg_0)
+                                                                        .withClasses(BootstrapClasses.navbar_nav,BootstrapClasses.me_auto,BootstrapClasses.mb_2,BootstrapClasses.mb_lg_0)
                                                                         .with(
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                                                                         )
@@ -1152,20 +1142,20 @@ class NavbarTest {
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                                         .withHref("#")
                                                                                                         .with(
                                                                                                                 text("Features")
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                                         .withHref("#")
                                                                                                         .with(
                                                                                                                 text("Pricing")
@@ -1173,7 +1163,7 @@ class NavbarTest {
                                                                                         )
                                                                         ),
                                                                 span()
-                                                                        .withClasses(Navbar.navbar_text)
+                                                                        .withClasses(BootstrapClasses.navbar_text)
                                                                         .with(
                                                                                 text("Navbar text with an inline element")
                                                                         )
@@ -1232,19 +1222,19 @@ class NavbarTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         nav()
-                                .withClasses(Navbar.navbar,Background.bg_dark,Borders.border_bottom,Borders.border_body)
+                                .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_dark,BootstrapClasses.border_bottom,Navbar.border_body)
                                 .withData("bs-theme","dark")
                                 .with(
                                         comment("Navbar content")
                                 ),
                         nav()
-                                .withClasses(Navbar.navbar,Background.bg_primary)
+                                .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_primary)
                                 .withData("bs-theme","dark")
                                 .with(
                                         comment("Navbar content")
                                 ),
                         nav()
-                                .withClasses(Navbar.navbar)
+                                .withClasses(BootstrapClasses.navbar)
                                 .withStyle("background-color: #e3f2fd;")
                                 .with(
                                         comment("Navbar content")
@@ -1278,19 +1268,19 @@ class NavbarTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         nav()
-                                .withClasses(Navbar.navbar,Background.bg_dark,Borders.border_bottom,"border-body")
+                                .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_dark,BootstrapClasses.border_bottom,"border-body")
                                 .withData("bs-theme","dark")
                                 .with(
                                         comment("Navbar content")
                                 ),
                         nav()
-                                .withClasses(Navbar.navbar,Background.bg_primary)
+                                .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_primary)
                                 .withData("bs-theme","dark")
                                 .with(
                                         comment("Navbar content")
                                 ),
                         nav()
-                                .withClasses(Navbar.navbar)
+                                .withClasses(BootstrapClasses.navbar)
                                 .withStyle("background-color: #e3f2fd;")
                                 .with(
                                         comment("Navbar content")
@@ -1323,13 +1313,13 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Navbar.navbar_expand_lg,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.navbar_expand_lg,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_md)
+                                        .withClasses(BootstrapClasses.container_md)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Navbar")
@@ -1361,13 +1351,13 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Default")
@@ -1399,13 +1389,13 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar, Position.fixed_top,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar, BootstrapClasses.fixed_top,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Fixed top")
@@ -1437,13 +1427,13 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Position.fixed_bottom,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.fixed_bottom,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Fixed bottom")
@@ -1475,13 +1465,13 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Position.sticky_top,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.sticky_top,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Sticky top")
@@ -1513,13 +1503,13 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Position.sticky_bottom,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.sticky_bottom,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Sticky bottom")
@@ -1551,19 +1541,19 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Navbar.navbar_expand_lg,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.navbar_expand_lg,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Navbar scroll")
                                                         ),
                                                 button()
-                                                        .withClasses(Navbar.navbar_toggler)
+                                                        .withClasses(BootstrapClasses.navbar_toggler)
                                                         .withType("button")
                                                         .withData("bs-toggle","collapse")
                                                         .withData("bs-target","#navbarScroll")
@@ -1578,21 +1568,21 @@ class NavbarTest {
                                                         )
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Navbar.navbar_toggler_icon)
+                                                                        .withClasses(BootstrapClasses.navbar_toggler_icon)
                                                         ),
                                                 div()
-                                                        .withClasses(Collapse.collapse,Navbar.navbar_collapse)
+                                                        .withClasses(BootstrapClasses.collapse,BootstrapClasses.navbar_collapse)
                                                         .withId("navbarScroll")
                                                         .with(
                                                                 ul()
-                                                                        .withClasses(Navbar.navbar_nav,Spacing.me_auto,Spacing.my_2,Spacing.my_lg_0,Navbar.navbar_nav_scroll)
+                                                                        .withClasses(BootstrapClasses.navbar_nav,BootstrapClasses.me_auto,BootstrapClasses.my_2,BootstrapClasses.my_lg_0,BootstrapClasses.navbar_nav_scroll)
                                                                         .withStyle("--bs-scroll-height: 100px;")
                                                                         .with(
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                                                                         )
@@ -1602,20 +1592,20 @@ class NavbarTest {
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                                         .withHref("#")
                                                                                                         .with(
                                                                                                                 text("Link")
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item,Dropdowns.dropdown)
+                                                                                        .withClasses(BootstrapClasses.nav_item,BootstrapClasses.dropdown)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Dropdowns.dropdown_toggle)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.dropdown_toggle)
                                                                                                         .withHref("#")
                                                                                                         .attr(AriaRoles.roleButton)
                                                                                                         .withData("bs-toggle","dropdown")
@@ -1626,12 +1616,12 @@ class NavbarTest {
                                                                                                                 text("Link")
                                                                                                         ),
                                                                                                 ul()
-                                                                                                        .withClasses(Dropdowns.dropdown_menu)
+                                                                                                        .withClasses(BootstrapClasses.dropdown_menu)
                                                                                                         .with(
                                                                                                                 li()
                                                                                                                         .with(
                                                                                                                                 a()
-                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                         .withHref("#")
                                                                                                                                         .with(
                                                                                                                                                 text("Action")
@@ -1640,7 +1630,7 @@ class NavbarTest {
                                                                                                                 li()
                                                                                                                         .with(
                                                                                                                                 a()
-                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                         .withHref("#")
                                                                                                                                         .with(
                                                                                                                                                 text("Another action")
@@ -1649,12 +1639,12 @@ class NavbarTest {
                                                                                                                 li()
                                                                                                                         .with(
                                                                                                                                 hr()
-                                                                                                                                        .withClasses(Dropdowns.dropdown_divider)
+                                                                                                                                        .withClasses(BootstrapClasses.dropdown_divider)
                                                                                                                         ),
                                                                                                                 li()
                                                                                                                         .with(
                                                                                                                                 a()
-                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                         .withHref("#")
                                                                                                                                         .with(
                                                                                                                                                 text("Something else here")
@@ -1663,10 +1653,10 @@ class NavbarTest {
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                                                                         )
@@ -1676,18 +1666,18 @@ class NavbarTest {
                                                                                         )
                                                                         ),
                                                                 form()
-                                                                        .withClasses(Flex.d_flex)
+                                                                        .withClasses(BootstrapClasses.d_flex)
                                                                         .attr(AriaRoles.roleSearch)
                                                                         .with(
                                                                                 input()
-                                                                                        .withClasses(FormControl.form_control,Spacing.me_2)
+                                                                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.me_2)
                                                                                         .withType("search")
                                                                                         .withPlaceholder("Search")
                                                                                         .attr(
                                                                                                 AriaStatesAndProperties.ariaLabel("Search")
                                                                                         ),
                                                                                 button()
-                                                                                        .withClasses(Buttons.btn,Buttons.btn_outline_success)
+                                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_success)
                                                                                         .withType("submit")
                                                                                         .with(
                                                                                                 text("Search")
@@ -1775,13 +1765,13 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Navbar.navbar_expand_lg,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.navbar_expand_lg,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 button()
-                                                        .withClasses(Navbar.navbar_toggler)
+                                                        .withClasses(BootstrapClasses.navbar_toggler)
                                                         .withType("button")
                                                         .withData("bs-toggle","collapse")
                                                         .withData("bs-target","#navbarTogglerDemo01")
@@ -1796,26 +1786,26 @@ class NavbarTest {
                                                         )
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Navbar.navbar_toggler_icon)
+                                                                        .withClasses(BootstrapClasses.navbar_toggler_icon)
                                                         ),
                                                 div()
-                                                        .withClasses(Collapse.collapse,Navbar.navbar_collapse)
+                                                        .withClasses(BootstrapClasses.collapse,BootstrapClasses.navbar_collapse)
                                                         .withId("navbarTogglerDemo01")
                                                         .with(
                                                                 a()
-                                                                        .withClasses(Navbar.navbar_brand)
+                                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                                         .withHref("#")
                                                                         .with(
                                                                                 text("Hidden brand")
                                                                         ),
                                                                 ul()
-                                                                        .withClasses(Navbar.navbar_nav,Spacing.me_auto,Spacing.mb_2,"mb-lg-0")
+                                                                        .withClasses(BootstrapClasses.navbar_nav,BootstrapClasses.me_auto,BootstrapClasses.mb_2,"mb-lg-0")
                                                                         .with(
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                                                                         )
@@ -1825,20 +1815,20 @@ class NavbarTest {
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                                         .withHref("#")
                                                                                                         .with(
                                                                                                                 text("Link")
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                                                                         )
@@ -1848,18 +1838,18 @@ class NavbarTest {
                                                                                         )
                                                                         ),
                                                                 form()
-                                                                        .withClasses(Flex.d_flex)
+                                                                        .withClasses(BootstrapClasses.d_flex)
                                                                         .attr(AriaRoles.roleSearch)
                                                                         .with(
                                                                                 input()
-                                                                                        .withClasses(FormControl.form_control,Spacing.me_2)
+                                                                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.me_2)
                                                                                         .withType("search")
                                                                                         .withPlaceholder("Search")
                                                                                         .attr(
                                                                                                 AriaStatesAndProperties.ariaLabel("Search")
                                                                                         ),
                                                                                 button()
-                                                                                        .withClasses(Buttons.btn,Buttons.btn_outline_success)
+                                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_success)
                                                                                         .withType("submit")
                                                                                         .with(
                                                                                                 text("Search")
@@ -1923,19 +1913,19 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Navbar.navbar_expand_lg,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.navbar_expand_lg,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Navbar")
                                                         ),
                                                 button()
-                                                        .withClasses(Navbar.navbar_toggler)
+                                                        .withClasses(BootstrapClasses.navbar_toggler)
                                                         .withType("button")
                                                         .withData("bs-toggle","collapse")
                                                         .withData("bs-target","#navbarTogglerDemo02")
@@ -1950,20 +1940,20 @@ class NavbarTest {
                                                         )
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Navbar.navbar_toggler_icon)
+                                                                        .withClasses(BootstrapClasses.navbar_toggler_icon)
                                                         ),
                                                 div()
-                                                        .withClasses(Collapse.collapse,Navbar.navbar_collapse)
+                                                        .withClasses(BootstrapClasses.collapse,BootstrapClasses.navbar_collapse)
                                                         .withId("navbarTogglerDemo02")
                                                         .with(
                                                                 ul()
-                                                                        .withClasses(Navbar.navbar_nav,Spacing.me_auto,Spacing.mb_2,Spacing.mb_lg_0)
+                                                                        .withClasses(BootstrapClasses.navbar_nav,BootstrapClasses.me_auto,BootstrapClasses.mb_2,BootstrapClasses.mb_lg_0)
                                                                         .with(
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                                                                         )
@@ -1973,20 +1963,20 @@ class NavbarTest {
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                                         .withHref("#")
                                                                                                         .with(
                                                                                                                 text("Link")
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                                                                         )
@@ -1996,18 +1986,18 @@ class NavbarTest {
                                                                                         )
                                                                         ),
                                                                 form()
-                                                                        .withClasses(Flex.d_flex)
+                                                                        .withClasses(BootstrapClasses.d_flex)
                                                                         .attr(AriaRoles.roleSearch)
                                                                         .with(
                                                                                 input()
-                                                                                        .withClasses(FormControl.form_control,Spacing.me_2)
+                                                                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.me_2)
                                                                                         .withType("search")
                                                                                         .withPlaceholder("Search")
                                                                                         .attr(
                                                                                                 AriaStatesAndProperties.ariaLabel("Search")
                                                                                         ),
                                                                                 button()
-                                                                                        .withClasses(Buttons.btn,Buttons.btn_outline_success)
+                                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_success)
                                                                                         .withType("submit")
                                                                                         .with(
                                                                                                 text("Search")
@@ -2070,13 +2060,13 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Navbar.navbar_expand_lg,Background.bg_body_tertiary)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.navbar_expand_lg,BootstrapClasses.bg_body_tertiary)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 button()
-                                                        .withClasses(Navbar.navbar_toggler)
+                                                        .withClasses(BootstrapClasses.navbar_toggler)
                                                         .withType("button")
                                                         .withData("bs-toggle","collapse")
                                                         .withData("bs-target","#navbarTogglerDemo03")
@@ -2091,26 +2081,26 @@ class NavbarTest {
                                                         )
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Navbar.navbar_toggler_icon)
+                                                                        .withClasses(BootstrapClasses.navbar_toggler_icon)
                                                         ),
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Navbar")
                                                         ),
                                                 div()
-                                                        .withClasses(Collapse.collapse,Navbar.navbar_collapse)
+                                                        .withClasses(BootstrapClasses.collapse,BootstrapClasses.navbar_collapse)
                                                         .withId("navbarTogglerDemo03")
                                                         .with(
                                                                 ul()
-                                                                        .withClasses(Navbar.navbar_nav,Spacing.me_auto,Spacing.mb_2,"mb-lg-0")
+                                                                        .withClasses(BootstrapClasses.navbar_nav,BootstrapClasses.me_auto,BootstrapClasses.mb_2,"mb-lg-0")
                                                                         .with(
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                                                                         )
@@ -2120,20 +2110,20 @@ class NavbarTest {
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                                         .withHref("#")
                                                                                                         .with(
                                                                                                                 text("Link")
                                                                                                         )
                                                                                         ),
                                                                                 li()
-                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                         .with(
                                                                                                 a()
-                                                                                                        .withClasses(NavsTabs.nav_link,Popovers.disabled)
+                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.disabled)
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaDisabled("true")
                                                                                                         )
@@ -2143,18 +2133,18 @@ class NavbarTest {
                                                                                         )
                                                                         ),
                                                                 form()
-                                                                        .withClasses(Flex.d_flex)
+                                                                        .withClasses(BootstrapClasses.d_flex)
                                                                         .attr(AriaRoles.roleSearch)
                                                                         .with(
                                                                                 input()
-                                                                                        .withClasses(FormControl.form_control,Spacing.me_2)
+                                                                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.me_2)
                                                                                         .withType("search")
                                                                                         .withPlaceholder("Search")
                                                                                         .attr(
                                                                                                 AriaStatesAndProperties.ariaLabel("Search")
                                                                                         ),
                                                                                 button()
-                                                                                        .withClasses(Buttons.btn,Buttons.btn_outline_success)
+                                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_success)
                                                                                         .withType("submit")
                                                                                         .with(
                                                                                                 text("Search")
@@ -2218,33 +2208,33 @@ class NavbarTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Collapse.collapse)
+                                .withClasses(BootstrapClasses.collapse)
                                 .withId("navbarToggleExternalContent")
                                 .withData("bs-theme","dark")
                                 .with(
                                         div()
-                                                .withClasses(Background.bg_dark,Spacing.p_4)
+                                                .withClasses(BootstrapClasses.bg_dark,BootstrapClasses.p_4)
                                                 .with(
                                                         h5()
-                                                                .withClasses(Colors.text_body_emphasis,Typography.h4)
+                                                                .withClasses(BootstrapClasses.text_body_emphasis,BootstrapClasses.h4)
                                                                 .with(
                                                                         text("Collapsed content")
                                                                 ),
                                                         span()
-                                                                .withClasses(Colors.text_body_secondary)
+                                                                .withClasses(BootstrapClasses.text_body_secondary)
                                                                 .with(
                                                                         text("Toggleable via the navbar brand.")
                                                                 )
                                                 )
                                 ),
                         nav()
-                                .withClasses(Navbar.navbar,Navbar.navbar_dark,Background.bg_dark)
+                                .withClasses(BootstrapClasses.navbar,BootstrapClasses.navbar_dark,BootstrapClasses.bg_dark)
                                 .with(
                                         div()
-                                                .withClasses(Containers.container_fluid)
+                                                .withClasses(BootstrapClasses.container_fluid)
                                                 .with(
                                                         button()
-                                                                .withClasses(Navbar.navbar_toggler)
+                                                                .withClasses(BootstrapClasses.navbar_toggler)
                                                                 .withType("button")
                                                                 .withData("bs-toggle","collapse")
                                                                 .withData("bs-target","#navbarToggleExternalContent")
@@ -2259,7 +2249,7 @@ class NavbarTest {
                                                                 )
                                                                 .with(
                                                                         span()
-                                                                                .withClasses(Navbar.navbar_toggler_icon)
+                                                                                .withClasses(BootstrapClasses.navbar_toggler_icon)
                                                                 )
                                                 )
                                 )
@@ -2300,19 +2290,19 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Background.bg_body_tertiary,Position.fixed_top)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_body_tertiary,BootstrapClasses.fixed_top)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Offcanvas navbar")
                                                         ),
                                                 button()
-                                                        .withClasses(Navbar.navbar_toggler)
+                                                        .withClasses(BootstrapClasses.navbar_toggler)
                                                         .withType("button")
                                                         .withData("bs-toggle","offcanvas")
                                                         .withData("bs-target","#offcanvasNavbar")
@@ -2324,10 +2314,10 @@ class NavbarTest {
                                                         )
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Navbar.navbar_toggler_icon)
+                                                                        .withClasses(BootstrapClasses.navbar_toggler_icon)
                                                         ),
                                                 div()
-                                                        .withClasses(OffCanvas.offcanvas,OffCanvas.offcanvas_end)
+                                                        .withClasses(BootstrapClasses.offcanvas,BootstrapClasses.offcanvas_end)
                                                         .withTabindex(-1)
                                                         .withId("offcanvasNavbar")
                                                         .attr(
@@ -2335,33 +2325,33 @@ class NavbarTest {
                                                         )
                                                         .with(
                                                                 div()
-                                                                        .withClasses(OffCanvas.offcanvas_header)
+                                                                        .withClasses(BootstrapClasses.offcanvas_header)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(OffCanvas.offcanvas_title)
+                                                                                        .withClasses(BootstrapClasses.offcanvas_title)
                                                                                         .withId("offcanvasNavbarLabel")
                                                                                         .with(
                                                                                                 text("Offcanvas")
                                                                                         ),
                                                                                 button()
                                                                                         .withType("button")
-                                                                                        .withClasses(CloseButton.btn_close)
+                                                                                        .withClasses(BootstrapClasses.btn_close)
                                                                                         .withData("bs-dismiss","offcanvas")
                                                                                         .attr(
                                                                                                 AriaStatesAndProperties.ariaLabel("Close")
                                                                                         )
                                                                         ),
                                                                 div()
-                                                                        .withClasses(OffCanvas.offcanvas_body)
+                                                                        .withClasses(BootstrapClasses.offcanvas_body)
                                                                         .with(
                                                                                 ul()
-                                                                                        .withClasses(Navbar.navbar_nav,Flex.justify_content_end,Flex.flex_grow_1,Spacing.pe_3)
+                                                                                        .withClasses(BootstrapClasses.navbar_nav,BootstrapClasses.justify_content_end,BootstrapClasses.flex_grow_1,BootstrapClasses.pe_3)
                                                                                         .with(
                                                                                                 li()
-                                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                                         .with(
                                                                                                                 a()
-                                                                                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                                                                                         .attr(
                                                                                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                                                                                         )
@@ -2371,20 +2361,20 @@ class NavbarTest {
                                                                                                                         )
                                                                                                         ),
                                                                                                 li()
-                                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                                         .with(
                                                                                                                 a()
-                                                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                                                         .withHref("#")
                                                                                                                         .with(
                                                                                                                                 text("Link")
                                                                                                                         )
                                                                                                         ),
                                                                                                 li()
-                                                                                                        .withClasses(NavsTabs.nav_item,Dropdowns.dropdown)
+                                                                                                        .withClasses(BootstrapClasses.nav_item,BootstrapClasses.dropdown)
                                                                                                         .with(
                                                                                                                 a()
-                                                                                                                        .withClasses(NavsTabs.nav_link,Dropdowns.dropdown_toggle)
+                                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.dropdown_toggle)
                                                                                                                         .withHref("#")
                                                                                                                         .attr(AriaRoles.roleButton)
                                                                                                                         .withData("bs-toggle","dropdown")
@@ -2395,12 +2385,12 @@ class NavbarTest {
                                                                                                                                 text("Dropdown")
                                                                                                                         ),
                                                                                                                 ul()
-                                                                                                                        .withClasses(Dropdowns.dropdown_menu)
+                                                                                                                        .withClasses(BootstrapClasses.dropdown_menu)
                                                                                                                         .with(
                                                                                                                                 li()
                                                                                                                                         .with(
                                                                                                                                                 a()
-                                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                                         .withHref("#")
                                                                                                                                                         .with(
                                                                                                                                                                 text("Action")
@@ -2409,7 +2399,7 @@ class NavbarTest {
                                                                                                                                 li()
                                                                                                                                         .with(
                                                                                                                                                 a()
-                                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                                         .withHref("#")
                                                                                                                                                         .with(
                                                                                                                                                                 text("Another action")
@@ -2418,12 +2408,12 @@ class NavbarTest {
                                                                                                                                 li()
                                                                                                                                         .with(
                                                                                                                                                 hr()
-                                                                                                                                                        .withClasses(Dropdowns.dropdown_divider)
+                                                                                                                                                        .withClasses(BootstrapClasses.dropdown_divider)
                                                                                                                                         ),
                                                                                                                                 li()
                                                                                                                                         .with(
                                                                                                                                                 a()
-                                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                                         .withHref("#")
                                                                                                                                                         .with(
                                                                                                                                                                 text("Something else here")
@@ -2433,18 +2423,18 @@ class NavbarTest {
                                                                                                         )
                                                                                         ),
                                                                                 form()
-                                                                                        .withClasses(Flex.d_flex,Spacing.mt_3)
+                                                                                        .withClasses(BootstrapClasses.d_flex,BootstrapClasses.mt_3)
                                                                                         .attr(AriaRoles.roleSearch)
                                                                                         .with(
                                                                                                 input()
-                                                                                                        .withClasses(FormControl.form_control,Spacing.me_2)
+                                                                                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.me_2)
                                                                                                         .withType("search")
                                                                                                         .withPlaceholder("Search")
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaLabel("Search")
                                                                                                         ),
                                                                                                 button()
-                                                                                                        .withClasses(Buttons.btn,Buttons.btn_outline_success)
+                                                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_success)
                                                                                                         .withType("submit")
                                                                                                         .with(
                                                                                                                 text("Search")
@@ -2537,16 +2527,16 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,Navbar.navbar_expand_lg,Background.bg_body_tertiary,Position.fixed_top)
+                        .withClasses(BootstrapClasses.navbar,BootstrapClasses.navbar_expand_lg,BootstrapClasses.bg_body_tertiary,BootstrapClasses.fixed_top)
                         .with(
                                 a()
-                                        .withClasses(Navbar.navbar_brand)
+                                        .withClasses(BootstrapClasses.navbar_brand)
                                         .withHref("#")
                                         .with(
                                                 text("Offcanvas navbar")
                                         ),
                                 button()
-                                        .withClasses(Navbar.navbar_toggler)
+                                        .withClasses(BootstrapClasses.navbar_toggler)
                                         .withType("button")
                                         .withData("bs-toggle","offcanvas")
                                         .withData("bs-target","#navbarOffcanvasLg")
@@ -2558,10 +2548,10 @@ class NavbarTest {
                                         )
                                         .with(
                                                 span()
-                                                        .withClasses(Navbar.navbar_toggler_icon)
+                                                        .withClasses(BootstrapClasses.navbar_toggler_icon)
                                         ),
                                 div()
-                                        .withClasses(OffCanvas.offcanvas,OffCanvas.offcanvas_end)
+                                        .withClasses(BootstrapClasses.offcanvas,BootstrapClasses.offcanvas_end)
                                         .withTabindex(-1)
                                         .withId("navbarOffcanvasLg")
                                         .attr(
@@ -2601,19 +2591,19 @@ class NavbarTest {
 
         String renderedHtml = uiDocumentation.render(
                 nav()
-                        .withClasses(Navbar.navbar,"navbar-dark",Background.bg_dark,Position.fixed_top)
+                        .withClasses(BootstrapClasses.navbar,"navbar-dark",BootstrapClasses.bg_dark,BootstrapClasses.fixed_top)
                         .with(
                                 div()
-                                        .withClasses(Containers.container_fluid)
+                                        .withClasses(BootstrapClasses.container_fluid)
                                         .with(
                                                 a()
-                                                        .withClasses(Navbar.navbar_brand)
+                                                        .withClasses(BootstrapClasses.navbar_brand)
                                                         .withHref("#")
                                                         .with(
                                                                 text("Offcanvas dark navbar")
                                                         ),
                                                 button()
-                                                        .withClasses(Navbar.navbar_toggler)
+                                                        .withClasses(BootstrapClasses.navbar_toggler)
                                                         .withType("button")
                                                         .withData("bs-toggle","offcanvas")
                                                         .withData("bs-target","#offcanvasDarkNavbar")
@@ -2625,10 +2615,10 @@ class NavbarTest {
                                                         )
                                                         .with(
                                                                 span()
-                                                                        .withClasses(Navbar.navbar_toggler_icon)
+                                                                        .withClasses(BootstrapClasses.navbar_toggler_icon)
                                                         ),
                                                 div()
-                                                        .withClasses(OffCanvas.offcanvas,OffCanvas.offcanvas_end, ColorsAndBackground.text_bg_dark)
+                                                        .withClasses(BootstrapClasses.offcanvas,BootstrapClasses.offcanvas_end, BootstrapClasses.text_bg_dark)
                                                         .withTabindex(-1)
                                                         .withId("offcanvasDarkNavbar")
                                                         .attr(
@@ -2636,33 +2626,33 @@ class NavbarTest {
                                                         )
                                                         .with(
                                                                 div()
-                                                                        .withClasses(OffCanvas.offcanvas_header)
+                                                                        .withClasses(BootstrapClasses.offcanvas_header)
                                                                         .with(
                                                                                 h5()
-                                                                                        .withClasses(OffCanvas.offcanvas_title)
+                                                                                        .withClasses(BootstrapClasses.offcanvas_title)
                                                                                         .withId("offcanvasDarkNavbarLabel")
                                                                                         .with(
                                                                                                 text("Dark offcanvas")
                                                                                         ),
                                                                                 button()
                                                                                         .withType("button")
-                                                                                        .withClasses(CloseButton.btn_close,CloseButton.btn_close_white)
+                                                                                        .withClasses(BootstrapClasses.btn_close,BootstrapClasses.btn_close_white)
                                                                                         .withData("bs-dismiss","offcanvas")
                                                                                         .attr(
                                                                                                 AriaStatesAndProperties.ariaLabel("Close")
                                                                                         )
                                                                         ),
                                                                 div()
-                                                                        .withClasses(OffCanvas.offcanvas_body)
+                                                                        .withClasses(BootstrapClasses.offcanvas_body)
                                                                         .with(
                                                                                 ul()
-                                                                                        .withClasses(Navbar.navbar_nav,Flex.justify_content_end,Flex.flex_grow_1,Spacing.pe_3)
+                                                                                        .withClasses(BootstrapClasses.navbar_nav,BootstrapClasses.justify_content_end,BootstrapClasses.flex_grow_1,BootstrapClasses.pe_3)
                                                                                         .with(
                                                                                                 li()
-                                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                                         .with(
                                                                                                                 a()
-                                                                                                                        .withClasses(NavsTabs.nav_link,Pagination.active)
+                                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.active)
                                                                                                                         .attr(
                                                                                                                                 AriaStatesAndProperties.ariaCurrent("page")
                                                                                                                         )
@@ -2672,20 +2662,20 @@ class NavbarTest {
                                                                                                                         )
                                                                                                         ),
                                                                                                 li()
-                                                                                                        .withClasses(NavsTabs.nav_item)
+                                                                                                        .withClasses(BootstrapClasses.nav_item)
                                                                                                         .with(
                                                                                                                 a()
-                                                                                                                        .withClasses(NavsTabs.nav_link)
+                                                                                                                        .withClasses(BootstrapClasses.nav_link)
                                                                                                                         .withHref("#")
                                                                                                                         .with(
                                                                                                                                 text("Link")
                                                                                                                         )
                                                                                                         ),
                                                                                                 li()
-                                                                                                        .withClasses(NavsTabs.nav_item,Dropdowns.dropdown)
+                                                                                                        .withClasses(BootstrapClasses.nav_item,BootstrapClasses.dropdown)
                                                                                                         .with(
                                                                                                                 a()
-                                                                                                                        .withClasses(NavsTabs.nav_link,Dropdowns.dropdown_toggle)
+                                                                                                                        .withClasses(BootstrapClasses.nav_link,BootstrapClasses.dropdown_toggle)
                                                                                                                         .withHref("#")
                                                                                                                         .attr(AriaRoles.roleButton)
                                                                                                                         .withData("bs-toggle","dropdown")
@@ -2696,12 +2686,12 @@ class NavbarTest {
                                                                                                                                 text("Dropdown")
                                                                                                                         ),
                                                                                                                 ul()
-                                                                                                                        .withClasses(Dropdowns.dropdown_menu,Dropdowns.dropdown_menu_dark)
+                                                                                                                        .withClasses(BootstrapClasses.dropdown_menu,BootstrapClasses.dropdown_menu_dark)
                                                                                                                         .with(
                                                                                                                                 li()
                                                                                                                                         .with(
                                                                                                                                                 a()
-                                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                                         .withHref("#")
                                                                                                                                                         .with(
                                                                                                                                                                 text("Action")
@@ -2710,7 +2700,7 @@ class NavbarTest {
                                                                                                                                 li()
                                                                                                                                         .with(
                                                                                                                                                 a()
-                                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                                         .withHref("#")
                                                                                                                                                         .with(
                                                                                                                                                                 text("Another action")
@@ -2719,12 +2709,12 @@ class NavbarTest {
                                                                                                                                 li()
                                                                                                                                         .with(
                                                                                                                                                 hr()
-                                                                                                                                                        .withClasses(Dropdowns.dropdown_divider)
+                                                                                                                                                        .withClasses(BootstrapClasses.dropdown_divider)
                                                                                                                                         ),
                                                                                                                                 li()
                                                                                                                                         .with(
                                                                                                                                                 a()
-                                                                                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                                                         .withHref("#")
                                                                                                                                                         .with(
                                                                                                                                                                 text("Something else here")
@@ -2734,18 +2724,18 @@ class NavbarTest {
                                                                                                         )
                                                                                         ),
                                                                                 form()
-                                                                                        .withClasses(Flex.d_flex,Spacing.mt_3)
+                                                                                        .withClasses(BootstrapClasses.d_flex,BootstrapClasses.mt_3)
                                                                                         .attr(AriaRoles.roleSearch)
                                                                                         .with(
                                                                                                 input()
-                                                                                                        .withClasses(FormControl.form_control,Spacing.me_2)
+                                                                                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.me_2)
                                                                                                         .withType("search")
                                                                                                         .withPlaceholder("Search")
                                                                                                         .attr(
                                                                                                                 AriaStatesAndProperties.ariaLabel("Search")
                                                                                                         ),
                                                                                                 button()
-                                                                                                        .withClasses(Buttons.btn,Buttons.btn_success)
+                                                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_success)
                                                                                                         .withType("submit")
                                                                                                         .with(
                                                                                                                 text("Search")

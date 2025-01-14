@@ -1,19 +1,12 @@
 package dev.rebelcraft.j2html.ext.helpers;
 
-import dev.rebelcraft.j2html.ext.components.Badge;
-import dev.rebelcraft.j2html.ext.components.Card;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ColorAndBackgroundTest {
@@ -31,42 +24,42 @@ class ColorAndBackgroundTest {
         String renderedHtml = uiDocumentation.render(
                 each(
               div()
-               .withClasses(ColorsAndBackground.text_bg_primary, Spacing.p_3)
+               .withClasses(BootstrapClasses.text_bg_primary, BootstrapClasses.p_3)
                .with(
                   text("Primary with contrasting color")
                 ),
               div()
-               .withClasses(ColorsAndBackground.text_bg_secondary,Spacing.p_3)
+               .withClasses(BootstrapClasses.text_bg_secondary,BootstrapClasses.p_3)
                .with(
                   text("Secondary with contrasting color")
                 ),
               div()
-               .withClasses(ColorsAndBackground.text_bg_success,Spacing.p_3)
+               .withClasses(BootstrapClasses.text_bg_success,BootstrapClasses.p_3)
                .with(
                   text("Success with contrasting color")
                 ),
               div()
-               .withClasses(ColorsAndBackground.text_bg_danger,Spacing.p_3)
+               .withClasses(BootstrapClasses.text_bg_danger,BootstrapClasses.p_3)
                .with(
                   text("Danger with contrasting color")
                 ),
               div()
-               .withClasses(ColorsAndBackground.text_bg_warning,Spacing.p_3)
+               .withClasses(BootstrapClasses.text_bg_warning,BootstrapClasses.p_3)
                .with(
                   text("Warning with contrasting color")
                 ),
               div()
-               .withClasses(ColorsAndBackground.text_bg_info,Spacing.p_3)
+               .withClasses(BootstrapClasses.text_bg_info,BootstrapClasses.p_3)
                .with(
                   text("Info with contrasting color")
                 ),
               div()
-               .withClasses(ColorsAndBackground.text_bg_light,Spacing.p_3)
+               .withClasses(BootstrapClasses.text_bg_light,BootstrapClasses.p_3)
                .with(
                   text("Light with contrasting color")
                 ),
               div()
-               .withClasses(ColorsAndBackground.text_bg_dark,Spacing.p_3)
+               .withClasses(BootstrapClasses.text_bg_dark,BootstrapClasses.p_3)
                .with(
                   text("Dark with contrasting color")
                 )
@@ -114,12 +107,12 @@ class ColorAndBackgroundTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         span()
-                                .withClasses(Badge.badge,ColorsAndBackground.text_bg_primary)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_primary)
                                 .with(
                                         text("Primary")
                                 ),
                         span()
-                                .withClasses(Badge.badge,ColorsAndBackground.text_bg_info)
+                                .withClasses(BootstrapClasses.badge,BootstrapClasses.text_bg_info)
                                 .with(
                                         text("Info")
                                 )
@@ -149,38 +142,38 @@ class ColorAndBackgroundTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Card.card,ColorsAndBackground.text_bg_primary,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.text_bg_primary,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )
                                                 )
                                 ),
                         div()
-                                .withClasses(Card.card,ColorsAndBackground.text_bg_info,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.card,BootstrapClasses.text_bg_info,BootstrapClasses.mb_3)
                                 .withStyle("max-width: 18rem;")
                                 .with(
                                         div()
-                                                .withClasses(Card.card_header)
+                                                .withClasses(BootstrapClasses.card_header)
                                                 .with(
                                                         text("Header")
                                                 ),
                                         div()
-                                                .withClasses(Card.card_body)
+                                                .withClasses(BootstrapClasses.card_body)
                                                 .with(
                                                         p()
-                                                                .withClasses(Card.card_text)
+                                                                .withClasses(BootstrapClasses.card_text)
                                                                 .with(
                                                                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                                 )

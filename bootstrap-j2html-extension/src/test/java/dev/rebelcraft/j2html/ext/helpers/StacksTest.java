@@ -1,21 +1,13 @@
 package dev.rebelcraft.j2html.ext.helpers;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.components.Buttons;
-import dev.rebelcraft.j2html.ext.forms.FormControl;
-import dev.rebelcraft.j2html.ext.layout.Grid;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class StacksTest {
@@ -32,20 +24,20 @@ class StacksTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-             .withClasses(Stacks.vstack,Spacing.gap_3)
+             .withClasses(BootstrapClasses.vstack, BootstrapClasses.gap_3)
              .with(
                 div()
-                 .withClasses(Spacing.p_2)
+                 .withClasses(BootstrapClasses.p_2)
                  .with(
                     text("First item")
                   ),
                 div()
-                 .withClasses(Spacing.p_2)
+                 .withClasses(BootstrapClasses.p_2)
                  .with(
                     text("Second item")
                   ),
                 div()
-                 .withClasses(Spacing.p_2)
+                 .withClasses(BootstrapClasses.p_2)
                  .with(
                     text("Third item")
                   )
@@ -79,20 +71,20 @@ class StacksTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Stacks.hstack,Spacing.gap_3)
+                        .withClasses(BootstrapClasses.hstack,BootstrapClasses.gap_3)
                         .with(
                                 div()
-                                        .withClasses(Spacing.p_2)
+                                        .withClasses(BootstrapClasses.p_2)
                                         .with(
                                                 text("First item")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2)
+                                        .withClasses(BootstrapClasses.p_2)
                                         .with(
                                                 text("Second item")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2)
+                                        .withClasses(BootstrapClasses.p_2)
                                         .with(
                                                 text("Third item")
                                         )
@@ -126,20 +118,20 @@ class StacksTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Stacks.hstack,Spacing.gap_3)
+                        .withClasses(BootstrapClasses.hstack,BootstrapClasses.gap_3)
                         .with(
                                 div()
-                                        .withClasses(Spacing.p_2)
+                                        .withClasses(BootstrapClasses.p_2)
                                         .with(
                                                 text("First item")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2,Spacing.ms_auto)
+                                        .withClasses(BootstrapClasses.p_2,BootstrapClasses.ms_auto)
                                         .with(
                                                 text("Second item")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2)
+                                        .withClasses(BootstrapClasses.p_2)
                                         .with(
                                                 text("Third item")
                                         )
@@ -173,22 +165,22 @@ class StacksTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Stacks.hstack,Spacing.gap_3)
+                        .withClasses(BootstrapClasses.hstack,BootstrapClasses.gap_3)
                         .with(
                                 div()
-                                        .withClasses(Spacing.p_2)
+                                        .withClasses(BootstrapClasses.p_2)
                                         .with(
                                                 text("First item")
                                         ),
                                 div()
-                                        .withClasses(Spacing.p_2,Spacing.ms_auto)
+                                        .withClasses(BootstrapClasses.p_2,BootstrapClasses.ms_auto)
                                         .with(
                                                 text("Second item")
                                         ),
                                 div()
-                                        .withClasses(VerticalRule.vr),
+                                        .withClasses(BootstrapClasses.vr),
                                 div()
-                                        .withClasses(Spacing.p_2)
+                                        .withClasses(BootstrapClasses.p_2)
                                         .with(
                                                 text("Third item")
                                         )
@@ -224,17 +216,17 @@ class StacksTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Stacks.vstack,Spacing.gap_2, Grid.col_md_5,Spacing.mx_auto)
+                        .withClasses(BootstrapClasses.vstack,BootstrapClasses.gap_2, BootstrapClasses.col_md_5,BootstrapClasses.mx_auto)
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                         .with(
                                                 text("Save changes")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                         .with(
                                                 text("Cancel")
                                         )
@@ -265,10 +257,10 @@ class StacksTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Stacks.hstack,Spacing.gap_3)
+                        .withClasses(BootstrapClasses.hstack,BootstrapClasses.gap_3)
                         .with(
                                 input()
-                                        .withClasses(FormControl.form_control,Spacing.me_auto)
+                                        .withClasses(BootstrapClasses.form_control,BootstrapClasses.me_auto)
                                         .withType("text")
                                         .withPlaceholder("Add your item here...")
                                         .attr(
@@ -276,15 +268,15 @@ class StacksTest {
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                         .with(
                                                 text("Submit")
                                         ),
                                 div()
-                                        .withClasses(VerticalRule.vr),
+                                        .withClasses(BootstrapClasses.vr),
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_outline_danger)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_danger)
                                         .with(
                                                 text("Reset")
                                         )

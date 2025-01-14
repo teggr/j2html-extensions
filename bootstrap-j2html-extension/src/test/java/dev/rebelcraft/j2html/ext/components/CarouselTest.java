@@ -1,20 +1,13 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.helpers.VisuallyHidden;
-import dev.rebelcraft.j2html.ext.utilities.Display;
-import dev.rebelcraft.j2html.ext.utilities.Sizing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CarouselTest {
@@ -32,62 +25,62 @@ class CarouselTest {
         String renderedHtml = uiDocumentation.render(
                 div()
                      .withId("carouselExample")
-                     .withClasses(Carousel.carousel,Carousel.slide)
+                     .withClasses(BootstrapClasses.carousel,Carousel.slide)
                      .with(
                         div()
-                         .withClasses(Carousel.carousel_inner)
+                         .withClasses(BootstrapClasses.carousel_inner)
                          .with(
                             div()
-                             .withClasses(Carousel.carousel_item,Carousel.active)
+                             .withClasses(BootstrapClasses.carousel_item,BootstrapClasses.active)
                              .with(
                                 img()
                                  .withSrc("...")
-                                 .withClasses(Display.d_block, Sizing.w_100)
+                                 .withClasses(BootstrapClasses.d_block, BootstrapClasses.w_100)
                                  .withAlt("...")
                               ),
                             div()
-                             .withClasses(Carousel.carousel_item)
+                             .withClasses(BootstrapClasses.carousel_item)
                              .with(
                                 img()
                                  .withSrc("...")
-                                 .withClasses(Display.d_block,Sizing.w_100)
+                                 .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                  .withAlt("...")
                               ),
                             div()
-                             .withClasses(Carousel.carousel_item)
+                             .withClasses(BootstrapClasses.carousel_item)
                              .with(
                                 img()
                                  .withSrc("...")
-                                 .withClasses(Display.d_block,Sizing.w_100)
+                                 .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                  .withAlt("...")
                               )
                           ),
                         button()
-                         .withClasses(Carousel.carousel_control_prev)
+                         .withClasses(BootstrapClasses.carousel_control_prev)
                          .withType("button")
                          .withData("bs-target","#carouselExample")
                          .withData("bs-slide","prev")
                          .with(
                             span()
-                             .withClasses(Carousel.carousel_control_prev_icon)
+                             .withClasses(BootstrapClasses.carousel_control_prev_icon)
                              .attr(AriaStatesAndProperties.ariaHidden("true")),
                             span()
-                             .withClasses(VisuallyHidden.visually_hidden)
+                             .withClasses(BootstrapClasses.visually_hidden)
                              .with(
                                 text("Previous")
                               )
                           ),
                         button()
-                         .withClasses(Carousel.carousel_control_next)
+                         .withClasses(BootstrapClasses.carousel_control_next)
                          .withType("button")
                          .withData("bs-target","#carouselExample")
                          .withData("bs-slide","next")
                          .with(
                             span()
-                             .withClasses(Carousel.carousel_control_next_icon)
+                             .withClasses(BootstrapClasses.carousel_control_next_icon)
                              .attr(AriaStatesAndProperties.ariaHidden("true")),
                             span()
-                             .withClasses(VisuallyHidden.visually_hidden)
+                             .withClasses(BootstrapClasses.visually_hidden)
                              .with(
                                 text("Next")
                               )
@@ -139,16 +132,16 @@ class CarouselTest {
         String renderedHtml = uiDocumentation.render(
                 div()
                         .withId("carouselExampleIndicators")
-                        .withClasses(Carousel.carousel,Carousel.slide)
+                        .withClasses(BootstrapClasses.carousel,Carousel.slide)
                         .with(
                                 div()
-                                        .withClasses(Carousel.carousel_indicators)
+                                        .withClasses(BootstrapClasses.carousel_indicators)
                                         .with(
                                                 button()
                                                         .withType("button")
                                                         .withData("bs-target","#carouselExampleIndicators")
                                                         .withData("bs-slide-to","0")
-                                                        .withClasses(Pagination.active)
+                                                        .withClasses(BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("true")
                                                         )
@@ -171,63 +164,63 @@ class CarouselTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Carousel.carousel_inner)
+                                        .withClasses(BootstrapClasses.carousel_inner)
                                         .with(
                                                 div()
-                                                        .withClasses(Carousel.carousel_item,Pagination.active)
+                                                        .withClasses(BootstrapClasses.carousel_item,BootstrapClasses.active)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_prev)
+                                        .withClasses(BootstrapClasses.carousel_control_prev)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleIndicators")
                                         .withData("bs-slide","prev")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_prev_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_prev_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Previous")
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_next)
+                                        .withClasses(BootstrapClasses.carousel_control_next)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleIndicators")
                                         .withData("bs-slide","next")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_next_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_next_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Next")
                                                         )
@@ -287,16 +280,16 @@ class CarouselTest {
         String renderedHtml = uiDocumentation.render(
                 div()
                         .withId("carouselExampleCaptions")
-                        .withClasses(Carousel.carousel,Carousel.slide)
+                        .withClasses(BootstrapClasses.carousel,Carousel.slide)
                         .with(
                                 div()
-                                        .withClasses(Carousel.carousel_indicators)
+                                        .withClasses(BootstrapClasses.carousel_indicators)
                                         .with(
                                                 button()
                                                         .withType("button")
                                                         .withData("bs-target","#carouselExampleCaptions")
                                                         .withData("bs-slide-to","0")
-                                                        .withClasses(Pagination.active)
+                                                        .withClasses(BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("true")
                                                         )
@@ -319,17 +312,17 @@ class CarouselTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Carousel.carousel_inner)
+                                        .withClasses(BootstrapClasses.carousel_inner)
                                         .with(
                                                 div()
-                                                        .withClasses(Carousel.carousel_item,Pagination.active)
+                                                        .withClasses(BootstrapClasses.carousel_item,BootstrapClasses.active)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Carousel.carousel_caption,Display.hidden_on_all,Display.d_md_block)
+                                                                        .withClasses(BootstrapClasses.carousel_caption,BootstrapClasses.d_none,BootstrapClasses.d_md_block)
                                                                         .with(
                                                                                 h5()
                                                                                         .with(
@@ -342,14 +335,14 @@ class CarouselTest {
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Carousel.carousel_caption,Display.hidden_on_all,Display.d_md_block)
+                                                                        .withClasses(BootstrapClasses.carousel_caption,BootstrapClasses.d_none,BootstrapClasses.d_md_block)
                                                                         .with(
                                                                                 h5()
                                                                                         .with(
@@ -362,14 +355,14 @@ class CarouselTest {
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Carousel.carousel_caption,Display.hidden_on_all,Display.d_md_block)
+                                                                        .withClasses(BootstrapClasses.carousel_caption,BootstrapClasses.d_none,BootstrapClasses.d_md_block)
                                                                         .with(
                                                                                 h5()
                                                                                         .with(
@@ -383,35 +376,35 @@ class CarouselTest {
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_prev)
+                                        .withClasses(BootstrapClasses.carousel_control_prev)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleCaptions")
                                         .withData("bs-slide","prev")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_prev_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_prev_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Previous")
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_next)
+                                        .withClasses(BootstrapClasses.carousel_control_next)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleCaptions")
                                         .withData("bs-slide","next")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_next_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_next_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Next")
                                                         )
@@ -495,66 +488,66 @@ class CarouselTest {
         String renderedHtml = uiDocumentation.render(
                 div()
                         .withId("carouselExampleFade")
-                        .withClasses(Carousel.carousel,Carousel.slide,Carousel.carousel_fade)
+                        .withClasses(BootstrapClasses.carousel,Carousel.slide,BootstrapClasses.carousel_fade)
                         .with(
                                 div()
-                                        .withClasses(Carousel.carousel_inner)
+                                        .withClasses(BootstrapClasses.carousel_inner)
                                         .with(
                                                 div()
-                                                        .withClasses(Carousel.carousel_item,Pagination.active)
+                                                        .withClasses(BootstrapClasses.carousel_item,BootstrapClasses.active)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_prev)
+                                        .withClasses(BootstrapClasses.carousel_control_prev)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleFade")
                                         .withData("bs-slide","prev")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_prev_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_prev_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Previous")
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_next)
+                                        .withClasses(BootstrapClasses.carousel_control_next)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleFade")
                                         .withData("bs-slide","next")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_next_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_next_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Next")
                                                         )
@@ -607,67 +600,67 @@ class CarouselTest {
         String renderedHtml = uiDocumentation.render(
                 div()
                         .withId("carouselExampleAutoplaying")
-                        .withClasses(Carousel.carousel,Carousel.slide)
+                        .withClasses(BootstrapClasses.carousel,Carousel.slide)
                         .withData("bs-ride","carousel")
                         .with(
                                 div()
-                                        .withClasses(Carousel.carousel_inner)
+                                        .withClasses(BootstrapClasses.carousel_inner)
                                         .with(
                                                 div()
-                                                        .withClasses(Carousel.carousel_item,Pagination.active)
+                                                        .withClasses(BootstrapClasses.carousel_item,BootstrapClasses.active)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_prev)
+                                        .withClasses(BootstrapClasses.carousel_control_prev)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleAutoplaying")
                                         .withData("bs-slide","prev")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_prev_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_prev_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Previous")
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_next)
+                                        .withClasses(BootstrapClasses.carousel_control_next)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleAutoplaying")
                                         .withData("bs-slide","next")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_next_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_next_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Next")
                                                         )
@@ -719,67 +712,67 @@ class CarouselTest {
         String renderedHtml = uiDocumentation.render(
                 div()
                         .withId("carouselExampleRide")
-                        .withClasses(Carousel.carousel,Carousel.slide)
+                        .withClasses(BootstrapClasses.carousel,Carousel.slide)
                         .withData("bs-ride","true")
                         .with(
                                 div()
-                                        .withClasses(Carousel.carousel_inner)
+                                        .withClasses(BootstrapClasses.carousel_inner)
                                         .with(
                                                 div()
-                                                        .withClasses(Carousel.carousel_item,Pagination.active)
+                                                        .withClasses(BootstrapClasses.carousel_item,BootstrapClasses.active)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_prev)
+                                        .withClasses(BootstrapClasses.carousel_control_prev)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleRide")
                                         .withData("bs-slide","prev")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_prev_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_prev_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Previous")
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_next)
+                                        .withClasses(BootstrapClasses.carousel_control_next)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleRide")
                                         .withData("bs-slide","next")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_next_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_next_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Next")
                                                         )
@@ -831,69 +824,69 @@ class CarouselTest {
         String renderedHtml = uiDocumentation.render(
                 div()
                         .withId("carouselExampleInterval")
-                        .withClasses(Carousel.carousel,Carousel.slide)
+                        .withClasses(BootstrapClasses.carousel,Carousel.slide)
                         .withData("bs-ride","carousel")
                         .with(
                                 div()
-                                        .withClasses(Carousel.carousel_inner)
+                                        .withClasses(BootstrapClasses.carousel_inner)
                                         .with(
                                                 div()
-                                                        .withClasses(Carousel.carousel_item,Pagination.active)
+                                                        .withClasses(BootstrapClasses.carousel_item,BootstrapClasses.active)
                                                         .withData("bs-interval","10000")
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .withData("bs-interval","2000")
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_prev)
+                                        .withClasses(BootstrapClasses.carousel_control_prev)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleInterval")
                                         .withData("bs-slide","prev")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_prev_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_prev_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Previous")
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_next)
+                                        .withClasses(BootstrapClasses.carousel_control_next)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleInterval")
                                         .withData("bs-slide","next")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_next_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_next_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Next")
                                                         )
@@ -945,34 +938,34 @@ class CarouselTest {
         String renderedHtml = uiDocumentation.render(
                 div()
                         .withId("carouselExampleSlidesOnly")
-                        .withClasses(Carousel.carousel,Carousel.slide)
+                        .withClasses(BootstrapClasses.carousel,Carousel.slide)
                         .withData("bs-ride","carousel")
                         .with(
                                 div()
-                                        .withClasses(Carousel.carousel_inner)
+                                        .withClasses(BootstrapClasses.carousel_inner)
                                         .with(
                                                 div()
-                                                        .withClasses(Carousel.carousel_item,Pagination.active)
+                                                        .withClasses(BootstrapClasses.carousel_item,BootstrapClasses.active)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         )
                                         )
@@ -1009,67 +1002,67 @@ class CarouselTest {
         String renderedHtml = uiDocumentation.render(
                 div()
                         .withId("carouselExampleControlsNoTouching")
-                        .withClasses(Carousel.carousel,Carousel.slide)
+                        .withClasses(BootstrapClasses.carousel,Carousel.slide)
                         .withData("bs-touch","false")
                         .with(
                                 div()
-                                        .withClasses(Carousel.carousel_inner)
+                                        .withClasses(BootstrapClasses.carousel_inner)
                                         .with(
                                                 div()
-                                                        .withClasses(Carousel.carousel_item,Pagination.active)
+                                                        .withClasses(BootstrapClasses.carousel_item,BootstrapClasses.active)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("...")
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_prev)
+                                        .withClasses(BootstrapClasses.carousel_control_prev)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleControlsNoTouching")
                                         .withData("bs-slide","prev")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_prev_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_prev_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Previous")
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_next)
+                                        .withClasses(BootstrapClasses.carousel_control_next)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleControlsNoTouching")
                                         .withData("bs-slide","next")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_next_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_next_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Next")
                                                         )
@@ -1121,16 +1114,16 @@ class CarouselTest {
         String renderedHtml = uiDocumentation.render(
                 div()
                         .withId("carouselExampleDark")
-                        .withClasses(Carousel.carousel,Carousel.carousel_dark,Carousel.slide)
+                        .withClasses(BootstrapClasses.carousel,BootstrapClasses.carousel_dark,Carousel.slide)
                         .with(
                                 div()
-                                        .withClasses(Carousel.carousel_indicators)
+                                        .withClasses(BootstrapClasses.carousel_indicators)
                                         .with(
                                                 button()
                                                         .withType("button")
                                                         .withData("bs-target","#carouselExampleDark")
                                                         .withData("bs-slide-to","0")
-                                                        .withClasses(Pagination.active)
+                                                        .withClasses(BootstrapClasses.active)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaCurrent("true")
                                                         )
@@ -1153,18 +1146,18 @@ class CarouselTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Carousel.carousel_inner)
+                                        .withClasses(BootstrapClasses.carousel_inner)
                                         .with(
                                                 div()
-                                                        .withClasses(Carousel.carousel_item,Pagination.active)
+                                                        .withClasses(BootstrapClasses.carousel_item,BootstrapClasses.active)
                                                         .withData("bs-interval","10000")
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Carousel.carousel_caption,Display.hidden_on_all,Display.d_md_block)
+                                                                        .withClasses(BootstrapClasses.carousel_caption,BootstrapClasses.d_none,BootstrapClasses.d_md_block)
                                                                         .with(
                                                                                 h5()
                                                                                         .with(
@@ -1177,15 +1170,15 @@ class CarouselTest {
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .withData("bs-interval","2000")
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Carousel.carousel_caption,Display.hidden_on_all,Display.d_md_block)
+                                                                        .withClasses(BootstrapClasses.carousel_caption,BootstrapClasses.d_none,BootstrapClasses.d_md_block)
                                                                         .with(
                                                                                 h5()
                                                                                         .with(
@@ -1198,14 +1191,14 @@ class CarouselTest {
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Carousel.carousel_item)
+                                                        .withClasses(BootstrapClasses.carousel_item)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Display.visible_on_all,Sizing.w_100)
+                                                                        .withClasses(BootstrapClasses.d_block,BootstrapClasses.w_100)
                                                                         .withAlt("..."),
                                                                 div()
-                                                                        .withClasses(Carousel.carousel_caption,Display.hidden_on_all,Display.d_md_block)
+                                                                        .withClasses(BootstrapClasses.carousel_caption,BootstrapClasses.d_none,BootstrapClasses.d_md_block)
                                                                         .with(
                                                                                 h5()
                                                                                         .with(
@@ -1219,35 +1212,35 @@ class CarouselTest {
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_prev)
+                                        .withClasses(BootstrapClasses.carousel_control_prev)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleDark")
                                         .withData("bs-slide","prev")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_prev_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_prev_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Previous")
                                                         )
                                         ),
                                 button()
-                                        .withClasses(Carousel.carousel_control_next)
+                                        .withClasses(BootstrapClasses.carousel_control_next)
                                         .withType("button")
                                         .withData("bs-target","#carouselExampleDark")
                                         .withData("bs-slide","next")
                                         .with(
                                                 span()
-                                                        .withClasses(Carousel.carousel_control_next_icon)
+                                                        .withClasses(BootstrapClasses.carousel_control_next_icon)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaHidden("true")
                                                         ),
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Next")
                                                         )

@@ -1,16 +1,13 @@
 package dev.rebelcraft.j2html.ext.forms;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SelectTest {
@@ -27,7 +24,7 @@ class SelectTest {
 
         String renderedHtml = uiDocumentation.render(
                 select()
-                        .withClasses(Select.form_select)
+                        .withClasses(BootstrapClasses.form_select)
                         .attr(AriaStatesAndProperties.ariaLabel("Default select example"))
                         .with(
                                 option()
@@ -84,7 +81,7 @@ class SelectTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         select()
-                                .withClasses(Select.form_select,Select.form_select_lg, Spacing.mb_3)
+                                .withClasses(BootstrapClasses.form_select,BootstrapClasses.form_select_lg, BootstrapClasses.mb_3)
                                 .attr(AriaStatesAndProperties.ariaLabel("Large select example"))
                                 .with(
                                         option()
@@ -109,7 +106,7 @@ class SelectTest {
                                                 )
                                 ),
                         select()
-                                .withClasses(Select.form_select,Select.form_select_sm)
+                                .withClasses(BootstrapClasses.form_select,BootstrapClasses.form_select_sm)
                                 .attr(AriaStatesAndProperties.ariaLabel("Small select example"))
                                 .with(
                                         option()
@@ -180,7 +177,7 @@ class SelectTest {
 
         String renderedHtml = uiDocumentation.render(
                 select()
-                        .withClasses(Select.form_select)
+                        .withClasses(BootstrapClasses.form_select)
                         .withCondMultiple(true)
                         .attr(AriaStatesAndProperties.ariaLabel("Multiple select example"))
                         .with(
@@ -237,7 +234,7 @@ class SelectTest {
 
         String renderedHtml = uiDocumentation.render(
                 select()
-                        .withClasses(Select.form_select)
+                        .withClasses(BootstrapClasses.form_select)
                         .withSize("3")
                         .attr(AriaStatesAndProperties.ariaLabel("Size 3 select example"))
                         .with(
@@ -294,7 +291,7 @@ class SelectTest {
 
         String renderedHtml = uiDocumentation.render(
                 select()
-                        .withClasses(Select.form_select)
+                        .withClasses(BootstrapClasses.form_select)
                         .attr(AriaStatesAndProperties.ariaLabel("Disabled select example"))
                         .withCondDisabled(true)
                         .with(

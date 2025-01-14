@@ -1,25 +1,13 @@
 package dev.rebelcraft.j2html.ext.forms;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.components.Buttons;
-import dev.rebelcraft.j2html.ext.helpers.VisuallyHidden;
-import dev.rebelcraft.j2html.ext.layout.Columns;
-import dev.rebelcraft.j2html.ext.layout.Grid;
-import dev.rebelcraft.j2html.ext.layout.Gutters;
-import dev.rebelcraft.j2html.ext.utilities.Flex;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
-import dev.rebelcraft.j2html.ext.utilities.Text;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LayoutTest {
@@ -37,32 +25,32 @@ class LayoutTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                       div()
-                       .withClasses(Spacing.mb_3)
+                       .withClasses(BootstrapClasses.mb_3)
                        .with(
                           label()
                            .withFor("formGroupExampleInput")
-                           .withClasses(FormControl.form_label)
+                           .withClasses(BootstrapClasses.form_label)
                            .with(
                               text("Example label")
                             ),
                           input()
                            .withType("text")
-                           .withClasses(FormControl.form_control)
+                           .withClasses(BootstrapClasses.form_control)
                            .withId("formGroupExampleInput")
                            .withPlaceholder("Example input placeholder")
                         ),
                       div()
-                       .withClasses(Spacing.mb_3)
+                       .withClasses(BootstrapClasses.mb_3)
                        .with(
                           label()
                            .withFor("formGroupExampleInput2")
-                           .withClasses(FormControl.form_label)
+                           .withClasses(BootstrapClasses.form_label)
                            .with(
                               text("Another label")
                             ),
                           input()
                            .withType("text")
-                           .withClasses(FormControl.form_control)
+                           .withClasses(BootstrapClasses.form_control)
                            .withId("formGroupExampleInput2")
                            .withPlaceholder("Another input placeholder")
                         )
@@ -97,25 +85,25 @@ class LayoutTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row)
+                        .withClasses(BootstrapClasses.row)
                         .with(
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withPlaceholder("First name")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLabel("First name")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withPlaceholder("Last name")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLabel("Last name")
@@ -148,25 +136,25 @@ class LayoutTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row, Gutters.g_3)
+                        .withClasses(BootstrapClasses.row, BootstrapClasses.g_3)
                         .with(
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withPlaceholder("First name")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLabel("First name")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col)
+                                        .withClasses(BootstrapClasses.col)
                                         .with(
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withPlaceholder("Last name")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLabel("Last name")
@@ -199,92 +187,92 @@ class LayoutTest {
 
         String renderedHtml = uiDocumentation.render(
                 form()
-                        .withClasses(Grid.row,Gutters.g_3)
+                        .withClasses(BootstrapClasses.row,BootstrapClasses.g_3)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_md_6)
+                                        .withClasses(BootstrapClasses.col_md_6)
                                         .with(
                                                 label()
                                                         .withFor("inputEmail4")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Email")
                                                         ),
                                                 input()
                                                         .withType("email")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("inputEmail4")
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_6)
+                                        .withClasses(BootstrapClasses.col_md_6)
                                         .with(
                                                 label()
                                                         .withFor("inputPassword4")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Password")
                                                         ),
                                                 input()
                                                         .withType("password")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("inputPassword4")
                                         ),
                                 div()
-                                        .withClasses(Grid.col_12)
+                                        .withClasses(BootstrapClasses.col_12)
                                         .with(
                                                 label()
                                                         .withFor("inputAddress")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Address")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("inputAddress")
                                                         .withPlaceholder("1234 Main St")
                                         ),
                                 div()
-                                        .withClasses(Grid.col_12)
+                                        .withClasses(BootstrapClasses.col_12)
                                         .with(
                                                 label()
                                                         .withFor("inputAddress2")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Address 2")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("inputAddress2")
                                                         .withPlaceholder("Apartment, studio, or floor")
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_6)
+                                        .withClasses(BootstrapClasses.col_md_6)
                                         .with(
                                                 label()
                                                         .withFor("inputCity")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("City")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("inputCity")
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_4)
+                                        .withClasses(BootstrapClasses.col_md_4)
                                         .with(
                                                 label()
                                                         .withFor("inputState")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("State")
                                                         ),
                                                 select()
                                                         .withId("inputState")
-                                                        .withClasses(Select.form_select)
+                                                        .withClasses(BootstrapClasses.form_select)
                                                         .with(
                                                                 option()
                                                                         .withCondSelected(true)
@@ -298,31 +286,31 @@ class LayoutTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_2)
+                                        .withClasses(BootstrapClasses.col_md_2)
                                         .with(
                                                 label()
                                                         .withFor("inputZip")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Zip")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("inputZip")
                                         ),
                                 div()
-                                        .withClasses(Grid.col_12)
+                                        .withClasses(BootstrapClasses.col_12)
                                         .with(
                                                 div()
-                                                        .withClasses(ChecksAndRadios.form_check)
+                                                        .withClasses(BootstrapClasses.form_check)
                                                         .with(
                                                                 input()
-                                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                                        .withClasses(BootstrapClasses.form_check_input)
                                                                         .withType("checkbox")
                                                                         .withId("gridCheck"),
                                                                 label()
-                                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                                        .withClasses(BootstrapClasses.form_check_label)
                                                                         .withFor("gridCheck")
                                                                         .with(
                                                                                 text("Check me out")
@@ -330,11 +318,11 @@ class LayoutTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_12)
+                                        .withClasses(BootstrapClasses.col_12)
                                         .with(
                                                 button()
                                                         .withType("submit")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("Sign in")
                                                         )
@@ -424,97 +412,97 @@ class LayoutTest {
                 form()
                         .with(
                                 div()
-                                        .withClasses(Grid.row,Spacing.mb_3)
+                                        .withClasses(BootstrapClasses.row,BootstrapClasses.mb_3)
                                         .with(
                                                 label()
                                                         .withFor("inputEmail3")
-                                                        .withClasses(Grid.col_sm_2,Layout.col_form_label)
+                                                        .withClasses(BootstrapClasses.col_sm_2,BootstrapClasses.col_form_label)
                                                         .with(
                                                                 text("Email")
                                                         ),
                                                 div()
-                                                        .withClasses(Grid.col_sm_10)
+                                                        .withClasses(BootstrapClasses.col_sm_10)
                                                         .with(
                                                                 input()
                                                                         .withType("email")
-                                                                        .withClasses(FormControl.form_control)
+                                                                        .withClasses(BootstrapClasses.form_control)
                                                                         .withId("inputEmail3")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.row,Spacing.mb_3)
+                                        .withClasses(BootstrapClasses.row,BootstrapClasses.mb_3)
                                         .with(
                                                 label()
                                                         .withFor("inputPassword3")
-                                                        .withClasses(Grid.col_sm_2,Layout.col_form_label)
+                                                        .withClasses(BootstrapClasses.col_sm_2,BootstrapClasses.col_form_label)
                                                         .with(
                                                                 text("Password")
                                                         ),
                                                 div()
-                                                        .withClasses(Grid.col_sm_10)
+                                                        .withClasses(BootstrapClasses.col_sm_10)
                                                         .with(
                                                                 input()
                                                                         .withType("password")
-                                                                        .withClasses(FormControl.form_control)
+                                                                        .withClasses(BootstrapClasses.form_control)
                                                                         .withId("inputPassword3")
                                                         )
                                         ),
                                 fieldset()
-                                        .withClasses(Grid.row,Spacing.mb_3)
+                                        .withClasses(BootstrapClasses.row,BootstrapClasses.mb_3)
                                         .with(
                                                 legend()
-                                                        .withClasses(Layout.col_form_label,Grid.col_sm_2,Spacing.pt_0)
+                                                        .withClasses(BootstrapClasses.col_form_label,BootstrapClasses.col_sm_2,BootstrapClasses.pt_0)
                                                         .with(
                                                                 text("Radios")
                                                         ),
                                                 div()
-                                                        .withClasses(Grid.col_sm_10)
+                                                        .withClasses(BootstrapClasses.col_sm_10)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(ChecksAndRadios.form_check)
+                                                                        .withClasses(BootstrapClasses.form_check)
                                                                         .with(
                                                                                 input()
-                                                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                                                        .withClasses(BootstrapClasses.form_check_input)
                                                                                         .withType("radio")
                                                                                         .withName("gridRadios")
                                                                                         .withId("gridRadios1")
                                                                                         .withValue("option1")
                                                                                         .withCondChecked(true),
                                                                                 label()
-                                                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                                                        .withClasses(BootstrapClasses.form_check_label)
                                                                                         .withFor("gridRadios1")
                                                                                         .with(
                                                                                                 text("First radio")
                                                                                         )
                                                                         ),
                                                                 div()
-                                                                        .withClasses(ChecksAndRadios.form_check)
+                                                                        .withClasses(BootstrapClasses.form_check)
                                                                         .with(
                                                                                 input()
-                                                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                                                        .withClasses(BootstrapClasses.form_check_input)
                                                                                         .withType("radio")
                                                                                         .withName("gridRadios")
                                                                                         .withId("gridRadios2")
                                                                                         .withValue("option2"),
                                                                                 label()
-                                                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                                                        .withClasses(BootstrapClasses.form_check_label)
                                                                                         .withFor("gridRadios2")
                                                                                         .with(
                                                                                                 text("Second radio")
                                                                                         )
                                                                         ),
                                                                 div()
-                                                                        .withClasses(ChecksAndRadios.form_check,Buttons.disabled)
+                                                                        .withClasses(BootstrapClasses.form_check,BootstrapClasses.disabled)
                                                                         .with(
                                                                                 input()
-                                                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                                                        .withClasses(BootstrapClasses.form_check_input)
                                                                                         .withType("radio")
                                                                                         .withName("gridRadios")
                                                                                         .withId("gridRadios3")
                                                                                         .withValue("option3")
                                                                                         .withCondDisabled(true),
                                                                                 label()
-                                                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                                                        .withClasses(BootstrapClasses.form_check_label)
                                                                                         .withFor("gridRadios3")
                                                                                         .with(
                                                                                                 text("Third disabled radio")
@@ -523,20 +511,20 @@ class LayoutTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.row,Spacing.mb_3)
+                                        .withClasses(BootstrapClasses.row,BootstrapClasses.mb_3)
                                         .with(
                                                 div()
-                                                        .withClasses(Grid.col_sm_10, Columns.offset_sm_2)
+                                                        .withClasses(BootstrapClasses.col_sm_10, BootstrapClasses.offset_sm_2)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(ChecksAndRadios.form_check)
+                                                                        .withClasses(BootstrapClasses.form_check)
                                                                         .with(
                                                                                 input()
-                                                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                                                        .withClasses(BootstrapClasses.form_check_input)
                                                                                         .withType("checkbox")
                                                                                         .withId("gridCheck1"),
                                                                                 label()
-                                                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                                                        .withClasses(BootstrapClasses.form_check_label)
                                                                                         .withFor("gridCheck1")
                                                                                         .with(
                                                                                                 text("Example checkbox")
@@ -546,7 +534,7 @@ class LayoutTest {
                                         ),
                                 button()
                                         .withType("submit")
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .with(
                                                 text("Sign in")
                                         )
@@ -626,58 +614,58 @@ class LayoutTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Grid.row,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.row,BootstrapClasses.mb_3)
                                 .with(
                                         label()
                                                 .withFor("colFormLabelSm")
-                                                .withClasses(Grid.col_sm_2,Layout.col_form_label,Layout.col_form_label_sm)
+                                                .withClasses(BootstrapClasses.col_sm_2,BootstrapClasses.col_form_label,BootstrapClasses.col_form_label_sm)
                                                 .with(
                                                         text("Email")
                                                 ),
                                         div()
-                                                .withClasses(Grid.col_sm_10)
+                                                .withClasses(BootstrapClasses.col_sm_10)
                                                 .with(
                                                         input()
                                                                 .withType("email")
-                                                                .withClasses(FormControl.form_control,FormControl.form_control_sm)
+                                                                .withClasses(BootstrapClasses.form_control,BootstrapClasses.form_control_sm)
                                                                 .withId("colFormLabelSm")
                                                                 .withPlaceholder("col-form-label-sm")
                                                 )
                                 ),
                         div()
-                                .withClasses(Grid.row,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.row,BootstrapClasses.mb_3)
                                 .with(
                                         label()
                                                 .withFor("colFormLabel")
-                                                .withClasses(Grid.col_sm_2,Layout.col_form_label)
+                                                .withClasses(BootstrapClasses.col_sm_2,BootstrapClasses.col_form_label)
                                                 .with(
                                                         text("Email")
                                                 ),
                                         div()
-                                                .withClasses(Grid.col_sm_10)
+                                                .withClasses(BootstrapClasses.col_sm_10)
                                                 .with(
                                                         input()
                                                                 .withType("email")
-                                                                .withClasses(FormControl.form_control)
+                                                                .withClasses(BootstrapClasses.form_control)
                                                                 .withId("colFormLabel")
                                                                 .withPlaceholder("col-form-label")
                                                 )
                                 ),
                         div()
-                                .withClasses(Grid.row)
+                                .withClasses(BootstrapClasses.row)
                                 .with(
                                         label()
                                                 .withFor("colFormLabelLg")
-                                                .withClasses(Grid.col_sm_2,Layout.col_form_label,Layout.col_form_label_lg)
+                                                .withClasses(BootstrapClasses.col_sm_2,BootstrapClasses.col_form_label,BootstrapClasses.col_form_label_lg)
                                                 .with(
                                                         text("Email")
                                                 ),
                                         div()
-                                                .withClasses(Grid.col_sm_10)
+                                                .withClasses(BootstrapClasses.col_sm_10)
                                                 .with(
                                                         input()
                                                                 .withType("email")
-                                                                .withClasses(FormControl.form_control,FormControl.form_control_lg)
+                                                                .withClasses(BootstrapClasses.form_control,BootstrapClasses.form_control_lg)
                                                                 .withId("colFormLabelLg")
                                                                 .withPlaceholder("col-form-label-lg")
                                                 )
@@ -725,36 +713,36 @@ class LayoutTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row,Gutters.g_3)
+                        .withClasses(BootstrapClasses.row,BootstrapClasses.g_3)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_sm_7)
+                                        .withClasses(BootstrapClasses.col_sm_7)
                                         .with(
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withPlaceholder("City")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLabel("City")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_sm)
+                                        .withClasses(BootstrapClasses.col_sm)
                                         .with(
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withPlaceholder("State")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLabel("State")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_sm)
+                                        .withClasses(BootstrapClasses.col_sm)
                                         .with(
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withPlaceholder("Zip")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLabel("Zip")
@@ -790,58 +778,58 @@ class LayoutTest {
 
         String renderedHtml = uiDocumentation.render(
                 form()
-                        .withClasses(Grid.row,Gutters.gy_2,Gutters.gx_3, Flex.align_items_center)
+                        .withClasses(BootstrapClasses.row,BootstrapClasses.gy_2,BootstrapClasses.gx_3, BootstrapClasses.align_items_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_auto)
+                                        .withClasses(BootstrapClasses.col_auto)
                                         .with(
                                                 label()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .withFor("autoSizingInput")
                                                         .with(
                                                                 text("Name")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("autoSizingInput")
                                                         .withPlaceholder("Jane Doe")
                                         ),
                                 div()
-                                        .withClasses(Grid.col_auto)
+                                        .withClasses(BootstrapClasses.col_auto)
                                         .with(
                                                 label()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .withFor("autoSizingInputGroup")
                                                         .with(
                                                                 text("Username")
                                                         ),
                                                 div()
-                                                        .withClasses(InputGroups.input_group)
+                                                        .withClasses(BootstrapClasses.input_group)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(InputGroups.input_group_text)
+                                                                        .withClasses(BootstrapClasses.input_group_text)
                                                                         .with(
                                                                                 text("@")
                                                                         ),
                                                                 input()
                                                                         .withType("text")
-                                                                        .withClasses(FormControl.form_control)
+                                                                        .withClasses(BootstrapClasses.form_control)
                                                                         .withId("autoSizingInputGroup")
                                                                         .withPlaceholder("Username")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_auto)
+                                        .withClasses(BootstrapClasses.col_auto)
                                         .with(
                                                 label()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .withFor("autoSizingSelect")
                                                         .with(
                                                                 text("Preference")
                                                         ),
                                                 select()
-                                                        .withClasses(Select.form_select)
+                                                        .withClasses(BootstrapClasses.form_select)
                                                         .withId("autoSizingSelect")
                                                         .with(
                                                                 option()
@@ -867,17 +855,17 @@ class LayoutTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_auto)
+                                        .withClasses(BootstrapClasses.col_auto)
                                         .with(
                                                 div()
-                                                        .withClasses(ChecksAndRadios.form_check)
+                                                        .withClasses(BootstrapClasses.form_check)
                                                         .with(
                                                                 input()
-                                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                                        .withClasses(BootstrapClasses.form_check_input)
                                                                         .withType("checkbox")
                                                                         .withId("autoSizingCheck"),
                                                                 label()
-                                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                                        .withClasses(BootstrapClasses.form_check_label)
                                                                         .withFor("autoSizingCheck")
                                                                         .with(
                                                                                 text("Remember me")
@@ -885,11 +873,11 @@ class LayoutTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_auto)
+                                        .withClasses(BootstrapClasses.col_auto)
                                         .with(
                                                 button()
                                                         .withType("submit")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("Submit")
                                                         )
@@ -964,58 +952,58 @@ class LayoutTest {
 
         String renderedHtml = uiDocumentation.render(
                 form()
-                        .withClasses(Grid.row,Gutters.gx_3,Gutters.gy_2,Flex.align_items_center)
+                        .withClasses(BootstrapClasses.row,BootstrapClasses.gx_3,BootstrapClasses.gy_2,BootstrapClasses.align_items_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_sm_3)
+                                        .withClasses(BootstrapClasses.col_sm_3)
                                         .with(
                                                 label()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .withFor("specificSizeInputName")
                                                         .with(
                                                                 text("Name")
                                                         ),
                                                 input()
                                                         .withType("text")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("specificSizeInputName")
                                                         .withPlaceholder("Jane Doe")
                                         ),
                                 div()
-                                        .withClasses(Grid.col_sm_3)
+                                        .withClasses(BootstrapClasses.col_sm_3)
                                         .with(
                                                 label()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .withFor("specificSizeInputGroupUsername")
                                                         .with(
                                                                 text("Username")
                                                         ),
                                                 div()
-                                                        .withClasses(InputGroups.input_group)
+                                                        .withClasses(BootstrapClasses.input_group)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(InputGroups.input_group_text)
+                                                                        .withClasses(BootstrapClasses.input_group_text)
                                                                         .with(
                                                                                 text("@")
                                                                         ),
                                                                 input()
                                                                         .withType("text")
-                                                                        .withClasses(FormControl.form_control)
+                                                                        .withClasses(BootstrapClasses.form_control)
                                                                         .withId("specificSizeInputGroupUsername")
                                                                         .withPlaceholder("Username")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_sm_3)
+                                        .withClasses(BootstrapClasses.col_sm_3)
                                         .with(
                                                 label()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .withFor("specificSizeSelect")
                                                         .with(
                                                                 text("Preference")
                                                         ),
                                                 select()
-                                                        .withClasses(Select.form_select)
+                                                        .withClasses(BootstrapClasses.form_select)
                                                         .withId("specificSizeSelect")
                                                         .with(
                                                                 option()
@@ -1041,17 +1029,17 @@ class LayoutTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_auto)
+                                        .withClasses(BootstrapClasses.col_auto)
                                         .with(
                                                 div()
-                                                        .withClasses(ChecksAndRadios.form_check)
+                                                        .withClasses(BootstrapClasses.form_check)
                                                         .with(
                                                                 input()
-                                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                                        .withClasses(BootstrapClasses.form_check_input)
                                                                         .withType("checkbox")
                                                                         .withId("autoSizingCheck2"),
                                                                 label()
-                                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                                        .withClasses(BootstrapClasses.form_check_label)
                                                                         .withFor("autoSizingCheck2")
                                                                         .with(
                                                                                 text("Remember me")
@@ -1059,11 +1047,11 @@ class LayoutTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_auto)
+                                        .withClasses(BootstrapClasses.col_auto)
                                         .with(
                                                 button()
                                                         .withType("submit")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("Submit")
                                                         )
@@ -1138,43 +1126,43 @@ class LayoutTest {
 
         String renderedHtml = uiDocumentation.render(
                 form()
-                        .withClasses(Grid.row,Grid.row_cols_lg_auto,Gutters.g_3,Flex.align_items_center)
+                        .withClasses(BootstrapClasses.row,BootstrapClasses.row_cols_lg_auto,BootstrapClasses.g_3,BootstrapClasses.align_items_center)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_12)
+                                        .withClasses(BootstrapClasses.col_12)
                                         .with(
                                                 label()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .withFor("inlineFormInputGroupUsername")
                                                         .with(
                                                                 text("Username")
                                                         ),
                                                 div()
-                                                        .withClasses(InputGroups.input_group)
+                                                        .withClasses(BootstrapClasses.input_group)
                                                         .with(
                                                                 div()
-                                                                        .withClasses(InputGroups.input_group_text)
+                                                                        .withClasses(BootstrapClasses.input_group_text)
                                                                         .with(
                                                                                 text("@")
                                                                         ),
                                                                 input()
                                                                         .withType("text")
-                                                                        .withClasses(FormControl.form_control)
+                                                                        .withClasses(BootstrapClasses.form_control)
                                                                         .withId("inlineFormInputGroupUsername")
                                                                         .withPlaceholder("Username")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_12)
+                                        .withClasses(BootstrapClasses.col_12)
                                         .with(
                                                 label()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .withFor("inlineFormSelectPref")
                                                         .with(
                                                                 text("Preference")
                                                         ),
                                                 select()
-                                                        .withClasses(Select.form_select)
+                                                        .withClasses(BootstrapClasses.form_select)
                                                         .withId("inlineFormSelectPref")
                                                         .with(
                                                                 option()
@@ -1200,17 +1188,17 @@ class LayoutTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_12)
+                                        .withClasses(BootstrapClasses.col_12)
                                         .with(
                                                 div()
-                                                        .withClasses(ChecksAndRadios.form_check)
+                                                        .withClasses(BootstrapClasses.form_check)
                                                         .with(
                                                                 input()
-                                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                                        .withClasses(BootstrapClasses.form_check_input)
                                                                         .withType("checkbox")
                                                                         .withId("inlineFormCheck"),
                                                                 label()
-                                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                                        .withClasses(BootstrapClasses.form_check_label)
                                                                         .withFor("inlineFormCheck")
                                                                         .with(
                                                                                 text("Remember me")
@@ -1218,11 +1206,11 @@ class LayoutTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Grid.col_12)
+                                        .withClasses(BootstrapClasses.col_12)
                                         .with(
                                                 button()
                                                         .withType("submit")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("Submit")
                                                         )

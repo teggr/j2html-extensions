@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,27 +24,27 @@ class SizingTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Sizing.w_25, Spacing.p_3)
+                                .withClasses(BootstrapClasses.w_25, BootstrapClasses.p_3)
                                 .with(
                                         text("Width 25%")
                                 ),
                         div()
-                                .withClasses(Sizing.w_50, Spacing.p_3)
+                                .withClasses(BootstrapClasses.w_50, BootstrapClasses.p_3)
                                 .with(
                                         text("Width 50%")
                                 ),
                         div()
-                                .withClasses(Sizing.w_75, Spacing.p_3)
+                                .withClasses(BootstrapClasses.w_75, BootstrapClasses.p_3)
                                 .with(
                                         text("Width 75%")
                                 ),
                         div()
-                                .withClasses(Sizing.w_100, Spacing.p_3)
+                                .withClasses(BootstrapClasses.w_100, BootstrapClasses.p_3)
                                 .with(
                                         text("Width 100%")
                                 ),
                         div()
-                                .withClasses(Sizing.w_auto, Spacing.p_3)
+                                .withClasses(BootstrapClasses.w_auto, BootstrapClasses.p_3)
                                 .with(
                                         text("Width auto")
                                 )
@@ -84,31 +85,31 @@ class SizingTest {
                         .withStyle("height: 100px;")
                         .with(
                                 div()
-                                        .withClasses(Sizing.h_25, Display.d_inline_block)
+                                        .withClasses(BootstrapClasses.h_25, BootstrapClasses.d_inline_block)
                                         .withStyle("width: 120px;")
                                         .with(
                                                 text("Height 25%")
                                         ),
                                 div()
-                                        .withClasses(Sizing.h_50, Display.d_inline_block)
+                                        .withClasses(BootstrapClasses.h_50, BootstrapClasses.d_inline_block)
                                         .withStyle("width: 120px;")
                                         .with(
                                                 text("Height 50%")
                                         ),
                                 div()
-                                        .withClasses(Sizing.h_75, Display.d_inline_block)
+                                        .withClasses(BootstrapClasses.h_75, BootstrapClasses.d_inline_block)
                                         .withStyle("width: 120px;")
                                         .with(
                                                 text("Height 75%")
                                         ),
                                 div()
-                                        .withClasses(Sizing.h_100, Display.d_inline_block)
+                                        .withClasses(BootstrapClasses.h_100, BootstrapClasses.d_inline_block)
                                         .withStyle("width: 120px;")
                                         .with(
                                                 text("Height 100%")
                                         ),
                                 div()
-                                        .withClasses(Sizing.h_auto, Display.d_inline_block)
+                                        .withClasses(BootstrapClasses.h_auto, BootstrapClasses.d_inline_block)
                                         .withStyle("width: 120px;")
                                         .with(
                                                 text("Height auto")
@@ -152,7 +153,7 @@ class SizingTest {
                         .withStyle("width: 50%; height: 100px;")
                         .with(
                                 div()
-                                        .withClasses(Sizing.mw_100)
+                                        .withClasses(BootstrapClasses.mw_100)
                                         .withStyle("width: 200%;")
                                         .with(
                                                 text("Max-width 100%")
@@ -184,7 +185,7 @@ class SizingTest {
                         .withStyle("height: 100px;")
                         .with(
                                 div()
-                                        .withClasses(Sizing.mh_100)
+                                        .withClasses(BootstrapClasses.mh_100)
                                         .withStyle("width: 100px; height: 200px;")
                                         .with(
                                                 text("Max-height 100%")
@@ -214,22 +215,22 @@ class SizingTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Sizing.min_vw_100)
+                                .withClasses(BootstrapClasses.min_vw_100)
                                 .with(
                                         text("Min-width 100vw")
                                 ),
                         div()
-                                .withClasses(Sizing.min_vh_100)
+                                .withClasses(BootstrapClasses.min_vh_100)
                                 .with(
                                         text("Min-height 100vh")
                                 ),
                         div()
-                                .withClasses(Sizing.vw_100)
+                                .withClasses(BootstrapClasses.vw_100)
                                 .with(
                                         text("Width 100vw")
                                 ),
                         div()
-                                .withClasses(Sizing.vh_100)
+                                .withClasses(BootstrapClasses.vh_100)
                                 .with(
                                         text("Height 100vh")
                                 )

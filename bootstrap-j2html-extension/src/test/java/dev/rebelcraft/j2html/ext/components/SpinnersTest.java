@@ -1,22 +1,14 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.helpers.Clearfix;
-import dev.rebelcraft.j2html.ext.helpers.VisuallyHidden;
-import dev.rebelcraft.j2html.ext.utilities.*;
-import dev.rebelcraft.j2html.ext.utilities.Float;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SpinnersTest {
@@ -33,11 +25,11 @@ class SpinnersTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-             .withClasses(Spinners.spinner_border)
+             .withClasses(BootstrapClasses.spinner_border)
              .attr(AriaRoles.roleStatus)
              .with(
                 span()
-                 .withClasses(VisuallyHidden.visually_hidden)
+                 .withClasses(BootstrapClasses.visually_hidden)
                  .with(
                     text("Loading...")
                   )
@@ -65,81 +57,81 @@ class SpinnersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Spinners.spinner_border,Colors.text_primary)
+                                .withClasses(BootstrapClasses.spinner_border,BootstrapClasses.text_primary)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_border,Colors.text_secondary)
+                                .withClasses(BootstrapClasses.spinner_border,BootstrapClasses.text_secondary)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_border,Colors.text_success)
+                                .withClasses(BootstrapClasses.spinner_border,BootstrapClasses.text_success)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_border,Colors.text_danger)
+                                .withClasses(BootstrapClasses.spinner_border,BootstrapClasses.text_danger)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_border,Colors.text_warning)
+                                .withClasses(BootstrapClasses.spinner_border,BootstrapClasses.text_warning)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_border,Colors.text_info)
+                                .withClasses(BootstrapClasses.spinner_border,BootstrapClasses.text_info)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_border,Colors.text_light)
+                                .withClasses(BootstrapClasses.spinner_border,BootstrapClasses.text_light)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_border, Colors.text_dark)
+                                .withClasses(BootstrapClasses.spinner_border, BootstrapClasses.text_dark)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
@@ -203,11 +195,11 @@ class SpinnersTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Spinners.spinner_grow)
+                        .withClasses(BootstrapClasses.spinner_grow)
                         .attr(AriaRoles.roleStatus)
                         .with(
                                 span()
-                                        .withClasses(VisuallyHidden.visually_hidden)
+                                        .withClasses(BootstrapClasses.visually_hidden)
                                         .with(
                                                 text("Loading...")
                                         )
@@ -236,81 +228,81 @@ class SpinnersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Spinners.spinner_grow,Colors.text_primary)
+                                .withClasses(BootstrapClasses.spinner_grow,BootstrapClasses.text_primary)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_grow,Colors.text_secondary)
+                                .withClasses(BootstrapClasses.spinner_grow,BootstrapClasses.text_secondary)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_grow,Colors.text_success)
+                                .withClasses(BootstrapClasses.spinner_grow,BootstrapClasses.text_success)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_grow,Colors.text_danger)
+                                .withClasses(BootstrapClasses.spinner_grow,BootstrapClasses.text_danger)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_grow,Colors.text_warning)
+                                .withClasses(BootstrapClasses.spinner_grow,BootstrapClasses.text_warning)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_grow,Colors.text_info)
+                                .withClasses(BootstrapClasses.spinner_grow,BootstrapClasses.text_info)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_grow,Colors.text_light)
+                                .withClasses(BootstrapClasses.spinner_grow,BootstrapClasses.text_light)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_grow,Colors.text_dark)
+                                .withClasses(BootstrapClasses.spinner_grow,BootstrapClasses.text_dark)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
@@ -374,11 +366,11 @@ class SpinnersTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Spinners.spinner_border, Spacing.m_5)
+                        .withClasses(BootstrapClasses.spinner_border, BootstrapClasses.m_5)
                         .attr(AriaRoles.roleStatus)
                         .with(
                                 span()
-                                        .withClasses(VisuallyHidden.visually_hidden)
+                                        .withClasses(BootstrapClasses.visually_hidden)
                                         .with(
                                                 text("Loading...")
                                         )
@@ -406,14 +398,14 @@ class SpinnersTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex,Flex.justify_content_center)
+                        .withClasses(BootstrapClasses.d_flex,BootstrapClasses.justify_content_center)
                         .with(
                                 div()
-                                        .withClasses(Spinners.spinner_border)
+                                        .withClasses(BootstrapClasses.spinner_border)
                                         .attr(AriaRoles.roleStatus)
                                         .with(
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Loading...")
                                                         )
@@ -444,7 +436,7 @@ class SpinnersTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex,Flex.align_items_center)
+                        .withClasses(BootstrapClasses.d_flex,BootstrapClasses.align_items_center)
                         .with(
                                 strong()
                                         .attr(AriaRoles.roleStatus)
@@ -452,7 +444,7 @@ class SpinnersTest {
                                                 text("Loading...")
                                         ),
                                 div()
-                                        .withClasses(Spinners.spinner_border,Spacing.ms_auto)
+                                        .withClasses(BootstrapClasses.spinner_border,BootstrapClasses.ms_auto)
                                         .attr(
                                                 AriaStatesAndProperties.ariaHidden("true")
                                         )
@@ -482,14 +474,14 @@ class SpinnersTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Clearfix.clearfix)
+                        .withClasses(BootstrapClasses.clearfix)
                         .with(
                                 div()
-                                        .withClasses(Spinners.spinner_border, Float.float_end)
+                                        .withClasses(BootstrapClasses.spinner_border, BootstrapClasses.float_end)
                                         .attr(AriaRoles.roleStatus)
                                         .with(
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Loading...")
                                                         )
@@ -520,14 +512,14 @@ class SpinnersTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Text.text_center)
+                        .withClasses(BootstrapClasses.text_center)
                         .with(
                                 div()
-                                        .withClasses(Spinners.spinner_border)
+                                        .withClasses(BootstrapClasses.spinner_border)
                                         .attr(AriaRoles.roleStatus)
                                         .with(
                                                 span()
-                                                        .withClasses(VisuallyHidden.visually_hidden)
+                                                        .withClasses(BootstrapClasses.visually_hidden)
                                                         .with(
                                                                 text("Loading...")
                                                         )
@@ -559,21 +551,21 @@ class SpinnersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Spinners.spinner_border,Spinners.spinner_border_sm)
+                                .withClasses(BootstrapClasses.spinner_border,BootstrapClasses.spinner_border_sm)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_grow,Spinners.spinner_grow_sm)
+                                .withClasses(BootstrapClasses.spinner_grow,BootstrapClasses.spinner_grow_sm)
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
@@ -608,23 +600,23 @@ class SpinnersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Spinners.spinner_border)
+                                .withClasses(BootstrapClasses.spinner_border)
                                 .withStyle("width: 3rem; height: 3rem;")
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         div()
-                                .withClasses(Spinners.spinner_grow)
+                                .withClasses(BootstrapClasses.spinner_grow)
                                 .withStyle("width: 3rem; height: 3rem;")
                                 .attr(AriaRoles.roleStatus)
                                 .with(
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .with(
                                                         text("Loading...")
                                                 )
@@ -659,29 +651,29 @@ class SpinnersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         button()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("button")
                                 .withCondDisabled(true)
                                 .with(
                                         span()
-                                                .withClasses(Spinners.spinner_border,Spinners.spinner_border_sm)
+                                                .withClasses(BootstrapClasses.spinner_border,BootstrapClasses.spinner_border_sm)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaHidden("true")
                                                 ),
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .attr(AriaRoles.roleStatus)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         button()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("button")
                                 .withCondDisabled(true)
                                 .with(
                                         span()
-                                                .withClasses(Spinners.spinner_border,Spinners.spinner_border_sm)
+                                                .withClasses(BootstrapClasses.spinner_border,BootstrapClasses.spinner_border_sm)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaHidden("true")
                                                 ),
@@ -725,29 +717,29 @@ class SpinnersTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         button()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("button")
                                 .withCondDisabled(true)
                                 .with(
                                         span()
-                                                .withClasses(Spinners.spinner_grow,Spinners.spinner_grow_sm)
+                                                .withClasses(BootstrapClasses.spinner_grow,BootstrapClasses.spinner_grow_sm)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaHidden("true")
                                                 ),
                                         span()
-                                                .withClasses(VisuallyHidden.visually_hidden)
+                                                .withClasses(BootstrapClasses.visually_hidden)
                                                 .attr(AriaRoles.roleStatus)
                                                 .with(
                                                         text("Loading...")
                                                 )
                                 ),
                         button()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("button")
                                 .withCondDisabled(true)
                                 .with(
                                         span()
-                                                .withClasses(Spinners.spinner_grow,Spinners.spinner_grow_sm)
+                                                .withClasses(BootstrapClasses.spinner_grow,BootstrapClasses.spinner_grow_sm)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaHidden("true")
                                                 ),

@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,19 +24,19 @@ class FloatTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Float.float_start)
+                                .withClasses(BootstrapClasses.float_start)
                                 .with(
                                         text("Float start on all viewport sizes")
                                 ),
                         br(),
                         div()
-                                .withClasses(Float.float_end)
+                                .withClasses(BootstrapClasses.float_end)
                                 .with(
                                         text("Float end on all viewport sizes")
                                 ),
                         br(),
                         div()
-                                .withClasses(Float.float_none)
+                                .withClasses(BootstrapClasses.float_none)
                                 .with(
                                         text("Don't float on all viewport sizes")
                                 )
@@ -70,31 +71,31 @@ class FloatTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Float.float_sm_end)
+                                .withClasses(BootstrapClasses.float_sm_end)
                                 .with(
                                         text("Float end on viewports sized SM (small) or wider")
                                 ),
                         br(),
                         div()
-                                .withClasses(Float.float_md_end)
+                                .withClasses(BootstrapClasses.float_md_end)
                                 .with(
                                         text("Float end on viewports sized MD (medium) or wider")
                                 ),
                         br(),
                         div()
-                                .withClasses(Float.float_lg_end)
+                                .withClasses(BootstrapClasses.float_lg_end)
                                 .with(
                                         text("Float end on viewports sized LG (large) or wider")
                                 ),
                         br(),
                         div()
-                                .withClasses(Float.float_xl_end)
+                                .withClasses(BootstrapClasses.float_xl_end)
                                 .with(
                                         text("Float end on viewports sized XL (extra large) or wider")
                                 ),
                         br(),
                         div()
-                                .withClasses(Float.float_xxl_end)
+                                .withClasses(BootstrapClasses.float_xxl_end)
                                 .with(
                                         text("Float end on viewports sized XXL (extra extra large) or wider")
                                 ),

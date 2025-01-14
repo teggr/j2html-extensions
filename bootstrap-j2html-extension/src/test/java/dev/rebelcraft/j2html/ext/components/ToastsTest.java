@@ -1,21 +1,15 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.forms.Select;
-import dev.rebelcraft.j2html.ext.helpers.ColorsAndBackground;
-import dev.rebelcraft.j2html.ext.utilities.*;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.comment;
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ToastsTest {
@@ -32,20 +26,20 @@ class ToastsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                 .withClasses(Toasts.toast)
+                 .withClasses(BootstrapClasses.toast)
                  .attr(AriaRoles.roleAlert)
                  .attr(AriaStatesAndProperties.ariaLive("assertive"))
                  .attr(AriaStatesAndProperties.ariaAtomic("true"))
                  .with(
                     div()
-                     .withClasses(Toasts.toast_header)
+                     .withClasses(BootstrapClasses.toast_header)
                      .with(
                         img()
                          .withSrc("...")
-                         .withClasses(Borders.rounded, Spacing.me_2)
+                         .withClasses(BootstrapClasses.rounded, BootstrapClasses.me_2)
                          .withAlt("..."),
                         strong()
-                         .withClasses(Spacing.me_auto)
+                         .withClasses(BootstrapClasses.me_auto)
                          .with(
                             text("Bootstrap")
                           ),
@@ -55,14 +49,14 @@ class ToastsTest {
                           ),
                         button()
                          .withType("button")
-                         .withClasses(CloseButton.btn_close)
+                         .withClasses(BootstrapClasses.btn_close)
                          .withData("bs-dismiss","toast")
                          .attr(
                             AriaStatesAndProperties.ariaLabel("Close")
                           )
                       ),
                     div()
-                     .withClasses(Toasts.toast_body)
+                     .withClasses(BootstrapClasses.toast_body)
                      .with(
                         text("Hello, world! This is a toast message.")
                       )
@@ -103,17 +97,17 @@ class ToastsTest {
                 each(
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withId("liveToastBtn")
                                 .with(
                                         text("Show live toast")
                                 ),
                         div()
-                                .withClasses(Toasts.toast_container, Position.position_fixed,Position.bottom_0,Position.end_0,Spacing.p_3)
+                                .withClasses(BootstrapClasses.toast_container, BootstrapClasses.position_fixed,BootstrapClasses.bottom_0,BootstrapClasses.end_0,BootstrapClasses.p_3)
                                 .with(
                                         div()
                                                 .withId("liveToast")
-                                                .withClasses(Toasts.toast)
+                                                .withClasses(BootstrapClasses.toast)
                                                 .attr(AriaRoles.roleAlert)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLive("assertive")
@@ -123,14 +117,14 @@ class ToastsTest {
                                                 )
                                                 .with(
                                                         div()
-                                                                .withClasses(Toasts.toast_header)
+                                                                .withClasses(BootstrapClasses.toast_header)
                                                                 .with(
                                                                         img()
                                                                                 .withSrc("...")
-                                                                                .withClasses(Borders.rounded,Spacing.me_2)
+                                                                                .withClasses(BootstrapClasses.rounded,BootstrapClasses.me_2)
                                                                                 .withAlt("..."),
                                                                         strong()
-                                                                                .withClasses(Spacing.me_auto)
+                                                                                .withClasses(BootstrapClasses.me_auto)
                                                                                 .with(
                                                                                         text("Bootstrap")
                                                                                 ),
@@ -140,14 +134,14 @@ class ToastsTest {
                                                                                 ),
                                                                         button()
                                                                                 .withType("button")
-                                                                                .withClasses(CloseButton.btn_close)
+                                                                                .withClasses(BootstrapClasses.btn_close)
                                                                                 .withData("bs-dismiss","toast")
                                                                                 .attr(
                                                                                         AriaStatesAndProperties.ariaLabel("Close")
                                                                                 )
                                                                 ),
                                                         div()
-                                                                .withClasses(Toasts.toast_body)
+                                                                .withClasses(BootstrapClasses.toast_body)
                                                                 .with(
                                                                         text("Hello, world! This is a toast message.")
                                                                 )
@@ -193,7 +187,7 @@ class ToastsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Toasts.toast)
+                        .withClasses(BootstrapClasses.toast)
                         .attr(AriaRoles.roleAlert)
                         .attr(
                                 AriaStatesAndProperties.ariaLive("assertive")
@@ -203,32 +197,32 @@ class ToastsTest {
                         )
                         .with(
                                 div()
-                                        .withClasses(Toasts.toast_header)
+                                        .withClasses(BootstrapClasses.toast_header)
                                         .with(
                                                 img()
                                                         .withSrc("...")
-                                                        .withClasses(Borders.rounded,Spacing.me_2)
+                                                        .withClasses(BootstrapClasses.rounded,BootstrapClasses.me_2)
                                                         .withAlt("..."),
                                                 strong()
-                                                        .withClasses(Spacing.me_auto)
+                                                        .withClasses(BootstrapClasses.me_auto)
                                                         .with(
                                                                 text("Bootstrap")
                                                         ),
                                                 small()
-                                                        .withClasses(Colors.text_body_secondary)
+                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                         .with(
                                                                 text("11 mins ago")
                                                         ),
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(CloseButton.btn_close)
+                                                        .withClasses(BootstrapClasses.btn_close)
                                                         .withData("bs-dismiss","toast")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLabel("Close")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Toasts.toast_body)
+                                        .withClasses(BootstrapClasses.toast_body)
                                         .with(
                                                 text("Hello, world! This is a toast message.")
                                         )
@@ -267,10 +261,10 @@ class ToastsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Toasts.toast_container,Position.position_static)
+                        .withClasses(BootstrapClasses.toast_container,BootstrapClasses.position_static)
                         .with(
                                 div()
-                                        .withClasses(Toasts.toast)
+                                        .withClasses(BootstrapClasses.toast)
                                         .attr(AriaRoles.roleAlert)
                                         .attr(
                                                 AriaStatesAndProperties.ariaLive("assertive")
@@ -280,38 +274,38 @@ class ToastsTest {
                                         )
                                         .with(
                                                 div()
-                                                        .withClasses(Toasts.toast_header)
+                                                        .withClasses(BootstrapClasses.toast_header)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Borders.rounded,Spacing.me_2)
+                                                                        .withClasses(BootstrapClasses.rounded,BootstrapClasses.me_2)
                                                                         .withAlt("..."),
                                                                 strong()
-                                                                        .withClasses(Spacing.me_auto)
+                                                                        .withClasses(BootstrapClasses.me_auto)
                                                                         .with(
                                                                                 text("Bootstrap")
                                                                         ),
                                                                 small()
-                                                                        .withClasses(Colors.text_body_secondary)
+                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                         .with(
                                                                                 text("just now")
                                                                         ),
                                                                 button()
                                                                         .withType("button")
-                                                                        .withClasses(CloseButton.btn_close)
+                                                                        .withClasses(BootstrapClasses.btn_close)
                                                                         .withData("bs-dismiss","toast")
                                                                         .attr(
                                                                                 AriaStatesAndProperties.ariaLabel("Close")
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Toasts.toast_body)
+                                                        .withClasses(BootstrapClasses.toast_body)
                                                         .with(
                                                                 text("See? Just like this.")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Toasts.toast)
+                                        .withClasses(BootstrapClasses.toast)
                                         .attr(AriaRoles.roleAlert)
                                         .attr(
                                                 AriaStatesAndProperties.ariaLive("assertive")
@@ -321,32 +315,32 @@ class ToastsTest {
                                         )
                                         .with(
                                                 div()
-                                                        .withClasses(Toasts.toast_header)
+                                                        .withClasses(BootstrapClasses.toast_header)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Borders.rounded,Spacing.me_2)
+                                                                        .withClasses(BootstrapClasses.rounded,BootstrapClasses.me_2)
                                                                         .withAlt("..."),
                                                                 strong()
-                                                                        .withClasses(Spacing.me_auto)
+                                                                        .withClasses(BootstrapClasses.me_auto)
                                                                         .with(
                                                                                 text("Bootstrap")
                                                                         ),
                                                                 small()
-                                                                        .withClasses(Colors.text_body_secondary)
+                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                         .with(
                                                                                 text("2 seconds ago")
                                                                         ),
                                                                 button()
                                                                         .withType("button")
-                                                                        .withClasses(CloseButton.btn_close)
+                                                                        .withClasses(BootstrapClasses.btn_close)
                                                                         .withData("bs-dismiss","toast")
                                                                         .attr(
                                                                                 AriaStatesAndProperties.ariaLabel("Close")
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Toasts.toast_body)
+                                                        .withClasses(BootstrapClasses.toast_body)
                                                         .with(
                                                                 text("Heads up, toasts will stack automatically")
                                                         )
@@ -404,7 +398,7 @@ class ToastsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Toasts.toast,Flex.align_items_center)
+                        .withClasses(BootstrapClasses.toast,BootstrapClasses.align_items_center)
                         .attr(AriaRoles.roleAlert)
                         .attr(
                                 AriaStatesAndProperties.ariaLive("assertive")
@@ -414,16 +408,16 @@ class ToastsTest {
                         )
                         .with(
                                 div()
-                                        .withClasses(Flex.d_flex)
+                                        .withClasses(BootstrapClasses.d_flex)
                                         .with(
                                                 div()
-                                                        .withClasses(Toasts.toast_body)
+                                                        .withClasses(BootstrapClasses.toast_body)
                                                         .with(
                                                                 text("Hello, world! This is a toast message.")
                                                         ),
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(CloseButton.btn_close,Spacing.me_2,Spacing.m_auto)
+                                                        .withClasses(BootstrapClasses.btn_close,BootstrapClasses.me_2,BootstrapClasses.m_auto)
                                                         .withData("bs-dismiss","toast")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLabel("Close")
@@ -457,7 +451,7 @@ class ToastsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Toasts.toast)
+                        .withClasses(BootstrapClasses.toast)
                         .attr(AriaRoles.roleAlert)
                         .attr(
                                 AriaStatesAndProperties.ariaLive("assertive")
@@ -467,21 +461,21 @@ class ToastsTest {
                         )
                         .with(
                                 div()
-                                        .withClasses(Toasts.toast_body)
+                                        .withClasses(BootstrapClasses.toast_body)
                                         .with(
                                                 text("Hello, world! This is a toast message."),
                                                 div()
-                                                        .withClasses(Spacing.mt_2,Spacing.pt_2,Borders.border_top)
+                                                        .withClasses(BootstrapClasses.mt_2,BootstrapClasses.pt_2,BootstrapClasses.border_top)
                                                         .with(
                                                                 button()
                                                                         .withType("button")
-                                                                        .withClasses(Buttons.btn,Buttons.btn_primary,Buttons.btn_sm)
+                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.btn_sm)
                                                                         .with(
                                                                                 text("Take action")
                                                                         ),
                                                                 button()
                                                                         .withType("button")
-                                                                        .withClasses(Buttons.btn,Buttons.btn_secondary,Buttons.btn_sm)
+                                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.btn_sm)
                                                                         .withData("bs-dismiss","toast")
                                                                         .with(
                                                                                 text("Close")
@@ -520,7 +514,7 @@ class ToastsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Toasts.toast,Flex.align_items_center, ColorsAndBackground.text_bg_primary,Borders.border_0)
+                        .withClasses(BootstrapClasses.toast,BootstrapClasses.align_items_center, BootstrapClasses.text_bg_primary,BootstrapClasses.border_0)
                         .attr(AriaRoles.roleAlert)
                         .attr(
                                 AriaStatesAndProperties.ariaLive("assertive")
@@ -530,16 +524,16 @@ class ToastsTest {
                         )
                         .with(
                                 div()
-                                        .withClasses(Flex.d_flex)
+                                        .withClasses(BootstrapClasses.d_flex)
                                         .with(
                                                 div()
-                                                        .withClasses(Toasts.toast_body)
+                                                        .withClasses(BootstrapClasses.toast_body)
                                                         .with(
                                                                 text("Hello, world! This is a toast message.")
                                                         ),
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(CloseButton.btn_close,CloseButton.btn_close_white,Spacing.me_2,Spacing.m_auto)
+                                                        .withClasses(BootstrapClasses.btn_close,BootstrapClasses.btn_close_white,BootstrapClasses.me_2,BootstrapClasses.m_auto)
                                                         .withData("bs-dismiss","toast")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLabel("Close")
@@ -576,7 +570,7 @@ class ToastsTest {
                         form()
                                 .with(
                                         div()
-                                                .withClasses(Spacing.mb_3)
+                                                .withClasses(BootstrapClasses.mb_3)
                                                 .with(
                                                         label()
                                                                 .withFor("selectToastPlacement")
@@ -584,14 +578,14 @@ class ToastsTest {
                                                                         text("Toast placement")
                                                                 ),
                                                         select()
-                                                                .withClasses(Select.form_select,Spacing.mt_2)
+                                                                .withClasses(BootstrapClasses.form_select,BootstrapClasses.mt_2)
                                                                 .withId("selectToastPlacement")
                                                                 .with(
                                                                         option()
                                                                                 .withValue("")
                                                                                 .withCondSelected(true)
                                                                                 .with(
-                                                                                        text("Select a position...")
+                                                                                        text("Select a BootstrapClasses...")
                                                                                 ),
                                                                         option()
                                                                                 .withValue("top-0 start-0")
@@ -648,24 +642,24 @@ class ToastsTest {
                                 .attr(
                                         AriaStatesAndProperties.ariaAtomic("true")
                                 )
-                                .withClasses(Background.bg_body_secondary,Position.position_relative,"bd-example-toasts",Borders.rounded_3)
+                                .withClasses(BootstrapClasses.bg_body_secondary,BootstrapClasses.position_relative,"bd-example-toasts",BootstrapClasses.rounded_3)
                                 .with(
                                         div()
-                                                .withClasses(Toasts.toast_container,Spacing.p_3)
+                                                .withClasses(BootstrapClasses.toast_container,BootstrapClasses.p_3)
                                                 .withId("toastPlacement")
                                                 .with(
                                                         div()
-                                                                .withClasses(Toasts.toast)
+                                                                .withClasses(BootstrapClasses.toast)
                                                                 .with(
                                                                         div()
-                                                                                .withClasses(Toasts.toast_header)
+                                                                                .withClasses(BootstrapClasses.toast_header)
                                                                                 .with(
                                                                                         img()
                                                                                                 .withSrc("...")
-                                                                                                .withClasses(Borders.rounded,Spacing.me_2)
+                                                                                                .withClasses(BootstrapClasses.rounded,BootstrapClasses.me_2)
                                                                                                 .withAlt("..."),
                                                                                         strong()
-                                                                                                .withClasses(Spacing.me_auto)
+                                                                                                .withClasses(BootstrapClasses.me_auto)
                                                                                                 .with(
                                                                                                         text("Bootstrap")
                                                                                                 ),
@@ -675,7 +669,7 @@ class ToastsTest {
                                                                                                 )
                                                                                 ),
                                                                         div()
-                                                                                .withClasses(Toasts.toast_body)
+                                                                                .withClasses(BootstrapClasses.toast_body)
                                                                                 .with(
                                                                                         text("Hello, world! This is a toast message.")
                                                                                 )
@@ -694,7 +688,7 @@ class ToastsTest {
             </label>
             <select class="form-select mt-2" id="selectToastPlacement">
               <option value="" selected>
-                Select a position...
+                Select a BootstrapClasses...
               </option>
               <option value="top-0 start-0">
                 Top left
@@ -764,18 +758,18 @@ class ToastsTest {
                         .attr(
                                 AriaStatesAndProperties.ariaAtomic("true")
                         )
-                        .withClasses(Position.position_relative)
+                        .withClasses(BootstrapClasses.position_relative)
                         .with(
                                 comment("Position it:"),
                                 comment("- `.toast-container` for spacing between toasts"),
                                 comment("- `top-0` & `end-0` to position the toasts in the upper right corner"),
                                 comment("- `.p-3` to prevent the toasts from sticking to the edge of the container "),
                                 div()
-                                        .withClasses(Toasts.toast_container,Position.top_0,Position.end_0,Spacing.p_3)
+                                        .withClasses(BootstrapClasses.toast_container,BootstrapClasses.top_0,BootstrapClasses.end_0,BootstrapClasses.p_3)
                                         .with(
                                                 comment("Then put toasts within"),
                                                 div()
-                                                        .withClasses(Toasts.toast)
+                                                        .withClasses(BootstrapClasses.toast)
                                                         .attr(AriaRoles.roleAlert)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLive("assertive")
@@ -785,38 +779,38 @@ class ToastsTest {
                                                         )
                                                         .with(
                                                                 div()
-                                                                        .withClasses(Toasts.toast_header)
+                                                                        .withClasses(BootstrapClasses.toast_header)
                                                                         .with(
                                                                                 img()
                                                                                         .withSrc("...")
-                                                                                        .withClasses(Borders.rounded,Spacing.me_2)
+                                                                                        .withClasses(BootstrapClasses.rounded,BootstrapClasses.me_2)
                                                                                         .withAlt("..."),
                                                                                 strong()
-                                                                                        .withClasses(Spacing.me_auto)
+                                                                                        .withClasses(BootstrapClasses.me_auto)
                                                                                         .with(
                                                                                                 text("Bootstrap")
                                                                                         ),
                                                                                 small()
-                                                                                        .withClasses(Colors.text_body_secondary)
+                                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                                         .with(
                                                                                                 text("just now")
                                                                                         ),
                                                                                 button()
                                                                                         .withType("button")
-                                                                                        .withClasses(CloseButton.btn_close)
+                                                                                        .withClasses(BootstrapClasses.btn_close)
                                                                                         .withData("bs-dismiss","toast")
                                                                                         .attr(
                                                                                                 AriaStatesAndProperties.ariaLabel("Close")
                                                                                         )
                                                                         ),
                                                                 div()
-                                                                        .withClasses(Toasts.toast_body)
+                                                                        .withClasses(BootstrapClasses.toast_body)
                                                                         .with(
                                                                                 text("See? Just like this.")
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Toasts.toast)
+                                                        .withClasses(BootstrapClasses.toast)
                                                         .attr(AriaRoles.roleAlert)
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLive("assertive")
@@ -826,32 +820,32 @@ class ToastsTest {
                                                         )
                                                         .with(
                                                                 div()
-                                                                        .withClasses(Toasts.toast_header)
+                                                                        .withClasses(BootstrapClasses.toast_header)
                                                                         .with(
                                                                                 img()
                                                                                         .withSrc("...")
-                                                                                        .withClasses(Borders.rounded,Spacing.me_2)
+                                                                                        .withClasses(BootstrapClasses.rounded,BootstrapClasses.me_2)
                                                                                         .withAlt("..."),
                                                                                 strong()
-                                                                                        .withClasses(Spacing.me_auto)
+                                                                                        .withClasses(BootstrapClasses.me_auto)
                                                                                         .with(
                                                                                                 text("Bootstrap")
                                                                                         ),
                                                                                 small()
-                                                                                        .withClasses(Colors.text_body_secondary)
+                                                                                        .withClasses(BootstrapClasses.text_body_secondary)
                                                                                         .with(
                                                                                                 text("2 seconds ago")
                                                                                         ),
                                                                                 button()
                                                                                         .withType("button")
-                                                                                        .withClasses(CloseButton.btn_close)
+                                                                                        .withClasses(BootstrapClasses.btn_close)
                                                                                         .withData("bs-dismiss","toast")
                                                                                         .attr(
                                                                                                 AriaStatesAndProperties.ariaLabel("Close")
                                                                                         )
                                                                         ),
                                                                 div()
-                                                                        .withClasses(Toasts.toast_body)
+                                                                        .withClasses(BootstrapClasses.toast_body)
                                                                         .with(
                                                                                 text("Heads up, toasts will stack automatically")
                                                                         )
@@ -923,11 +917,11 @@ class ToastsTest {
                         .attr(
                                 AriaStatesAndProperties.ariaAtomic("true")
                         )
-                        .withClasses(Flex.d_flex,Flex.justify_content_center,Flex.align_items_center,Sizing.w_100)
+                        .withClasses(BootstrapClasses.d_flex,BootstrapClasses.justify_content_center,BootstrapClasses.align_items_center,BootstrapClasses.w_100)
                         .with(
                                 comment("Then put toasts within"),
                                 div()
-                                        .withClasses(Toasts.toast)
+                                        .withClasses(BootstrapClasses.toast)
                                         .attr(AriaRoles.roleAlert)
                                         .attr(
                                                 AriaStatesAndProperties.ariaLive("assertive")
@@ -937,14 +931,14 @@ class ToastsTest {
                                         )
                                         .with(
                                                 div()
-                                                        .withClasses(Toasts.toast_header)
+                                                        .withClasses(BootstrapClasses.toast_header)
                                                         .with(
                                                                 img()
                                                                         .withSrc("...")
-                                                                        .withClasses(Borders.rounded,Spacing.me_2)
+                                                                        .withClasses(BootstrapClasses.rounded,BootstrapClasses.me_2)
                                                                         .withAlt("..."),
                                                                 strong()
-                                                                        .withClasses(Spacing.me_auto)
+                                                                        .withClasses(BootstrapClasses.me_auto)
                                                                         .with(
                                                                                 text("Bootstrap")
                                                                         ),
@@ -954,14 +948,14 @@ class ToastsTest {
                                                                         ),
                                                                 button()
                                                                         .withType("button")
-                                                                        .withClasses(CloseButton.btn_close)
+                                                                        .withClasses(BootstrapClasses.btn_close)
                                                                         .withData("bs-dismiss","toast")
                                                                         .attr(
                                                                                 AriaStatesAndProperties.ariaLabel("Close")
                                                                         )
                                                         ),
                                                 div()
-                                                        .withClasses(Toasts.toast_body)
+                                                        .withClasses(BootstrapClasses.toast_body)
                                                         .with(
                                                                 text("Hello, world! This is a toast message.")
                                                         )
@@ -1004,7 +998,7 @@ class ToastsTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Toasts.toast)
+                        .withClasses(BootstrapClasses.toast)
                         .attr(AriaRoles.roleAlert)
                         .attr(
                                 AriaStatesAndProperties.ariaLive("polite")
@@ -1056,18 +1050,18 @@ class ToastsTest {
                         .attr(
                                 AriaStatesAndProperties.ariaAtomic("true")
                         )
-                        .withClasses(Toasts.toast)
+                        .withClasses(BootstrapClasses.toast)
                         .withData("bs-autohide","false")
                         .with(
                                 div()
-                                        .withClasses(Toasts.toast_header)
+                                        .withClasses(BootstrapClasses.toast_header)
                                         .with(
                                                 img()
                                                         .withSrc("...")
-                                                        .withClasses(Borders.rounded,Spacing.me_2)
+                                                        .withClasses(BootstrapClasses.rounded,BootstrapClasses.me_2)
                                                         .withAlt("..."),
                                                 strong()
-                                                        .withClasses(Spacing.me_auto)
+                                                        .withClasses(BootstrapClasses.me_auto)
                                                         .with(
                                                                 text("Bootstrap")
                                                         ),
@@ -1077,14 +1071,14 @@ class ToastsTest {
                                                         ),
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(CloseButton.btn_close)
+                                                        .withClasses(BootstrapClasses.btn_close)
                                                         .withData("bs-dismiss","toast")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLabel("Close")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Toasts.toast_body)
+                                        .withClasses(BootstrapClasses.toast_body)
                                         .with(
                                                 text("Hello, world! This is a toast message.")
                                         )

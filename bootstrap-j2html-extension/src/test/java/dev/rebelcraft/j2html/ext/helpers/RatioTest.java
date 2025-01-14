@@ -1,16 +1,12 @@
 package dev.rebelcraft.j2html.ext.helpers;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RatioTest {
@@ -27,7 +23,7 @@ class RatioTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                    .withClasses(Ratio.ratio,Ratio.ratio_16x9)
+                    .withClasses(BootstrapClasses.ratio, BootstrapClasses.ratio_16x9)
                      .with(
                         iframe()
                          .withSrc("https://www.youtube.com/embed/zpOULjyy-n8?rel=0")
@@ -57,7 +53,7 @@ class RatioTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Ratio.ratio,Ratio.ratio_1x1)
+                                .withClasses(BootstrapClasses.ratio,BootstrapClasses.ratio_1x1)
                                 .with(
                                         div()
                                                 .with(
@@ -65,7 +61,7 @@ class RatioTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(Ratio.ratio,Ratio.ratio_4x3)
+                                .withClasses(BootstrapClasses.ratio,BootstrapClasses.ratio_4x3)
                                 .with(
                                         div()
                                                 .with(
@@ -73,7 +69,7 @@ class RatioTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(Ratio.ratio,Ratio.ratio_16x9)
+                                .withClasses(BootstrapClasses.ratio,BootstrapClasses.ratio_16x9)
                                 .with(
                                         div()
                                                 .with(
@@ -81,7 +77,7 @@ class RatioTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(Ratio.ratio,Ratio.ratio_21x9)
+                                .withClasses(BootstrapClasses.ratio,BootstrapClasses.ratio_21x9)
                                 .with(
                                         div()
                                                 .with(
@@ -127,7 +123,7 @@ class RatioTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Ratio.ratio)
+                        .withClasses(BootstrapClasses.ratio)
                         .withStyle("--bs-aspect-ratio: 50%;")
                         .with(
                                 div()
@@ -158,7 +154,7 @@ class RatioTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Ratio.ratio,Ratio.ratio_4x3)
+                        .withClasses(BootstrapClasses.ratio,BootstrapClasses.ratio_4x3)
                         .with(
                                 div()
                                         .with(

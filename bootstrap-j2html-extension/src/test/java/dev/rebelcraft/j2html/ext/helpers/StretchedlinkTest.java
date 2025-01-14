@@ -1,22 +1,12 @@
 package dev.rebelcraft.j2html.ext.helpers;
 
-import dev.rebelcraft.j2html.ext.components.Buttons;
-import dev.rebelcraft.j2html.ext.components.Card;
-import dev.rebelcraft.j2html.ext.layout.Grid;
-import dev.rebelcraft.j2html.ext.layout.Gutters;
-import dev.rebelcraft.j2html.ext.utilities.*;
-import dev.rebelcraft.j2html.ext.utilities.Position;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class StretchedlinkTest {
@@ -33,29 +23,29 @@ class StretchedlinkTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-             .withClasses(Card.card)
+             .withClasses(BootstrapClasses.card)
              .withStyle("width: 18rem;")
              .with(
                 img()
                  .withSrc("...")
-                 .withClasses(Card.card_img_top)
+                 .withClasses(BootstrapClasses.card_img_top)
                  .withAlt("..."),
                 div()
-                 .withClasses(Card.card_body)
+                 .withClasses(BootstrapClasses.card_body)
                  .with(
                     h5()
-                     .withClasses(Card.card_title)
+                     .withClasses(BootstrapClasses.card_title)
                      .with(
                         text("Card with stretched link")
                       ),
                     p()
-                     .withClasses(Card.card_text)
+                     .withClasses(BootstrapClasses.card_text)
                      .with(
                         text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                       ),
                     a()
                      .withHref("#")
-                     .withClasses(Buttons.btn, Buttons.btn_primary,StretchedLink.stretched_link)
+                     .withClasses(BootstrapClasses.btn, BootstrapClasses.btn_primary,BootstrapClasses.stretched_link)
                      .with(
                         text("Go somewhere")
                       )
@@ -93,16 +83,16 @@ class StretchedlinkTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Flex.d_flex, Position.position_relative)
+                        .withClasses(BootstrapClasses.d_flex, BootstrapClasses.position_relative)
                         .with(
                                 img()
                                         .withSrc("...")
-                                        .withClasses(Flex.flex_shrink_0,Spacing.me_3)
+                                        .withClasses(BootstrapClasses.flex_shrink_0,BootstrapClasses.me_3)
                                         .withAlt("..."),
                                 div()
                                         .with(
                                                 h5()
-                                                        .withClasses(Spacing.mt_0)
+                                                        .withClasses(BootstrapClasses.mt_0)
                                                         .with(
                                                                 text("Custom component with stretched link")
                                                         ),
@@ -112,7 +102,7 @@ class StretchedlinkTest {
                                                         ),
                                                 a()
                                                         .withHref("#")
-                                                        .withClasses(StretchedLink.stretched_link)
+                                                        .withClasses(BootstrapClasses.stretched_link)
                                                         .with(
                                                                 text("Go somewhere")
                                                         )
@@ -150,21 +140,21 @@ class StretchedlinkTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Grid.row, Gutters.g_0, Background.bg_body_secondary,Position.position_relative)
+                        .withClasses(BootstrapClasses.row, BootstrapClasses.g_0, BootstrapClasses.bg_body_secondary,BootstrapClasses.position_relative)
                         .with(
                                 div()
-                                        .withClasses(Grid.col_md_6,Spacing.mb_md_0,Spacing.p_md_4)
+                                        .withClasses(BootstrapClasses.col_md_6,BootstrapClasses.mb_md_0,BootstrapClasses.p_md_4)
                                         .with(
                                                 img()
                                                         .withSrc("...")
-                                                        .withClasses(Sizing.w_100)
+                                                        .withClasses(BootstrapClasses.w_100)
                                                         .withAlt("...")
                                         ),
                                 div()
-                                        .withClasses(Grid.col_md_6,Spacing.p_4,Spacing.ps_md_0)
+                                        .withClasses(BootstrapClasses.col_md_6,BootstrapClasses.p_4,BootstrapClasses.ps_md_0)
                                         .with(
                                                 h5()
-                                                        .withClasses(Spacing.mt_0)
+                                                        .withClasses(BootstrapClasses.mt_0)
                                                         .with(
                                                                 text("Columns with stretched link")
                                                         ),
@@ -174,7 +164,7 @@ class StretchedlinkTest {
                                                         ),
                                                 a()
                                                         .withHref("#")
-                                                        .withClasses(StretchedLink.stretched_link)
+                                                        .withClasses(BootstrapClasses.stretched_link)
                                                         .with(
                                                                 text("Go somewhere")
                                                         )
@@ -214,32 +204,32 @@ class StretchedlinkTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Card.card)
+                        .withClasses(BootstrapClasses.card)
                         .withStyle("width: 18rem;")
                         .with(
                                 img()
                                         .withSrc("...")
-                                        .withClasses(Card.card_img_top)
+                                        .withClasses(BootstrapClasses.card_img_top)
                                         .withAlt("..."),
                                 div()
-                                        .withClasses(Card.card_body)
+                                        .withClasses(BootstrapClasses.card_body)
                                         .with(
                                                 h5()
-                                                        .withClasses(Card.card_title)
+                                                        .withClasses(BootstrapClasses.card_title)
                                                         .with(
                                                                 text("Card with stretched links")
                                                         ),
                                                 p()
-                                                        .withClasses(Card.card_text)
+                                                        .withClasses(BootstrapClasses.card_text)
                                                         .with(
                                                                 text("Some quick example text to build on the card title and make up the bulk of the card's content.")
                                                         ),
                                                 p()
-                                                        .withClasses(Card.card_text)
+                                                        .withClasses(BootstrapClasses.card_text)
                                                         .with(
                                                                 a()
                                                                         .withHref("#")
-                                                                        .withClasses(StretchedLink.stretched_link,Colors.text_danger)
+                                                                        .withClasses(BootstrapClasses.stretched_link,BootstrapClasses.text_danger)
                                                                         .withStyle("position: relative;")
                                                                         .with(
                                                                                 text("Stretched link will not work here, because"),
@@ -251,13 +241,13 @@ class StretchedlinkTest {
                                                                         )
                                                         ),
                                                 p()
-                                                        .withClasses(Card.card_text,Background.bg_body_tertiary)
+                                                        .withClasses(BootstrapClasses.card_text,BootstrapClasses.bg_body_tertiary)
                                                         .withStyle("transform: rotate(0);")
                                                         .with(
                                                                 text("This"),
                                                                 a()
                                                                         .withHref("#")
-                                                                        .withClasses(Colors.text_warning,StretchedLink.stretched_link)
+                                                                        .withClasses(BootstrapClasses.text_warning, BootstrapClasses.stretched_link)
                                                                         .with(
                                                                                 text("stretched link")
                                                                         ),

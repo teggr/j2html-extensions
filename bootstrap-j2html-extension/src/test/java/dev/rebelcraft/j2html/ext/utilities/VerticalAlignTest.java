@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,32 +24,32 @@ class VerticalAlignTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         span()
-                                .withClasses(VerticalAlign.align_baseline)
+                                .withClasses(BootstrapClasses.align_baseline)
                                 .with(
                                         text("baseline")
                                 ),
                         span()
-                                .withClasses(VerticalAlign.align_top)
+                                .withClasses(BootstrapClasses.align_top)
                                 .with(
                                         text("top")
                                 ),
                         span()
-                                .withClasses(VerticalAlign.align_middle)
+                                .withClasses(BootstrapClasses.align_middle)
                                 .with(
                                         text("middle")
                                 ),
                         span()
-                                .withClasses(VerticalAlign.align_bottom)
+                                .withClasses(BootstrapClasses.align_bottom)
                                 .with(
                                         text("bottom")
                                 ),
                         span()
-                                .withClasses(VerticalAlign.align_text_top)
+                                .withClasses(BootstrapClasses.align_text_top)
                                 .with(
                                         text("text-top")
                                 ),
                         span()
-                                .withClasses(VerticalAlign.align_text_bottom)
+                                .withClasses(BootstrapClasses.align_text_bottom)
                                 .with(
                                         text("text-bottom")
                                 )
@@ -96,32 +97,32 @@ class VerticalAlignTest {
                                                 tr()
                                                         .with(
                                                                 td()
-                                                                        .withClasses(VerticalAlign.align_baseline)
+                                                                        .withClasses(BootstrapClasses.align_baseline)
                                                                         .with(
                                                                                 text("baseline")
                                                                         ),
                                                                 td()
-                                                                        .withClasses(VerticalAlign.align_top)
+                                                                        .withClasses(BootstrapClasses.align_top)
                                                                         .with(
                                                                                 text("top")
                                                                         ),
                                                                 td()
-                                                                        .withClasses(VerticalAlign.align_middle)
+                                                                        .withClasses(BootstrapClasses.align_middle)
                                                                         .with(
                                                                                 text("middle")
                                                                         ),
                                                                 td()
-                                                                        .withClasses(VerticalAlign.align_bottom)
+                                                                        .withClasses(BootstrapClasses.align_bottom)
                                                                         .with(
                                                                                 text("bottom")
                                                                         ),
                                                                 td()
-                                                                        .withClasses(VerticalAlign.align_text_top)
+                                                                        .withClasses(BootstrapClasses.align_text_top)
                                                                         .with(
                                                                                 text("text-top")
                                                                         ),
                                                                 td()
-                                                                        .withClasses(VerticalAlign.align_text_bottom)
+                                                                        .withClasses(BootstrapClasses.align_text_bottom)
                                                                         .with(
                                                                                 text("text-bottom")
                                                                         )

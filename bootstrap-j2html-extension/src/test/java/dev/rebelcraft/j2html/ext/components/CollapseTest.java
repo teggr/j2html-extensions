@@ -1,21 +1,14 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.layout.Grid;
-import dev.rebelcraft.j2html.ext.utilities.Flex;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CollapseTest {
@@ -33,10 +26,10 @@ class CollapseTest {
         String renderedHtml = uiDocumentation.render(
                 each(
               p()
-               .withClasses(Flex.d_inline_flex, Spacing.gap_1)
+               .withClasses(BootstrapClasses.d_inline_flex, BootstrapClasses.gap_1)
                .with(
                   a()
-                   .withClasses(Buttons.btn,Buttons.btn_primary)
+                   .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                    .withData("bs-toggle","collapse")
                    .withHref("#collapseExample")
                    .attr(AriaRoles.roleButton)
@@ -50,7 +43,7 @@ class CollapseTest {
                       text("Link with href")
                     ),
                   button()
-                   .withClasses(Buttons.btn,Buttons.btn_primary)
+                   .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                    .withType("button")
                    .withData("bs-toggle","collapse")
                    .withData("bs-target","#collapseExample")
@@ -65,11 +58,11 @@ class CollapseTest {
                     )
                 ),
               div()
-               .withClasses(Collapse.collapse)
+               .withClasses(BootstrapClasses.collapse)
                .withId("collapseExample")
                .with(
                   div()
-                   .withClasses(Card.card,Card.card_body)
+                   .withClasses(BootstrapClasses.card,BootstrapClasses.card_body)
                    .with(
                       text("Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.")
                     )
@@ -109,7 +102,7 @@ class CollapseTest {
                         p()
                                 .with(
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                 .withType("button")
                                                 .withData("bs-toggle","collapse")
                                                 .withData("bs-target","#collapseWidthExample")
@@ -127,14 +120,14 @@ class CollapseTest {
                                 .withStyle("min-height: 120px;")
                                 .with(
                                         div()
-                                                .withClasses(Collapse.collapse,Collapse.collapse_horizontal)
+                                                .withClasses(BootstrapClasses.collapse,BootstrapClasses.collapse_horizontal)
                                                 .withId("collapseWidthExample")
                                                 .with(
                                                         div()
-                                                                .withClasses(Card.card,Card.card_body)
+                                                                .withClasses(BootstrapClasses.card,BootstrapClasses.card_body)
                                                                 .withStyle("width: 300px;")
                                                                 .with(
-                                                                        text("This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.")
+                                                                        text("This is some placeholder content for a horizontal BootstrapClasses. It's hidden by default and shown when triggered.")
                                                                 )
                                                 )
                                 )
@@ -151,7 +144,7 @@ class CollapseTest {
                 <div style="min-height: 120px;">
                   <div class="collapse collapse-horizontal" id="collapseWidthExample">
                     <div class="card card-body" style="width: 300px;">
-                      This is some placeholder content for a horizontal collapse. It&#x27;s hidden by default and shown when triggered.
+                      This is some placeholder content for a horizontal BootstrapClasses. It&#x27;s hidden by default and shown when triggered.
                     </div>
                   </div>
                 </div>
@@ -170,10 +163,10 @@ class CollapseTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         p()
-                                .withClasses(Flex.d_inline_flex,Spacing.gap_1)
+                                .withClasses(BootstrapClasses.d_inline_flex,BootstrapClasses.gap_1)
                                 .with(
                                         a()
-                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                 .withData("bs-toggle","collapse")
                                                 .withHref("#multiCollapseExample1")
                                                 .attr(AriaRoles.roleButton)
@@ -187,7 +180,7 @@ class CollapseTest {
                                                         text("Toggle first element")
                                                 ),
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                 .withType("button")
                                                 .withData("bs-toggle","collapse")
                                                 .withData("bs-target","#multiCollapseExample2")
@@ -201,7 +194,7 @@ class CollapseTest {
                                                         text("Toggle second element")
                                                 ),
                                         button()
-                                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                 .withType("button")
                                                 .withData("bs-toggle","collapse")
                                                 .withData("bs-target",".multi-collapse")
@@ -216,31 +209,31 @@ class CollapseTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(Grid.row)
+                                .withClasses(BootstrapClasses.row)
                                 .with(
                                         div()
-                                                .withClasses(Grid.col)
+                                                .withClasses(BootstrapClasses.col)
                                                 .with(
                                                         div()
-                                                                .withClasses(Collapse.collapse,Collapse.multi_collapse)
+                                                                .withClasses(BootstrapClasses.collapse,Collapse.multi_collapse)
                                                                 .withId("multiCollapseExample1")
                                                                 .with(
                                                                         div()
-                                                                                .withClasses(Card.card,Card.card_body)
+                                                                                .withClasses(BootstrapClasses.card,BootstrapClasses.card_body)
                                                                                 .with(
                                                                                         text("Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.")
                                                                                 )
                                                                 )
                                                 ),
                                         div()
-                                                .withClasses(Grid.col)
+                                                .withClasses(BootstrapClasses.col)
                                                 .with(
                                                         div()
-                                                                .withClasses(Collapse.collapse,Collapse.multi_collapse)
+                                                                .withClasses(BootstrapClasses.collapse,Collapse.multi_collapse)
                                                                 .withId("multiCollapseExample2")
                                                                 .with(
                                                                         div()
-                                                                                .withClasses(Card.card,Card.card_body)
+                                                                                .withClasses(BootstrapClasses.card,BootstrapClasses.card_body)
                                                                                 .with(
                                                                                         text("Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.")
                                                                                 )

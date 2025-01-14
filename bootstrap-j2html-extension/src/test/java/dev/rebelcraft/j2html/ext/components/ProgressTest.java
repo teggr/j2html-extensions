@@ -1,23 +1,14 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.helpers.ColorsAndBackground;
-import dev.rebelcraft.j2html.ext.utilities.Background;
-import dev.rebelcraft.j2html.ext.utilities.Colors;
-import dev.rebelcraft.j2html.ext.utilities.Overflow;
-import dev.rebelcraft.j2html.ext.utilities.Sizing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ProgressTest {
@@ -35,7 +26,7 @@ class ProgressTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Basic example")
@@ -51,11 +42,11 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar)
+                                                .withClasses(BootstrapClasses.progress_bar)
                                                 .withStyle("width: 0%")
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Basic example")
@@ -71,11 +62,11 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar)
+                                                .withClasses(BootstrapClasses.progress_bar)
                                                 .withStyle("width: 25%")
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Basic example")
@@ -91,11 +82,11 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar)
+                                                .withClasses(BootstrapClasses.progress_bar)
                                                 .withStyle("width: 50%")
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Basic example")
@@ -111,11 +102,11 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar)
+                                                .withClasses(BootstrapClasses.progress_bar)
                                                 .withStyle("width: 75%")
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Basic example")
@@ -131,7 +122,7 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar)
+                                                .withClasses(BootstrapClasses.progress_bar)
                                                 .withStyle("width: 100%")
                                 )
                 )
@@ -173,7 +164,7 @@ class ProgressTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Progress.progress)
+                        .withClasses(BootstrapClasses.progress)
                         .attr(AriaRoles.roleProgressbar)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Basic example")
@@ -189,7 +180,7 @@ class ProgressTest {
                         )
                         .with(
                                 div()
-                                        .withClasses(Progress.progress_bar, Sizing.w_75)
+                                        .withClasses(BootstrapClasses.progress_bar, BootstrapClasses.w_75)
                         )
         );
 
@@ -214,7 +205,7 @@ class ProgressTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Example 1px high")
@@ -231,11 +222,11 @@ class ProgressTest {
                                 .withStyle("height: 1px")
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar)
+                                                .withClasses(BootstrapClasses.progress_bar)
                                                 .withStyle("width: 25%")
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Example 20px high")
@@ -252,7 +243,7 @@ class ProgressTest {
                                 .withStyle("height: 20px")
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar)
+                                                .withClasses(BootstrapClasses.progress_bar)
                                                 .withStyle("width: 25%")
                                 )
                 )
@@ -282,7 +273,7 @@ class ProgressTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Progress.progress)
+                        .withClasses(BootstrapClasses.progress)
                         .attr(AriaRoles.roleProgressbar)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Example with label")
@@ -298,7 +289,7 @@ class ProgressTest {
                         )
                         .with(
                                 div()
-                                        .withClasses(Progress.progress_bar)
+                                        .withClasses(BootstrapClasses.progress_bar)
                                         .withStyle("width: 25%")
                                         .with(
                                                 text("25%")
@@ -327,7 +318,7 @@ class ProgressTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Progress.progress)
+                        .withClasses(BootstrapClasses.progress)
                         .attr(AriaRoles.roleProgressbar)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Example with label")
@@ -343,7 +334,7 @@ class ProgressTest {
                         )
                         .with(
                                 div()
-                                        .withClasses(Progress.progress_bar, Overflow.overflow_visible, Colors.text_dark)
+                                        .withClasses(BootstrapClasses.progress_bar, BootstrapClasses.overflow_visible, BootstrapClasses.text_dark)
                                         .withStyle("width: 10%")
                                         .with(
                                                 text("Long label text for the progress bar, set to a dark color")
@@ -373,7 +364,7 @@ class ProgressTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Success example")
@@ -389,11 +380,11 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar,Background.bg_success)
+                                                .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.bg_success)
                                                 .withStyle("width: 25%")
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Info example")
@@ -409,11 +400,11 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar,Background.bg_info)
+                                                .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.bg_info)
                                                 .withStyle("width: 50%")
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Warning example")
@@ -429,11 +420,11 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar,Background.bg_warning)
+                                                .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.bg_warning)
                                                 .withStyle("width: 75%")
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Danger example")
@@ -449,7 +440,7 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar, Background.bg_danger)
+                                                .withClasses(BootstrapClasses.progress_bar, BootstrapClasses.bg_danger)
                                                 .withStyle("width: 100%")
                                 )
                 )
@@ -488,7 +479,7 @@ class ProgressTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Success example")
@@ -504,14 +495,14 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar,Background.bg_success)
+                                                .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.bg_success)
                                                 .withStyle("width: 25%")
                                                 .with(
                                                         text("25%")
                                                 )
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Info example")
@@ -527,14 +518,14 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar,Background.bg_info,Colors.text_dark)
+                                                .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.bg_info,BootstrapClasses.text_dark)
                                                 .withStyle("width: 50%")
                                                 .with(
                                                         text("50%")
                                                 )
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Warning example")
@@ -550,14 +541,14 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar,Background.bg_warning,Colors.text_dark)
+                                                .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.bg_warning,BootstrapClasses.text_dark)
                                                 .withStyle("width: 75%")
                                                 .with(
                                                         text("75%")
                                                 )
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Danger example")
@@ -573,7 +564,7 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar,Background.bg_danger)
+                                                .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.bg_danger)
                                                 .withStyle("width: 100%")
                                                 .with(
                                                         text("100%")
@@ -618,7 +609,7 @@ class ProgressTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Progress.progress)
+                        .withClasses(BootstrapClasses.progress)
                         .attr(AriaRoles.roleProgressbar)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Warning example")
@@ -634,7 +625,7 @@ class ProgressTest {
                         )
                         .with(
                                 div()
-                                        .withClasses(Progress.progress_bar, ColorsAndBackground.text_bg_warning)
+                                        .withClasses(BootstrapClasses.progress_bar, BootstrapClasses.text_bg_warning)
                                         .withStyle("width: 75%")
                                         .with(
                                                 text("75%")
@@ -663,10 +654,10 @@ class ProgressTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Progress.progress_stacked)
+                        .withClasses(BootstrapClasses.progress_stacked)
                         .with(
                                 div()
-                                        .withClasses(Progress.progress)
+                                        .withClasses(BootstrapClasses.progress)
                                         .attr(AriaRoles.roleProgressbar)
                                         .attr(
                                                 AriaStatesAndProperties.ariaLabel("Segment one")
@@ -683,10 +674,10 @@ class ProgressTest {
                                         .withStyle("width: 15%")
                                         .with(
                                                 div()
-                                                        .withClasses(Progress.progress_bar)
+                                                        .withClasses(BootstrapClasses.progress_bar)
                                         ),
                                 div()
-                                        .withClasses(Progress.progress)
+                                        .withClasses(BootstrapClasses.progress)
                                         .attr(AriaRoles.roleProgressbar)
                                         .attr(
                                                 AriaStatesAndProperties.ariaLabel("Segment two")
@@ -703,10 +694,10 @@ class ProgressTest {
                                         .withStyle("width: 30%")
                                         .with(
                                                 div()
-                                                        .withClasses(Progress.progress_bar,Background.bg_success)
+                                                        .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.bg_success)
                                         ),
                                 div()
-                                        .withClasses(Progress.progress)
+                                        .withClasses(BootstrapClasses.progress)
                                         .attr(AriaRoles.roleProgressbar)
                                         .attr(
                                                 AriaStatesAndProperties.ariaLabel("Segment three")
@@ -723,7 +714,7 @@ class ProgressTest {
                                         .withStyle("width: 20%")
                                         .with(
                                                 div()
-                                                        .withClasses(Progress.progress_bar,Background.bg_info)
+                                                        .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.bg_info)
                                         )
                         )
         );
@@ -759,7 +750,7 @@ class ProgressTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Default striped example")
@@ -775,11 +766,11 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar,Progress.progress_bar_striped)
+                                                .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.progress_bar_striped)
                                                 .withStyle("width: 10%")
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Success striped example")
@@ -795,11 +786,11 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar,Progress.progress_bar_striped,Background.bg_success)
+                                                .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.progress_bar_striped,BootstrapClasses.bg_success)
                                                 .withStyle("width: 25%")
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Info striped example")
@@ -815,11 +806,11 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar,Progress.progress_bar_striped,Background.bg_info)
+                                                .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.progress_bar_striped,BootstrapClasses.bg_info)
                                                 .withStyle("width: 50%")
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Warning striped example")
@@ -835,11 +826,11 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar,Progress.progress_bar_striped,Background.bg_warning)
+                                                .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.progress_bar_striped,BootstrapClasses.bg_warning)
                                                 .withStyle("width: 75%")
                                 ),
                         div()
-                                .withClasses(Progress.progress)
+                                .withClasses(BootstrapClasses.progress)
                                 .attr(AriaRoles.roleProgressbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Danger striped example")
@@ -855,7 +846,7 @@ class ProgressTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(Progress.progress_bar,Progress.progress_bar_striped,Background.bg_danger)
+                                                .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.progress_bar_striped,BootstrapClasses.bg_danger)
                                                 .withStyle("width: 100%")
                                 )
                 )
@@ -897,7 +888,7 @@ class ProgressTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Progress.progress)
+                        .withClasses(BootstrapClasses.progress)
                         .attr(AriaRoles.roleProgressbar)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Animated striped example")
@@ -913,7 +904,7 @@ class ProgressTest {
                         )
                         .with(
                                 div()
-                                        .withClasses(Progress.progress_bar,Progress.progress_bar_striped,Progress.progress_bar_animated)
+                                        .withClasses(BootstrapClasses.progress_bar,BootstrapClasses.progress_bar_striped,BootstrapClasses.progress_bar_animated)
                                         .withStyle("width: 75%")
                         )
         );

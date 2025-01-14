@@ -1,16 +1,12 @@
 package dev.rebelcraft.j2html.ext.helpers;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PositionTest {
@@ -27,7 +23,7 @@ class PositionTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-             .withClasses(Position.fixed_top)
+             .withClasses(BootstrapClasses.fixed_top)
              .with(
                 text("...")
               )
@@ -52,7 +48,7 @@ class PositionTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Position.fixed_bottom)
+                        .withClasses(BootstrapClasses.fixed_bottom)
                         .with(
                                 text("...")
                         )
@@ -77,7 +73,7 @@ class PositionTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Position.sticky_top)
+                        .withClasses(BootstrapClasses.sticky_top)
                         .with(
                                 text("...")
                         )
@@ -161,7 +157,7 @@ class PositionTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Position.sticky_bottom)
+                        .withClasses(BootstrapClasses.sticky_bottom)
                         .with(
                                 text("...")
                         )

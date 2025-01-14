@@ -1,16 +1,12 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TooltipsTest {
@@ -101,7 +97,7 @@ class TooltipsTest {
         String renderedHtml = uiDocumentation.render(
                 button()
                         .withType("button")
-                        .withClasses(Buttons.btn,Buttons.btn_secondary)
+                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                         .withData("bs-toggle","tooltip")
                         .withData("bs-placement","top")
                         .withData("bs-custom-class","custom-tooltip")
@@ -132,7 +128,7 @@ class TooltipsTest {
                 each(
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                 .withData("bs-toggle","tooltip")
                                 .withData("bs-placement","top")
                                 .withData("bs-title","Tooltip on top")
@@ -141,7 +137,7 @@ class TooltipsTest {
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                 .withData("bs-toggle","tooltip")
                                 .withData("bs-placement","right")
                                 .withData("bs-title","Tooltip on right")
@@ -150,7 +146,7 @@ class TooltipsTest {
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                 .withData("bs-toggle","tooltip")
                                 .withData("bs-placement","bottom")
                                 .withData("bs-title","Tooltip on bottom")
@@ -159,7 +155,7 @@ class TooltipsTest {
                                 ),
                         button()
                                 .withType("button")
-                                .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                 .withData("bs-toggle","tooltip")
                                 .withData("bs-placement","left")
                                 .withData("bs-title","Tooltip on left")

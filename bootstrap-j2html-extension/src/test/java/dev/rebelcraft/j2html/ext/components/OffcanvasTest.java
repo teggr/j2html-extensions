@@ -1,21 +1,14 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.helpers.ColorsAndBackground;
-import dev.rebelcraft.j2html.ext.utilities.Display;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class OffcanvasTest {
@@ -32,7 +25,7 @@ class OffcanvasTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                 .withClasses(OffCanvas.offcanvas,OffCanvas.offcanvas_start,OffCanvas.show)
+                 .withClasses(BootstrapClasses.offcanvas, BootstrapClasses.offcanvas_start,BootstrapClasses.show)
                  .withTabindex(-1)
                  .withId("offcanvas")
                  .attr(
@@ -40,24 +33,24 @@ class OffcanvasTest {
                   )
                  .with(
                     div()
-                     .withClasses(OffCanvas.offcanvas_header)
+                     .withClasses(BootstrapClasses.offcanvas_header)
                      .with(
                         h5()
-                         .withClasses(OffCanvas.offcanvas_title)
+                         .withClasses(BootstrapClasses.offcanvas_title)
                          .withId("offcanvasLabel")
                          .with(
                             text("Offcanvas")
                           ),
                         button()
                          .withType("button")
-                         .withClasses(CloseButton.btn_close)
+                         .withClasses(BootstrapClasses.btn_close)
                          .withData("bs-dismiss","offcanvas")
                          .attr(
                             AriaStatesAndProperties.ariaLabel("Close")
                           )
                       ),
                     div()
-                     .withClasses(OffCanvas.offcanvas_body)
+                     .withClasses(BootstrapClasses.offcanvas_body)
                      .with(
                         text("Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.")
                       )
@@ -93,7 +86,7 @@ class OffcanvasTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         a()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withData("bs-toggle","offcanvas")
                                 .withHref("#offcanvasExample")
                                 .attr(AriaRoles.roleButton)
@@ -104,7 +97,7 @@ class OffcanvasTest {
                                         text("Link with href")
                                 ),
                         button()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("button")
                                 .withData("bs-toggle","offcanvas")
                                 .withData("bs-target","#offcanvasExample")
@@ -115,7 +108,7 @@ class OffcanvasTest {
                                         text("Button with data-bs-target")
                                 ),
                         div()
-                                .withClasses(OffCanvas.offcanvas,OffCanvas.offcanvas_start)
+                                .withClasses(BootstrapClasses.offcanvas,BootstrapClasses.offcanvas_start)
                                 .withTabindex(-1)
                                 .withId("offcanvasExample")
                                 .attr(
@@ -123,46 +116,46 @@ class OffcanvasTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_header)
+                                                .withClasses(BootstrapClasses.offcanvas_header)
                                                 .with(
                                                         h5()
-                                                                .withClasses(OffCanvas.offcanvas_title)
+                                                                .withClasses(BootstrapClasses.offcanvas_title)
                                                                 .withId("offcanvasExampleLabel")
                                                                 .with(
                                                                         text("Offcanvas")
                                                                 ),
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(CloseButton.btn_close)
+                                                                .withClasses(BootstrapClasses.btn_close)
                                                                 .withData("bs-dismiss","offcanvas")
                                                                 .attr(
                                                                         AriaStatesAndProperties.ariaLabel("Close")
                                                                 )
                                                 ),
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_body)
+                                                .withClasses(BootstrapClasses.offcanvas_body)
                                                 .with(
                                                         div()
                                                                 .with(
                                                                         text("Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.")
                                                                 ),
                                                         div()
-                                                                .withClasses(Dropdowns.dropdown, Spacing.mt_3)
+                                                                .withClasses(BootstrapClasses.dropdown, BootstrapClasses.mt_3)
                                                                 .with(
                                                                         button()
-                                                                                .withClasses(Buttons.btn,Buttons.btn_secondary,Dropdowns.dropdown_toggle)
+                                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary,BootstrapClasses.dropdown_toggle)
                                                                                 .withType("button")
                                                                                 .withData("bs-toggle","dropdown")
                                                                                 .with(
                                                                                         text("Dropdown button")
                                                                                 ),
                                                                         ul()
-                                                                                .withClasses(Dropdowns.dropdown_menu)
+                                                                                .withClasses(BootstrapClasses.dropdown_menu)
                                                                                 .with(
                                                                                         li()
                                                                                                 .with(
                                                                                                         a()
-                                                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                 .withHref("#")
                                                                                                                 .with(
                                                                                                                         text("Action")
@@ -171,7 +164,7 @@ class OffcanvasTest {
                                                                                         li()
                                                                                                 .with(
                                                                                                         a()
-                                                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                 .withHref("#")
                                                                                                                 .with(
                                                                                                                         text("Another action")
@@ -180,7 +173,7 @@ class OffcanvasTest {
                                                                                         li()
                                                                                                 .with(
                                                                                                         a()
-                                                                                                                .withClasses(Dropdowns.dropdown_item)
+                                                                                                                .withClasses(BootstrapClasses.dropdown_item)
                                                                                                                 .withHref("#")
                                                                                                                 .with(
                                                                                                                         text("Something else here")
@@ -252,7 +245,7 @@ class OffcanvasTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         button()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("button")
                                 .withData("bs-toggle","offcanvas")
                                 .withData("bs-target","#offcanvasScrolling")
@@ -263,7 +256,7 @@ class OffcanvasTest {
                                         text("Enable body scrolling")
                                 ),
                         div()
-                                .withClasses(OffCanvas.offcanvas,OffCanvas.offcanvas_start)
+                                .withClasses(BootstrapClasses.offcanvas,BootstrapClasses.offcanvas_start)
                                 .withData("bs-scroll","true")
                                 .withData("bs-backdrop","false")
                                 .withTabindex(-1)
@@ -273,24 +266,24 @@ class OffcanvasTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_header)
+                                                .withClasses(BootstrapClasses.offcanvas_header)
                                                 .with(
                                                         h5()
-                                                                .withClasses(OffCanvas.offcanvas_title)
+                                                                .withClasses(BootstrapClasses.offcanvas_title)
                                                                 .withId("offcanvasScrollingLabel")
                                                                 .with(
                                                                         text("Offcanvas with body scrolling")
                                                                 ),
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(CloseButton.btn_close)
+                                                                .withClasses(BootstrapClasses.btn_close)
                                                                 .withData("bs-dismiss","offcanvas")
                                                                 .attr(
                                                                         AriaStatesAndProperties.ariaLabel("Close")
                                                                 )
                                                 ),
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_body)
+                                                .withClasses(BootstrapClasses.offcanvas_body)
                                                 .with(
                                                         p()
                                                                 .with(
@@ -335,7 +328,7 @@ class OffcanvasTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         button()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("button")
                                 .withData("bs-toggle","offcanvas")
                                 .withData("bs-target","#offcanvasWithBothOptions")
@@ -346,7 +339,7 @@ class OffcanvasTest {
                                         text("Enable both scrolling & backdrop")
                                 ),
                         div()
-                                .withClasses(OffCanvas.offcanvas,OffCanvas.offcanvas_start)
+                                .withClasses(BootstrapClasses.offcanvas,BootstrapClasses.offcanvas_start)
                                 .withData("bs-scroll","true")
                                 .withTabindex(-1)
                                 .withId("offcanvasWithBothOptions")
@@ -355,24 +348,24 @@ class OffcanvasTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_header)
+                                                .withClasses(BootstrapClasses.offcanvas_header)
                                                 .with(
                                                         h5()
-                                                                .withClasses(OffCanvas.offcanvas_title)
+                                                                .withClasses(BootstrapClasses.offcanvas_title)
                                                                 .withId("offcanvasWithBothOptionsLabel")
                                                                 .with(
                                                                         text("Backdrop with scrolling")
                                                                 ),
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(CloseButton.btn_close)
+                                                                .withClasses(BootstrapClasses.btn_close)
                                                                 .withData("bs-dismiss","offcanvas")
                                                                 .attr(
                                                                         AriaStatesAndProperties.ariaLabel("Close")
                                                                 )
                                                 ),
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_body)
+                                                .withClasses(BootstrapClasses.offcanvas_body)
                                                 .with(
                                                         p()
                                                                 .with(
@@ -417,7 +410,7 @@ class OffcanvasTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         button()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("button")
                                 .withData("bs-toggle","offcanvas")
                                 .withData("bs-target","#staticBackdrop")
@@ -428,7 +421,7 @@ class OffcanvasTest {
                                         text("Toggle static offcanvas")
                                 ),
                         div()
-                                .withClasses(OffCanvas.offcanvas,OffCanvas.offcanvas_start)
+                                .withClasses(BootstrapClasses.offcanvas,BootstrapClasses.offcanvas_start)
                                 .withData("bs-backdrop","static")
                                 .withTabindex(-1)
                                 .withId("staticBackdrop")
@@ -437,24 +430,24 @@ class OffcanvasTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_header)
+                                                .withClasses(BootstrapClasses.offcanvas_header)
                                                 .with(
                                                         h5()
-                                                                .withClasses(OffCanvas.offcanvas_title)
+                                                                .withClasses(BootstrapClasses.offcanvas_title)
                                                                 .withId("staticBackdropLabel")
                                                                 .with(
                                                                         text("Offcanvas")
                                                                 ),
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(CloseButton.btn_close)
+                                                                .withClasses(BootstrapClasses.btn_close)
                                                                 .withData("bs-dismiss","offcanvas")
                                                                 .attr(
                                                                         AriaStatesAndProperties.ariaLabel("Close")
                                                                 )
                                                 ),
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_body)
+                                                .withClasses(BootstrapClasses.offcanvas_body)
                                                 .with(
                                                         div()
                                                                 .with(
@@ -498,7 +491,7 @@ class OffcanvasTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(OffCanvas.offcanvas,OffCanvas.offcanvas_start,OffCanvas.show, ColorsAndBackground.text_bg_dark)
+                        .withClasses(BootstrapClasses.offcanvas,BootstrapClasses.offcanvas_start,BootstrapClasses.show, BootstrapClasses.text_bg_dark)
                         .withTabindex(-1)
                         .withId("offcanvasDark")
                         .attr(
@@ -506,24 +499,24 @@ class OffcanvasTest {
                         )
                         .with(
                                 div()
-                                        .withClasses(OffCanvas.offcanvas_header)
+                                        .withClasses(BootstrapClasses.offcanvas_header)
                                         .with(
                                                 h5()
-                                                        .withClasses(OffCanvas.offcanvas_title)
+                                                        .withClasses(BootstrapClasses.offcanvas_title)
                                                         .withId("offcanvasDarkLabel")
                                                         .with(
                                                                 text("Offcanvas")
                                                         ),
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(CloseButton.btn_close,CloseButton.btn_close_white)
+                                                        .withClasses(BootstrapClasses.btn_close,BootstrapClasses.btn_close_white)
                                                         .withData("bs-dismiss","offcanvasDark")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaLabel("Close")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(OffCanvas.offcanvas_body)
+                                        .withClasses(BootstrapClasses.offcanvas_body)
                                         .with(
                                                 p()
                                                         .with(
@@ -565,7 +558,7 @@ class OffcanvasTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         button()
-                                .withClasses(Buttons.btn,Buttons.btn_primary,Display.d_lg_none)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.d_lg_none)
                                 .withType("button")
                                 .withData("bs-toggle","offcanvas")
                                 .withData("bs-target","#offcanvasResponsive")
@@ -576,12 +569,12 @@ class OffcanvasTest {
                                         text("Toggle offcanvas")
                                 ),
                         div()
-                                .withClasses(Alert.alert,Alert.alert_info, Display.hidden_on_all,Display.d_lg_block)
+                                .withClasses(BootstrapClasses.alert,BootstrapClasses.alert_info, BootstrapClasses.d_none,BootstrapClasses.d_lg_block)
                                 .with(
                                         text("Resize your browser to show the responsive offcanvas toggle.")
                                 ),
                         div()
-                                .withClasses(OffCanvas.offcanvas_lg,OffCanvas.offcanvas_end)
+                                .withClasses(BootstrapClasses.offcanvas_lg,BootstrapClasses.offcanvas_end)
                                 .withTabindex(-1)
                                 .withId("offcanvasResponsive")
                                 .attr(
@@ -589,17 +582,17 @@ class OffcanvasTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_header)
+                                                .withClasses(BootstrapClasses.offcanvas_header)
                                                 .with(
                                                         h5()
-                                                                .withClasses(OffCanvas.offcanvas_title)
+                                                                .withClasses(BootstrapClasses.offcanvas_title)
                                                                 .withId("offcanvasResponsiveLabel")
                                                                 .with(
                                                                         text("Responsive offcanvas")
                                                                 ),
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(CloseButton.btn_close)
+                                                                .withClasses(BootstrapClasses.btn_close)
                                                                 .withData("bs-dismiss","offcanvas")
                                                                 .withData("bs-target","#offcanvasResponsive")
                                                                 .attr(
@@ -607,10 +600,10 @@ class OffcanvasTest {
                                                                 )
                                                 ),
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_body)
+                                                .withClasses(BootstrapClasses.offcanvas_body)
                                                 .with(
                                                         p()
-                                                                .withClasses(Spacing.mb_0)
+                                                                .withClasses(BootstrapClasses.mb_0)
                                                                 .with(
                                                                         text("This is content within an"),
                                                                         code()
@@ -665,7 +658,7 @@ class OffcanvasTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         button()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("button")
                                 .withData("bs-toggle","offcanvas")
                                 .withData("bs-target","#offcanvasTop")
@@ -676,7 +669,7 @@ class OffcanvasTest {
                                         text("Toggle top offcanvas")
                                 ),
                         div()
-                                .withClasses(OffCanvas.offcanvas,OffCanvas.offcanvas_top)
+                                .withClasses(BootstrapClasses.offcanvas,BootstrapClasses.offcanvas_top)
                                 .withTabindex(-1)
                                 .withId("offcanvasTop")
                                 .attr(
@@ -684,24 +677,24 @@ class OffcanvasTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_header)
+                                                .withClasses(BootstrapClasses.offcanvas_header)
                                                 .with(
                                                         h5()
-                                                                .withClasses(OffCanvas.offcanvas_title)
+                                                                .withClasses(BootstrapClasses.offcanvas_title)
                                                                 .withId("offcanvasTopLabel")
                                                                 .with(
                                                                         text("Offcanvas top")
                                                                 ),
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(CloseButton.btn_close)
+                                                                .withClasses(BootstrapClasses.btn_close)
                                                                 .withData("bs-dismiss","offcanvas")
                                                                 .attr(
                                                                         AriaStatesAndProperties.ariaLabel("Close")
                                                                 )
                                                 ),
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_body)
+                                                .withClasses(BootstrapClasses.offcanvas_body)
                                                 .with(
                                                         text("...")
                                                 )
@@ -741,7 +734,7 @@ class OffcanvasTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         button()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("button")
                                 .withData("bs-toggle","offcanvas")
                                 .withData("bs-target","#offcanvasRight")
@@ -752,7 +745,7 @@ class OffcanvasTest {
                                         text("Toggle right offcanvas")
                                 ),
                         div()
-                                .withClasses(OffCanvas.offcanvas,OffCanvas.offcanvas_end)
+                                .withClasses(BootstrapClasses.offcanvas,BootstrapClasses.offcanvas_end)
                                 .withTabindex(-1)
                                 .withId("offcanvasRight")
                                 .attr(
@@ -760,24 +753,24 @@ class OffcanvasTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_header)
+                                                .withClasses(BootstrapClasses.offcanvas_header)
                                                 .with(
                                                         h5()
-                                                                .withClasses(OffCanvas.offcanvas_title)
+                                                                .withClasses(BootstrapClasses.offcanvas_title)
                                                                 .withId("offcanvasRightLabel")
                                                                 .with(
                                                                         text("Offcanvas right")
                                                                 ),
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(CloseButton.btn_close)
+                                                                .withClasses(BootstrapClasses.btn_close)
                                                                 .withData("bs-dismiss","offcanvas")
                                                                 .attr(
                                                                         AriaStatesAndProperties.ariaLabel("Close")
                                                                 )
                                                 ),
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_body)
+                                                .withClasses(BootstrapClasses.offcanvas_body)
                                                 .with(
                                                         text("...")
                                                 )
@@ -817,7 +810,7 @@ class OffcanvasTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         button()
-                                .withClasses(Buttons.btn,Buttons.btn_primary)
+                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                 .withType("button")
                                 .withData("bs-toggle","offcanvas")
                                 .withData("bs-target","#offcanvasBottom")
@@ -828,7 +821,7 @@ class OffcanvasTest {
                                         text("Toggle bottom offcanvas")
                                 ),
                         div()
-                                .withClasses(OffCanvas.offcanvas,OffCanvas.offcanvas_bottom)
+                                .withClasses(BootstrapClasses.offcanvas,BootstrapClasses.offcanvas_bottom)
                                 .withTabindex(-1)
                                 .withId("offcanvasBottom")
                                 .attr(
@@ -836,24 +829,24 @@ class OffcanvasTest {
                                 )
                                 .with(
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_header)
+                                                .withClasses(BootstrapClasses.offcanvas_header)
                                                 .with(
                                                         h5()
-                                                                .withClasses(OffCanvas.offcanvas_title)
+                                                                .withClasses(BootstrapClasses.offcanvas_title)
                                                                 .withId("offcanvasBottomLabel")
                                                                 .with(
                                                                         text("Offcanvas bottom")
                                                                 ),
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(CloseButton.btn_close)
+                                                                .withClasses(BootstrapClasses.btn_close)
                                                                 .withData("bs-dismiss","offcanvas")
                                                                 .attr(
                                                                         AriaStatesAndProperties.ariaLabel("Close")
                                                                 )
                                                 ),
                                         div()
-                                                .withClasses(OffCanvas.offcanvas_body,"small")
+                                                .withClasses(BootstrapClasses.offcanvas_body,"small")
                                                 .with(
                                                         text("...")
                                                 )

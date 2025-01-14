@@ -1,15 +1,12 @@
 package dev.rebelcraft.j2html.ext.content;
 
-import dev.rebelcraft.j2html.ext.utilities.*;
-import dev.rebelcraft.j2html.ext.utilities.Float;
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ImagesTest {
@@ -27,7 +24,7 @@ class ImagesTest {
         String renderedHtml = uiDocumentation.render(
                 img()
                         .withSrc("...")
-                        .withClasses(Images.img_fluid)
+                        .withClasses(BootstrapClasses.img_fluid)
                         .withAlt("...")
         );
 
@@ -49,7 +46,7 @@ class ImagesTest {
         String renderedHtml = uiDocumentation.render(
                 img()
                         .withSrc("...")
-                        .withClasses(Images.img_thumbnail)
+                        .withClasses(BootstrapClasses.img_thumbnail)
                         .withAlt("...")
         );
 
@@ -72,11 +69,11 @@ class ImagesTest {
                 each(
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded, Float.float_start)
+                                .withClasses(BootstrapClasses.rounded, BootstrapClasses.float_start)
                                 .withAlt("..."),
                         img()
                                 .withSrc("...")
-                                .withClasses(Borders.rounded, Float.float_end)
+                                .withClasses(BootstrapClasses.rounded, BootstrapClasses.float_end)
                                 .withAlt("...")
                 )
         );
@@ -100,7 +97,7 @@ class ImagesTest {
         String renderedHtml = uiDocumentation.render(
                 img()
                         .withSrc("...")
-                        .withClasses(Borders.rounded, Spacing.mx_auto, Display.d_block)
+                        .withClasses(BootstrapClasses.rounded, BootstrapClasses.mx_auto, BootstrapClasses.d_block)
                         .withAlt("...")
         );
 
@@ -121,11 +118,11 @@ class ImagesTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(Text.text_center)
+                        .withClasses(BootstrapClasses.text_center)
                         .with(
                                 img()
                                         .withSrc("...")
-                                        .withClasses(Borders.rounded)
+                                        .withClasses(BootstrapClasses.rounded)
                                         .withAlt("...")
                         )
         );
@@ -155,7 +152,7 @@ class ImagesTest {
                                         .withType("image/svg+xml"),
                                 img()
                                         .withSrc("...")
-                                        .withClasses(Images.img_fluid,Images.img_thumbnail)
+                                        .withClasses(BootstrapClasses.img_fluid,BootstrapClasses.img_thumbnail)
                                         .withAlt("...")
                         )
         );

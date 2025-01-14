@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,27 +24,27 @@ class OpacityTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Opacity.opacity_100)
+                                .withClasses(BootstrapClasses.opacity_100)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Opacity.opacity_75)
+                                .withClasses(BootstrapClasses.opacity_75)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Opacity.opacity_50)
+                                .withClasses(BootstrapClasses.opacity_50)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Opacity.opacity_25)
+                                .withClasses(BootstrapClasses.opacity_25)
                                 .with(
                                         text("...")
                                 ),
                         div()
-                                .withClasses(Opacity.opacity_0)
+                                .withClasses(BootstrapClasses.opacity_0)
                                 .with(
                                         text("...")
                                 )

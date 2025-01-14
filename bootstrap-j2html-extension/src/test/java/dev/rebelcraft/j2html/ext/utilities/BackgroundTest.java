@@ -1,5 +1,6 @@
 package dev.rebelcraft.j2html.ext.utilities;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,112 +24,112 @@ class BackgroundTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_primary, Colors.text_white)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_primary, BootstrapClasses.text_white)
                                 .with(
                                         text(".bg-primary")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_primary_subtle, Colors.text_primary_emphasis)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_primary_subtle, BootstrapClasses.text_primary_emphasis)
                                 .with(
                                         text(".bg-primary-subtle")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_secondary, Colors.text_white)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_secondary, BootstrapClasses.text_white)
                                 .with(
                                         text(".bg-secondary")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_secondary_subtle, Colors.text_secondary_emphasis)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_secondary_subtle, BootstrapClasses.text_secondary_emphasis)
                                 .with(
                                         text(".bg-secondary-subtle")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_success, Colors.text_white)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_success, BootstrapClasses.text_white)
                                 .with(
                                         text(".bg-success")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_success_subtle, Colors.text_success_emphasis)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_success_subtle, BootstrapClasses.text_success_emphasis)
                                 .with(
                                         text(".bg-success-subtle")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_danger, Colors.text_white)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_danger, BootstrapClasses.text_white)
                                 .with(
                                         text(".bg-danger")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_danger_subtle, Colors.text_danger_emphasis)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_danger_subtle, BootstrapClasses.text_danger_emphasis)
                                 .with(
                                         text(".bg-danger-subtle")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_warning, Colors.text_dark)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_warning, BootstrapClasses.text_dark)
                                 .with(
                                         text(".bg-warning")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_warning_subtle, Colors.text_warning_emphasis)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_warning_subtle, BootstrapClasses.text_warning_emphasis)
                                 .with(
                                         text(".bg-warning-subtle")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_info, Colors.text_dark)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_info, BootstrapClasses.text_dark)
                                 .with(
                                         text(".bg-info")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_info_subtle, Colors.text_info_emphasis)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_info_subtle, BootstrapClasses.text_info_emphasis)
                                 .with(
                                         text(".bg-info-subtle")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_light, Colors.text_dark)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_light, BootstrapClasses.text_dark)
                                 .with(
                                         text(".bg-light")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_light_subtle, Colors.text_light_emphasis)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_light_subtle, BootstrapClasses.text_light_emphasis)
                                 .with(
                                         text(".bg-light-subtle")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_dark, Colors.text_white)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_dark, BootstrapClasses.text_white)
                                 .with(
                                         text(".bg-dark")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_dark_subtle, Colors.text_dark_emphasis)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_dark_subtle, BootstrapClasses.text_dark_emphasis)
                                 .with(
                                         text(".bg-dark-subtle")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_body_secondary)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_body_secondary)
                                 .with(
                                         text(".bg-body-secondary")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_body_tertiary)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_body_tertiary)
                                 .with(
                                         text(".bg-body-tertiary")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_body, Colors.text_body)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_body, BootstrapClasses.text_body)
                                 .with(
                                         text(".bg-body")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_black, Colors.text_white)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_black, BootstrapClasses.text_white)
                                 .with(
                                         text(".bg-black")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_white, Colors.text_dark)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_white, BootstrapClasses.text_dark)
                                 .with(
                                         text(".bg-white")
                                 ),
                         div()
-                                .withClasses(Spacing.p_3, Spacing.mb_2, Background.bg_transparent, Colors.text_body)
+                                .withClasses(BootstrapClasses.p_3, BootstrapClasses.mb_2, BootstrapClasses.bg_transparent, BootstrapClasses.text_body)
                                 .with(
                                         text(".bg-transparent")
                                 )

@@ -1,23 +1,14 @@
 package dev.rebelcraft.j2html.ext.components;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.forms.ChecksAndRadios;
-import dev.rebelcraft.j2html.ext.forms.FormControl;
-import dev.rebelcraft.j2html.ext.forms.InputGroups;
-import dev.rebelcraft.j2html.ext.utilities.Flex;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaRoles.*;
-import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ButtonGroupTest {
@@ -34,7 +25,7 @@ class ButtonGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                 .withClasses(ButtonGroup.btn_group)
+                 .withClasses(BootstrapClasses.btn_group)
                  .attr(AriaRoles.roleGroup)
                  .attr(
                     AriaStatesAndProperties.ariaLabel("Basic example")
@@ -42,19 +33,19 @@ class ButtonGroupTest {
                  .with(
                     button()
                      .withType("button")
-                     .withClasses(Buttons.btn,Buttons.btn_primary)
+                     .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                      .with(
                         text("Left")
                       ),
                     button()
                      .withType("button")
-                     .withClasses(Buttons.btn,Buttons.btn_primary)
+                     .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                      .with(
                         text("Middle")
                       ),
                     button()
                      .withType("button")
-                     .withClasses(Buttons.btn,Buttons.btn_primary)
+                     .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                      .with(
                         text("Right")
                       )
@@ -88,11 +79,11 @@ class ButtonGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_group)
+                        .withClasses(BootstrapClasses.btn_group)
                         .with(
                                 a()
                                         .withHref("#")
-                                        .withClasses(Buttons.btn,Buttons.btn_primary,Buttons.active)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.active)
                                         .attr(
                                                 AriaStatesAndProperties.ariaCurrent("page")
                                         )
@@ -101,13 +92,13 @@ class ButtonGroupTest {
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .with(
                                                 text("Link")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .with(
                                                 text("Link")
                                         )
@@ -141,7 +132,7 @@ class ButtonGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_group)
+                        .withClasses(BootstrapClasses.btn_group)
                         .attr(AriaRoles.roleGroup)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Basic mixed styles example")
@@ -149,19 +140,19 @@ class ButtonGroupTest {
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_danger)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_danger)
                                         .with(
                                                 text("Left")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_warning)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_warning)
                                         .with(
                                                 text("Middle")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_success)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_success)
                                         .with(
                                                 text("Right")
                                         )
@@ -196,7 +187,7 @@ class ButtonGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_group)
+                        .withClasses(BootstrapClasses.btn_group)
                         .attr(AriaRoles.roleGroup)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Basic outlined example")
@@ -204,19 +195,19 @@ class ButtonGroupTest {
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                         .with(
                                                 text("Left")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                         .with(
                                                 text("Middle")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                         .with(
                                                 text("Right")
                                         )
@@ -250,7 +241,7 @@ class ButtonGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_group)
+                        .withClasses(BootstrapClasses.btn_group)
                         .attr(AriaRoles.roleGroup)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Basic checkbox toggle button group")
@@ -258,33 +249,33 @@ class ButtonGroupTest {
                         .with(
                                 input()
                                         .withType("checkbox")
-                                        .withClasses(ChecksAndRadios.btn_check)
+                                        .withClasses(BootstrapClasses.btn_check)
                                         .withId("btncheck1")
                                         .attr("autocomplete","off"),
                                 label()
-                                        .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                         .withFor("btncheck1")
                                         .with(
                                                 text("Checkbox 1")
                                         ),
                                 input()
                                         .withType("checkbox")
-                                        .withClasses(ChecksAndRadios.btn_check)
+                                        .withClasses(BootstrapClasses.btn_check)
                                         .withId("btncheck2")
                                         .attr("autocomplete","off"),
                                 label()
-                                        .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                         .withFor("btncheck2")
                                         .with(
                                                 text("Checkbox 2")
                                         ),
                                 input()
                                         .withType("checkbox")
-                                        .withClasses(ChecksAndRadios.btn_check)
+                                        .withClasses(BootstrapClasses.btn_check)
                                         .withId("btncheck3")
                                         .attr("autocomplete","off"),
                                 label()
-                                        .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                         .withFor("btncheck3")
                                         .with(
                                                 text("Checkbox 3")
@@ -322,7 +313,7 @@ class ButtonGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_group)
+                        .withClasses(BootstrapClasses.btn_group)
                         .attr(AriaRoles.roleGroup)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Basic radio toggle button group")
@@ -330,37 +321,37 @@ class ButtonGroupTest {
                         .with(
                                 input()
                                         .withType("radio")
-                                        .withClasses(ChecksAndRadios.btn_check)
+                                        .withClasses(BootstrapClasses.btn_check)
                                         .withName("btnradio")
                                         .withId("btnradio1")
                                         .attr("autocomplete","off")
                                         .withCondChecked(true),
                                 label()
-                                        .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                         .withFor("btnradio1")
                                         .with(
                                                 text("Radio 1")
                                         ),
                                 input()
                                         .withType("radio")
-                                        .withClasses(ChecksAndRadios.btn_check)
+                                        .withClasses(BootstrapClasses.btn_check)
                                         .withName("btnradio")
                                         .withId("btnradio2")
                                         .attr("autocomplete","off"),
                                 label()
-                                        .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                         .withFor("btnradio2")
                                         .with(
                                                 text("Radio 2")
                                         ),
                                 input()
                                         .withType("radio")
-                                        .withClasses(ChecksAndRadios.btn_check)
+                                        .withClasses(BootstrapClasses.btn_check)
                                         .withName("btnradio")
                                         .withId("btnradio3")
                                         .attr("autocomplete","off"),
                                 label()
-                                        .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                         .withFor("btnradio3")
                                         .with(
                                                 text("Radio 3")
@@ -399,14 +390,14 @@ class ButtonGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_toolbar)
+                        .withClasses(BootstrapClasses.btn_toolbar)
                         .attr(AriaRoles.roleToolbar)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Toolbar with button groups")
                         )
                         .with(
                                 div()
-                                        .withClasses(ButtonGroup.btn_group, Spacing.me_2)
+                                        .withClasses(BootstrapClasses.btn_group, BootstrapClasses.me_2)
                                         .attr(AriaRoles.roleGroup)
                                         .attr(
                                                 AriaStatesAndProperties.ariaLabel("First group")
@@ -414,31 +405,31 @@ class ButtonGroupTest {
                                         .with(
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("1")
                                                         ),
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("2")
                                                         ),
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("3")
                                                         ),
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                                         .with(
                                                                 text("4")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(ButtonGroup.btn_group,Spacing.me_2)
+                                        .withClasses(BootstrapClasses.btn_group,BootstrapClasses.me_2)
                                         .attr(AriaRoles.roleGroup)
                                         .attr(
                                                 AriaStatesAndProperties.ariaLabel("Second group")
@@ -446,25 +437,25 @@ class ButtonGroupTest {
                                         .with(
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                                         .with(
                                                                 text("5")
                                                         ),
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                                         .with(
                                                                 text("6")
                                                         ),
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_secondary)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_secondary)
                                                         .with(
                                                                 text("7")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(ButtonGroup.btn_group)
+                                        .withClasses(BootstrapClasses.btn_group)
                                         .attr(AriaRoles.roleGroup)
                                         .attr(
                                                 AriaStatesAndProperties.ariaLabel("Third group")
@@ -472,7 +463,7 @@ class ButtonGroupTest {
                                         .with(
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_info)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_info)
                                                         .with(
                                                                 text("8")
                                                         )
@@ -529,14 +520,14 @@ class ButtonGroupTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ButtonGroup.btn_toolbar,Spacing.mb_3)
+                                .withClasses(BootstrapClasses.btn_toolbar,BootstrapClasses.mb_3)
                                 .attr(AriaRoles.roleToolbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Toolbar with button groups")
                                 )
                                 .with(
                                         div()
-                                                .withClasses(ButtonGroup.btn_group,Spacing.me_2)
+                                                .withClasses(BootstrapClasses.btn_group,BootstrapClasses.me_2)
                                                 .attr(AriaRoles.roleGroup)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("First group")
@@ -544,41 +535,41 @@ class ButtonGroupTest {
                                                 .with(
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                                 .with(
                                                                         text("1")
                                                                 ),
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                                 .with(
                                                                         text("2")
                                                                 ),
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                                 .with(
                                                                         text("3")
                                                                 ),
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                                 .with(
                                                                         text("4")
                                                                 )
                                                 ),
                                         div()
-                                                .withClasses(InputGroups.input_group)
+                                                .withClasses(BootstrapClasses.input_group)
                                                 .with(
                                                         div()
-                                                                .withClasses(InputGroups.input_group_text)
+                                                                .withClasses(BootstrapClasses.input_group_text)
                                                                 .withId("btnGroupAddon")
                                                                 .with(
                                                                         text("@")
                                                                 ),
                                                         input()
                                                                 .withType("text")
-                                                                .withClasses(FormControl.form_control)
+                                                                .withClasses(BootstrapClasses.form_control)
                                                                 .withPlaceholder("Input group example")
                                                                 .attr(
                                                                         AriaStatesAndProperties.ariaLabel("Input group example")
@@ -589,14 +580,14 @@ class ButtonGroupTest {
                                                 )
                                 ),
                         div()
-                                .withClasses(ButtonGroup.btn_toolbar, Flex.justify_content_between)
+                                .withClasses(BootstrapClasses.btn_toolbar, BootstrapClasses.justify_content_between)
                                 .attr(AriaRoles.roleToolbar)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Toolbar with button groups")
                                 )
                                 .with(
                                         div()
-                                                .withClasses(ButtonGroup.btn_group)
+                                                .withClasses(BootstrapClasses.btn_group)
                                                 .attr(AriaRoles.roleGroup)
                                                 .attr(
                                                         AriaStatesAndProperties.ariaLabel("First group")
@@ -604,41 +595,41 @@ class ButtonGroupTest {
                                                 .with(
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                                 .with(
                                                                         text("1")
                                                                 ),
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                                 .with(
                                                                         text("2")
                                                                 ),
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                                 .with(
                                                                         text("3")
                                                                 ),
                                                         button()
                                                                 .withType("button")
-                                                                .withClasses(Buttons.btn,Buttons.btn_outline_secondary)
+                                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_secondary)
                                                                 .with(
                                                                         text("4")
                                                                 )
                                                 ),
                                         div()
-                                                .withClasses(InputGroups.input_group)
+                                                .withClasses(BootstrapClasses.input_group)
                                                 .with(
                                                         div()
-                                                                .withClasses(InputGroups.input_group_text)
+                                                                .withClasses(BootstrapClasses.input_group_text)
                                                                 .withId("btnGroupAddon2")
                                                                 .with(
                                                                         text("@")
                                                                 ),
                                                         input()
                                                                 .withType("text")
-                                                                .withClasses(FormControl.form_control)
+                                                                .withClasses(BootstrapClasses.form_control)
                                                                 .withPlaceholder("Input group example")
                                                                 .attr(
                                                                         AriaStatesAndProperties.ariaLabel("Input group example")
@@ -712,7 +703,7 @@ class ButtonGroupTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         div()
-                                .withClasses(ButtonGroup.btn_group,ButtonGroup.btn_group_lg)
+                                .withClasses(BootstrapClasses.btn_group,BootstrapClasses.btn_group_lg)
                                 .attr(AriaRoles.roleGroup)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Large button group")
@@ -720,26 +711,26 @@ class ButtonGroupTest {
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                                 .with(
                                                         text("Left")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                                 .with(
                                                         text("Middle")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                                 .with(
                                                         text("Right")
                                                 )
                                 ),
                         br(),
                         div()
-                                .withClasses(ButtonGroup.btn_group)
+                                .withClasses(BootstrapClasses.btn_group)
                                 .attr(AriaRoles.roleGroup)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Default button group")
@@ -747,26 +738,26 @@ class ButtonGroupTest {
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                                 .with(
                                                         text("Left")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                                 .with(
                                                         text("Middle")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                                 .with(
                                                         text("Right")
                                                 )
                                 ),
                         br(),
                         div()
-                                .withClasses(ButtonGroup.btn_group,ButtonGroup.btn_group_sm)
+                                .withClasses(BootstrapClasses.btn_group,BootstrapClasses.btn_group_sm)
                                 .attr(AriaRoles.roleGroup)
                                 .attr(
                                         AriaStatesAndProperties.ariaLabel("Small button group")
@@ -774,19 +765,19 @@ class ButtonGroupTest {
                                 .with(
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                                 .with(
                                                         text("Left")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                                 .with(
                                                         text("Middle")
                                                 ),
                                         button()
                                                 .withType("button")
-                                                .withClasses(Buttons.btn,Buttons.btn_outline_primary)
+                                                .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_primary)
                                                 .with(
                                                         text("Right")
                                                 )
@@ -845,7 +836,7 @@ class ButtonGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_group)
+                        .withClasses(BootstrapClasses.btn_group)
                         .attr(AriaRoles.roleGroup)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Button group with nested dropdown")
@@ -853,23 +844,23 @@ class ButtonGroupTest {
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .with(
                                                 text("1")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .with(
                                                 text("2")
                                         ),
                                 div()
-                                        .withClasses(ButtonGroup.btn_group)
+                                        .withClasses(BootstrapClasses.btn_group)
                                         .attr(AriaRoles.roleGroup)
                                         .with(
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary,Dropdowns.dropdown_toggle)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.dropdown_toggle)
                                                         .withData("bs-toggle","dropdown")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaExpanded("false")
@@ -878,12 +869,12 @@ class ButtonGroupTest {
                                                                 text("Dropdown")
                                                         ),
                                                 ul()
-                                                        .withClasses(Dropdowns.dropdown_menu)
+                                                        .withClasses(BootstrapClasses.dropdown_menu)
                                                         .with(
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Dropdown link")
@@ -892,7 +883,7 @@ class ButtonGroupTest {
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Dropdown link")
@@ -944,7 +935,7 @@ class ButtonGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_group_vertical)
+                        .withClasses(BootstrapClasses.btn_group_vertical)
                         .attr(AriaRoles.roleGroup)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Vertical button group")
@@ -952,25 +943,25 @@ class ButtonGroupTest {
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .with(
                                                 text("Button")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .with(
                                                 text("Button")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .with(
                                                 text("Button")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .with(
                                                 text("Button")
                                         )
@@ -1007,7 +998,7 @@ class ButtonGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_group_vertical)
+                        .withClasses(BootstrapClasses.btn_group_vertical)
                         .attr(AriaRoles.roleGroup)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Vertical button group")
@@ -1015,23 +1006,23 @@ class ButtonGroupTest {
                         .with(
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .with(
                                                 text("Button")
                                         ),
                                 button()
                                         .withType("button")
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .with(
                                                 text("Button")
                                         ),
                                 div()
-                                        .withClasses(ButtonGroup.btn_group)
+                                        .withClasses(BootstrapClasses.btn_group)
                                         .attr(AriaRoles.roleGroup)
                                         .with(
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary,Dropdowns.dropdown_toggle)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.dropdown_toggle)
                                                         .withData("bs-toggle","dropdown")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaExpanded("false")
@@ -1040,12 +1031,12 @@ class ButtonGroupTest {
                                                                 text("Dropdown")
                                                         ),
                                                 ul()
-                                                        .withClasses(Dropdowns.dropdown_menu)
+                                                        .withClasses(BootstrapClasses.dropdown_menu)
                                                         .with(
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Dropdown link")
@@ -1054,7 +1045,7 @@ class ButtonGroupTest {
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Dropdown link")
@@ -1068,7 +1059,7 @@ class ButtonGroupTest {
                                         .with(
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary,Dropdowns.dropdown_toggle)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.dropdown_toggle)
                                                         .withData("bs-toggle","dropdown")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaExpanded("false")
@@ -1077,12 +1068,12 @@ class ButtonGroupTest {
                                                                 text("Dropdown")
                                                         ),
                                                 ul()
-                                                        .withClasses(Dropdowns.dropdown_menu)
+                                                        .withClasses(BootstrapClasses.dropdown_menu)
                                                         .with(
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Dropdown link")
@@ -1091,7 +1082,7 @@ class ButtonGroupTest {
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Dropdown link")
@@ -1100,12 +1091,12 @@ class ButtonGroupTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(ButtonGroup.btn_group,Dropdowns.dropend)
+                                        .withClasses(BootstrapClasses.btn_group,BootstrapClasses.dropend)
                                         .attr(AriaRoles.roleGroup)
                                         .with(
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary,Dropdowns.dropdown_toggle)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.dropdown_toggle)
                                                         .withData("bs-toggle","dropdown")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaExpanded("false")
@@ -1114,12 +1105,12 @@ class ButtonGroupTest {
                                                                 text("Dropdown")
                                                         ),
                                                 ul()
-                                                        .withClasses(Dropdowns.dropdown_menu)
+                                                        .withClasses(BootstrapClasses.dropdown_menu)
                                                         .with(
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Dropdown link")
@@ -1128,7 +1119,7 @@ class ButtonGroupTest {
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Dropdown link")
@@ -1137,12 +1128,12 @@ class ButtonGroupTest {
                                                         )
                                         ),
                                 div()
-                                        .withClasses(ButtonGroup.btn_group,Dropdowns.dropup)
+                                        .withClasses(BootstrapClasses.btn_group,BootstrapClasses.dropup)
                                         .attr(AriaRoles.roleGroup)
                                         .with(
                                                 button()
                                                         .withType("button")
-                                                        .withClasses(Buttons.btn,Buttons.btn_primary,Dropdowns.dropdown_toggle)
+                                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary,BootstrapClasses.dropdown_toggle)
                                                         .withData("bs-toggle","dropdown")
                                                         .attr(
                                                                 AriaStatesAndProperties.ariaExpanded("false")
@@ -1151,12 +1142,12 @@ class ButtonGroupTest {
                                                                 text("Dropdown")
                                                         ),
                                                 ul()
-                                                        .withClasses(Dropdowns.dropdown_menu)
+                                                        .withClasses(BootstrapClasses.dropdown_menu)
                                                         .with(
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Dropdown link")
@@ -1165,7 +1156,7 @@ class ButtonGroupTest {
                                                                 li()
                                                                         .with(
                                                                                 a()
-                                                                                        .withClasses(Dropdowns.dropdown_item)
+                                                                                        .withClasses(BootstrapClasses.dropdown_item)
                                                                                         .withHref("#")
                                                                                         .with(
                                                                                                 text("Dropdown link")
@@ -1268,7 +1259,7 @@ class ButtonGroupTest {
 
         String renderedHtml = uiDocumentation.render(
                 div()
-                        .withClasses(ButtonGroup.btn_group_vertical)
+                        .withClasses(BootstrapClasses.btn_group_vertical)
                         .attr(AriaRoles.roleGroup)
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Vertical radio toggle button group")
@@ -1276,37 +1267,37 @@ class ButtonGroupTest {
                         .with(
                                 input()
                                         .withType("radio")
-                                        .withClasses(ChecksAndRadios.btn_check)
+                                        .withClasses(BootstrapClasses.btn_check)
                                         .withName("vbtn-radio")
                                         .withId("vbtn-radio1")
                                         .attr("autocomplete","off")
                                         .withCondChecked(true),
                                 label()
-                                        .withClasses(Buttons.btn,Buttons.btn_outline_danger)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_danger)
                                         .withFor("vbtn-radio1")
                                         .with(
                                                 text("Radio 1")
                                         ),
                                 input()
                                         .withType("radio")
-                                        .withClasses(ChecksAndRadios.btn_check)
+                                        .withClasses(BootstrapClasses.btn_check)
                                         .withName("vbtn-radio")
                                         .withId("vbtn-radio2")
                                         .attr("autocomplete","off"),
                                 label()
-                                        .withClasses(Buttons.btn,Buttons.btn_outline_danger)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_danger)
                                         .withFor("vbtn-radio2")
                                         .with(
                                                 text("Radio 2")
                                         ),
                                 input()
                                         .withType("radio")
-                                        .withClasses(ChecksAndRadios.btn_check)
+                                        .withClasses(BootstrapClasses.btn_check)
                                         .withName("vbtn-radio")
                                         .withId("vbtn-radio3")
                                         .attr("autocomplete","off"),
                                 label()
-                                        .withClasses(Buttons.btn,Buttons.btn_outline_danger)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_outline_danger)
                                         .withFor("vbtn-radio3")
                                         .with(
                                                 text("Radio 3")

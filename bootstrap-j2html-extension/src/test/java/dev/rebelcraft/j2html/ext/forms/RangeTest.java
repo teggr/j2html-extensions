@@ -1,14 +1,12 @@
 package dev.rebelcraft.j2html.ext.forms;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RangeTest {
@@ -27,13 +25,13 @@ class RangeTest {
                 each(
                         label()
                                 .withFor("customRange1")
-                                .withClasses(FormControl.form_label)
+                                .withClasses(BootstrapClasses.form_label)
                                 .with(
                                         text("Example range")
                                 ),
                         input()
                                 .withType("range")
-                                .withClasses(Range.form_range)
+                                .withClasses(BootstrapClasses.form_range)
                                 .withId("customRange1")
                 )
         );
@@ -60,13 +58,13 @@ class RangeTest {
                 each(
                         label()
                                 .withFor("disabledRange")
-                                .withClasses(FormControl.form_label)
+                                .withClasses(BootstrapClasses.form_label)
                                 .with(
                                         text("Disabled range")
                                 ),
                         input()
                                 .withType("range")
-                                .withClasses(Range.form_range)
+                                .withClasses(BootstrapClasses.form_range)
                                 .withId("disabledRange")
                                 .withCondDisabled(true)
                 )
@@ -94,13 +92,13 @@ class RangeTest {
                 each(
                         label()
                                 .withFor("customRange2")
-                                .withClasses(FormControl.form_label)
+                                .withClasses(BootstrapClasses.form_label)
                                 .with(
                                         text("Example range")
                                 ),
                         input()
                                 .withType("range")
-                                .withClasses(Range.form_range)
+                                .withClasses(BootstrapClasses.form_range)
                                 .withMin("0")
                                 .withMax("5")
                                 .withId("customRange2")
@@ -129,13 +127,13 @@ class RangeTest {
                 each(
                         label()
                                 .withFor("customRange3")
-                                .withClasses(FormControl.form_label)
+                                .withClasses(BootstrapClasses.form_label)
                                 .with(
                                         text("Example range")
                                 ),
                         input()
                                 .withType("range")
-                                .withClasses(Range.form_range)
+                                .withClasses(BootstrapClasses.form_range)
                                 .withMin("0")
                                 .withMax("5")
                                 .withStep("0.5")

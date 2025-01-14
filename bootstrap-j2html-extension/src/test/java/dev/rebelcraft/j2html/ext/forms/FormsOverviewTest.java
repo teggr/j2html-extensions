@@ -1,17 +1,13 @@
 package dev.rebelcraft.j2html.ext.forms;
 
+import dev.rebelcraft.j2html.ext.BootstrapClasses;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
-import dev.rebelcraft.j2html.ext.components.Buttons;
-import dev.rebelcraft.j2html.ext.utilities.Spacing;
 import dev.rebelcraft.uidocs.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static j2html.TagCreator.*;
-import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
-
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FormsOverviewTest {
@@ -30,49 +26,49 @@ class FormsOverviewTest {
                 form()
                         .with(
                                 div()
-                                        .withClasses(Spacing.mb_3)
+                                        .withClasses(BootstrapClasses.mb_3)
                                         .with(
                                                 label()
                                                         .withFor("exampleInputEmail1")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Email address")
                                                         ),
                                                 input()
                                                         .withType("email")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("exampleInputEmail1")
                                                         .attr(AriaStatesAndProperties.ariaDescribedby("emailHelp")),
                                                 div()
                                                         .withId("emailHelp")
-                                                        .withClasses(FormControl.form_text)
+                                                        .withClasses(BootstrapClasses.form_text)
                                                         .with(
                                                                 text("We'll never share your email with anyone else.")
                                                         )
                                         ),
                                 div()
-                                        .withClasses(Spacing.mb_3)
+                                        .withClasses(BootstrapClasses.mb_3)
                                         .with(
                                                 label()
                                                         .withFor("exampleInputPassword1")
-                                                        .withClasses(FormControl.form_label)
+                                                        .withClasses(BootstrapClasses.form_label)
                                                         .with(
                                                                 text("Password")
                                                         ),
                                                 input()
                                                         .withType("password")
-                                                        .withClasses(FormControl.form_control)
+                                                        .withClasses(BootstrapClasses.form_control)
                                                         .withId("exampleInputPassword1")
                                         ),
                                 div()
-                                        .withClasses(Spacing.mb_3,ChecksAndRadios.form_check)
+                                        .withClasses(BootstrapClasses.mb_3,BootstrapClasses.form_check)
                                         .with(
                                                 input()
                                                         .withType("checkbox")
-                                                        .withClasses(ChecksAndRadios.form_check_input)
+                                                        .withClasses(BootstrapClasses.form_check_input)
                                                         .withId("exampleCheck1"),
                                                 label()
-                                                        .withClasses(ChecksAndRadios.form_check_label)
+                                                        .withClasses(BootstrapClasses.form_check_label)
                                                         .withFor("exampleCheck1")
                                                         .with(
                                                                 text("Check me out")
@@ -80,7 +76,7 @@ class FormsOverviewTest {
                                         ),
                                 button()
                                         .withType("submit")
-                                        .withClasses(Buttons.btn,Buttons.btn_primary)
+                                        .withClasses(BootstrapClasses.btn,BootstrapClasses.btn_primary)
                                         .with(
                                                 text("Submit")
                                         )
