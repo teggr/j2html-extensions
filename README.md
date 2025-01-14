@@ -26,3 +26,10 @@ render of the source code done at render() method use inline/page/etc. to determ
 | Java Version | Boostrap Version |
 |--------------|------------------|
 |0.0.1-SNAPSHOT| 5.3.3 |
+
+# Modules
+
+* rebel-ui-test - Standalone module for testing UI rendering
+* j2html-extensions-tools - Standalone module with utilities for generating code
+* j2html-extensions-core - Extensions for the core j2html classes and creators
+* bootstrap-j2html-extension - Bootstrap lib

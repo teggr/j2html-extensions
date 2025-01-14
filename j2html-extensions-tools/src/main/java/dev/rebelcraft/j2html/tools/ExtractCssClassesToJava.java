@@ -1,4 +1,4 @@
-package dev.rebelcraft.export;
+package dev.rebelcraft.j2html.tools;
 
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.css.ECSSVersion;
@@ -22,8 +22,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class MavenDependencyFileLister {
+public class ExtractCssClassesToJava {
 
+    /**
+     *
+     * @param args - css_file package_name class_name output_dir
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
 
         String cssFilePath = "bootstrap-j2html-extension/src/bootstrap/css/bootstrap.css";

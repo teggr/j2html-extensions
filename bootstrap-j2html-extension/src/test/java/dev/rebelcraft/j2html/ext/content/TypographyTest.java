@@ -1,12 +1,10 @@
 package dev.rebelcraft.j2html.ext.content;
 
 import dev.rebelcraft.j2html.ext.BootstrapClasses;
-import dev.rebelcraft.uidocs.UiDocumentation;
+import dev.rebelcraft.uitest.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
-
-import java.lang.reflect.Type;
 
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;

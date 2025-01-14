@@ -1,4 +1,4 @@
-package dev.rebelcraft.uidocs;
+package dev.rebelcraft.uitest;
 
 public class ExtendedEscapeUtil {
 

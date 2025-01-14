@@ -1,4 +1,4 @@
-package dev.rebelcraft.uidocs;
+package dev.rebelcraft.uitest;
 
 import com.github.javaparser.ParserConfiguration;
 import com.github.javaparser.StaticJavaParser;
@@ -11,7 +11,6 @@ import com.github.javaparser.printer.lexicalpreservation.LexicalPreservingPrinte
 import j2html.Config;
 import j2html.rendering.IndentedHtml;
 import j2html.tags.DomContent;
-import j2html.utils.EscapeUtil;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.TestInfo;
 

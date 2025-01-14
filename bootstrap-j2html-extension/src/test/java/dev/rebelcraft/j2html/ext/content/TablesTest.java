@@ -1,7 +1,7 @@
 package dev.rebelcraft.j2html.ext.content;
 
 import dev.rebelcraft.j2html.ext.BootstrapClasses;
-import dev.rebelcraft.uidocs.UiDocumentation;
+import dev.rebelcraft.uitest.UiDocumentation;
 import j2html.tags.specialized.TbodyTag;
 import j2html.tags.specialized.TheadTag;
 import org.junit.jupiter.api.BeforeEach;

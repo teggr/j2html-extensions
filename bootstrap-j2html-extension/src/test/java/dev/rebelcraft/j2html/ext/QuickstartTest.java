@@ -1,6 +1,6 @@
 package dev.rebelcraft.j2html.ext;
 
-import dev.rebelcraft.uidocs.UiDocumentation;
+import dev.rebelcraft.uitest.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;

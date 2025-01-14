@@ -18,24 +18,18 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>bootstrap</artifactId>
-            <version>5.3.3</version>
-        </dependency>
 
         <dependency>
-            <groupId>com.helger</groupId>
-            <artifactId>ph-css</artifactId>
-            <version>7.0.3</version>
+            <groupId>dev.rebelcraft</groupId>
+            <artifactId>rebel-ui-test</artifactId>
+            <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
-            <groupId>com.palantir.javapoet</groupId>
-            <artifactId>javapoet</artifactId>
-            <version>0.6.0</version>
-            <scope>test</scope>
+            <groupId>dev.rebelcraft</groupId>
+            <artifactId>j2html-extensions-core</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
     </dependencies>
