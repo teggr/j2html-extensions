@@ -14,6 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class NavbarTest {
 
+    public static final String border_body = "border-body";
     private UiDocumentation uiDocumentation;
 
     @BeforeEach
@@ -1222,7 +1223,7 @@ class NavbarTest {
         String renderedHtml = uiDocumentation.render(
                 each(
                         nav()
-                                .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_dark,BootstrapClasses.border_bottom,Navbar.border_body)
+                                .withClasses(BootstrapClasses.navbar,BootstrapClasses.bg_dark,BootstrapClasses.border_bottom, border_body)
                                 .withData("bs-theme","dark")
                                 .with(
                                         comment("Navbar content")

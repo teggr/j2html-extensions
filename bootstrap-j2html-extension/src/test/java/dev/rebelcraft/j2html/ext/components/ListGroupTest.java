@@ -794,42 +794,42 @@ class ListGroupTest {
                                                 text("A simple default list group item")
                                         ),
                                 li()
-                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_primary)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_primary)
                                         .with(
                                                 text("A simple primary list group item")
                                         ),
                                 li()
-                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_secondary)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_secondary)
                                         .with(
                                                 text("A simple secondary list group item")
                                         ),
                                 li()
-                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_success)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_success)
                                         .with(
                                                 text("A simple success list group item")
                                         ),
                                 li()
-                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_danger)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_danger)
                                         .with(
                                                 text("A simple danger list group item")
                                         ),
                                 li()
-                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_warning)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_warning)
                                         .with(
                                                 text("A simple warning list group item")
                                         ),
                                 li()
-                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_info)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_info)
                                         .with(
                                                 text("A simple info list group item")
                                         ),
                                 li()
-                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_light)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_light)
                                         .with(
                                                 text("A simple light list group item")
                                         ),
                                 li()
-                                        .withClasses(BootstrapClasses.list_group_item,ListGroup.list_group_dark)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_dark)
                                         .with(
                                                 text("A simple dark list group item")
                                         )
@@ -891,49 +891,49 @@ class ListGroupTest {
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_primary)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,BootstrapClasses.list_group_item_primary)
                                         .with(
                                                 text("A simple primary list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_secondary)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,BootstrapClasses.list_group_item_secondary)
                                         .with(
                                                 text("A simple secondary list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_success)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,BootstrapClasses.list_group_item_success)
                                         .with(
                                                 text("A simple success list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_danger)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,BootstrapClasses.list_group_item_danger)
                                         .with(
                                                 text("A simple danger list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_warning)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,BootstrapClasses.list_group_item_warning)
                                         .with(
                                                 text("A simple warning list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_info)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,BootstrapClasses.list_group_item_info)
                                         .with(
                                                 text("A simple info list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_light)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,BootstrapClasses.list_group_item_light)
                                         .with(
                                                 text("A simple light list group item")
                                         ),
                                 a()
                                         .withHref("#")
-                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,ListGroup.list_group_dark)
+                                        .withClasses(BootstrapClasses.list_group_item,BootstrapClasses.list_group_item_action,BootstrapClasses.list_group_item_dark)
                                         .with(
                                                 text("A simple dark list group item")
                                         )

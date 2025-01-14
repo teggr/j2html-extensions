@@ -497,7 +497,7 @@ void codeBlocks() throws Exception {
         String renderedHtml = uiDocumentation.render(
                 span()
                         .attr(AriaRoles.roleButton)
-                        .attr(Reboot.tabindex,"0")
+                        .withTabindex(0)
                         .with(
                                 text("Non-button element button")
                         )

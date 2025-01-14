@@ -13,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CollapseTest {
 
+    public static final String multi_collapse = "multi-collapse";
     private UiDocumentation uiDocumentation;
 
     @BeforeEach
@@ -215,7 +216,7 @@ class CollapseTest {
                                                 .withClasses(BootstrapClasses.col)
                                                 .with(
                                                         div()
-                                                                .withClasses(BootstrapClasses.collapse,Collapse.multi_collapse)
+                                                                .withClasses(BootstrapClasses.collapse, multi_collapse)
                                                                 .withId("multiCollapseExample1")
                                                                 .with(
                                                                         div()
@@ -229,7 +230,7 @@ class CollapseTest {
                                                 .withClasses(BootstrapClasses.col)
                                                 .with(
                                                         div()
-                                                                .withClasses(BootstrapClasses.collapse,Collapse.multi_collapse)
+                                                                .withClasses(BootstrapClasses.collapse, multi_collapse)
                                                                 .withId("multiCollapseExample2")
                                                                 .with(
                                                                         div()

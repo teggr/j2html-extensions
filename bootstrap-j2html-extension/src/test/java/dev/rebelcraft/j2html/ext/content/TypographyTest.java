@@ -400,7 +400,7 @@ class TypographyTest {
                         p()
                                 .with(
                                         abbr()
-                                                .attr(Typography.title, "attribute")
+                                                .withTitle( "attribute")
                                                 .with(
                                                         text("attr")
                                                 )
@@ -408,7 +408,7 @@ class TypographyTest {
                         p()
                                 .with(
                                         abbr()
-                                                .attr(Typography.title,"HyperText Markup Language")
+                                                .withTitle("HyperText Markup Language")
                                                 .withClasses(BootstrapClasses.initialism)
                                                 .with(
                                                         text("HTML")
@@ -488,7 +488,7 @@ class TypographyTest {
                                         .with(
                                                 text("Someone famous in"),
                                                 cite()
-                                                        .attr( Typography.title,"Source Title")
+                                                        .withTitle("Source Title")
                                                         .with(
                                                                 text("Source Title")
                                                         )
@@ -540,7 +540,7 @@ class TypographyTest {
                                         .with(
                                                 text("Someone famous in"),
                                                 cite()
-                                                        .attr(Typography.title,"Source Title")
+                                                        .withTitle("Source Title")
                                                         .with(
                                                                 text("Source Title")
                                                         )
@@ -592,7 +592,7 @@ class TypographyTest {
                                         .with(
                                                 text("Someone famous in"),
                                                 cite()
-                                                        .attr(Typography.title,"Source Title")
+                                                        .withTitle("Source Title")
                                                         .with(
                                                                 text("Source Title")
                                                         )
