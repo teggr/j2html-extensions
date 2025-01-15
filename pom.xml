@@ -27,6 +27,7 @@
         <module>j2html-extensions-tools</module>
         <module>rebel-ui-test</module>
         <module>bootstrap-j2html-extension</module>
+        <module>j2html-generator</module>
     </modules>
 
     <dependencyManagement>
