@@ -8,9 +8,11 @@ import com.helger.css.decl.ICSSSelectorMember;
 import com.helger.css.decl.visit.CSSVisitor;
 import com.helger.css.decl.visit.DefaultCSSVisitor;
 import com.helger.css.reader.CSSReader;
+import com.palantir.javapoet.AnnotationSpec;
 import com.palantir.javapoet.FieldSpec;
 import com.palantir.javapoet.JavaFile;
 import com.palantir.javapoet.TypeSpec;
+import dev.rebelcraft.j2html.ext.CssClassMapper;
 
 import javax.annotation.Nonnull;
 import javax.lang.model.element.Modifier;
@@ -103,6 +105,10 @@ public class ExtractCssClassesToJava {
             variables.add(FieldSpec
                     .builder(String.class, variableName, Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
                     .initializer("$S", cssClassName)
+                    .addAnnotation(AnnotationSpec.builder(CssClassMapper.class)
+                            .addMember("field", "$S", variableName)
+                            .addMember("className", "$S", cssClassName)
+                            .build())
                     .build());
 
         }
