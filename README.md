@@ -56,3 +56,35 @@ render of the source code done at render() method use inline/page/etc. to determ
 |0.0.1-SNAPSHOT| 5.3.3 |
 
 # j2html-generator
+
+# Build and release
+
+```shell
+mvn clean
+# set the version for all extensions and then the spring boot app
+mvn -Pcentral versions:set -DremoveSnapshot -DprocessAllModules
+mvn -Pcentral --projects j2html-generator versions:set -DremoveSnapshot
+# check that the poms are correct
+mvn -Pcentral org.kordamp.maven:pomchecker-maven-plugin:1.14.0:check-maven-central
+# verify it still all works
+mvn -Pcentral deploy -DignorePublishedComponents=true
+
+# set the new versions for all extensions and then the spring boot app
+mvn -Pcentral versions:set -DnextSnapshot -DprocessAllModules
+mvn -Pcentral --projects j2html-generator versions:set -DnextSnapshot
+
+# set the new versions for all extensions and then the spring boot app
+mvn -Pcentral versions:commit -DprocessAllModules
+mvn -Pcentral --projects j2html-generator versions:commit
+```
+
+## Plugins
+
+* https://www.mojohaus.org/versions/versionsmaven-plugin/index.html
+* https://maven.apache.org/plugins/maven-gpg-plugin/index.html
+* https://kordamp.org/pomchecker/pomchecker-maven-plugin/index.html
+
+## Maintenance
+
+* https://central.sonatype.com/publishing
+* https://central.sonatype.com/search?q=dev.rebelcraft
