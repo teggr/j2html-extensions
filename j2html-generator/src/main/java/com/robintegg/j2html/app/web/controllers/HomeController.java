@@ -1,7 +1,7 @@
 package com.robintegg.j2html.app.web.controllers;
 
 import com.robintegg.j2html.app.generator.J2HtmlGenerator;
-import jakarta.servlet.http.HttpServletResponse;
+import io.github.wimdeblauwe.htmx.spring.boot.mvc.HxTrigger;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,19 +21,18 @@ class HomeController {
     }
 
     @PostMapping("/generate")
+    @HxTrigger("code-updated")
     public String generate(
-            @RequestParam(name= "packageName", required = false) String packageName,
-            @RequestParam(name="includeImports", required = false) boolean includeImports,
-            @RequestParam(name= "tagLibraryId", required = false) String tagLibraryId,
-            @RequestParam(name="template", required = false) String template,
-            @RequestParam(name="className", required = false) String className,
-            @RequestParam(name="testName", required = false) String testName,
-            @RequestParam(name="testOnly", required = false) boolean testOnly,
+            @RequestParam(name = "packageName", required = false) String packageName,
+            @RequestParam(name = "includeImports", required = false) boolean includeImports,
+            @RequestParam(name = "tagLibraryId", required = false) String tagLibraryId,
+            @RequestParam(name = "template", required = false) String template,
+            @RequestParam(name = "className", required = false) String className,
+            @RequestParam(name = "testName", required = false) String testName,
+            @RequestParam(name = "testOnly", required = false) boolean testOnly,
             @RequestParam("content") String content,
-            Model model,
-            HttpServletResponse response
+            Model model
     ) {
-        response.addHeader("HX-Trigger", "code-updated");
         String generatedText = j2HtmlGenerator.generateFromHtml(packageName, includeImports, tagLibraryId, content, template, className, testName, testOnly);
         model.addAttribute("generatedText", generatedText);
         model.addAttribute("includeImports", includeImports);

@@ -1,10 +1,10 @@
 package com.robintegg.j2html.app.web.pages;
 
-import dev.rebelcraft.j2html.bootstrap.Bootstrap;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import j2html.tags.specialized.DivTag;
 
-import static dev.rebelcraft.j2html.bootstrap.Bootstrap.*;
+import static dev.rebelcraft.j2html.bootstrap.Bootstrap.alert;
+import static dev.rebelcraft.j2html.bootstrap.Bootstrap.alert_danger;
 import static j2html.TagCreator.div;
 import static j2html.TagCreator.iff;
 

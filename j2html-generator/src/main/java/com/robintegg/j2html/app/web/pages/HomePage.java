@@ -13,6 +13,7 @@ import java.util.Map;
 
 import static dev.rebelcraft.j2html.bootstrap.Bootstrap.col;
 import static dev.rebelcraft.j2html.bootstrap.Bootstrap.*;
+import static dev.rebelcraft.j2html.htmx.HtmxAttributes.*;
 import static j2html.TagCreator.h1;
 import static j2html.TagCreator.*;
 
@@ -62,10 +63,10 @@ public class HomePage implements View {
                                                                 form()
                                                                         .withAction(links.of("/generate"))
                                                                         .withMethod("post")
-                                                                        .attr("hx-post", links.of("/generate"))
-                                                                        .attr("hx-target", "#generated-code")
-                                                                        .attr("hx-select", "#generated-code-insert")
-                                                                        .attr("hx-indicator", "#spinner")
+                                                                        .attr(hxPost(links.of("/generate")))
+                                                                        .attr(hxTarget( "#generated-code"))
+                                                                        .attr(hxSelect( "#generated-code-insert"))
+                                                                        .attr(hxIndicator( "#spinner"))
                                                                         .with(
                                                                                 div()
                                                                                         .withClass(mb_3)
@@ -199,7 +200,7 @@ public class HomePage implements View {
                                                                 div().withId("generated-code").with(
                                                                         img()
                                                                                 .withId("spinner")
-                                                                                .withClass("htmx-indicator")
+                                                                                .withClass(htmx_indicator)
                                                                                 .withSrc("https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/svg-css/90-ring.svg")
                                                                 ),
                                                                 //language=javascript

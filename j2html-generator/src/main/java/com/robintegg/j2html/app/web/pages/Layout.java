@@ -2,6 +2,7 @@ package com.robintegg.j2html.app.web.pages;
 
 import dev.rebelcraft.j2html.bootstrap.BootstrapTagCreator;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
+import dev.rebelcraft.j2html.htmx.HtmxTagCreator;
 import j2html.attributes.Attribute;
 import j2html.tags.DomContent;
 import j2html.tags.specialized.NavTag;
@@ -15,6 +16,7 @@ import java.util.Map;
 import static dev.rebelcraft.j2html.bootstrap.Bootstrap.*;
 import static dev.rebelcraft.j2html.bootstrap.BootstrapTagCreator.*;
 import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
+import static dev.rebelcraft.j2html.htmx.HtmxAttributes.hxBoost;
 import static j2html.TagCreator.nav;
 import static j2html.TagCreator.*;
 
@@ -51,9 +53,9 @@ public class Layout {
                         script().withSrc("https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/remove-initial-line-feed/prism-remove-initial-line-feed.min.js"),
 
                         // htmx
-                        script().withSrc("https://unpkg.com/htmx.org")
+                        HtmxTagCreator.cdnMinJSLink()
                 ),
-                body().attr("hx-boost", true)
+                body().attr(hxBoost("true"))
                         .with(
                                 header()
                                         .with(

@@ -227,6 +227,8 @@ public class HtmlToJ2HtmlConverter {
             case "aria-live" -> chainedMethodCall("attr").withParameter(ariaAttributeMethodCall("ariaLive", value));
             case "aria-atomic" -> chainedMethodCall("attr").withParameter(ariaAttributeMethodCall("ariaAtomic", value));
             case "autoplay" -> chainedMethodCall("attr").withParameter(plainTextParameter("autoplay"));
+            case "method" -> chainedMethodCall("withMethod").withParameter(plainTextParameter(value));
+            case "action" -> chainedMethodCall("withAction").withParameter(plainTextParameter(value));
             default -> {
                 if (key.startsWith("data-")) {
                     yield chainedMethodCall("withData").withParameter(plainTextParameter(key.substring("data-".length()))).withParameter(plainTextParameter(value));
