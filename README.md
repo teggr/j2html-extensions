@@ -10,6 +10,7 @@ A collection of extensions for the [j2html](https://j2html.com) library, used fo
 * [j2html-extensions-tools](#j2html-extensions-tools) - Standalone module with utilities for generating code
 * [rebel-ui-test](#rebel-ui-test) - Standalone module for testing UI rendering
 * [bootstrap-j2html-extension](#bootstrap-j2html-extension) - Bootstrap lib
+* [htmx-j2html-extension](#htmx-j2html-extension) - HTMX attributes
 * [j2html-generator](#j2html-generator) - Webapp for generating j2html code from html
 
 # j2html-extensions-core
@@ -127,6 +128,42 @@ Support for generating Java classes containing the CSS class names from publishe
 </plugin>
 
 ```
+
+# htmx-j2html-extension
+
+This brings the [HTMX](https://htmx.org/) tools for HTML into the j2html ecosystem.
+
+* `HtmxAttributes` for attributes
+* `HtmxTagCreator` for tags
+
+```xml
+<dependency>
+    <groupId>dev.rebelcraft</groupId>
+    <artifactId>htmx-j2html-extension</artifactId>
+    <version>0.0.2</version>
+</dependency>
+```
+
+Usage:
+```java
+import static dev.rebelcraft.j2html.htmx.HtmxAttributes.*;
+import static j2html.TagCreator.*;
+
+button()
+        .attr(hxPost("/clicked"))
+        .attr(hxTrigger(click))
+        .attr(hxTarget("#parent-div"))
+        .attr(hxSwap(outerHTML))
+        .with(
+            text("Click Me!")
+        )
+```
+
+## bootstrap versions support
+
+| Java Version | Htmx Version |
+|--------------|--------------|
+| 0.0.2        | 2.0.0        |
 
 # bootstrap-j2html-extension
 

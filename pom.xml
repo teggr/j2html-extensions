@@ -31,6 +31,7 @@
         <module>rebel-ui-test</module>
         <module>bootstrap-j2html-extension</module>
         <module>j2html-generator</module>
+        <module>htmx-j2html-extension</module>
     </modules>
 
     <dependencyManagement>
