@@ -16,7 +16,7 @@ import java.util.Map;
 import static dev.rebelcraft.j2html.bootstrap.Bootstrap.*;
 import static dev.rebelcraft.j2html.bootstrap.BootstrapTagCreator.*;
 import static dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties.*;
-import static dev.rebelcraft.j2html.htmx.HtmxAttributes.hxBoost;
+import static dev.rebelcraft.j2html.htmx.Htmx.hx;
 import static j2html.TagCreator.nav;
 import static j2html.TagCreator.*;
 
@@ -55,7 +55,7 @@ public class Layout {
                         // htmx
                         HtmxTagCreator.cdnMinJSLink()
                 ),
-                body().attr(hxBoost("true"))
+                hx(body(), (hx) -> hx.boost("true"))
                         .with(
                                 header()
                                         .with(

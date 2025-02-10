@@ -5,12 +5,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
-import static dev.rebelcraft.j2html.htmx.HtmxAttributes.*;
+import static dev.rebelcraft.j2html.htmx.Htmx.hx;
 import static j2html.TagCreator.button;
 import static j2html.TagCreator.text;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class AttributesTest {
+class AttributesHtmxConfigurerTest {
 
     private UiDocumentation uiDocumentation;
 
@@ -23,11 +23,12 @@ class AttributesTest {
     void hxGetTest() throws Exception {
 
         String renderedHtml = uiDocumentation.render(
-                button()
-                        .attr(hxGet("/example"))
-                        .with(
-                                text("Get Some HTML")
-                        )
+                hx(button()
+                                .with(
+                                        text("Get Some HTML")
+                                ),
+                        (hx) -> hx.get("/example")
+                )
         );
 
         //language=HTML
@@ -48,12 +49,12 @@ class AttributesTest {
     void hxPostTest() throws Exception {
 
         String renderedHtml = uiDocumentation.render(
-                button()
-                        .attr(hxPost("/account/enable"))
-                        .attr(hxTarget("body"))
-                        .with(
-                                text("Enable Your Account")
-                        )
+                hx(button()
+                                .with(
+                                        text("Enable Your Account")
+                                ),
+                        hx -> hx.post("/account/enable").target("body")
+                )
         );
 
         //language=HTML
@@ -74,12 +75,12 @@ class AttributesTest {
     void hxPutTest() throws Exception {
 
         String renderedHtml = uiDocumentation.render(
-                button()
-                        .attr(hxPut("/account"))
-                        .attr(hxTarget("body"))
-                        .with(
-                                text("Put Money In Your Account")
-                        )
+                hx(button()
+                                .with(
+                                        text("Put Money In Your Account")
+                                ),
+                        (hx) -> hx.put("/account").target("body")
+                )
         );
 
         //language=HTML
@@ -100,12 +101,12 @@ class AttributesTest {
     void hxPatchTest() throws Exception {
 
         String renderedHtml = uiDocumentation.render(
-                button()
-                        .attr(hxPatch("/account"))
-                        .attr("hx-target", "body")
-                        .with(
-                                text("Patch Your Account")
-                        )
+                hx(button()
+                                .with(
+                                        text("Patch Your Account")
+                                ),
+                        (hx) -> hx.patch("/account").target("body")
+                )
         );
 
         //language=HTML
@@ -126,12 +127,12 @@ class AttributesTest {
     void hxDeleteTest() throws Exception {
 
         String renderedHtml = uiDocumentation.render(
-                button()
-                        .attr(hxDelete("/account"))
-                        .attr(hxTarget("body"))
-                        .with(
-                                text("Delete Your Account")
-                        )
+                hx(button()
+                                .with(
+                                        text("Delete Your Account")
+                                ),
+                        (hx) -> hx.delete("/account").target("body")
+                )
         );
 
         //language=HTML

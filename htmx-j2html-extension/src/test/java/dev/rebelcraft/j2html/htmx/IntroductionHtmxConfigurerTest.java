@@ -5,12 +5,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
-import static dev.rebelcraft.j2html.htmx.Htmx.*;
+import static dev.rebelcraft.j2html.htmx.Htmx.hx;
 import static dev.rebelcraft.j2html.htmx.HtmxAttributes.*;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class IntroductionTest {
+class IntroductionHtmxConfigurerTest {
 
     private UiDocumentation uiDocumentation;
 
@@ -23,14 +23,12 @@ class IntroductionTest {
     void nutshell() throws Exception {
 
         String renderedHtml = uiDocumentation.render(
-                button()
-                        .attr(hxPost("/clicked"))
-                        .attr(hxTrigger(click))
-                        .attr(hxTarget("#parent-div"))
-                        .attr(hxSwap(outerHTML))
+                hx(button()
                         .with(
                                 text("Click Me!")
-                        )
+                        ),
+                        (hx) -> hx.post("/clicked").trigger(click).target("#parent-div").swap(outerHTML)
+                )
         );
 
         //language=HTML

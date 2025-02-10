@@ -2,7 +2,6 @@ package dev.rebelcraft.j2html.htmx;
 
 import org.junit.jupiter.api.Test;
 
-import static dev.rebelcraft.j2html.htmx.Htmx.htmx_indicator;
 import static dev.rebelcraft.j2html.htmx.HtmxAttributes.*;
 import static j2html.TagCreator.*;
 

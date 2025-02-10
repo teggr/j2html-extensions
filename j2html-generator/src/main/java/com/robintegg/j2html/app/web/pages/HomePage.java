@@ -13,7 +13,8 @@ import java.util.Map;
 
 import static dev.rebelcraft.j2html.bootstrap.Bootstrap.col;
 import static dev.rebelcraft.j2html.bootstrap.Bootstrap.*;
-import static dev.rebelcraft.j2html.htmx.HtmxAttributes.*;
+import static dev.rebelcraft.j2html.htmx.Htmx.hx;
+import static dev.rebelcraft.j2html.htmx.HtmxAttributes.htmx_indicator;
 import static j2html.TagCreator.h1;
 import static j2html.TagCreator.*;
 
@@ -60,13 +61,13 @@ public class HomePage implements View {
                                                 div()
                                                         .withClass(col_6)
                                                         .with(
-                                                                form()
+                                                                hx(form(), (hx) -> hx
+                                                                        .post(links.of("/generate"))
+                                                                        .target("#generated-code")
+                                                                        .select("#generated-code-insert")
+                                                                        .indicator("#spinner"))
                                                                         .withAction(links.of("/generate"))
                                                                         .withMethod("post")
-                                                                        .attr(hxPost(links.of("/generate")))
-                                                                        .attr(hxTarget( "#generated-code"))
-                                                                        .attr(hxSelect( "#generated-code-insert"))
-                                                                        .attr(hxIndicator( "#spinner"))
                                                                         .with(
                                                                                 div()
                                                                                         .withClass(mb_3)
