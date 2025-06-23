@@ -1,27 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.1</version>
+        <version>3.4.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>dev.rebelcraft</groupId>
-    <artifactId>j2html-generator</artifactId>
+    <artifactId>j2html-example-webapp</artifactId>
     <version>0.0.3-SNAPSHOT</version>
 
-    <name>j2html-generator</name>
-    <description>j2html code generator</description>
+    <name>j2html-example-webapp</name>
+    <description>j2html example webapp</description>
     <url>https://www.rebelcraft.dev</url>
 
     <properties>
         <java.version>17</java.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>dev.rebelcraft</groupId>
+                <artifactId>j2html-extensions-bom</artifactId>
+                <version>0.0.3-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -58,62 +72,17 @@
         <dependency>
             <groupId>dev.rebelcraft</groupId>
             <artifactId>bootstrap-j2html-extension</artifactId>
-            <version>0.0.3-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>dev.rebelcraft</groupId>
             <artifactId>htmx-j2html-extension</artifactId>
-            <version>0.0.3-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jsweet</groupId>
-            <artifactId>jsweet-core</artifactId>
-            <version>6.3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jsoup</groupId>
-            <artifactId>jsoup</artifactId>
-            <version>1.16.1</version>
         </dependency>
 
     </dependencies>
 
     <build>
         <plugins>
-<!--            <plugin>-->
-<!--                <groupId>org.jsweet</groupId>-->
-<!--                <artifactId>jsweet-maven-plugin</artifactId>-->
-<!--                <version>3.1.0</version>-->
-<!--                <configuration>-->
-<!--                    <verbose>true</verbose>-->
-<!--                    <tsOut>target/ts</tsOut>-->
-<!--                    <outDir>${project.build.outputDirectory}/static/js</outDir>-->
-<!--                    <candiesJsOut>webapp/candies</candiesJsOut>-->
-<!--                    <targetVersion>ES6</targetVersion>-->
-<!--                    <module>none</module>-->
-<!--                    <moduleResolution>classic</moduleResolution>-->
-<!--                    <includes>-->
-<!--                        <include>com/robintegg/j2html/generator/web/scripts/*.*</include>-->
-<!--                    </includes>-->
-<!--                </configuration>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>generate-js</id>-->
-<!--                        <phase>generate-sources</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>jsweet</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                    <execution>-->
-<!--                        <id>clean</id>-->
-<!--                        <phase>clean</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>clean</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -126,12 +95,6 @@
                     </excludes>
                 </configuration>
             </plugin>
-
-<!--            <plugin>-->
-<!--                <groupId>dev.deploy4j</groupId>-->
-<!--                <artifactId>deploy4j-maven-plugin</artifactId>-->
-<!--                <version>1.0-SNAPSHOT</version>-->
-<!--            </plugin>-->
 
         </plugins>
     </build>

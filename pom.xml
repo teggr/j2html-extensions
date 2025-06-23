@@ -11,7 +11,7 @@
 
     <name>j2html-extensions</name>
     <description>j2html-extensions</description>
-    <url>https://www.rebelcraft.com</url>
+    <url>https://www.rebelcraft.dev</url>
 
     <properties>
 
@@ -32,6 +32,8 @@
         <module>bootstrap-j2html-extension</module>
         <module>j2html-generator</module>
         <module>htmx-j2html-extension</module>
+        <module>j2html-extensions-bom</module>
+        <module>j2html-example-webapp</module>
     </modules>
 
     <dependencyManagement>
