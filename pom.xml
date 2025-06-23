@@ -32,8 +32,10 @@
         <module>bootstrap-j2html-extension</module>
         <module>j2html-generator</module>
         <module>htmx-j2html-extension</module>
+        <module>j2html-extensions-spring-boot-starter</module>
         <module>j2html-extensions-bom</module>
         <module>j2html-example-webapp</module>
+
     </modules>
 
     <dependencyManagement>

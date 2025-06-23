@@ -71,6 +71,10 @@
 
         <dependency>
             <groupId>dev.rebelcraft</groupId>
+            <artifactId>j2html-extensions-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dev.rebelcraft</groupId>
             <artifactId>bootstrap-j2html-extension</artifactId>
         </dependency>
         <dependency>

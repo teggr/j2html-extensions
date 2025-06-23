@@ -1,6 +1,7 @@
 package dev.rebelcraft.j2html.bootstrap;
 
 import dev.rebelcraft.j2html.ext.ExtendedTagCreator;
+import j2html.tags.specialized.HtmlTag;
 
 import static dev.rebelcraft.j2html.bootstrap.BootstrapTagCreator.*;
 import static j2html.TagCreator.*;
@@ -15,21 +16,25 @@ public class Quickstart {
     public static String index() {
 
         return ExtendedTagCreator.document(
-                html().withLang("en")
-                        .with(
-                                head(
-                                        utf8Charset(),
-                                        responsiveViewport(),
-                                        title("Bootstrap demo"),
-                                        cdnCSSLink()
-                                ),
-                                body(
-                                        h1("Hello, world!"),
-                                        cdnBundleMinJSLink()
-                                )
-                        )
+                indexDomContent()
         );
 
+    }
+
+    public static HtmlTag indexDomContent() {
+        return html().withLang("en")
+                .with(
+                        head(
+                                utf8Charset(),
+                                responsiveViewport(),
+                                title("Bootstrap demo"),
+                                cdnCSSLink()
+                        ),
+                        body(
+                                h1("Hello, world!"),
+                                cdnBundleMinJSLink()
+                        )
+                );
     }
 
 }
