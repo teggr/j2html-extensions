@@ -34,3 +34,14 @@ https://github.com/teggr/j2html-extensions/releases
 ```
 
 For manual publishing: https://central.sonatype.com/publishing/deployments (GH)
+
+## Plugins
+
+* https://www.mojohaus.org/versions/versionsmaven-plugin/index.html
+* https://maven.apache.org/plugins/maven-gpg-plugin/index.html
+* https://kordamp.org/pomchecker/pomchecker-maven-plugin/index.html
+
+## Maintenance
+
+* https://central.sonatype.com/publishing
+* https://central.sonatype.com/search?q=dev.rebelcraft
