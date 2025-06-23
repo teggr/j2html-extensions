@@ -12,7 +12,7 @@
 
     <groupId>dev.rebelcraft</groupId>
     <artifactId>j2html-example-webapp</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
 
     <name>j2html-example-webapp</name>
     <description>j2html example webapp</description>
@@ -27,7 +27,7 @@
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
                 <artifactId>j2html-extensions-bom</artifactId>
-                <version>0.0.3-SNAPSHOT</version>
+                <version>0.0.4-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

@@ -6,10 +6,11 @@
     <parent>
         <groupId>dev.rebelcraft</groupId>
         <artifactId>j2html-extensions</artifactId>
-        <version>0.0.3-SNAPSHOT</version>
+        <version>0.0.4-SNAPSHOT</version>
     </parent>
 
     <artifactId>j2html-extensions-spring-boot-starter</artifactId>
+    <name>j2html-extensions-spring-boot-starter</name>
 
     <dependencies>
         <dependency>
@@ -26,7 +27,7 @@
         <dependency>
             <groupId>dev.rebelcraft</groupId>
             <artifactId>j2html-extensions-core</artifactId>
-            <version>0.0.3-SNAPSHOT</version>
+            <version>0.0.4-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
