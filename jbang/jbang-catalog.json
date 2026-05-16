@@ -1,0 +1,13 @@
+{
+  "aliases": {
+    "j2htmlInit": {
+      "script-ref": "j2htmlInit.java",
+      "description": "Initialise a Maven pom.xml with j2html-extensions dependencies",
+      "tags": [
+        "j2html",
+        "maven",
+        "init"
+      ]
+    }
+  }
+}

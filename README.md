@@ -88,3 +88,21 @@ public class HomeView extends J2HtmlView {
 # Build and release
 
 [RELEASE.md](/docs/RELEASE.md)
+
+# JBang init script
+
+A JBang setup script is available at `/jbang/j2htmlInit.java`.
+
+Interactive mode (asks for confirmation and updates `./pom.xml`):
+
+```bash
+jbang /path/to/j2html-extensions/jbang/j2htmlInit.java
+```
+
+Non-interactive mode:
+
+```bash
+jbang /path/to/j2html-extensions/jbang/j2htmlInit.java --pom /path/to/project/pom.xml --yes
+```
+
+Use `--help` to see all CLI options.
