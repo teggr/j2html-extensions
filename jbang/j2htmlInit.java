@@ -1,5 +1,5 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
-//JAVA 17
+//JAVA 21
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
