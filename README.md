@@ -87,6 +87,12 @@ public class HomeView extends J2HtmlView {
 
 # Build and release
 
+JDK 21 or newer is required to build and test this repository.
+
+```bash
+./mvnw --no-transfer-progress test
+```
+
 [RELEASE.md](/docs/RELEASE.md)
 
 # JBang init script
