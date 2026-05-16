@@ -8,6 +8,7 @@ import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
@@ -86,8 +87,7 @@ public class j2htmlInit {
     }
 
     private static Document parsePom(Path pomPath) throws Exception {
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        factory.setNamespaceAware(true);
+        DocumentBuilderFactory factory = newSecureDocumentBuilderFactory(true);
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document document = builder.parse(Files.newInputStream(pomPath));
         document.getDocumentElement().normalize();
@@ -223,8 +223,8 @@ public class j2htmlInit {
                 if (resolved != null && !resolved.isBlank()) {
                     return resolved.trim();
                 }
-            } catch (Exception ignored) {
-                // try next metadata URL
+            } catch (Exception ex) {
+                System.err.println("Warning: could not resolve metadata from " + metadataUrl + ": " + ex.getMessage());
             }
         }
 
@@ -246,8 +246,7 @@ public class j2htmlInit {
     }
 
     private static String extractVersionFromMetadata(InputStream inputStream) throws Exception {
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        factory.setNamespaceAware(false);
+        DocumentBuilderFactory factory = newSecureDocumentBuilderFactory(false);
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document metadata = builder.parse(inputStream);
         metadata.getDocumentElement().normalize();
@@ -275,6 +274,21 @@ public class j2htmlInit {
             return null;
         }
         return nodes.item(0).getTextContent().trim();
+    }
+
+    private static DocumentBuilderFactory newSecureDocumentBuilderFactory(boolean namespaceAware)
+            throws ParserConfigurationException {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        factory.setNamespaceAware(namespaceAware);
+        factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+        factory.setFeature("http://xml.org/sax/features/external-general-entities", false);
+        factory.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+        factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+        factory.setXIncludeAware(false);
+        factory.setExpandEntityReferences(false);
+        factory.setAttribute(javax.xml.XMLConstants.ACCESS_EXTERNAL_DTD, "");
+        factory.setAttribute(javax.xml.XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
+        return factory;
     }
 
     private static void printUsage() {
@@ -305,8 +319,14 @@ public class j2htmlInit {
             for (int i = 0; i < args.length; i++) {
                 String arg = args[i];
                 switch (arg) {
-                    case "--pom" -> options.pomPath = requireValue(args, ++i, "--pom");
-                    case "--version" -> options.version = requireValue(args, ++i, "--version");
+                    case "--pom" -> {
+                        options.pomPath = requireValue(args, i + 1, "--pom");
+                        i++;
+                    }
+                    case "--version" -> {
+                        options.version = requireValue(args, i + 1, "--version");
+                        i++;
+                    }
                     case "--yes", "-y" -> options.yes = true;
                     case "--no", "-n" -> options.no = true;
                     case "--non-interactive" -> options.nonInteractive = true;
