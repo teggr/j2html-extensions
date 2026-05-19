@@ -33,6 +33,21 @@
             </dependency>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
+                <artifactId>j2html-engine-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.rebelcraft</groupId>
+                <artifactId>j2html-engine-spring</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.rebelcraft</groupId>
+                <artifactId>j2html-engine-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.rebelcraft</groupId>
                 <artifactId>j2html-extensions-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
